@@ -1,0 +1,116 @@
+﻿/* Responsive Font Size Control */
+.potter-responsive-options {
+	margin-bottom: 5px;
+}
+
+.potter-responsive-options li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.potter-responsive-options li button {
+	display: inline-block;
+	background: #fff;
+	text-align: center;
+	padding: 0;
+	border-radius: 100%;
+	cursor: pointer;
+	border: 1px solid #ccc;
+	outline: 0;
+}
+
+.potter-responsive-options li button i {
+	font-size: 16px;
+	width: 33px;
+	height: 33px;
+	line-height: 33px;
+}
+
+.potter-responsive-options li button:hover {
+	background: #ccc;
+}
+
+.potter-responsive-options li:hover {
+}
+
+.potter-responsive-options li button.active {
+	background: #ccc;
+}
+
+.potter-control-desktop, .potter-control-tablet, .potter-control-mobile {
+	display: none;
+}
+
+.potter-control-desktop.active, .potter-control-tablet.active, .potter-control-mobile.active {
+	display: block !important;
+}
+
+/* Padding Control */
+.potter-control-padding-top, .potter-control-padding-right, .potter-control-padding-bottom, .potter-control-padding-left {
+	width: 21.5%;
+	float: left;
+	margin-right: 1%;
+	text-align: center;
+}
+
+.customize-control-potter-padding .px,
+.customize-control-potter-responsive-padding .px {
+	line-height: 18px;
+	float: left;
+	padding: 3px 5px;
+}
+
+/* Input Slider */
+.potter-input-slider-control {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.potter-input-slider-control input[type=text] {
+	text-align: right;
+	width: 55px;
+	margin-left: 15px;
+	font-size: 14px;
+}
+.potter-input-slider-control .slider {
+	width: 100%;
+	float: left;
+}
+.potter-input-slider-control .slider-reset {
+	position: absolute;
+	right: 0;
+	top: -20px;
+	cursor: pointer;
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.3);
+	transition: 0.3s ease-in-out;
+}
+.potter-input-slider-control .slider-reset:hover {
+  transform: scale(1.3);
+  color: #DC3232;
+}
+.potter-input-slider-control .ui-widget.ui-widget-content {
+	border: 1px solid #bdc3c7;
+	background: #bdc3c7;
+}
+.potter-input-slider-control .ui-corner-all {
+	border-radius: 4px;
+}
+.potter-input-slider-control .ui-slider-horizontal {
+	height: 4px;
+}
+.potter-input-slider-control .ui-slider {
+	position: relative;
+}
+.potter-input-slider-control .ui-slider-handle {
+	background: #F0F0F0;
+	border: 1px solid #999999;
+	margin-left: -6px;
+	top: -6px;
+	border-radius: 14px;
+	cursor: pointer;
+	height: 14px;
+	position: absolute;
+	width: 14px;
+	z-index: 2;
+}

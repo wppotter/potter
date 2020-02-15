@@ -1,0 +1,325 @@
+/**
+ * Admin styles
+ */
+#adminmenu .toplevel_page_potter img {
+    width: 18px;
+    margin-top: -1px;
+}
+.potter-core-admin-wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 15px;
+}
+.potter-core-admin-block-content .button-primary {
+  background: #fff;
+  padding: 4px 10px;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  color: #000 ;
+}
+.potter-core-admin-block-content .button-primary:hover {
+  background: #000;
+  color: #fff ;
+}
+
+.potter-logo-inline {
+    width: 32px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+.potter-core-admin-wrapper .potter-core-admin-header p.potter-rec-plugins-sub {
+    box-shadow: -1px 0 0 0 rgba(0, 0, 0, 0.1);
+    margin: 0;
+    padding: 10px;
+}
+.potter-core-admin-wrapper .potter-core-admin-header .title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    margin: 0px;
+    color: #444;
+    flex: 0 0 265px;
+}
+.potter-core-admin-header .potter-logo-inline {
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+    padding: 10px 10px 5px;
+    margin-right: 10px;
+}
+.potter-rec-plugins .potter-core-admin-header .potter-logo-inline {
+    padding: 15px 10px 10px;
+    width: 36px;
+}
+.potter-core-sidebar-widget .title {
+    font-size: 17px;
+    margin: 0.5em 0 1em;
+}
+.potter-core-sidebar-widget p {
+    font-size: 14px;
+}
+.potter-core-admin-wrapper .potter-core-content {
+    width: 100%;
+    display: flex;
+    max-width: 800px;
+    flex-flow: row wrap;
+    align-content: center;
+    margin: auto;
+}
+.potter-core-admin-wrapper .potter-core-content-inner {
+    max-width: 70em;
+    height: auto;
+    flex: 1 1 70%;
+}
+.potter-core-admin-wrapper .potter-core-sidebar {
+    flex: 1 1 200px;
+    padding: 20px;
+}
+.potter-core-admin-block-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: -10px;
+}
+.theme-content {
+  font-size: 20px;
+  font-weight: 200;
+}
+.potter-core-admin-block-wrapper .potter-core-admin-block {
+    background-color: #fff;
+    flex: 1 1 auto;
+    min-width: 250px;
+    width: 300px;
+    margin: 10px 10px 10px 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+.potter-core-admin-block-large,
+.potter-core-sidebar-widget {
+    background: #fff;
+    margin-bottom: 25px;
+    padding: 1em;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+.potter-core-admin-block-header {
+    max-height: 4em;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.potter-core-admin-block-header-icon {
+    width: 30px;
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.potter-core-admin-block-header-icon .dashicons{
+  font-size: 25px;
+}
+.potter-core-admin-block-support .potter-core-admin-block-header-icon {
+    width: 30px;
+}
+.potter-core-admin-title {
+    margin: 1em 0;
+    padding: 0 1.26582em;
+    font-size: 1.185em;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.potter-core-admin-block-content {
+    overflow: hidden;
+    position: relative;
+    padding: 1em 1.5em 1.5em;
+    background-color: #fff;
+}
+.potter-core-admin-wrapper .potter-core-admin-footer {
+    width: 100%;
+    padding: 15px 20px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.potter-plugins-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    margin: -10px;
+}
+.potter-preview-img {
+    width: 100%;
+}
+.potter-core-sidebar-block {
+    margin: calc(3% + 1.5em) auto;
+}
+.potter-core-sidebar-block .potter-admin-sidebar-logo {
+    display: block;
+    margin: 0 auto;
+}
+.potter-core-sidebar-block .potter-admin-sidebar-logo.potter-pro-logo {
+    max-width: 120px;
+}
+.potter-core-sidebar-block .potter-admin-sidebar-logo-text > img,
+.potter-core-sidebar-block .potter-admin-sidebar-logo-text > svg {
+    max-width: 200px;
+    display: block;
+    margin: 10px auto;
+}
+.potter-plugins {
+    max-width: calc(25% - 22px);
+    min-width: 350px;
+    flex: 1 1 auto;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.potter-plugins .header {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.potter-plugins .header img {
+    max-width: 100%;
+}
+.potter-plugins .content {
+    height: auto;
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    line-height: 26px;
+    padding: 15px 20px;
+}
+.potter-plugins .content .title {
+    padding: 0;
+    margin: 0;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+}
+.potter-plugins .content .by-author a {
+    text-decoration: none;
+}
+.potter-plugins .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #f7f7f7;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.potter-plugins .footer .footer-left {
+    width: 70%;
+}
+.potter-plugins .footer .footer-right {
+    width: 25%;
+}
+.potter-plugins .footer .footer-left ul {
+    padding: 0px;
+    margin: 0px;
+}
+.potter-plugins .footer .footer-left ul li {
+    display: inline;
+}
+.potter-plugins .footer .footer-left ul li:last-child {
+    padding-left: 10px;
+}
+.potter-plugins .footer .footer-left ul li:first-child {
+    padding-left: 0px;
+}
+.potter-plugins .footer .footer-left ul li a {
+    line-height: 25px;
+    text-decoration: none;
+}
+.potter-plugins .footer .footer-left ul li a:hover {
+    text-decoration: underline;
+}
+.potter-plugins .footer .footer-right {
+    text-align: right;
+}
+.potter-plugins .footer .footer-right .tag-free {
+    display: inline-block;
+    background: #02cc7b;
+    padding: 5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.potter-plugins .footer .footer-right .tag-pro {
+    display: inline-block;
+    background: #651fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+.notice.potter-usage-notice {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+.potter-usage-notice-img .potter-logo-inline {
+    width: 50px;
+    display: block;
+    box-shadow: 1px 0 0 0 rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    padding: 15px 10px 10px 0;
+}
+.potter-core-admin-block-content p {
+  font-size: 16px;
+  font-weight: 300;
+}
+.potter-admin-sidebar-cta a {
+    font-size: 1em;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.065em;
+    text-align: center;
+    margin: 20px 0px;
+    display: block;
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 15px;
+    width: 200px;
+    outline: none;
+    box-shadow: none;
+    transition: all 0.3s;
+}
+
+.potter-admin-sidebar-cta a:hover {
+    color: #fff;
+    background: #000;
+}
+/* Media Quires */
+@media only screen and (max-width: 480px) {
+    .potter-plugins-wrapper {
+        flex-flow: column wrap;
+    }
+    .potter-plugins {
+        max-width: 100%;
+        margin-right: 0px;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .potter-plugins {
+        max-width: calc(50% - 20px);
+        margin-right: 20px;
+    }
+    .potter-plugins:nth-child(2n) {
+        margin-right: 0px;
+    }
+}

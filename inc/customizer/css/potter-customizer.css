@@ -1,0 +1,48 @@
+/* Image Select */
+.customize-control-kirki-radio-image input:hover + label img {
+	opacity: .7 !important;
+}
+.customize-control-kirki-radio-image input + label img {
+	margin: 3px;
+}
+
+.customize-control-kirki-radio-image input:checked + label img {
+	box-shadow: none !important;
+	opacity: 1 !important;
+	border: 1px solid #aaa !important;
+}
+
+/* Premium Notice */
+#sub-accordion-section-potter_premium_addon .customize-section-title {
+	border-color: #0056FF;
+	border-top: 1px solid #0056FF;
+}
+
+#sub-accordion-section-potter_premium_addon .customize-section-title h3 {
+	color: #0056FF;
+}
+
+input[type=dimention] {
+	width: 100%;
+	padding: 5px;
+	border-radius: 3px;
+}
+#accordion-panel-potter_footer_options {
+	margin-bottom: 20px;
+}
+.setting-header {
+	border: 1px solid #ccc;
+	padding: 8px;
+	font-size: 14px;
+	text-transform: uppercase;
+	background: #fff;
+	color: #1A5BA7;
+	letter-spacing: 2px;
+	margin: auto -20px auto -10px;
+}
+.customize-control-checkbox {
+	margin-bottom: 0px;
+}
+.customize-control-kirki-image {
+	padding: 25px 0px;
+}
