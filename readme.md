@@ -2,6 +2,7 @@
 Potter – The only theme you'll ever need
 -------------------------------------------------------
 * Website: https://pottertheme.com/
+<<<<<<< HEAD
 * Documentation: https://pottertheme.com/docs-2/
 * Contributors: wppotter
 * Email: support@pottertheme.com
@@ -12,10 +13,20 @@ Potter – The only theme you'll ever need
 * Stable tag: 1.0
 * License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
+=======
+*  Documentation: https://pottertheme.com/docs-2/
+*  Contributors: wppotter
+*  Email: support@pottertheme.com
+*  Tags: one-column, blog, custom-background, custom-logo, custom-header, custom-menu, editor-style, rtl-language-support, featured-image-header, featured-images, flexible-header, custom-colors, full-width-template, sticky-post, threaded-comments, translation-ready, theme-options, two-columns
+* Requires at least: 5.2
+* Tested up to: 5.3
+* License: GPLv3 or later
+* License URI: https://www.gnu.org/licenses/gpl-3.0.html
+>>>>>>> cd0c9922c4872f82f990473b6c4f5e5665979c1c
 -------------------------------------------------------
 Features:
 -------------------------------------------------------
-== Appearance > Customize ==
+*  == Appearance > Customize ==
 	- General: change the layout, background, sidebar, accent- & button colors for your website.
 	- Blog: customize the look & layout of your blog and archive pages.
 	- Typography: pick your favorite fonts and adjust the typography for your headlines and text.
