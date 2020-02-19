@@ -43,13 +43,10 @@ get_header();
 				<article id="post-<?php the_ID(); ?>" <?php post_class($post_classes); ?> itemscope="itemscope" itemtype="https://schema.org/CreativeWork">
 
 					<div class="potter-article-wrapper">
-
+						<?php do_action( 'potter_main_title_before' ); ?>
 						<?php do_action('potter_article_open'); ?>
-
 						<header class="article-header">
-
 							<?php
-							  do_action('potter_breadcrumbhead');
                 if (! empty($template_parts_header) && is_array($template_parts_header)) {
                   foreach ($template_parts_header as $part) {
                     get_template_part('inc/template-parts/single/single-' . $part);

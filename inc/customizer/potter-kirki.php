@@ -270,7 +270,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-103',
     'section'  => 'potter_offcanvas_menu_options',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Canvas Setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Canvas Setting', 'potter') .  '</h3>',
     'priority' => 0,
     'active_callback' => array(
         array(
@@ -338,19 +338,19 @@ Kirki::add_field('potter', array(
     ),
 
 ));
-Kirki::add_field( 'potter', array(
-	'type'        => 'dimensions',
-	'settings'    => 'off_canvas_padding',
-	'label'       => esc_html__( 'Canvas Padding', 'potter' ),
-	'description' => esc_html__( 'Set Canvas Padding for each side.', 'potter' ),
+Kirki::add_field('potter', array(
+    'type'        => 'dimensions',
+    'settings'    => 'off_canvas_padding',
+    'label'       => esc_html__('Canvas Padding', 'potter'),
+    'description' => esc_html__('Set Canvas Padding for each side.', 'potter'),
   'priority'  => 2,
-	'section'     => 'potter_offcanvas_menu_options',
-	'default'     => array(
-		'padding-top'    => '60px',
-		'padding-bottom' => '40px',
-		'padding-left'   => '40px',
-		'padding-right'  => '40px',
-	),
+    'section'     => 'potter_offcanvas_menu_options',
+    'default'     => array(
+        'padding-top'    => '60px',
+        'padding-bottom' => '40px',
+        'padding-left'   => '40px',
+        'padding-right'  => '40px',
+    ),
 
 ));
 
@@ -370,7 +370,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-10245',
     'section'  => 'potter_offcanvas_menu_options',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Off Canvas Content Setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Off Canvas Content Setting', 'potter') .  '</h3>',
     'priority' => 2,
 
 ));
@@ -477,7 +477,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-102',
     'section'  => 'potter_offcanvas_menu_options',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Burger Menu Setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Burger Menu Setting', 'potter') .  '</h3>',
     'priority' => 10,
 
 ));
@@ -595,23 +595,17 @@ Kirki::add_section('potter_bottom_footer', array(
 
 // Alignment.
 Kirki::add_field('potter', array(
-    'type'            => 'radio',
-    'settings'        => 'title_bar_position',
-    'label'           => __('Title Bar Position', 'potter'),
-    'section'         => 'potter_breadcrumb_settings',
-    'default'         => 'before-content',
-    'priority'        => 1,
-    'multiple'        => 1,
-    'choices'         => array(
-      'before-content'   => esc_html__( 'Before Content', 'potter' ),
-      'after-header' => esc_html__( 'After Header', 'potter' ),
-    ),
+    'type'     => 'custom',
+    'settings' => 'separator-1024456',
+    'section'  => 'potter_breadcrumb_settings',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Title Settings', 'potter') .  '</h3>',
+    'priority' => 1,
 ));
 
 Kirki::add_field('potter', array(
     'type'            => 'radio-image',
-    'settings'        => 'breadcrumbs_alignment',
-    'label'           => __('Alignment', 'potter'),
+    'settings'        => 'page_title_alignment',
+    'label'           => __('Page Title Alignment', 'potter'),
     'section'         => 'potter_breadcrumb_settings',
     'default'         => 'left',
     'priority'        => 2,
@@ -621,11 +615,31 @@ Kirki::add_field('potter', array(
         'center' => POTTER_THEME_URI . '/inc/customizer/img/align-center.png',
         'right'  => POTTER_THEME_URI . '/inc/customizer/img/align-right.png',
     ),
+));
+
+Kirki::add_field('potter', array(
+    'type'            => 'radio-image',
+    'settings'        => 'breadcrumbs_alignment',
+    'label'           => __('Breadcrumb Alignment', 'potter'),
+    'section'         => 'potter_breadcrumb_settings',
+    'default'         => 'left',
+    'priority'        => 14,
+    'multiple'        => 1,
+    'choices'         => array(
+        'left'   => POTTER_THEME_URI . '/inc/customizer/img/align-left.png',
+        'center' => POTTER_THEME_URI . '/inc/customizer/img/align-center.png',
+        'right'  => POTTER_THEME_URI . '/inc/customizer/img/align-right.png',
+    ),
     'active_callback' => array(
+      array(
+          'setting'  => 'breadcrumbs_toggle',
+          'operator' => '==',
+          'value'    => 1,
+      ),
         array(
             'setting'  => 'title_bar_position',
             'operator' => '==',
-            'value'    => 'before-content',
+            'value'    => 'after-header',
         ),
     ),
 ));
@@ -637,12 +651,17 @@ Kirki::add_field('potter', array(
     'settings'        => 'breadcrumbs_background_color',
     'label'           => __('Background Color', 'potter'),
     'section'         => 'potter_breadcrumb_settings',
-    'priority'        => 3,
+    'priority'        => 14,
     'transport'       => 'postMessage',
     'choices'         => array(
         'alpha' => true,
     ),
     'active_callback' => array(
+      array(
+          'setting'  => 'breadcrumbs_toggle',
+          'operator' => '==',
+          'value'    => 1,
+      ),
         array(
             'setting'  => 'title_bar_position',
             'operator' => '==',
@@ -657,12 +676,17 @@ Kirki::add_field('potter', array(
     'settings'        => 'breadcrumbs_font_color',
     'label'           => __('Font Color', 'potter'),
     'section'         => 'potter_breadcrumb_settings',
-    'priority'        => 4,
+    'priority'        => 15,
     'transport'       => 'postMessage',
     'choices'         => array(
         'alpha' => true,
     ),
     'active_callback' => array(
+      array(
+          'setting'  => 'breadcrumbs_toggle',
+          'operator' => '==',
+          'value'    => 1,
+      ),
         array(
             'setting'  => 'title_bar_position',
             'operator' => '==',
@@ -677,12 +701,17 @@ Kirki::add_field('potter', array(
     'settings'        => 'breadcrumbs_accent_color',
     'label'           => __('Accent Color', 'potter'),
     'section'         => 'potter_breadcrumb_settings',
-    'priority'        => 5,
+    'priority'        => 16,
     'transport'       => 'postMessage',
     'choices'         => array(
         'alpha' => true,
     ),
     'active_callback' => array(
+      array(
+          'setting'  => 'breadcrumbs_toggle',
+          'operator' => '==',
+          'value'    => 1,
+      ),
         array(
             'setting'  => 'title_bar_position',
             'operator' => '==',
@@ -697,11 +726,16 @@ Kirki::add_field('potter', array(
     'settings'        => 'breadcrumbs_accent_color_alt',
     'label'           => __('Hover', 'potter'),
     'section'         => 'potter_breadcrumb_settings',
-    'priority'        => 6,
+    'priority'        => 17,
     'choices'         => array(
         'alpha' => true,
     ),
     'active_callback' => array(
+      array(
+          'setting'  => 'breadcrumbs_toggle',
+          'operator' => '==',
+          'value'    => 1,
+      ),
         array(
             'setting'  => 'title_bar_position',
             'operator' => '==',
@@ -714,9 +748,9 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'            => 'slider',
     'settings'        => 'page_title_bar_top_padding',
-    'label'           => __('Title Bar Top Padding', 'potter'),
+    'label'           => __('Breadcrumb Bar Top Padding', 'potter'),
     'section'         => 'potter_breadcrumb_settings',
-    'priority'        => 8,
+    'priority'        => 18,
     'default'         => '10',
     'transport' => 'postMessage',
     'choices'         => array(
@@ -725,6 +759,11 @@ Kirki::add_field('potter', array(
         'step' => '1',
     ),
     'active_callback' => array(
+      array(
+          'setting'  => 'breadcrumbs_toggle',
+          'operator' => '==',
+          'value'    => 1,
+      ),
         array(
             'setting'  => 'title_bar_position',
             'operator' => '==',
@@ -736,9 +775,9 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'            => 'slider',
     'settings'        => 'page_title_bar_bottom_padding',
-    'label'           => __('Title Bar Bottom Padding', 'potter'),
+    'label'           => __('Breadcrumb Bar Bottom Padding', 'potter'),
     'section'         => 'potter_breadcrumb_settings',
-    'priority'        => 9,
+    'priority'        => 19,
     'default'         => '10',
     'transport' => 'postMessage',
     'choices'         => array(
@@ -747,6 +786,11 @@ Kirki::add_field('potter', array(
         'step' => '1',
     ),
     'active_callback' => array(
+      array(
+          'setting'  => 'breadcrumbs_toggle',
+          'operator' => '==',
+          'value'    => 1,
+      ),
         array(
             'setting'  => 'title_bar_position',
             'operator' => '==',
@@ -774,7 +818,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-10244',
     'section'  => 'potter_breadcrumb_settings',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Breadcrumb Settings', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Breadcrumb Settings', 'potter') .  '</h3>',
     'priority' => 10,
 ));
 
@@ -786,6 +830,105 @@ Kirki::add_field('potter', array(
     'section'  => 'potter_breadcrumb_settings',
     'default'  => 0,
     'priority' => 12,
+));
+
+Kirki::add_field('potter', array(
+    'type'            => 'checkbox',
+    'settings'        => 'breadcrumb_on_archive_page',
+    'label'           => __('Disable on Archive Page?', 'potter'),
+    'section'         => 'potter_breadcrumb_settings',
+    'default'         => false,
+    'priority'        => 12,
+    'active_callback' => array(
+        array(
+            'setting'  => 'breadcrumbs_toggle',
+            'operator' => '==',
+            'value'    => 1,
+        ),
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'            => 'checkbox',
+    'settings'        => 'breadcrumb_on_blog_page',
+    'label'           => __('Disable on Blog Page?', 'potter'),
+    'section'         => 'potter_breadcrumb_settings',
+    'default'         => false,
+    'priority'        => 12,
+    'active_callback' => array(
+        array(
+            'setting'  => 'breadcrumbs_toggle',
+            'operator' => '==',
+            'value'    => 1,
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'            => 'checkbox',
+    'settings'        => 'breadcrumb_on_search_page',
+    'label'           => __('Disable on Search Pages?', 'potter'),
+    'section'         => 'potter_breadcrumb_settings',
+    'default'         => false,
+    'priority'        => 12,
+    'active_callback' => array(
+        array(
+            'setting'  => 'breadcrumbs_toggle',
+            'operator' => '==',
+            'value'    => 1,
+        ),
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'            => 'checkbox',
+    'settings'        => 'breadcrumb_on_404_page',
+    'label'           => __('Disable on 404  Pages?', 'potter'),
+    'section'         => 'potter_breadcrumb_settings',
+    'default'         => false,
+    'priority'        => 12,
+    'active_callback' => array(
+        array(
+            'setting'  => 'breadcrumbs_toggle',
+            'operator' => '==',
+            'value'    => 1,
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'            => 'checkbox',
+    'settings'        => 'breadcrumb_single_post_page',
+    'label'           => __('Disable Single Post?', 'potter'),
+    'section'         => 'potter_breadcrumb_settings',
+    'default'         => false,
+    'priority'        => 12,
+    'active_callback' => array(
+        array(
+            'setting'  => 'breadcrumbs_toggle',
+            'operator' => '==',
+            'value'    => 1,
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'            => 'radio',
+    'settings'        => 'title_bar_position',
+    'label'           => __('Breadcrumb  Position', 'potter'),
+    'section'         => 'potter_breadcrumb_settings',
+    'default'         => 'before-content',
+    'priority'        => 13,
+    'multiple'        => 1,
+    'choices'         => array(
+      'before-content'   => esc_html__('Before title', 'potter'),
+      'after-header' => esc_html__('After Header', 'potter'),
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'breadcrumbs_toggle',
+            'operator' => '==',
+            'value'    => 1,
+        ),
+    ),
 ));
 
 
@@ -1029,29 +1172,28 @@ Kirki::add_field('potter', array(
 /* Fields - Blog (Blog Layouts) */
 
 foreach ($archives as $archive) {
-
-  Kirki::add_field('potter', array(
+    Kirki::add_field('potter', array(
       'type'     => 'custom',
       'settings' => 'separator-1096',
       'section'  => 'potter_' . $archive . '_options',
-      'default'  => '<h3 class="setting-header">' . esc_html__( 'Blog Page Title', 'potter' ) .  '</h3>',
+      'default'  => '<h3 class="setting-header">' . esc_html__('Blog Page Title', 'potter') .  '</h3>',
       'priority' => 0,
   ));
 
-  Kirki::add_field('potter', array(
+    Kirki::add_field('potter', array(
       'type'     => 'text',
       'settings' => 'blog_page_custom_title',
       'section'  => 'potter_' . $archive . '_options',
-      'default'  => __( 'Blog', 'potter' ),
+      'default'  => __('Blog', 'potter'),
       'priority' => 0,
   ));
 
-  // Separator.
-  Kirki::add_field('potter', array(
+    // Separator.
+    Kirki::add_field('potter', array(
       'type'     => 'custom',
       'settings' => 'separator-109',
       'section'  => 'potter_' . $archive . '_options',
-      'default'  => '<h3 class="setting-header">' . esc_html__( 'Archive Layout Setting', 'potter' ) .  '</h3>',
+      'default'  => '<h3 class="setting-header">' . esc_html__('Archive Layout Setting', 'potter') .  '</h3>',
       'priority' => 0,
   ));
     // Width.
@@ -1394,12 +1536,11 @@ foreach ($archives as $archive) {
 /* Fields – Blog (Post Layout) */
 
 foreach ($singles as $single) {
-
-  Kirki::add_field('potter', array(
+    Kirki::add_field('potter', array(
       'type'     => 'custom',
       'settings' => 'separator-1093',
       'section'  => 'potter_' . $single . '_options',
-      'default'  => '<h3 class="setting-header">' . esc_html__( 'Post Layout Setting', 'potter' ) .  '</h3>',
+      'default'  => '<h3 class="setting-header">' . esc_html__('Post Layout Setting', 'potter') .  '</h3>',
       'priority' => 0,
   ));
     // Width.
@@ -1627,7 +1768,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-105',
     'section'  => 'potter_page_options',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Layout Setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Layout Setting', 'potter') .  '</h3>',
     'priority' => 0,
 ));
 Kirki::add_field('potter', array(
@@ -1881,7 +2022,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-106',
     'section'  => 'potter_page_options',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Scroll to Top Setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Scroll to Top Setting', 'potter') .  '</h3>',
     'priority' => 13,
 ));
 Kirki::add_field('potter', array(
@@ -2320,7 +2461,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-1023',
     'section'  => 'typo_panel',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Page Font Setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Page Font Setting', 'potter') .  '</h3>',
     'priority' => 0,
 ));
 Kirki::add_field('potter', array(
@@ -2359,7 +2500,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-10234',
     'section'  => 'typo_panel',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Global Color Setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Global Color Setting', 'potter') .  '</h3>',
     'priority' => 2,
 ));
 Kirki::add_field('potter', array(
@@ -2426,7 +2567,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-102345',
     'section'  => 'typo_panel',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Title and Tagline', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Title and Tagline', 'potter') .  '</h3>',
     'priority' => 6,
 ));
 // Title font toggle.
@@ -2502,7 +2643,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-1023456',
     'section'  => 'typo_panel',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Menu Font setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Menu Font setting', 'potter') .  '</h3>',
     'priority' => 11,
 ));
 
@@ -2542,7 +2683,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-10234568',
     'section'  => 'typo_panel',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Heading Font setting', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Heading Font setting', 'potter') .  '</h3>',
     'priority' => 13,
 ));
 
@@ -2813,44 +2954,44 @@ Kirki::add_field('potter', array(
 
 Kirki::add_field('potter', array(
   'type'        => 'repeater',
-	'label'       => esc_html__( 'Repeater Control', 'potter' ),
-	'section'     => 'potter_pre_header_options',
-	'priority'    => 2,
-	'row_label' => [
-		'type'  => 'text',
-		'value' => esc_html__( 'Custom Icon', 'potter' ),
-	],
-	'button_label' => esc_html__('+ New Icon', 'potter' ),
-	'settings'     => 'potter_icon_repeater_topbar',
-	'default'      => [
-		[
-			'link_text' => esc_html__( 'pottericon-heart', 'potter' ),
-			'link_url'  => 'https://example-url.com/',
+    'label'       => esc_html__('Repeater Control', 'potter'),
+    'section'     => 'potter_pre_header_options',
+    'priority'    => 2,
+    'row_label' => [
+        'type'  => 'text',
+        'value' => esc_html__('Custom Icon', 'potter'),
+    ],
+    'button_label' => esc_html__('+ New Icon', 'potter'),
+    'settings'     => 'potter_icon_repeater_topbar',
+    'default'      => [
+        [
+            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_url'  => '#',
       'link_color'  => '#333333',
-		],
-	],
-	'fields' => [
-		'link_text' => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Icon Class', 'potter' ),
-			'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
-			'default'     => '',
-		],
-		'link_url'  => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Link URL', 'potter' ),
-			'description' => esc_html__( 'This will be the link URL', 'potter' ),
-			'default'     => '',
-		],
+        ],
+    ],
+    'fields' => [
+        'link_text' => [
+            'type'        => 'text',
+            'label'       => esc_html__('Icon Class', 'potter'),
+            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'default'     => '',
+        ],
+        'link_url'  => [
+            'type'        => 'text',
+            'label'       => esc_html__('Link URL', 'potter'),
+            'description' => esc_html__('This will be the link URL', 'potter'),
+            'default'     => '',
+        ],
     'link_color'  => [
-			'type'        => 'color',
-			'label'       => esc_html__( 'Icon Color', 'potter' ),
-			'default'     => '#333333',
+            'type'        => 'color',
+            'label'       => esc_html__('Icon Color', 'potter'),
+            'default'     => '#333333',
       'choices'         => array(
           'alpha' => true,
       ),
-		],
-	],
+        ],
+    ],
   'active_callback' => array(
       array(
           'setting'  => 'pre_header_layout',
@@ -2918,44 +3059,44 @@ Kirki::add_field('potter', array(
 
 Kirki::add_field('potter', array(
   'type'        => 'repeater',
-	'label'       => esc_html__( 'Repeater Control', 'potter' ),
-	'section'     => 'potter_pre_header_options',
-	'priority'    => 2,
-	'row_label' => [
-		'type'  => 'text',
-		'value' => esc_html__( 'Custom Icon', 'potter' ),
-	],
-	'button_label' => esc_html__('+ New Icon', 'potter' ),
-	'settings'     => 'potter_icon_repeater_topbar_col2',
-	'default'      => [
-		[
-			'link_text' => esc_html__( 'pottericon-heart', 'potter' ),
-			'link_url'  => 'https://example-url.com/',
+    'label'       => esc_html__('Repeater Control', 'potter'),
+    'section'     => 'potter_pre_header_options',
+    'priority'    => 2,
+    'row_label' => [
+        'type'  => 'text',
+        'value' => esc_html__('Custom Icon', 'potter'),
+    ],
+    'button_label' => esc_html__('+ New Icon', 'potter'),
+    'settings'     => 'potter_icon_repeater_topbar_col2',
+    'default'      => [
+        [
+            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_url'  => '#',
       'link_color'  => '#333333',
-		],
-	],
-	'fields' => [
-		'link_text' => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Icon Class', 'potter' ),
-			'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
-			'default'     => '',
-		],
-		'link_url'  => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Link URL', 'potter' ),
-			'description' => esc_html__( 'This will be the link URL', 'potter' ),
-			'default'     => '',
-		],
+        ],
+    ],
+    'fields' => [
+        'link_text' => [
+            'type'        => 'text',
+            'label'       => esc_html__('Icon Class', 'potter'),
+            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'default'     => '',
+        ],
+        'link_url'  => [
+            'type'        => 'text',
+            'label'       => esc_html__('Link URL', 'potter'),
+            'description' => esc_html__('This will be the link URL', 'potter'),
+            'default'     => '',
+        ],
     'link_color'  => [
-			'type'        => 'color',
-			'label'       => esc_html__( 'Icon Color', 'potter' ),
-			'default'     => '#333333',
+            'type'        => 'color',
+            'label'       => esc_html__('Icon Color', 'potter'),
+            'default'     => '#333333',
       'choices'         => array(
           'alpha' => true,
       ),
-		],
-	],
+        ],
+    ],
   'active_callback' => array(
       array(
           'setting'  => 'pre_header_layout',
@@ -3842,44 +3983,44 @@ Kirki::add_field('potter', array(
 
 Kirki::add_field('potter', array(
   'type'        => 'repeater',
-	'label'       => esc_html__( 'Menu Icon', 'potter' ),
-	'section'     => 'potter_menu_options',
-	'priority'    => 4,
-	'row_label' => [
-		'type'  => 'text',
-		'value' => esc_html__( 'Custom Icon', 'potter' ),
-	],
-	'button_label' => esc_html__('+ New Icon', 'potter' ),
-	'settings'     => 'potter_icon_nav_bar',
-	'default'      => [
-		[
-			'link_text' => esc_html__( 'pottericon-heart', 'potter' ),
-			'link_url'  => 'https://example-url.com/',
+    'label'       => esc_html__('Menu Icon', 'potter'),
+    'section'     => 'potter_menu_options',
+    'priority'    => 4,
+    'row_label' => [
+        'type'  => 'text',
+        'value' => esc_html__('Custom Icon', 'potter'),
+    ],
+    'button_label' => esc_html__('+ New Icon', 'potter'),
+    'settings'     => 'potter_icon_nav_bar',
+    'default'      => [
+        [
+            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_url'  => '#',
       'link_color'  => '#333333',
-		],
-	],
-	'fields' => [
-		'link_text' => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Icon Class', 'potter' ),
-			'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
-			'default'     => '',
-		],
-		'link_url'  => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Link URL', 'potter' ),
-			'description' => esc_html__( 'This will be the link URL', 'potter' ),
-			'default'     => '',
-		],
+        ],
+    ],
+    'fields' => [
+        'link_text' => [
+            'type'        => 'text',
+            'label'       => esc_html__('Icon Class', 'potter'),
+            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'default'     => '',
+        ],
+        'link_url'  => [
+            'type'        => 'text',
+            'label'       => esc_html__('Link URL', 'potter'),
+            'description' => esc_html__('This will be the link URL', 'potter'),
+            'default'     => '',
+        ],
     'link_color'  => [
-			'type'        => 'color',
-			'label'       => esc_html__( 'Icon Color', 'potter' ),
-			'default'     => '#333333',
+            'type'        => 'color',
+            'label'       => esc_html__('Icon Color', 'potter'),
+            'default'     => '#333333',
       'choices'         => array(
           'alpha' => true,
       ),
-		],
-	],
+        ],
+    ],
   'active_callback' => array(
       array(
           'setting'  => 'menu_icon_link',
@@ -4411,7 +4552,7 @@ Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-1023',
     'section'  => 'potter_transparent_header_options',
-    'default'  => '<h3 class="setting-header">' . esc_html__( 'Setting for nav HTML Button', 'potter' ) .  '</h3>',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Setting for nav HTML Button', 'potter') .  '</h3>',
     'priority' => 18,
     'active_callback' => array(
         array(
@@ -5360,44 +5501,44 @@ Kirki::add_field('potter', array(
 
 Kirki::add_field('potter', array(
   'type'        => 'repeater',
-	'label'       => esc_html__( 'Custom Icon Links', 'potter' ),
-	'section'     => 'potter_bottom_footer',
-	'priority'    => 18,
-	'row_label' => [
-		'type'  => 'text',
-		'value' => esc_html__( 'Custom Icon', 'potter' ),
-	],
-	'button_label' => esc_html__('+ New Icon', 'potter' ),
-	'settings'     => 'potter_icon_bottom_footer_col1',
-	'default'      => [
-		[
-			'link_text' => esc_html__( 'pottericon-heart', 'potter' ),
-			'link_url'  => 'https://example-url.com/',
+    'label'       => esc_html__('Custom Icon Links', 'potter'),
+    'section'     => 'potter_bottom_footer',
+    'priority'    => 18,
+    'row_label' => [
+        'type'  => 'text',
+        'value' => esc_html__('Custom Icon', 'potter'),
+    ],
+    'button_label' => esc_html__('+ New Icon', 'potter'),
+    'settings'     => 'potter_icon_bottom_footer_col1',
+    'default'      => [
+        [
+            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_url'  => '#',
       'link_color'  => '#333333',
-		],
-	],
-	'fields' => [
-		'link_text' => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Icon Class', 'potter' ),
-			'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
-			'default'     => '',
-		],
-		'link_url'  => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Link URL', 'potter' ),
-			'description' => esc_html__( 'This will be the link URL', 'potter' ),
-			'default'     => '',
-		],
+        ],
+    ],
+    'fields' => [
+        'link_text' => [
+            'type'        => 'text',
+            'label'       => esc_html__('Icon Class', 'potter'),
+            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'default'     => '',
+        ],
+        'link_url'  => [
+            'type'        => 'text',
+            'label'       => esc_html__('Link URL', 'potter'),
+            'description' => esc_html__('This will be the link URL', 'potter'),
+            'default'     => '',
+        ],
     'link_color'  => [
-			'type'        => 'color',
-			'label'       => esc_html__( 'Icon Color', 'potter' ),
-			'default'     => '#333333',
+            'type'        => 'color',
+            'label'       => esc_html__('Icon Color', 'potter'),
+            'default'     => '#333333',
       'choices'         => array(
           'alpha' => true,
       ),
-		],
-	],
+        ],
+    ],
   'active_callback' => array(
       array(
           'setting'  => 'footer_layout',
@@ -5495,44 +5636,44 @@ Kirki::add_field('potter', array(
 
 Kirki::add_field('potter', array(
   'type'        => 'repeater',
-	'label'       => esc_html__( 'Custom Icon Links', 'potter' ),
-	'section'     => 'potter_bottom_footer',
-	'priority'    => 20,
-	'row_label' => [
-		'type'  => 'text',
-		'value' => esc_html__( 'Custom Icon', 'potter' ),
-	],
-	'button_label' => esc_html__('+ New Icon', 'potter' ),
-	'settings'     => 'potter_icon_bottom_footer_col2',
-	'default'      => [
-		[
-			'link_text' => esc_html__( 'pottericon-heart', 'potter' ),
-			'link_url'  => 'https://example-url.com/',
+    'label'       => esc_html__('Custom Icon Links', 'potter'),
+    'section'     => 'potter_bottom_footer',
+    'priority'    => 20,
+    'row_label' => [
+        'type'  => 'text',
+        'value' => esc_html__('Custom Icon', 'potter'),
+    ],
+    'button_label' => esc_html__('+ New Icon', 'potter'),
+    'settings'     => 'potter_icon_bottom_footer_col2',
+    'default'      => [
+        [
+            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_url'  => '#',
       'link_color'  => '#333333',
-		],
-	],
-	'fields' => [
-		'link_text' => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Icon Class', 'potter' ),
-			'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
-			'default'     => '',
-		],
-		'link_url'  => [
-			'type'        => 'text',
-			'label'       => esc_html__( 'Link URL', 'potter' ),
-			'description' => esc_html__( 'This will be the link URL', 'potter' ),
-			'default'     => '',
-		],
+        ],
+    ],
+    'fields' => [
+        'link_text' => [
+            'type'        => 'text',
+            'label'       => esc_html__('Icon Class', 'potter'),
+            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'default'     => '',
+        ],
+        'link_url'  => [
+            'type'        => 'text',
+            'label'       => esc_html__('Link URL', 'potter'),
+            'description' => esc_html__('This will be the link URL', 'potter'),
+            'default'     => '',
+        ],
     'link_color'  => [
-			'type'        => 'color',
-			'label'       => esc_html__( 'Icon Color', 'potter' ),
-			'default'     => '#333333',
+            'type'        => 'color',
+            'label'       => esc_html__('Icon Color', 'potter'),
+            'default'     => '#333333',
       'choices'         => array(
           'alpha' => true,
       ),
-		],
-	],
+        ],
+    ],
   'active_callback' => array(
       array(
           'setting'  => 'footer_layout',

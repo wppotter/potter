@@ -707,6 +707,7 @@ if ($sidebar_width) {
 
 // Breadcrumbs.
 $breadcrumbs_alignment        = get_theme_mod('breadcrumbs_alignment', 'left');
+$page_title_alignment        = get_theme_mod('page_title_alignment', 'left');
 $breadcrumbs_background_color = get_theme_mod('breadcrumbs_background_color');
 $breadcrumbs_font_color       = get_theme_mod('breadcrumbs_font_color');
 $breadcrumbs_accent_color     = get_theme_mod('breadcrumbs_accent_color');
@@ -718,10 +719,15 @@ $transparent_header = get_theme_mod('transparent_header');
 
 $dtheader_single_post								= get_theme_mod('dtheader_single_post');
 
-
 if ('left' !== $breadcrumbs_alignment) {
-    echo '.title-bar-before-content, .default-title-bar-archive, .woocommerce-breadcrumb, .woocommerce-products-header {';
+    echo '.title-bar-after-header {';
     echo sprintf('text-align: %s;', esc_attr($breadcrumbs_alignment));
+    echo '}';
+}
+
+if ('left' !== $page_title_alignment) {
+    echo '.title-bar-before-content, .default-title-bar-archive, .woocommerce-breadcrumb, .woocommerce-products-header, .potter-page-content h1.entry-title {';
+    echo sprintf('text-align: %s;', esc_attr($page_title_alignment));
     echo '}';
 }
 echo '.title-bar-after-header {';
@@ -740,14 +746,8 @@ echo '}';
     echo '}';
 
     if ($page_title_font_size) {
-        echo '.title-bar-after-header h1 {';
+        echo '.potter-page-content h1.entry-title {';
         echo sprintf('font-size: %s;', esc_attr($page_title_font_size)  . 'px');
-        echo '}';
-        echo '.title-bar-before-content h1 {';
-        echo sprintf('font-size: %s;', esc_attr($page_title_font_size)  . 'px');
-        echo '}';
-        echo '.title-bar-after-header ul {';
-        echo sprintf('line-height: %s;', esc_attr($page_title_font_size)  . 'px');
         echo '}';
         echo '.default-title-bar-archive h1, .woocommerce-products-header h1 {';
         echo sprintf('font-size: %s;', esc_attr($page_title_font_size)  . 'px');
@@ -793,7 +793,7 @@ if ($blog_pagination_border_radius || $blog_pagination_font_size || $blog_pagina
 
     if ($blog_pagination_font_size) {
         $suffix = is_numeric($blog_pagination_font_size) ? 'px' : '';
-        echo sprintf('font-size: %s;', esc_attr($blog_pagination_font_size) . $suffix);
+        echo sprintf('font-size: %s;', esc_attr($blog_pagination_font_size) . esc_attr($suffix));
     }
 
     if ($blog_pagination_background_color) {
@@ -848,7 +848,7 @@ foreach ($archives as $archive) {
     if ('archive' === $custom_width && $archive) {
         echo '.blog #inner-content,';
         echo '.search #inner-content,';
-        echo '.' . $archive . ' #inner-content {';
+        echo '.' . esc_attr($archive) . ' #inner-content {';
         echo sprintf('max-width: %s;', esc_attr($custom_width));
         echo '}';
 
@@ -856,16 +856,16 @@ foreach ($archives as $archive) {
     } elseif ($custom_width && strpos($archive, '-')) {
         $cpt = substr($archive, 0, strpos($archive, '-'));
 
-        echo '.tax-' . $cpt . '_category #inner-content,';
-        echo '.tax-' . $cpt . '_tag #inner-content,';
-        echo '.post-type-archive-' . $cpt . ' #inner-content {';
+        echo '.tax-' . esc_attr($cpt) . '_category #inner-content,';
+        echo '.tax-' . esc_attr($cpt) . '_tag #inner-content,';
+        echo '.post-type-archive-' . esc_attr($cpt) . ' #inner-content {';
         echo sprintf('max-width: %s;', esc_attr($custom_width));
         echo '}';
 
     // Other archives.
     } elseif ($custom_width) {
         echo '.blog #inner-content,';
-        echo '.' . $archive . ' #inner-content {';
+        echo '.' . esc_attr($archive) . ' #inner-content {';
         echo sprintf('max-width: %s;', esc_attr($custom_width));
         echo '}';
     }
@@ -882,19 +882,19 @@ foreach ($archives as $archive) {
 
     // General layout settings.
     if ($content_alignment) {
-        echo '.potter-' . $archive . '-content .potter-post {';
+        echo '.potter-' . esc_attr($archive) . '-content .potter-post {';
         echo sprintf('text-align: %s;', esc_attr($content_alignment));
         echo '}';
     }
 
     if ($accent_color) {
-        echo '.potter-' . $archive . '-content .potter-post a:not(.potter-read-more) {';
+        echo '.potter-' . esc_attr($archive) . '-content .potter-post a:not(.potter-read-more) {';
         echo sprintf('color: %s;', esc_attr($accent_color));
         echo '}';
     }
 
     if ($accent_color_alt) {
-        echo '.potter-' . $archive . '-content .potter-post a:not(.potter-read-more):hover {';
+        echo '.potter-' . esc_attr($archive) . '-content .potter-post a:not(.potter-read-more):hover {';
         echo sprintf('color: %s;', esc_attr($accent_color_alt));
         echo '}';
     }
@@ -902,15 +902,15 @@ foreach ($archives as $archive) {
     if ($title_size) {
         $suffix = is_numeric($title_size) ? 'px' : '';
 
-        echo '.potter-' . $archive . '-content .potter-post .entry-title {';
-        echo sprintf('font-size: %s;', esc_attr($title_size) . $suffix);
+        echo '.potter-' . esc_attr($archive) . '-content .potter-post .entry-title {';
+        echo sprintf('font-size: %s;', esc_attr($title_size) . esc_attr($suffix));
         echo '}';
     }
 
     if ($font_size) {
         $suffix = is_numeric($font_size) ? 'px' : '';
 
-        echo '.potter-' . $archive . '-content .potter-post .entry-summary {';
+        echo '.potter-' . esc_attr($archive) . '-content .potter-post .entry-summary {';
         echo sprintf('font-size: %s;', esc_attr($font_size) . $suffix);
         echo '}';
     }

@@ -525,7 +525,6 @@ function potter_do_woocommerce_customizer_css() {
 
 	}
 	if ( 'left' === $woocommerce_single_layout ) {
-
 	}
 
 	if ( 'right' === $woocommerce_single_alignment ) {

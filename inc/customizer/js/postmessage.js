@@ -443,7 +443,6 @@
 	wp.customize( 'page_title_font_size', function( value ) {
 		value.bind( function( newval ) {
 			$('.title-bar-after-header h1').css('font-size', newval + 'px' );
-			$('.title-bar-after-header ul').css('line-height', newval + 'px' );
 			$('.title-bar-before-content h1').css('font-size', newval + 'px' );
 			$('.default-title-bar-archive h1, .woocommerce-products-header h1').css('font-size', newval + 'px' );
 		} );

@@ -238,14 +238,14 @@ function potter_nav_icon_link( $is_navigation = true, $is_mobile = false ) {
 	$defaults = [
 [
 	'link_text' => esc_html__( 'pottericon-heart', 'potter' ),
-	'link_url'  => 'https://example-url.com/',
+	'link_url'  => esc_url('#'),
 	'link_color' => '#333333',
 ],
 ];
 // Theme_mod settings to check.
 $settings = get_theme_mod( 'potter_icon_nav_bar', $defaults );
 	foreach( $settings as $setting ) :
-		$icon_item .= '<li class="menu-item potter-menu-item-icon"><a href="' . $setting['link_url'] . '" target="_blank">';
+		$icon_item .= '<li class="menu-item potter-menu-item-icon"><a href="' . esc_url($setting['link_url']) . '" target="_blank">';
 		$icon_item .= '<span class="' . $setting['link_text'] . '" style="color: '. $setting['link_color'] .'">';
 		$icon_item .= '</span></a></li>';
 	endforeach;

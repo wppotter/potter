@@ -18,7 +18,7 @@ get_header();
 	<?php do_action( 'potter_content_open' ); ?>
 
 	<?php potter_inner_content(); ?>
-
+	<?php do_action( 'potter_main_title_before' ); ?>
 		<?php do_action( 'potter_inner_content_open' ); ?>
 
 		<div class="potter-grid potter-main-grid potter-grid-<?php echo esc_attr( $grid_gap ); ?>">

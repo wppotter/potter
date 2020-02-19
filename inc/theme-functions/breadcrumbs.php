@@ -1296,3 +1296,26 @@ class POTTER_Breadcrumbs {
 		}
 	}
 }
+
+//title breadcrumb switcher
+function potter_breadcrumb_before_content()
+{
+    $title_bar_position	= get_theme_mod('title_bar_position', 'before-content');
+    if ('before-content' == $title_bar_position) {
+            echo '<div class="title-bar-before-content">';
+            do_action('potter_breadcrumbhead');
+            echo '</div>';
+    } else {
+    }
+}
+
+function potter_breadcrumb_after_header()
+{
+    $title_bar_position	= get_theme_mod('title_bar_position', 'before-content');
+    if ('after-header' == $title_bar_position) {
+            echo '<div class="title-bar-after-header"><div class="potter-container potter-container-center">';
+            do_action('potter_breadcrumbhead');
+            echo '</div></div>';
+    } else {
+    }
+}

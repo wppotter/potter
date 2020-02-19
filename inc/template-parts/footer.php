@@ -93,3 +93,266 @@ $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
 	<?php do_action('potter_footer_close'); ?>
 
 </footer>
+
+
+<?php
+// footer widget
+function potter_footer_four_column()
+{
+    ?>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-1')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-2')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-3')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-4')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+  <?php
+}
+
+function potter_footer_three_column()
+{
+    ?>
+    <div class="potter-1-3 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-1')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-3 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-2')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-3 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-3')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+  <?php
+}
+
+function potter_footer_two_column()
+{
+    ?>
+    <div class="potter-1-2 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-1')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-2 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-2')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+  <?php
+}
+
+function potter_footer_one_column()
+{
+    ?>
+    <div class="potter-1-1 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-1')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+  <?php
+}
+
+
+function potter_footer_three_column_right()
+{
+    ?>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-1')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-2')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-2 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-3')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+  <?php
+}
+
+function potter_footer_three_column_left()
+{
+    ?>
+    <div class="potter-1-2 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-1')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-2')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-3')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+  <?php
+}
+
+function potter_footer_three_column_middle()
+{
+    ?>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-1')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-2 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-2')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+    <div class="potter-1-4 potter-padding-medium">
+      <?php if (! dynamic_sidebar('sidebar-footer-3')) { ?>
+        <?php if (current_user_can('edit_theme_options')) { ?>
+          <div class="widget no-widgets">
+            <?php _e('Your Footer Widgets will appear here.', 'potter'); ?><br>
+            <a href='<?php echo esc_url(admin_url('widgets.php')); ?>'><?php _e('Add Widgets', 'potter'); ?></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
+    </div>
+  <?php
+}
+
+//footer widget layout_panel
+function potter_footer_widget_column_layout()
+{
+    $active_footer_widget = get_theme_mod('active_footer_widget');
+    $top_footer_widget_layout = get_theme_mod('top_footer_widget_layout', 'three-column');
+    if ($active_footer_widget) {
+        echo '<div class="footer-widget-area"><div class="potter-inner-footer potter-container potter-container-center">
+  	  <div class="potter-grid footer-widget-container">';
+        if ('four-column' === $top_footer_widget_layout) {
+            potter_footer_four_column();
+        } elseif ('three-column'  === $top_footer_widget_layout) {
+            potter_footer_three_column();
+        } elseif ('two-column'  === $top_footer_widget_layout) {
+            potter_footer_two_column();
+        } elseif ('one-column'  === $top_footer_widget_layout) {
+            potter_footer_one_column();
+        } elseif ('three-column-right'  === $top_footer_widget_layout) {
+            potter_footer_three_column_right();
+        } elseif ('three-column-left'  === $top_footer_widget_layout) {
+            potter_footer_three_column_left();
+        } elseif ('three-column-middle'  === $top_footer_widget_layout) {
+            potter_footer_three_column_middle();
+        }
+        echo '</div></div></div>';
+    }
+}

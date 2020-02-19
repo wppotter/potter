@@ -61,6 +61,12 @@ function potter_options_metabox_callback( $post ) {
 		$remove_title = false;
 	}
 
+	if ( strpos( $mydata[0], 'remove-breadcrumb' ) !== false ) {
+		$remove_breadcrumb = 'remove-breadcrumb';
+	} else {
+		$remove_breadcrumb = false;
+	}
+
 	if ( strpos( $mydata[0], 'full-width' ) !== false ) {
 		$full_width = 'full-width';
 	} elseif ( strpos( $mydata[0], 'contained' ) !== false ) {
@@ -117,6 +123,11 @@ function potter_options_metabox_callback( $post ) {
 	<div>
 		<input id="remove-title" type="checkbox" name="potter_options[]" value="remove-title" <?php checked( $remove_title, 'remove-title' ); ?> />
 		<label for="remove-title"><?php _e( 'Page Title', 'potter' ); ?></label>
+	</div>
+
+	<div>
+		<input id="remove-breadcrumb" type="checkbox" name="potter_options[]" value="remove-breadcrumb" <?php checked( $remove_breadcrumb, 'remove-breadcrumb' ); ?> />
+		<label for="remove-breadcrumb"><?php _e( 'Breadcrumb', 'potter' ); ?></label>
 	</div>
 
 	<div>
@@ -212,6 +223,9 @@ function potter_save_metadata( $post_id ) {
 
 		if ( in_array( 'remove-title', $_POST['potter_options'] ) !== false ) {
 			$checked[] .= 'remove-title';
+		}
+		if ( in_array( 'remove-breadcrumb', $_POST['potter_options'] ) !== false ) {
+			$checked[] .= 'remove-breadcrumb';
 		}
 
 		if ( in_array( 'full-width', $_POST['potter_options'] ) !== false ) {

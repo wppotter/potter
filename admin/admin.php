@@ -79,11 +79,11 @@ class Potter_Admin
         </svg>
 
         <p class="theme-content">
-        Potter is a super fast, gutenberg ready fully customizable & beautiful theme suitable for blog, personal portfolio, business website and WooCommerce storefront.
+        ' . sprintf(__('Potter is a super fast, gutenberg ready fully customizable & beautiful theme suitable for blog, personal portfolio, business website and WooCommerce storefront.', 'potter')) . '
         </p>
           </div>
           <div class="potter-admin-sidebar-cta">
-            ' . sprintf(__('<a href="%s" target="_blank"><span class="dashicons dashicons-admin-site-alt3"></span> Home Page</a>', 'potter'), 'https://pottertheme.com/') . '
+            <a href="https://pottertheme.com/" target="_blank"><span class="dashicons dashicons-admin-site-alt3"></span>   ' . sprintf(__('Home Page', 'potter')) . ' </a>
           </div></div>
       </div>
 				<div class="potter-core-content-inner">
@@ -93,11 +93,16 @@ class Potter_Admin
 								<div class="potter-core-admin-block-header-icon">
 									<span class="dashicons dashicons-admin-settings"></span>
 								</div>
-								<h4 class="potter-core-admin-title">Customize Potter</h4>
+								<h4 class="potter-core-admin-title">
+                ' . sprintf(__('Customize Potter', 'potter')) . '
+                </h4>
 							</header>
 							<div class="potter-core-admin-block-content">
-								<p>Potter got lots of customization options to achieve almost anything you want. Take a minute to explore the power of Potter.</p>
-								<a href="' . esc_url(admin_url('customize.php')) . '" class="customize-potter button button-primary" target="_blank">Customize Potter</a>
+								<p>
+                ' . sprintf(__('Potter got lots of customization options to achieve almost anything you want. Take a minute to explore the power of Potter.', 'potter')) . '</p>
+								<a href="' . esc_url(admin_url('customize.php')) . '" class="customize-potter button button-primary" target="_blank">
+                ' . sprintf(__('Customize Potter', 'potter')) . '
+                </a>
 							</div>
 						</div>
 						<div class="potter-core-admin-block potter-core-admin-block-docs">
@@ -105,11 +110,15 @@ class Potter_Admin
 								<div class="potter-core-admin-block-header-icon">
 								<span class="dashicons dashicons-media-text"></span>
 								</div>
-								<h4 class="potter-core-admin-title">Documentation</h4>
+								<h4 class="potter-core-admin-title">
+                ' . sprintf(__('Documentation', 'potter')) . '
+                </h4>
 							</header>
 							<div class="potter-core-admin-block-content">
-								<p>Get started by spending some time with the documentation to get familiar with Potter. Build awesome websites for you or your clients with ease.</a></p>
-								<a href="https://pottertheme.com/docs-2/" class="potter-docs-btn button button-primary" target="_blank">Documentation</a>
+								<p>
+                ' . sprintf(__('Get started by spending some time with the documentation to get familiar with Potter. Build awesome websites for you or your clients with ease.', 'potter')) . '
+                </a></p>
+								<a href="https://pottertheme.com/docs-2/" class="potter-docs-btn button button-primary" target="_blank">' . sprintf(__('Documentation', 'potter')) . '</a>
 							</div>
 						</div>
 						<div class="potter-core-admin-block potter-core-admin-block-contribution">
@@ -117,11 +126,15 @@ class Potter_Admin
 								<div class="potter-core-admin-block-header-icon">
 									<span class="dashicons dashicons-awards"></span>
 								</div>
-								<h4 class="potter-core-admin-title">Contribute to Potter</h4>
+								<h4 class="potter-core-admin-title">
+                ' . sprintf(__('Contribute to Potter', 'potter')) . '
+                </h4>
 							</header>
 							<div class="potter-core-admin-block-content">
-								<p>Potter is a free theme and always will be. You can contribute to make it better reporting bugs, creating issues, pull requests at <a href="https://github.com/wppotter/potter" target="_blank">Github.</a></p>
-								<a href="https://github.com/wppotter/potter/issues/new" class="potter-report-bug button button-primary" target="_blank">Report a bug</a>
+								<p>
+                ' . sprintf(__('Potter is a free theme and always will be. You can contribute to make it better reporting bugs, creating issues, pull requests at ', 'potter')) . '
+                <a href="https://github.com/wppotter/potter" target="_blank">' . sprintf(__('Github.', 'potter')) . '</a></p>
+								<a href="https://github.com/wppotter/potter/issues/new" class="potter-report-bug button button-primary" target="_blank">' . sprintf(__('Report a bug', 'potter')) . '</a>
 							</div>
 						</div>
 						<div class="potter-core-admin-block potter-core-admin-block-support">
@@ -129,11 +142,15 @@ class Potter_Admin
 								<div class="potter-core-admin-block-header-icon">
 									<span class="dashicons dashicons-format-chat"></span>
 								</div>
-								<h4 class="potter-core-admin-title">Need Help?</h4>
+								<h4 class="potter-core-admin-title">
+                ' . sprintf(__('Need Help?', 'potter')) . '
+                </h4>
 							</header>
 							<div class="potter-core-admin-block-content">
-								<p>Stuck with something? Get help from the community on <a href="https://wordpress.org/support/theme/potter" target="_blank">WordPress Support Forum.</a> In case of emergency, contact us at <a href="https://pottertheme.com/contact" target="_blank">Potter Website</a></p>
-								<a href="https://wordpress.org/support/theme/potter" class="potter-support-btn button button-primary" target="_blank">Get Community Support</a>
+								<p>
+                ' . sprintf(__('Stuck with something? Get help from the community on ', 'potter')) . '
+                <a href="https://wordpress.org/support/theme/potter" target="_blank">' . sprintf(__('WordPress Support Forum.</a> In case of emergency, contact us at ', 'potter')) . '<a href="https://pottertheme.com/contact" target="_blank">' . sprintf(__('Potter Website', 'potter')) . '</a></p>
+								<a href="https://wordpress.org/support/theme/potter" class="potter-support-btn button button-primary" target="_blank">' . sprintf(__('Get Community Support', 'potter')) . '</a>
 							</div>
 						</div>
 						<div class="potter-core-admin-block potter-core-admin-block-review">
@@ -141,12 +158,17 @@ class Potter_Admin
 								<div class="potter-core-admin-block-header-icon">
 									<span class="dashicons dashicons-heart"></span>
 								</div>
-								<h4 class="potter-core-admin-title">Show your Love</h4>
+								<h4 class="potter-core-admin-title">
+                ' . sprintf(__('Show your Love', 'potter')) . '
+                </h4>
 							</header>
 							<div class="potter-core-admin-block-content">
-								<p>We love to have you in Potter family. We are making it more awesome everyday. Take your 2 minutes to review the theme and spread the love to encourage us to keep it going.</p>
-
-								<a href="https://wordpress.org/support/theme/potter/reviews/#new-post" class="review-potter button button-primary" target="_blank">Leave a Review</a>
+								<p>
+                ' . sprintf(__('We love to have you in Potter family. We are making it more awesome everyday. Take your 2 minutes to review the theme and spread the love to encourage us to keep it going.', 'potter')) . '
+                </p>
+								<a href="https://wordpress.org/support/theme/potter/reviews/#new-post" class="review-potter button button-primary" target="_blank">
+                ' . sprintf(__('Leave a Review', 'potter')) . '
+                </a>
 							</div>
 						</div>
 					</div>';
