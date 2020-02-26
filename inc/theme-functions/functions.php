@@ -433,7 +433,7 @@ function potter_icon_link()
 {
     $defaults = [
 [
-  'link_text' => esc_html__('pottericon-heart', 'potter'),
+  'link_text' => esc_html__('pottericon-twitter', 'potter'),
   'link_url'  => esc_url('#'),
   'link_color' => '#333333',
 ],
@@ -451,7 +451,7 @@ function potter_icon_link_coltwo()
 {
     $defaults = [
 [
-  'link_text' => esc_html__('pottericon-heart', 'potter'),
+  'link_text' => esc_html__('pottericon-twitter', 'potter'),
   'link_url'  => esc_url('#'),
   'link_color' => '#333333',
 ],
@@ -469,7 +469,7 @@ function potter_icon_fotter_bottom_colone()
 {
     $defaults = [
 [
-  'link_text' => esc_html__('pottericon-heart', 'potter'),
+  'link_text' => esc_html__('pottericon-twitter', 'potter'),
   'link_url'  => esc_url('#'),
   'link_color' => '#333333',
 ],
@@ -487,7 +487,7 @@ function potter_icon_fotter_bottom_coltwo()
 {
     $defaults = [
 [
-  'link_text' => esc_html__('pottericon-heart', 'potter'),
+  'link_text' => esc_html__('pottericon-twitter', 'potter'),
   'link_url'  => esc_url('#'),
   'link_color' => '#333333',
 ],

@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page Sidebar Option
+ * Template Name: Sidebar Page
  *
  * @package Potter
  */

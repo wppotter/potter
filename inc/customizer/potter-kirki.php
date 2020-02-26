@@ -2965,7 +2965,7 @@ Kirki::add_field('potter', array(
     'settings'     => 'potter_icon_repeater_topbar',
     'default'      => [
         [
-            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_text' => esc_html__('pottericon-twitter', 'potter'),
             'link_url'  => '#',
       'link_color'  => '#333333',
         ],
@@ -3070,7 +3070,7 @@ Kirki::add_field('potter', array(
     'settings'     => 'potter_icon_repeater_topbar_col2',
     'default'      => [
         [
-            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_text' => esc_html__('pottericon-twitter', 'potter'),
             'link_url'  => '#',
       'link_color'  => '#333333',
         ],
@@ -3994,7 +3994,7 @@ Kirki::add_field('potter', array(
     'settings'     => 'potter_icon_nav_bar',
     'default'      => [
         [
-            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_text' => esc_html__('pottericon-twitter', 'potter'),
             'link_url'  => '#',
       'link_color'  => '#333333',
         ],
@@ -5512,7 +5512,7 @@ Kirki::add_field('potter', array(
     'settings'     => 'potter_icon_bottom_footer_col1',
     'default'      => [
         [
-            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_text' => esc_html__('pottericon-twitter', 'potter'),
             'link_url'  => '#',
       'link_color'  => '#333333',
         ],
@@ -5647,7 +5647,7 @@ Kirki::add_field('potter', array(
     'settings'     => 'potter_icon_bottom_footer_col2',
     'default'      => [
         [
-            'link_text' => esc_html__('pottericon-heart', 'potter'),
+            'link_text' => esc_html__('pottericon-twitter', 'potter'),
             'link_url'  => '#',
       'link_color'  => '#333333',
         ],

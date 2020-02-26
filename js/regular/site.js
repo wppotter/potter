@@ -1,5 +1,5 @@
 ! function(a) {
-  function d() {
+  function b() {
     a(".potter-menu-item-search").hasClass("active") && (a(".potter-menu-search").stop().animate({
       opacity: "0",
       width: "0px"
@@ -12,7 +12,7 @@
     }, 400))
   }
 
-  function e() {
+  function c() {
     a("body").hasClass("using-mouse") || a("#navigation > ul").hasClass("potter-sub-menu") && (a(".menu-item-has-children").removeClass("potter-sub-menu-focus"), a(this).parents(".menu-item-has-children").addClass("potter-sub-menu-focus"))
   }
   if (a(".menu-item-has-children").each(function() {
@@ -45,30 +45,30 @@
     }, 200), a("input[type=search]", this).val("").focus())
   });
   a(window).click(function() {
-    d()
+    b()
   });
   a(document).keyup(function(a) {
-    27 === a.keyCode && d()
+    27 === a.keyCode && b()
   });
   a(".wpcf7-form-control-wrap").hover(function() {
     a(".wpcf7-not-valid-tip", this).fadeOut()
   });
-  var c = a(".potter-navigation").data("sub-menu-animation-duration");
+  var d = a(".potter-navigation").data("sub-menu-animation-duration");
   a(".potter-sub-menu-animation-fade > .menu-item-has-children").hover(function() {
-    a(".sub-menu", this).first().stop().fadeIn(c)
+    a(".sub-menu", this).first().stop().fadeIn(d)
   }, function() {
-    a(".sub-menu", this).first().stop().fadeOut(c)
+    a(".sub-menu", this).first().stop().fadeOut(d)
   });
   a(".potter-sub-menu > .menu-item-has-children:not(.potter-mega-menu) .menu-item-has-children").hover(function() {
     a(".sub-menu", this).first().stop().css({
       display: "block"
     }).animate({
       opacity: "1"
-    }, c)
+    }, d)
   }, function() {
     a(".sub-menu", this).first().stop().animate({
       opacity: "0"
-    }, c, function() {
+    }, d, function() {
       a(this).css({
         display: "none"
       })
@@ -93,10 +93,10 @@
         "margin-bottom": f
       })
     }), a(".potter-menu-centered").length) {
-    var b = a(".potter-navigation .potter-menu > li > a").length / 2,
-      b = (b = Math.floor(b)) - 1;
+    var e = a(".potter-navigation .potter-menu > li > a").length / 2,
+      e = (e = Math.floor(e)) - 1;
     a(".potter-menu-centered .logo-container").insertAfter(".potter-navigation .potter-menu >li:eq(" +
-      b + ")").css({
+      e + ")").css({
       display: "block"
     })
   }
@@ -107,16 +107,27 @@
   a("body").keydown(function() {
     a(this).removeClass("using-mouse")
   });
-  a(".potter-menu-container #navigation a").on("focus", e);
-  a(".potter-menu-container #navigation a").on("blur", e)
+  a(".potter-menu-container #navigation a").on("focus", c);
+  a(".potter-menu-container #navigation a").on("blur", c)
 }(jQuery);
-window.onscroll = function() {
-  stickyNav()
-};
-var navbar = document.getElementById("main-navbar"),
-  contentx = document.getElementById("content"),
-  sticky = contentx.offsetTop;
-
-function stickyNav() {
-  150 <= window.pageYOffset ? (jQuery("#main-navbar").addClass("stickynav"), jQuery(".site-logo").addClass("hide-on-sticky")) : (jQuery("#main-navbar").removeClass("stickynav"), jQuery(".site-logo").removeClass("hide-on-sticky"))
-};
+jQuery(document).ready(function() {
+  var a = jQuery("#main-navbar");
+  if (a.length) var b = a.offset().top;
+  var c = function() {
+    jQuery(window).scrollTop() > b ? (jQuery("#main-navbar").addClass("stickynav"), jQuery(".site-logo").addClass("hide-on-sticky")) : (jQuery("#main-navbar").removeClass("stickynav"), jQuery(".site-logo").removeClass("hide-on-sticky"))
+  };
+  c();
+  jQuery(window).scroll(function() {
+    c()
+  })
+});
+jQuery("#potter-menu-toggle").click(function() {
+  jQuery(".potter-menu-off-canvas").toggleClass("canvas-visible");
+  jQuery(this).toggleClass("canvas-close-nav");
+  jQuery(".potter-menu-overlay").toggleClass("menu-overlay-visible")
+});
+jQuery(".potter-menu-off-canvas .potter-close").click(function() {
+  jQuery(".potter-menu-off-canvas").toggleClass("canvas-visible");
+  jQuery("#potter-menu-toggle").toggleClass("canvas-close-nav");
+  jQuery(".potter-menu-overlay").toggleClass("menu-overlay-visible")
+});

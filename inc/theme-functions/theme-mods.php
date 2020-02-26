@@ -237,7 +237,7 @@ function potter_nav_icon_link( $is_navigation = true, $is_mobile = false ) {
 
 	$defaults = [
 [
-	'link_text' => esc_html__( 'pottericon-heart', 'potter' ),
+	'link_text' => esc_html__( 'pottericon-twitter', 'potter' ),
 	'link_url'  => esc_url('#'),
 	'link_color' => '#333333',
 ],

@@ -63,15 +63,15 @@
 .potter-core-admin-wrapper .potter-core-content {
     width: 100%;
     display: flex;
-    max-width: 800px;
+    max-width: 900px;
     flex-flow: row wrap;
-    align-content: center;
     margin: auto;
+    align-content: center;
 }
 .potter-core-admin-wrapper .potter-core-content-inner {
-    max-width: 70em;
+    max-width: 100em;
     height: auto;
-    flex: 1 1 70%;
+    flex: 1 1 100%;
 }
 .potter-core-admin-wrapper .potter-core-sidebar {
     flex: 1 1 200px;
@@ -284,17 +284,17 @@
 }
 .potter-admin-sidebar-cta a {
     font-size: 1em;
-    color: #000;
+    color: #fff;
     text-decoration: none;
+    background: #FF6B6B;
     text-transform: uppercase;
     letter-spacing: 0.065em;
     text-align: center;
     margin: 20px 0px;
     display: block;
-    border: 1px solid #000;
     border-radius: 4px;
-    padding: 15px;
-    width: 200px;
+    padding: 15px 25px;
+    max-width: 200px;
     outline: none;
     box-shadow: none;
     transition: all 0.3s;

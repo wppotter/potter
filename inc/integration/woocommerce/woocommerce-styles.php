@@ -28,7 +28,7 @@ function potter_do_woocommerce_customizer_css() {
 
 		echo 'p.demo_store, .woocommerce-store-notice {';
 		echo sprintf( 'background: %s;', esc_attr( $woocommerce_store_notice_color ) );
-			echo $shop_title_bar_background_color;
+			echo esc_attr($shop_title_bar_background_color);
 		echo '}';
 
 	} elseif ( $page_accent_color ) {
