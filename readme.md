@@ -2,7 +2,6 @@
 Potter – The only theme you'll ever need
 -------------------------------------------------------
 * Website: https://pottertheme.com/
-<<<<<<< HEAD
 * Documentation: https://pottertheme.com/docs-2/
 * Contributors: wppotter
 * Email: support@pottertheme.com
@@ -22,7 +21,7 @@ License URI: https://www.gnu.org/licenses/gpl-3.0.html
 * Tested up to: 5.3
 * License: GPLv3 or later
 * License URI: https://www.gnu.org/licenses/gpl-3.0.html
->>>>>>> cd0c9922c4872f82f990473b6c4f5e5665979c1c
+
 -------------------------------------------------------
 Features:
 -------------------------------------------------------

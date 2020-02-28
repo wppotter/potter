@@ -202,14 +202,13 @@ function potter_inner_content_close()
 
 /**
 * Title for the Site
-
 */
-
 function potter_title()
 {
     $options = get_post_meta(get_the_ID(), 'potter_options', true);
     $removetitle = $options ? in_array('remove-title', $options) : false;
     $title = $removetitle ? false : '<h1 class="entry-title" itemprop="headline">' . get_the_title() . '</h1>';
+    //title
     if ($title) {
         do_action('potter_before_page_title');
         echo $title;
