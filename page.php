@@ -19,7 +19,7 @@ get_header();
 
 		<?php do_action( 'potter_inner_content_open' ); ?>
 
-		<main id="main" class="potter-main<?php echo potter_singular_class(); ?>">
+		<main id="main" class="potter-main<?php echo esc_attr(potter_singular_class()); ?>">
 
 			<?php do_action( 'potter_main_content_open' ); ?>
 			<?php do_action( 'potter_main_title_before' ); ?>

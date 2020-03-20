@@ -16,13 +16,15 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
  */
 function potter_excerpt_length( $excerpt_length ) {
 
+	if( is_admin() ) return $excerpt_length;
+
 	$potter_excerpt_length = get_theme_mod( 'excerpt_lenght' );
 
 	if ( ! $potter_excerpt_length || 0 == $potter_excerpt_length ) {
 		return $excerpt_length;
 	}
 
-	$excerpt_length = $potter_excerpt_length;
+	$excerpt_length = absint($potter_excerpt_length);
 
 	return $excerpt_length;
 
@@ -41,7 +43,7 @@ function potter_custom_404_title( $title ) {
 	$custom_title = get_theme_mod( '404_headline' );
 
 	if ( $custom_title ) {
-		$title = $custom_title;
+		$title = esc_html($custom_title);
 	}
 
 	return $title;
@@ -62,7 +64,7 @@ function potter_custom_404_text( $text ) {
 	$custom_text = get_theme_mod( '404_text' );
 
 	if ( $custom_text ) {
-		$text = $custom_text;
+		$text = esc_html($custom_text);
 	}
 
 	return $text;
@@ -177,12 +179,12 @@ add_action( 'potter_before_mobile_toggle', 'potter_search_menu_icon_mobile', 20 
  * @return string The search menu item.
  */
 function potter_html_button_item( $is_navigation = true, $is_mobile = false ) {
-	$menu_html_button_content = get_theme_mod( 'menu_html_button_content', __( '<a href="#">Contact Us</a>', 'potter' ) );
+	$menu_html_button_content = get_theme_mod( esc_attr( 'menu_html_button_content', __('<a href="#">Contact Us</a>', 'potter'  )));
 	$class = $is_mobile ? 'potter-mobile-nav-item' : 'potter-nav-item';
 
 
 	// We have a slightly different markup for the search menu item if it's being displayed outside the main menu.
-	$button_item .= '<li class="menu-item potter-menu-item-button">';
+	$button_item = '<li class="menu-item potter-menu-item-button">';
 	$button_item .=  $menu_html_button_content;
 	$button_item .= '</li>';
 
@@ -216,11 +218,6 @@ function potter_nav_html_button( $items, $args ) {
 add_filter( 'wp_nav_menu_items', 'potter_nav_html_button', 20, 2 );
 
 
-
-
-
-
-
 /**
  * Construct custom icon.
  *
@@ -244,9 +241,10 @@ function potter_nav_icon_link( $is_navigation = true, $is_mobile = false ) {
 ];
 // Theme_mod settings to check.
 $settings = get_theme_mod( 'potter_icon_nav_bar', $defaults );
+$icon_item = '';
 	foreach( $settings as $setting ) :
 		$icon_item .= '<li class="menu-item potter-menu-item-icon"><a href="' . esc_url($setting['link_url']) . '" target="_blank">';
-		$icon_item .= '<span class="' . $setting['link_text'] . '" style="color: '. $setting['link_color'] .'">';
+		$icon_item .= '<span class="' . esc_attr($setting['link_text']) . '" style="color: '. esc_attr($setting['link_color']) .'">';
 		$icon_item .= '</span></a></li>';
 	endforeach;
 	return $icon_item;
@@ -348,7 +346,7 @@ function potter_categories_title( $title ) {
 
 	$cat_title = get_theme_mod( 'blog_categories_title' );
 
-	if ( $cat_title && 'Filed under:' !== $cat_title ) {
+	if ( $cat_title && __( 'Filed under:', 'potter' ) !== $cat_title ) {
 
 		$title = $cat_title;
 
@@ -370,7 +368,7 @@ function potter_read_more_text( $text ) {
 
 	$read_more_text = get_theme_mod( 'blog_read_more_text' );
 
-	if ( $read_more_text && 'Read more' !== $read_more_text ) {
+	if ( $read_more_text && __('Read more', 'potter') !== $read_more_text ) {
 
 		$text = $read_more_text;
 
@@ -396,7 +394,7 @@ function potter_article_meta_separator( $separator ) {
 		$separator = ' ' . $blog_meta_separator . ' ';
 	}
 
-	return $separator;
+	return esc_html($separator);
 
 }
 add_filter( 'potter_article_meta_separator', 'potter_article_meta_separator' );

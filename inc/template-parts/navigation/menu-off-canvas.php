@@ -21,7 +21,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 		<div class="potter-3-4 potter-menu-container">
 			<div class="potter-menu-toggle-container">
 				<?php do_action( 'potter_before_menu_toggle' ); ?>
-				<button id="potter-menu-toggle" class="potter-nav-item potter-menu-toggle potterf potterf-hamburger" aria-label="<?php _e( 'Site Navigation', 'potter' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
+				<button id="potter-menu-toggle" class="potter-nav-item potter-menu-toggle potterf potterf-hamburger" aria-label="<?php esc_attr_e( 'Site Navigation', 'potter' ); ?>" aria-controls="navigation" aria-expanded="false" aria-haspopup="true">
 					<span class="screen-reader-text"><?php _e( 'Menu Toggle', 'potter' ); ?></span>
 				</button>
 				<?php do_action( 'potter_after_menu_toggle' ); ?>

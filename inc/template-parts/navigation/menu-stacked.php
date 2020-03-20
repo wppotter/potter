@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 	<?php do_action( 'potter_before_main_menu' ); ?>
 
-	<nav id="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="<?php _e( 'Site Navigation', 'potter' ); ?>">
+	<nav id="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-label="<?php esc_attr_e( 'Site Navigation', 'potter' ); ?>">
 
 		<?php do_action( 'potter_main_menu_open' ); ?>
 

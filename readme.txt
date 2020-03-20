@@ -56,16 +56,68 @@ kirki
 kirki is licensed under the MIT License (MIT)
 created by Aristeides Stathopoulos – https://aristath.github.io/
 
+
+-------------------------------------------------------
+breadcrumb.php
+-------------------------------------------------------
+General Public License as published by the Free Software Foundation; either version 2 of the License,
+Copyright (c) 2008 - 2017, Justin Tadlock – https://themehybrid.com/plugins/breadcrumb-trail
+http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+-------------------------------------------------------
+pottericon font
+-------------------------------------------------------
+Pottericon font created with IcoMoon
+package under one of these two licenses: CC BY 4.0 or GPL.
+http://creativecommons.org/licenses/by/4.0/
+http://www.gnu.org/licenses/gpl.html
+
+The icons are collection of Free Icon set of IconMoon
+https://github.com/Keyamoon/IcoMoon-Free
+License : https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt
+
+-------------------------------------------------------
+potter font
+-------------------------------------------------------
+Potter font created with IcoMoon
+package under one of these two licenses: CC BY 4.0 or GPL.
+http://creativecommons.org/licenses/by/4.0/
+http://www.gnu.org/licenses/gpl.html
+The icons are collection of Free Icon set of IconMoon
+https://github.com/Keyamoon/IcoMoon-Free
+License : https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt
+
+-------------------------------------------------------
+Font Folder
+-------------------------------------------------------
+created with IcoMoon
+package under one of these two licenses: CC BY 4.0 or GPL.
+http://creativecommons.org/licenses/by/4.0/
+http://www.gnu.org/licenses/gpl.html
+The icons are collection of Free Icon set of IconMoon
+https://github.com/Keyamoon/IcoMoon-Free
+
+License : https://github.com/Keyamoon/IcoMoon-Free/blob/master/License.txt
+
 -------------------------------------------------------
 normalize.css
 -------------------------------------------------------
 normalize.css is licensed under the MIT License (MIT)
 created by Nicolas Gallagher and Jonathan Neal – https://github.com/necolas/normalize.css
 
+== image Folder ==
+* Icon
+* Card Images
+are licensed under CC0 1.0 Universal - https://creativecommons.org/publicdomain/zero/1.0/
+The Card images and the icons are taken from Easy Digital Downloads and WooCommerce.
+
+WooCommerce is licensed under the GNU General Public License v3 or later – https://www.gnu.org/licenses/gpl-3.0.html
+
+Easy Digital Downloads is licensed under the GNU General Public License v3 or later – https://www.gnu.org/licenses/gpl-3.0.html
+
 == Screenshots ==
-* Image (used in screenshots)
 Screenshot image is licensed under CC0 1.0 Universal - https://creativecommons.org/publicdomain/zero/1.0/
-Illustrations: Self Created
+Illustrations and icons: Self Created
 
 == Frequently Asked Questions ==
 
@@ -77,6 +129,7 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
-= 1.83 - Feb 11 2020 =
+= 1.88 - March 11 2020 =
 * Echo issue fixed
 * Text translation issue fixed
+* escaped function issue fixed

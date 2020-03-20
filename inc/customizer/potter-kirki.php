@@ -806,7 +806,6 @@ Kirki::add_field('potter', array(
     'section'         => 'potter_breadcrumb_settings',
     'priority'        => 9,
     'default'         => '32',
-    'transport' => 'postMessage',
     'choices'         => array(
         'min'  => '1',
         'max'  => '300',

@@ -55,7 +55,6 @@ $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
                 echo '<div class="icon-links left-column">';
                 potter_icon_fotter_bottom_colone();
                 echo '</div>';
-                echo do_shortcode($pre_header_column_two);
             }
             ?>
 		</div>

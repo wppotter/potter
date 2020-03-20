@@ -25,7 +25,7 @@ get_header();
 
 			<?php do_action( 'potter_sidebar_left' ); ?>
 
-			<main id="main" class="potter-main potter-medium-2-3<?php echo potter_singular_class(); ?>">
+			<main id="main" class="potter-main potter-medium-2-3<?php echo esc_attr(potter_singular_class()); ?>">
 				<?php do_action( 'potter_main_content_open' ); ?>
 				<?php do_action( 'potter_main_title_before' ); ?>
 				<?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>

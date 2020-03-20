@@ -33,7 +33,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 			?>
 
-			<span class="customize-control-title"><?php echo esc_attr( $this->label ); ?></span>
+			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 
 			<ul class="potter-responsive-options">
 				<li class="desktop">
@@ -97,7 +97,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 			?>
 
-			<span class="customize-control-title"><?php echo esc_attr( $this->label ); ?></span>
+			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 
 			<?php foreach ( $areas as $area ) { ?>
 
@@ -113,7 +113,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 				<label>
 					<input style="text-align:center;" type="number" <?php echo esc_attr( $link ) ?> value="<?php echo esc_textarea( $this->value() ); ?>">
-					<small><?php echo esc_attr( ucfirst( $area ) ); ?></small>
+					<small><?php echo esc_html( ucfirst( $area ) ); ?></small>
 				</label>
 
 			</div>
@@ -149,7 +149,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 			?>
 
-			<span class="customize-control-title"><?php echo esc_attr( $this->label ); ?></span>
+			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 
 			<ul class="potter-responsive-options">
 				<li class="desktop">
@@ -188,7 +188,7 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 
 				<label>
 					<input style="text-align:center;" type="number" <?php echo esc_attr( $link ) ?> value="<?php echo esc_textarea( $this->value() ); ?>">
-					<small><?php echo esc_attr( ucfirst( $area ) ); ?></small>
+					<small><?php echo esc_html( ucfirst( $area ) ); ?></small>
 				</label>
 
 			</div>
@@ -228,7 +228,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 			<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 
 			<div class="potter-input-slider-control">
-				<div class="slider" slider-min-value="<?php echo esc_attr( $this->choices['min'] ); ?>" slider-max-value="<?php echo esc_attr( $this->choices['max'] ); ?>" slider-step-value="<?php echo esc_attr( $this->choices['step'] ); ?>"></div><span class="slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr( $this->value() ); ?>"></span>
+				<div class="slider" slider-min-value="<?php echo esc_attr( $this->choices['min'] ); ?>" slider-max-value="<?php echo esc_attr( $this->choices['max'] ); ?>" slider-step-value="<?php echo esc_attr( $this->choices['step'] ); ?>"></div>
+					<span class="slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr( $this->value() ); ?>"></span>
 				<input type="text" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-slider-value" <?php $this->link();?> />
 			</div>
 
@@ -305,7 +306,8 @@ if ( class_exists( 'WP_Customize_Control' ) ) {
 				<?php $link = str_replace( '"', '', $link ); ?>
 
 				<div class="potter-input-slider-control">
-					<div class="slider" slider-min-value="<?php echo esc_attr( $this->choices['min'] ); ?>" slider-max-value="<?php echo esc_attr( $this->choices['max'] ); ?>" slider-step-value="<?php echo esc_attr( $this->choices['step'] ); ?>"></div><span class="slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr( $this->value() ); ?>"></span>
+					<div class="slider" slider-min-value="<?php echo esc_attr( $this->choices['min'] ); ?>" slider-max-value="<?php echo esc_attr( $this->choices['max'] ); ?>" slider-step-value="<?php echo esc_attr( $this->choices['step'] ); ?>"></div>
+						<span class="slider-reset dashicons dashicons-image-rotate" slider-reset-value="<?php echo esc_attr( $this->value() ); ?>"></span>
 					<input type="text" id="<?php echo esc_attr( $this->id ); ?>" name="<?php echo esc_attr( $this->id ); ?>" value="<?php echo esc_attr( $this->value() ); ?>" class="customize-control-slider-value" <?php echo esc_attr($link); ?> />
 				</div>
 

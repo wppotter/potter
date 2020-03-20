@@ -501,7 +501,7 @@ class POTTER_Breadcrumbs {
 	protected function add_network_home_link() {
 
 		if ( is_multisite() && ! is_main_site() && true === $this->args['network'] )
-			$this->items[] = sprintf( '<a href="%s" rel="home">%s</a>', esc_url( network_home_url() ), $this->labels['home'] );
+			$this->items[] = sprintf( '<a href="%s" rel="home">%s</a>', esc_url( network_home_url('/') ), $this->labels['home'] );
 	}
 
 	/**
@@ -517,7 +517,7 @@ class POTTER_Breadcrumbs {
 		$label   = $network ? get_bloginfo( 'name' ) : $this->labels['home'];
 		$rel     = $network ? '' : ' rel="home"';
 
-		$this->items[] = sprintf( '<a href="%s"%s>%s</a>', esc_url( user_trailingslashit( home_url() ) ), $rel, $label );
+		$this->items[] = sprintf( '<a href="%s"%s>%s</a>', esc_url( user_trailingslashit( home_url('/') ) ), $rel, $label );
 	}
 
 	/**
@@ -883,7 +883,7 @@ class POTTER_Breadcrumbs {
 
 		// Add the week item.
 		if ( is_paged() )
-			$this->items[] = esc_url( get_archives_link( add_query_arg( array( 'm' => get_the_time( 'Y' ), 'w' => get_the_time( 'W' ) ), home_url() ), $week, false ) );
+			$this->items[] = esc_url( get_archives_link( add_query_arg( array( 'm' => get_the_time( 'Y' ), 'w' => get_the_time( 'W' ) ), home_url('/') ), $week, false ) );
 
 		elseif ( true === $this->args['show_title'] )
 			$this->items[] = $week;
@@ -1306,6 +1306,7 @@ function potter_breadcrumb_before_content()
             do_action('potter_breadcrumbhead');
             echo '</div>';
     } else {
+			echo '';
     }
 }
 
@@ -1317,5 +1318,6 @@ function potter_breadcrumb_after_header()
             do_action('potter_breadcrumbhead');
             echo '</div></div>';
     } else {
+			echo '';
     }
 }

@@ -12,13 +12,6 @@ defined('ABSPATH') || die("Can't access directly");
 
 do_action('potter_before_customizer_css');
 
-$breakpoint_mobile_int  = function_exists('potter_breakpoint_mobile') ? potter_breakpoint_mobile() : 480;
-$breakpoint_medium_int  = function_exists('potter_breakpoint_medium') ? potter_breakpoint_medium() : 768;
-$breakpoint_desktop_int = function_exists('potter_breakpoint_desktop') ? potter_breakpoint_desktop() : 1024;
-$breakpoint_mobile      = $breakpoint_mobile_int . 'px';
-$breakpoint_medium      = $breakpoint_medium_int . 'px';
-$breakpoint_desktop     = $breakpoint_desktop_int . 'px';
-
 /* Typography */
 
 // Page font settings.
@@ -638,6 +631,13 @@ if (! is_bool($sidebar_widget_padding_top_desktop) || ! is_bool($sidebar_widget_
 
     echo '}';
 }
+$breakpoint_mobile_int  = function_exists('potter_breakpoint_mobile') ? potter_breakpoint_mobile() : 480;
+$breakpoint_medium_int  = function_exists('potter_breakpoint_medium') ? potter_breakpoint_medium() : 768;
+$breakpoint_desktop_int = function_exists('potter_breakpoint_desktop') ? potter_breakpoint_desktop() : 1024;
+$breakpoint_mobile      = $breakpoint_mobile_int . 'px';
+$breakpoint_medium      = $breakpoint_medium_int . 'px';
+$breakpoint_desktop     = $breakpoint_desktop_int . 'px';
+
 
 if (! is_bool($sidebar_widget_padding_top_tablet) || ! is_bool($sidebar_widget_padding_right_tablet) || ! is_bool($sidebar_widget_padding_bottom_tablet) || ! is_bool($sidebar_widget_padding_left_tablet)) {
     echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . ') {';
@@ -1363,7 +1363,6 @@ if ($mobile_menu_logo_container_width) {
     echo sprintf('width: %s;', 100 - esc_attr($mobile_menu_logo_container_width) . '%');
     echo '}';
 }
-
 // Logo.
 $custom_logo                 = get_theme_mod('custom_logo');
 $menu_logo_font_toggle       = get_theme_mod('menu_logo_font_toggle');
@@ -1442,7 +1441,6 @@ if (! $custom_logo) {
         echo '}';
     }
 }
-
 if ($custom_logo) {
 
     // Backwards compatibility.
@@ -1479,7 +1477,6 @@ if ($custom_logo) {
 
     if ($menu_logo_size_mobile) {
         $suffix = is_numeric($menu_logo_size_mobile) ? 'px' : '';
-
         echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . ') {';
         echo '.potter-mobile-logo img {';
         echo sprintf('width: %s;', esc_attr($menu_logo_size_mobile) . $suffix);

@@ -146,7 +146,7 @@ function potter_woo_output_content_wrapper() {
 
 	do_action( 'potter_sidebar_left' );
 
-	echo '<main id="main" class="potter-main potter-medium-2-3' . potter_archive_class() . '">';
+	echo '<main id="main" class="potter-main potter-medium-2-3' . esc_attr(potter_archive_class()) . '">';
 
 	do_action( 'potter_main_content_open' );
 
@@ -618,7 +618,7 @@ function potter_woo_menu_icon_mobile() {
 	$menu_item .= potter_woo_menu_item();
 	$menu_item .= '</ul>';
 
-	echo $menu_item;
+	return $menu_item;
 
 }
 add_action( 'potter_before_mobile_toggle', 'potter_woo_menu_icon_mobile' );
@@ -643,7 +643,7 @@ function potter_woo_menu_icon_offcanvas() {
 	$menu_item .= potter_woo_menu_item();
 	$menu_item .= '</ul>';
 
-	echo $menu_item;
+	return $menu_item;
 
 }
 add_action( 'potter_before_menu_toggle', 'potter_woo_menu_icon_offcanvas' );

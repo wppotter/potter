@@ -5,7 +5,7 @@ Author: 		   wppotter
 Author URI:
 Description: 	Potter is a super fast,  gutenberg ready fully customizable & beautiful theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Potter comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL & Translation Ready # Regularly updated. Looking for a perfect base theme? Look no further. Potter is fast, fully customizable and WooCommerce & Easy Digital Downloads ready theme that you can use for building any kind of website!
 Tags: Blog,   E-Commerce,  Entertainment, Microformats, one-column, two-columns, left-sidebar, right-sidebar, custom-colors, custom-menu, featured-images, full-width-template, custom-logo, custom-background, threaded-comments, translation-ready, rtl-language-support, theme-options, block-styles, wide-blocks
-Version: 		1.0.86
+Version: 		1.0.90
 License:		GNU General Public License v3 or later
 License URI:	https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -272,6 +272,7 @@ textarea {
   -webkit-appearance: textfield;
   outline-offset: -2px
 }
+
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none
@@ -1169,7 +1170,7 @@ img.aligncenter, figure.aligncenter div.aligncenter {
 }
 
 :focus {
-  outline: 1px dotted rgba(0, 0, 0, 0.6)
+  outline: 1px dotted rgba(0, 0, 0, 0.8) !important;
 }
 
 body:focus {
@@ -1177,7 +1178,7 @@ body:focus {
 }
 
 .using-mouse :focus {
-  outline: 0
+  outline: 0 !important;
 }
 
 .using-mouse::-moz-focus-inner {

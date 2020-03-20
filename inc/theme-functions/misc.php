@@ -134,6 +134,7 @@ function potter_menu_description_html( $menu_item ) {
 
 }
 remove_filter( 'nav_menu_description', 'strip_tags' );
+add_filter( 'nav_menu_description', 'wp_kses_post' );
 add_filter( 'wp_setup_nav_menu_item', 'potter_menu_description_html' );
 
 /**

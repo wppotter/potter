@@ -31,7 +31,7 @@ get_header();
 
 			<?php do_action('potter_sidebar_left'); ?>
 
-			<main id="main" class="potter-main potter-medium-2-3<?php echo potter_singular_class(); ?>">
+			<main id="main" class="potter-main potter-medium-2-3<?php echo esc_attr(potter_singular_class()); ?>">
 
 				<?php
 					do_action('potter_main_content_open');
@@ -83,6 +83,7 @@ get_header();
 						</footer>
 						<?php do_action('potter_article_close'); ?>
 					</div>
+					<?php do_action('potter_article_after'); ?>
 					<?php if ('hide' !== get_theme_mod('single_post_nav')) { ?>
 					<?php do_action('potter_before_post_links'); ?>
 

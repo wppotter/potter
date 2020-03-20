@@ -533,11 +533,11 @@ function potter_archive_header()
 
 function potter_blog_page_title()
 {
-    $blog_page_custom_title = get_theme_mod('blog_page_custom_title', 'Blog');
+    $blog_page_custom_title = get_theme_mod('blog_page_custom_title', __( 'Blog', 'potter' ));
     if (is_home() && $blog_page_custom_title) {
         echo '<div class="default-title-bar-archive">';
         echo '<h1 class="page-title">';
-        echo esc_attr($blog_page_custom_title);
+        echo esc_html($blog_page_custom_title);
         echo '</h1></div>';
     }
 }

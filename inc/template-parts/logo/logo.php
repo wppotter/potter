@@ -10,7 +10,7 @@ defined('ABSPATH') || die("Can't access directly");
 $menu_active_logo = get_theme_mod('menu_active_logo') ? ' data-menu-active-logo="' . esc_url(get_theme_mod('menu_active_logo')) . '"' : '';
 $menu_alt_tag     = get_theme_mod('menu_logo_alt', get_bloginfo('name'));
 $menu_title_tag   = get_theme_mod('menu_logo_title', get_bloginfo('name'));
-$menu_logo_url    = get_theme_mod('menu_logo_url', home_url());
+$menu_logo_url    = get_theme_mod('menu_logo_url', home_url('/'));
 $custom_logo_id   = get_theme_mod('custom_logo');
 $custom_logo_url  = wp_get_attachment_image_src($custom_logo_id, 'full');
 $custom_logo_url  = apply_filters('potter_logo', $custom_logo_url[0]);
@@ -48,7 +48,7 @@ function potter_logo_switcher() {
   $menu_active_logo = get_theme_mod('menu_active_logo') ? ' data-menu-active-logo="' . esc_url(get_theme_mod('menu_active_logo')) . '"' : '';
   $menu_alt_tag     = get_theme_mod('menu_logo_alt', get_bloginfo('name'));
   $menu_title_tag   = get_theme_mod('menu_logo_title', get_bloginfo('name'));
-  $menu_logo_url    = get_theme_mod('menu_logo_url', home_url());
+  $menu_logo_url    = get_theme_mod('menu_logo_url', home_url('/'));
   $tagline          = get_bloginfo('description');
   $tagline_toggle   = get_theme_mod('menu_logo_description');
   $custom_logo_id   = get_theme_mod('custom_logo');
@@ -71,7 +71,7 @@ function potter_custom_logos()
     $menu_active_logo = get_theme_mod('menu_active_logo') ? ' data-menu-active-logo="' . esc_url(get_theme_mod('menu_active_logo')) . '"' : '';
     $menu_alt_tag     = get_theme_mod('menu_logo_alt', get_bloginfo('name'));
     $menu_title_tag   = get_theme_mod('menu_logo_title', get_bloginfo('name'));
-    $menu_logo_url    = get_theme_mod('menu_logo_url', home_url());
+    $menu_logo_url    = get_theme_mod('menu_logo_url', home_url('/'));
     $tagline          = get_bloginfo('description');
     $tagline_toggle   = get_theme_mod('menu_logo_description');
     $custom_logo_id   = get_theme_mod('custom_logo');

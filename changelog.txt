@@ -1,6 +1,18 @@
 -------------------------------------------------------
 Change Logs
 -------------------------------------------------------
+
+= 1.88 - March 11 2020 =
+* Echo issue fixed
+* Text translation issue fixed
+* escaped function issue fixed
+
+
+----- Version 1.0.87 -----
+
+* Screenshot changed
+* Removed some unused code and css
+
 ----- Version 1.0.86 -----
 
 * Initial Release for approval

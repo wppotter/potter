@@ -17,7 +17,7 @@ if ( 'post' !== get_post_type() ) {
 
 echo '<p class="footer-categories">';
 
-echo '<span class="categories-title">' . apply_filters( 'potter_categories_title', __( 'Filed under:', 'potter' ) ) . '</span> ';
+echo '<span class="categories-title">' . esc_html(apply_filters( 'potter_categories_title', __( 'Filed under:', 'potter' ))) . '</span> ';
 
 echo get_the_category_list( ', ' );
 

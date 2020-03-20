@@ -233,7 +233,7 @@ function potter_edd_menu_icon_mobile() {
 	$menu_item .= potter_edd_menu_item();
 	$menu_item .= '</ul>';
 
-	echo $menu_item;
+	return $menu_item;
 
 }
 add_action( 'potter_before_mobile_toggle', 'potter_edd_menu_icon_mobile' );

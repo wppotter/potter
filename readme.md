@@ -87,6 +87,7 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
-= 1.83 - Feb 11 2020 =
+= 1.88 - March 11 2020 =
 * Echo issue fixed
 * Text translation issue fixed
+* escaped function issue fixed
