@@ -179,13 +179,13 @@ add_action( 'potter_before_mobile_toggle', 'potter_search_menu_icon_mobile', 20 
  * @return string The search menu item.
  */
 function potter_html_button_item( $is_navigation = true, $is_mobile = false ) {
-	$menu_html_button_content = get_theme_mod( esc_attr( 'menu_html_button_content', __('<a href="#">Contact Us</a>', 'potter'  )));
+	$menu_html_button_content = get_theme_mod( 'menu_html_button_content', __('<a href="#">Contact Us</a>', 'potter'  ));
 	$class = $is_mobile ? 'potter-mobile-nav-item' : 'potter-nav-item';
 
 
 	// We have a slightly different markup for the search menu item if it's being displayed outside the main menu.
 	$button_item = '<li class="menu-item potter-menu-item-button">';
-	$button_item .=  $menu_html_button_content;
+	$button_item .=  wp_kses_post( $menu_html_button_content );
 	$button_item .= '</li>';
 
 	return $button_item;

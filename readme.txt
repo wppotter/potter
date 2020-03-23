@@ -9,7 +9,6 @@ Tags: Blog, Custom Colors, Custom Logo, Custom Menu, E-Commerce, Editor Style, E
 Requires at least: 5.2
 Tested up to: 5.3
 Requires PHP: 5.4
-Stable tag: 1.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 -------------------------------------------------------
