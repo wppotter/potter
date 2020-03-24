@@ -20,6 +20,10 @@ $page_font_family_value = get_theme_mod('page_font_family');
 $page_font_color        = get_theme_mod('page_font_color');
 $page_font_line_height        = get_theme_mod('page_font_line_height');
 
+$heading_font_color        = get_theme_mod('heading_font_color');
+$heading_font_accent_color        = get_theme_mod('heading_font_accent_hover_color');
+$heading_font_accent_hover_color        = get_theme_mod('heading_font_accent_color');
+
 if ($page_font_line_height) {
   echo 'body, optgroup, textarea, h1, h2, h3, h4, h5, h6, ul li, ol {';
     echo sprintf('line-height: %s;', esc_attr($page_font_line_height));
@@ -51,6 +55,22 @@ if ($page_font_toggle && $page_font_family_value) {
 if ($page_font_color) {
     echo 'body {';
     echo sprintf('color: %s;', esc_attr($page_font_color));
+    echo '}';
+}
+
+if ($heading_font_color) {
+    echo 'h1, h2, h3, h4, h5, h6  {';
+    echo sprintf('color: %s;', esc_attr($heading_font_color));
+    echo '}';
+}
+if ($heading_font_accent_color) {
+    echo 'h1 a, h2 a, h3 a, h4 a, h5 a, h6 a  {';
+    echo sprintf('color: %s;', esc_attr($heading_font_accent_color));
+    echo '}';
+}
+if ($heading_font_accent_hover_color) {
+    echo 'h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover  {';
+    echo sprintf('color: %s;', esc_attr($heading_font_accent_hover_color));
     echo '}';
 }
 

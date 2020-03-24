@@ -116,7 +116,12 @@ Easy Digital Downloads is licensed under the GNU General Public License v3 or la
 
 == Screenshots ==
 Screenshot image is licensed under CC0 1.0 Universal - https://creativecommons.org/publicdomain/zero/1.0/
-Illustrations and icons: Self Created
+Illustrations: Self Created
+Icons: Font Awesome
+			 Item URL:    http://fortawesome.github.io/Font-Awesome/#license
+			 Licence:     SIL Open Font &  MIT
+			 Licence OFL: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+			 Licence MIT: http://opensource.org/licenses/mit-license.html
 
 == Frequently Asked Questions ==
 

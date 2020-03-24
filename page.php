@@ -37,11 +37,8 @@ get_header();
 					'after'  => '</div>',
 				) );
 				?>
-
 				<?php do_action( 'potter_entry_content_close' ); ?>
-
 			</div>
-
 			<?php endwhile; endif; ?>
 
 			<?php comments_template(); ?>

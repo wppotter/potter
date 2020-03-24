@@ -100,7 +100,13 @@ Kirki::add_panel('blog_panel', array(
 // Typography.
 Kirki::add_section('typo_panel', array(
     'priority' => 3,
-    'title'    => __('Typography And Color', 'potter'),
+    'title'    => __('Typography', 'potter'),
+    'panel'    => 'layout_panel',
+));
+// Typography.
+Kirki::add_section('color_panel', array(
+    'priority' => 4,
+    'title'    => __('Color', 'potter'),
     'panel'    => 'layout_panel',
 ));
 
@@ -1183,7 +1189,7 @@ foreach ($archives as $archive) {
       'type'     => 'text',
       'settings' => 'blog_page_custom_title',
       'section'  => 'potter_' . $archive . '_options',
-      'default'  => __('Blog', 'potter'),
+      'default'  => __('Just another WordPress blog', 'potter'),
       'priority' => 0,
   ));
 
@@ -2498,7 +2504,7 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-10234',
-    'section'  => 'typo_panel',
+    'section'  => 'color_panel',
     'default'  => '<h3 class="setting-header">' . esc_html__('Global Color Setting', 'potter') .  '</h3>',
     'priority' => 2,
 ));
@@ -2506,7 +2512,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'page_font_color',
     'label'    => __('Color', 'potter'),
-    'section'  => 'typo_panel',
+    'section'  => 'color_panel',
     'default'  => '#666',
     'priority' => 2,
     'choices'  => array(
@@ -2519,7 +2525,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'page_accent_color',
     'label'    => __('Accent Color', 'potter'),
-    'section'  => 'typo_panel',
+    'section'  => 'color_panel',
     'priority' => 3,
     'choices'  => array(
         'alpha' => true,
@@ -2532,7 +2538,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'page_accent_color_alt',
     'label'    => __('Hover', 'potter'),
-    'section'  => 'typo_panel',
+    'section'  => 'color_panel',
     'priority' => 4,
     'default'  => '#333',
     'choices'  => array(
@@ -2888,6 +2894,48 @@ Kirki::add_field('potter', array(
     'priority'        => 25,
 ));
 
+
+// Separator.
+Kirki::add_field('potter', array(
+    'type'     => 'custom',
+    'settings' => 'separator-1023456878',
+    'section'  => 'color_panel',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Heading Font Color Settings', 'potter') .  '</h3>',
+    'priority' => 26,
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'heading_font_color',
+    'label'    => __('Color', 'potter'),
+    'section'  => 'color_panel',
+    'priority' => 27,
+    'choices'  => array(
+        'alpha' => true,
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'heading_font_accent_color',
+    'label'    => __('Accent Color', 'potter'),
+    'section'  => 'color_panel',
+    'priority' => 28,
+    'choices'  => array(
+        'alpha' => true,
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'heading_font_accent_hover_color',
+    'label'    => __('Accent Hover Color', 'potter'),
+    'section'  => 'color_panel',
+    'priority' => 29,
+    'choices'  => array(
+        'alpha' => true,
+    ),
+));
 
 /* Fields – Pre Header */
 

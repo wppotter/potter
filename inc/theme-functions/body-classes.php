@@ -26,7 +26,7 @@ function potter_body_classes( $classes ) {
 	}
 
 	// Sidebar classes.
-	if ( is_page() && ! is_page_template( 'page-sidebar.php' ) ) {
+	if ( is_page() && ! is_page_template( 'sidebar-page.php' ) ) {
 		$classes[] = 'potter-no-sidebar';
 	} else {
 		$classes[] = 'none' === potter_sidebar_layout() ? 'potter-no-sidebar' : 'potter-sidebar-' . potter_sidebar_layout();

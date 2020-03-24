@@ -1,6 +1,11 @@
 -------------------------------------------------------
 Change Logs
 -------------------------------------------------------
+= 1.1.0 - March 23 2020 =
+* Heading color setting added
+* Woo menu item issue fixed
+* changed screenshot
+* Page Sidebar issue fixed
 
 = 1.88 - March 11 2020 =
 * Echo issue fixed

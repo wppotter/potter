@@ -146,7 +146,7 @@ function potter_woo_output_content_wrapper() {
 
 	do_action( 'potter_sidebar_left' );
 
-	echo '<main id="main" class="potter-main potter-medium-2-3' . esc_attr(potter_archive_class()) . '">';
+	echo '<main id="main" class="potter-main potter-medium-2-3' . potter_archive_class() . '">';
 
 	do_action( 'potter_main_content_open' );
 
@@ -618,7 +618,7 @@ function potter_woo_menu_icon_mobile() {
 	$menu_item .= potter_woo_menu_item();
 	$menu_item .= '</ul>';
 
-	return $menu_item;
+	echo $menu_item;
 
 }
 add_action( 'potter_before_mobile_toggle', 'potter_woo_menu_icon_mobile' );
@@ -643,7 +643,7 @@ function potter_woo_menu_icon_offcanvas() {
 	$menu_item .= potter_woo_menu_item();
 	$menu_item .= '</ul>';
 
-	return $menu_item;
+	echo $menu_item;
 
 }
 add_action( 'potter_before_menu_toggle', 'potter_woo_menu_icon_offcanvas' );
@@ -663,6 +663,21 @@ function potter_woo_fragments( $fragments ) {
 
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'potter_woo_fragments' );
+
+
+/**
+* minicart drop down
+* @return string The dropdown shorytcode
+*/
+/*
+function custom_mini_cart() {
+	echo '<ul class="dropdown-menu dropdown-menu-mini-cart">';
+  echo '<li> <div class="widget_shopping_cart_content">';
+       woocommerce_mini_cart();
+  echo '</div></li></ul>';
+}
+add_action( 'potter_woo_menu_item_dropdown', 'custom_mini_cart' );
+*/
 
 
 /**
