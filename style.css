@@ -5,7 +5,7 @@ Author: 		   wppotter
 Author URI:
 Description: 	Potter is a super fast,  gutenberg ready fully customizable & beautiful theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Potter comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL & Translation Ready # Regularly updated. Looking for a perfect base theme? Look no further. Potter is fast, fully customizable and WooCommerce & Easy Digital Downloads ready theme that you can use for building any kind of website!
 Tags: Blog,   E-Commerce,  Entertainment, Microformats, one-column, two-columns, left-sidebar, right-sidebar, custom-colors, custom-menu, featured-images, full-width-template, custom-logo, custom-background, threaded-comments, translation-ready, rtl-language-support, theme-options, block-styles, wide-blocks
-Version: 		1.1.0
+Version: 		1.1.1
 License:		GNU General Public License v3 or later
 License URI:	https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -17,10 +17,10 @@ Text Domain:	potter
 
 body {
   font-family: Helvetica, Arial, sans-serif;
-  color: #6d7680;
+  color: #333;
   font-size: 16px;
   line-height: 1.7;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0;
   background: #eee;
 }
@@ -1859,9 +1859,7 @@ body:focus {
   margin-left: 0;
   margin-right: 0;
 }
-.potter-grid-divider .potter-main {
-  padding-right: 20px !important;
-}
+
 .potter-video {
   margin-bottom: 20px;
   position: relative;
@@ -2372,12 +2370,15 @@ body.potter-full-width .potter-page-content {
 
 .potter-page-content {
   padding: 60px !important;
-  background: #fff
+  background: #fff;
 }
 
 .potter-sidebar-left .potter-sidebar-wrapper {
   padding-left: 0;
   padding-right: 25px
+}
+.potter-grid-collapse .potter-sidebar-wrapper {
+  padding-right: 0px
 }
 
 .logo-container-center-nav {
@@ -2418,6 +2419,9 @@ body.potter-full-width .potter-page-content {
     padding-bottom: 20px
   }
 
+  .potter-page-content, .potter-archive-content .potter-post, .potter-article-wrapper {
+    padding: 20px !important;
+  }
   .potter-archive-content .potter-post {
     padding: 20px
   }

@@ -1806,6 +1806,7 @@ $menu_padding        = get_theme_mod('menu_padding');
 $menu_bg_color       = get_theme_mod('menu_bg_color');
 $menu_font_color     = get_theme_mod('menu_font_color');
 $menu_font_color_alt = get_theme_mod('menu_font_color_alt');
+$menu_font_color_active = get_theme_mod('menu_font_color_active');
 $sticky_menu_bg_color       = get_theme_mod('sticky_menu_bg_color');
 $sickynav_bar_box_shadow       = get_theme_mod('sickynav_bar_box_shadow');
 $sticky_menu_font_color     = get_theme_mod('sticky_menu_font_color');
@@ -1814,6 +1815,7 @@ $sticky_navbar = get_theme_mod('sticky_navbar');
 $transparent_header = get_theme_mod('transparent_header');
 $transparent_header_color     = get_theme_mod('transparent_header_color');
 $transparent_header_hover_color = get_theme_mod('transparent_header_hover_color');
+$transparent_header_active_color = get_theme_mod('transparent_header_active_color');
 
 $menu_sticky_logo  = get_theme_mod('menu_sticky_logo');
 $nav_bar_border_top        = get_theme_mod('nav_bar_border_top');
@@ -1840,6 +1842,11 @@ if ($transparent_header_color) {
     if ($transparent_header_hover_color) {
         echo '.transparent-header .potter-menu > .menu-item > a:hover, .transparent-header .potter-inner-pre-header a:hover {';
         echo sprintf('color: %s;', esc_attr($transparent_header_hover_color));
+        echo '}';
+    }
+    if ($transparent_header_active_color) {
+        echo '.transparent-header .potter-menu > .current-menu-item > a {';
+        echo sprintf('color: %s;', esc_attr($transparent_header_active_color) . '!important');
         echo '}';
     }
 

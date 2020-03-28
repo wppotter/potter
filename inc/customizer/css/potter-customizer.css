@@ -6,6 +6,93 @@
 	margin: 3px;
 }
 
+input[type="text"], input[type="number"], input[type="url"], input[type="email"], input[type="date"] {
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.customize-control-kirki-toggle label .customize-control-title {
+    width: calc(100% - 42px);
+}
+.customize-control select, .select2-container--default .selection .select2-selection--single {
+	height: 35px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-color: #888 transparent transparent transparent;
+border-style: solid;
+border-width: 6px 5px 0 5px;
+height: 0;
+left: 50%;
+margin-left: -9px;
+margin-top: -2px;
+position: absolute;
+top: 50%;
+width: 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 29px;
+position: absolute;
+top: 1px;
+right: 1px;
+width: 20px;
+}
+.customize-control-kirki-toggle .switch {
+	background: #fff;
+}
+.customize-control .wp-picker-container {
+	width: 100%;
+}
+.customize-control .wp-picker-container .wp-color-result.button {
+	width: 100%;
+}
+.customize-control-kirki-toggle {
+	padding: 6px 10px 5px 10px;
+	border-radius: 5px;
+	background: #D8D8D8;
+	border: 1px solid #999;
+	margin: 10px 0px;
+	width: auto;
+	float: none;
+}
+.customize-control-kirki-toggle span {
+	color: #333;
+	margin: 0px;
+}
+.customize-control-kirki-typography .wrapper {
+	background: #fff;
+	border-radius: 5px;
+}
+.customize-control-kirki-typography .wrapper .text-transform {
+	width: 100%;
+}
+.select2-container--default .select2-results > .select2-results__options li {
+	padding: 5px 15px;
+	border-bottom: 1px solid #ececec;
+}
+.customize-control-kirki-sortable ul.ui-sortable li {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.wp-color-result-text {
+	padding: 0px;
+	margin: 0px 5px;
+	width: 40%;
+	float: right;
+	border-radius: 2px;
+}
+.customize-control .wp-picker-container .color-alpha {
+	margin: 2px 0px 0px 2px !important;
+	width: 55% !important;
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAAHnlligAAAAGXRFW…G6BOmuIl0CIMBQ/IEMkO0myiSSraaaBhZcbkUOs0HuBwDplz5uFJ3Z4gAAAABJRU5ErkJggg==);
+}
+.customize-control .wp-picker-container .wp-color-result.button {
+	background-image: none !important;
+	background: #fff;
+	border: 1px solid #ccc;
+}
 .customize-control-kirki-radio-image input:checked + label img {
 	box-shadow: none !important;
 	opacity: 1 !important;
@@ -38,7 +125,7 @@ input[type=dimention] {
 	background: #fff;
 	color: #1A5BA7;
 	letter-spacing: 2px;
-	margin: auto -20px auto -10px;
+	margin: auto -15px auto -15px;
 }
 .customize-control-checkbox {
 	margin-bottom: 0px;

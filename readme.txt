@@ -133,6 +133,13 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
+= 1.1.1 - March 28 2020 =
+* Increased Customizer UX
+* Sidebar Gap Issue Fixed
+* Transparent Header active menu issue fixed
+* CSS Issue fixed related to page template
+
+
 = 1.88 - March 11 2020 =
 * Echo issue fixed
 * Text translation issue fixed

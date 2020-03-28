@@ -14,7 +14,7 @@ $theme_author = apply_filters(
     'potter_theme_author',
     array(
         'name' => __('Potter', 'potter'),
-        'url'  => 'https://wppotter.com/',
+        'url'  => 'https://pottertheme.com/',
     )
 );
 

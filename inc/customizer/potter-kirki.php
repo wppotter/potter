@@ -2179,7 +2179,6 @@ Kirki::add_field('potter', array(
     'priority' => 2,
     'multiple' => 1,
     'choices'  => array(
-        'divider'  => __('Divider', 'potter'),
         'xlarge'   => __('xLarge', 'potter'),
         'large'    => __('Large', 'potter'),
         'medium'   => __('Medium', 'potter'),
@@ -4165,6 +4164,8 @@ Kirki::add_field('potter', array(
     ),
 ));
 
+
+
 // Font size.
 Kirki::add_field('potter', array(
     'type'      => 'input_slider',
@@ -4550,6 +4551,24 @@ Kirki::add_field('potter', array(
     'type'            => 'color',
     'settings'        => 'transparent_header_hover_color',
     'label'           => __('Hover Color', 'potter'),
+    'section'         => 'potter_transparent_header_options',
+    'priority'        => 14,
+    'choices'         => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'transparent_header',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'            => 'color',
+    'settings'        => 'transparent_header_active_color',
+    'label'           => __('Menu Active Color', 'potter'),
     'section'         => 'potter_transparent_header_options',
     'default'         => '#cccccc',
     'priority'        => 14,
