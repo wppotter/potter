@@ -1851,7 +1851,7 @@ $sticky_nav_width        = get_theme_mod('sticky_nav_width');
 
 if ($menu_sticky_logo) {
     echo '.hide-on-sticky {';
-    echo sprintf('display: none;');
+    echo sprintf('display: none !important;');
     echo '}';
 }
     echo '@media (min-width: 1025px) {';

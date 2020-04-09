@@ -87,6 +87,8 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
+= 1.1.3 - April 09 2020 =
+* Sticky logo issue fixed
 
 = 1.1.2 - April 09 2020 =
 * Added Typography option to theme buttons
