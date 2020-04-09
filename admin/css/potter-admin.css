@@ -153,6 +153,7 @@
 }
 .potter-core-sidebar-block {
     margin: calc(3% + 1.5em) auto;
+    text-align: center;
 }
 .potter-core-sidebar-block .potter-admin-sidebar-logo {
     display: block;
@@ -298,6 +299,7 @@
     outline: none;
     box-shadow: none;
     transition: all 0.3s;
+    margin: auto;
 }
 
 .potter-admin-sidebar-cta a:hover {

@@ -2,6 +2,12 @@
 Change Logs
 -------------------------------------------------------
 
+= 1.1.2 - April 09 2020 =
+* Added Typography option to theme buttons
+* Fixed sticky navbar issue
+* New Layout Option for Navigation bar
+* CSS Issue fixed related to header layout
+
 = 1.1.1 - March 28 2020 =
 * Increased Customizer UX
 * Sidebar Gap Issue Fixed

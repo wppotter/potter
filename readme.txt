@@ -7,7 +7,7 @@ Contributors: wppotter
 Email: support@pottertheme.com
 Tags: Blog, Custom Colors, Custom Logo, Custom Menu, E-Commerce, Editor Style, Entertainment, Featured Images, Full Width Template, Left Sidebar, Microformats, One Column, Post Formats, Right Sidebar, RTL Language Support, Theme Options, Threaded Comments, Translation Ready, Two Columns
 Requires at least: 5.2
-Tested up to: 5.3
+Tested up to: 5.4
 Requires PHP: 5.4
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
@@ -133,6 +133,13 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
+
+= 1.1.2 - April 09 2020 =
+* Added Typography option to theme buttons
+* Fixed sticky navbar issue
+* New Layout Option for Navigation bar
+* CSS Issue fixed related to header layout
+
 = 1.1.1 - March 28 2020 =
 * Increased Customizer UX
 * Sidebar Gap Issue Fixed
@@ -140,7 +147,23 @@ Donation Link: https://pottertheme.com/
 * CSS Issue fixed related to page template
 
 
+= 1.1.0 - March 23 2020 =
+* Heading color setting added
+* Woo menu item issue fixed
+* changed screenshot
+* Page Sidebar issue fixed
+
 = 1.88 - March 11 2020 =
 * Echo issue fixed
 * Text translation issue fixed
 * escaped function issue fixed
+
+
+----- Version 1.0.87 -----
+
+* Screenshot changed
+* Removed some unused code and css
+
+----- Version 1.0.86 -----
+
+* Initial Release for approval

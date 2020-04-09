@@ -1295,7 +1295,34 @@ body:focus {
 .potter-logo-container {
   line-height: 1.5
 }
+.potter-split-menu {
+  display: table;
+  width: 100%;
+}
+.logo-container-split {
+  padding-left: 0px;
+  display: table-cell;
+  padding-right: 30px;
+  vertical-align: middle;
+}
+.logo-container-split a{
+  display: block;
+}
+.split-left-menu {
+  display: table-cell;
+  vertical-align: middle;
+}
+.split-left-menu #navigation-left {
+  float: left;
+}
+.split-left-menu #navigation-right {
+  float: right;
+}
 
+.split-menu .main-nav-left-menu ul.potter-sub-menu {
+  display: block;
+  margin: auto 0px;
+}
 .potter-logo a {
   font-weight: 700;
   font-size: 22px
@@ -1527,6 +1554,12 @@ body:focus {
   justify-content: center;
   margin: auto;
 }
+.potter-menu-centered .main-nav-left-menu nav {
+  float: right;
+}
+.potter-menu-centered .main-nav-right-menu nav {
+  float: left;
+}
 
 .potter-menu-stacked {
   text-align: center
@@ -1649,8 +1682,16 @@ body:focus {
 .stickynav {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%
+  left: 0px;
+  width: 100%;
+}
+#content {
+  transition: 3s;
+  animation: smoothScroll 1s backwards;
+}
+
+.hide-on-sticky {
+  display: none !important;
 }
 
 @media(min-width:1025px) {
@@ -1843,7 +1884,8 @@ body:focus {
 }
 
 .potter-navigation {
-  border-bottom: 1px solid #ccc
+  border-bottom: 1px solid #ccc;
+
 }
 
 .potter-page {

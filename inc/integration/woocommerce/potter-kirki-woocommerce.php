@@ -854,6 +854,8 @@ Kirki::add_field( 'potter', array(
 	),
 ) );
 
+
+
 // Image container width.
 Kirki::add_field( 'potter', array(
 	'type'      => 'slider',

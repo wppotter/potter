@@ -2237,6 +2237,22 @@ Kirki::add_field('potter', array(
 
 /* Fields – Buttons */
 
+// Font family.
+Kirki::add_field('potter', array(
+    'type'            => 'typography',
+    'settings'        => 'button_font_family',
+    'label'           => __('Typography', 'potter'),
+    'section'         => 'potter_button_options',
+    'default'         => array(
+        'font-family' => 'Helvetica, Arial, sans-serif',
+        'variant'     => 'regular',
+        'text-transform'     => 'capitalize',
+    ),
+    'choices'         => potter_default_font_choices(),
+    'priority'        => 1,
+));
+
+
 // Background color.
 Kirki::add_field('potter', array(
     'type'     => 'color',
@@ -3777,7 +3793,7 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'     => 'radio-image',
     'settings' => 'menu_position',
-    'label'    => __('Menu Bar', 'potter'),
+    'label'    => __('Nav Bar Layout', 'potter'),
     'section'  => 'potter_menu_options',
     'default'  => 'menu-right',
     'priority' => 0,
@@ -3786,6 +3802,7 @@ Kirki::add_field('potter', array(
         'menu-right'   => POTTER_THEME_URI . '/inc/customizer/img/nav-right.png',
         'menu-left'  => POTTER_THEME_URI . '/inc/customizer/img/nav-left.png',
         'menu-centered'  => POTTER_THEME_URI . '/inc/customizer/img/nav-center.png',
+        'menu-split'  => POTTER_THEME_URI . '/inc/customizer/img/nav-split.png',
         'menu-stacked'  => POTTER_THEME_URI . '/inc/customizer/img/nav-stacked.png',
         'menu-off-canvas'  => POTTER_THEME_URI . '/inc/customizer/img/nav-off-canvas.png',
     ),

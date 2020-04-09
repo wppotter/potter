@@ -119,7 +119,9 @@ jQuery(document).ready(function() {
   c();
   jQuery(window).scroll(function() {
     c()
-  })
+  });
+  a = jQuery("#main-navbar").height();
+  jQuery("#header").css("min-height", a + "px")
 });
 jQuery("#potter-menu-toggle").click(function() {
   jQuery(".potter-menu-off-canvas").toggleClass("canvas-visible");

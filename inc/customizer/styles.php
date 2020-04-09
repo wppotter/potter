@@ -515,6 +515,7 @@ $button_primary_bg_color         = get_theme_mod('button_primary_bg_color');
 $button_primary_text_color       = get_theme_mod('button_primary_text_color');
 $button_primary_bg_color_alt     = get_theme_mod('button_primary_bg_color_alt');
 $button_primary_text_color_alt   = get_theme_mod('button_primary_text_color_alt');
+$buttom_font_family_value = get_theme_mod('button_font_family');
 
 if ($button_border_width) {
     echo '.potter-button, input[type="submit"], .button {';
@@ -560,6 +561,24 @@ if ($button_bg_color || $button_text_color || $button_border_radius) {
         echo sprintf('color: %s;', esc_attr($button_text_color));
     }
 }
+if (! empty($buttom_font_family_value['font-family'])) {
+    echo sprintf('font-family: %s !important;', html_entity_decode(esc_attr($buttom_font_family_value['font-family']), ENT_QUOTES));
+}
+
+if (! empty($buttom_font_family_value['variant'])) {
+    $buttom_font_family_font_weight = str_replace('italic', '', $buttom_font_family_value['variant']);
+    $buttom_font_family_font_weight = (in_array($buttom_font_family_font_weight, array( '', 'regular' ))) ? '400' : $buttom_font_family_font_weight;
+
+    $buttom_font_family_is_italic = (false !== strpos($buttom_font_family_value['variant'], 'italic'));
+    $buttom_font_family_is_style  = $buttom_font_family_is_italic ? 'italic' : 'normal';
+
+    echo sprintf('font-weight: %s !important;', esc_attr($buttom_font_family_font_weight));
+    echo sprintf('font-style: %s !important;', esc_attr($buttom_font_family_is_style));
+}
+if (! empty($buttom_font_family_value['text-transform'])) {
+    echo sprintf('text-transform: %s !important;', html_entity_decode(esc_attr($buttom_font_family_value['text-transform']), ENT_QUOTES));
+}
+
 echo '}';
 
 if ($button_bg_color_alt || $button_text_color_alt) {
@@ -1481,6 +1500,9 @@ if ($custom_logo) {
         $suffix = is_numeric($menu_logo_size_desktop) ? 'px' : '';
 
         echo '.potter-logo img, .potter-mobile-logo img {';
+        echo sprintf('width: %s;', esc_attr($menu_logo_size_desktop) . $suffix);
+        echo '}';
+        echo '.logo-container-split {';
         echo sprintf('width: %s;', esc_attr($menu_logo_size_desktop) . $suffix);
         echo '}';
     }
