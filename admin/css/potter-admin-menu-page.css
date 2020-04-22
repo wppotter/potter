@@ -1,0 +1,265 @@
+/**
+ * CSS code for potter Theme admin Menu screens
+ *
+ * @package potter
+ * @since 1.1.3
+ */
+
+.potter-clear:before, .potter-clear:after {
+	content: " ";
+	display: table;
+}
+.appearance_page_potter #wpcontent{
+	padding: 0px;
+}
+.wrap.potter-theme-options-page {
+	padding: 0 30px;
+}
+.potter-clear:after {
+	clear: both;
+}
+#message {
+	display: block;
+	margin-left: 0;
+}
+.potter-menu-page-wrapper.wrap {
+	margin: 0;
+}
+.potter-menu-page-wrapper a {
+	text-decoration: none;
+}
+.potter-theme-page-header {
+	background-color: #fff;
+	text-align: center;
+	padding: 20px 0;
+	box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+}
+.potter-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+.potter-container .postbox .handle {
+	background: #ffffff;
+	border-bottom: 1px solid #e6e6e6;
+}
+
+/* Details link for starter sites */
+a.potterra-starter-sites-detail-link {
+	margin: 0 10px;
+}
+
+/* Top Right Links. */
+.potter-top-links {
+	flex: auto;
+	text-align: right;
+}
+
+.potter-top-links ul {
+	margin: 0;
+}
+.potter-top-links ul li {
+	display: inline-block;
+	margin-bottom: 0;
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.potter-container.potter-welcome,
+.general .potter-container {
+	max-width: 1130px;
+}
+.potter-quick-setting-section span.dashicons {
+	margin: 1px 3px 0 10px;
+}
+.potter-container div.notice,
+.potter-container div.updated,
+.potter-container div.error {
+	margin-top: 0;
+}
+.potter-container #poststuff h2 {
+	padding: 12px 20px;
+}
+.potter-container img.potter-starter-sites-img {
+	width: 100%;
+}
+.potter-flex {
+	-js-display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-webkit-align-content: center;
+	-ms-flex-line-pack: center;
+	align-content: center;
+}
+.potter-theme-title {
+	align-content: flex-start;
+	text-align: left;
+}
+.potter-theme-title .potterra-theme-version {
+	background-color: #e5e5e5;
+	border-radius: 3px;
+	font-size:  0.5em;
+	font-weight:  400;
+	margin-left: 10px;
+	padding: 2px 7px;
+}
+.potter-theme-title a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.potter-theme-title a,
+.potter-theme-title span {
+	font-size: 0.75rem;
+	color: #333333;
+	font-weight: 500;
+}
+
+.potter-theme-icon {
+	width: 200px;
+	vertical-align: bottom;
+}
+
+.potter-quick-setting-section ul {
+	margin: 0;
+}
+.potter-quick-setting-section li {
+	border-bottom: 1px solid #eee;
+	margin-bottom: 0;
+}
+.potter-quick-setting-section li {
+	padding: 5px 0;
+	width: 100%;
+}
+
+.potter-quick-setting-section li a {
+	margin: 5px;
+	display: inline-block;
+	text-decoration: none;
+}
+.potter-quick-setting-section a.potter-quick-setting-title {
+	flex: auto;
+}
+.resposive-documentation, .potter-review {
+	padding: 15px 20px 30px 20px;
+}
+.potter-sidebar .handle .dashicons {
+	margin: 0 5px 0 0;
+}
+#potter-options-go-pro .potter-features-table {
+	width: 100%;
+	border-collapse: collapse;
+	border:1px solid #eaeaea;
+	background-color: #ffffff;
+}
+#potter-options-go-pro {
+	padding: 2% 0 0 0;
+}
+@media (max-width: 544px){
+	.potter-quick-setting-section li {
+		width: 100%;
+	}
+}
+.potter-features-table .header-potter-features {
+	font-size: 14px;
+	padding: 20px 35px 20px 35px;
+}
+.potter-features-table .feature-title {
+	font-family: Roboto, Sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.potter-features-table .feature-description {
+
+}
+.potter-features-table .feature {
+	padding: 10px 10px 10px 20px;
+}
+.potter-features-table .feature-status {
+	text-align: center;
+}
+.potter-features-table .featureyes {
+	color: #32CD32;
+}
+.potter-features-table .featureno {
+	color: #ff0000;
+}
+.potter-features-table .featureno .dashicons-before:before, .potter-features-table .featureyes .dashicons-before:before {
+	width: 40px;
+	height: 40px;
+	font-size: 40px;
+}
+.postbox.potter-support-section .inside {
+	padding: 0 12px 30px;
+}
+.postbox {
+	border-radius: 5px;
+	overflow: hidden;
+}
+.postbox p {
+	font-size: 14px;
+}
+.go-pro-section {
+	text-align: right;
+	padding: 20px 50px;
+	background-color: #ffffff;
+}
+.go-pro-section .potter-go-pro-button {
+	border: 1px solid #32CD32;
+	padding: 20px 40px;
+	border-radius: 5px;
+	background-color: #32CD32;
+	display: inline-block;
+	fill: #ffffff;
+	color: #ffffff;
+	font-size: 20px;
+	text-decoration: none;
+}
+.potter-theme-version {
+	margin-left: 10px;
+	background-color: #f1f1f1;
+	padding: 3px 6px;
+	border-radius: 3px;
+}
+
+.potter-import-starter-sites-section {
+	background: url(../images/bg-plugins.png) right top no-repeat #fff;
+	background-size: 58%;
+	padding: 40px;
+	border-radius: 6px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+}
+.potter-import-starter-sites-section h2 {
+	padding: 0px 0px 10px 0px !important;
+	font-size: 35px !important;
+	font-weight: 700 !important;
+}
+.template-contente {
+	width: 45%;
+}
+.template-contente .button {
+	padding: 13px 30px;
+	line-height: 1;
+	font-size: 18px;
+	margin-bottom: 10px;
+	font-weight: 300;
+}
+.template-contente p {
+	margin: 0px 0px 10px 0px;
+	font-size: 16px;
+	font-weight: 300;
+}

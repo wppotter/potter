@@ -2440,6 +2440,8 @@ if ($bottom_footer_border) {
     echo '.bottom-footer .potter-inner-footer {';
     if ($bottom_footer_border_top_width) {
         echo sprintf('border-top: %s;', esc_attr($bottom_footer_border_top_width) . 'px' . ' solid ');
+    } else {
+      echo sprintf('border-top: 0px;');
     }
     if ($bottom_footer_border_color) {
         echo sprintf('border-top-color: %s;', esc_attr($bottom_footer_border_color));

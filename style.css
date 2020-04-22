@@ -1744,9 +1744,7 @@ body:focus {
   border-bottom: 0
 }
 
-.bottom-footer .potter-inner-footer {
-  border-top: 1px solid #ececec
-}
+
 
 .default-shop-title-bar {
   position: relative;
@@ -1881,7 +1879,7 @@ body:focus {
 
 .potter-navigation {
   border-bottom: 1px solid #ccc;
-
+  transition: .5s;
 }
 
 .potter-page {

@@ -4431,7 +4431,6 @@ Kirki::add_field('potter', array(
     'section'         => 'potter_menu_options',
     'priority'        => 22,
     'default'         => '1px',
-    'transport'       => 'postMessage',
     'choices'         => array(
         'min'  => '0',
         'max'  => '25',
@@ -4447,7 +4446,6 @@ Kirki::add_field('potter', array(
     'section'         => 'potter_menu_options',
     'priority'        => 23,
     'default'         => '#ececec',
-    'transport'       => 'postMessage',
     'active_callback' => array(
         array(
             'setting'  => 'nav_bar_border_bottom',
@@ -6049,7 +6047,6 @@ function potter_custom_controls_default($wp_customize)
             },
         )
     ));
-
     $wp_customize->add_control(new POTTER_Customize_Responsive_Input_Slider(
         $wp_customize,
         'menu_logo_size',

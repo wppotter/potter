@@ -194,8 +194,12 @@ require_once POTTER_THEME_DIR . '/inc/includes.php';
 
 // Admin functionalities
 if (is_admin()) {
-    require_once get_template_directory() . '/admin/admin.php';
-    new Potter_Admin();
+  require_once get_template_directory() . '/admin/admin-functions.php';
+    require_once get_template_directory() . '/admin/class-potter-admin-settings.php';
+    new Potter_Admin_Settings();
+    require_once get_template_directory() . '/admin/class-potter-plugin-install-helper.php';
+    new Potter_Plugin_Install_Helper();
+
 }
 // Is blog
 function potter_is_blog()
