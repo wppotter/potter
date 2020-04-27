@@ -86,6 +86,12 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 1.1.4 - April 27 2020 =
+* Sfticky nav issue Fixed
+* Admin page changed
+* Demo Importer plugin installer Added
+* Issue fix regarding WooCommerce Layout
+
 
 = 1.1.3 - April 09 2020 =
 * Sticky logo issue fixed

@@ -41,8 +41,11 @@ function potter_do_woocommerce_customizer_css() {
 
 	if ( $woocommerce_info_notice_color ) {
 
-		echo '.woocommerce-info:before, .woocommerce-info a {';
+		echo '.woocommerce-info a {';
 		echo sprintf( 'color: %s;', esc_attr( $woocommerce_info_notice_color ) );
+		echo '}';
+		echo '.woocommerce-info:before {';
+		echo sprintf( 'color: %s !important;', esc_attr( $woocommerce_info_notice_color ) );
 		echo '}';
 
 		echo '.woocommerce-info a:hover {';
@@ -50,13 +53,16 @@ function potter_do_woocommerce_customizer_css() {
 		echo '}';
 
 		echo '.woocommerce-info {';
-		echo sprintf( 'border-top-color: %s;', esc_attr( $woocommerce_info_notice_color ) );
+		echo sprintf( 'border-top-color: %s !important;', esc_attr( $woocommerce_info_notice_color ) );
 		echo '}';
 
 	} elseif ( $page_accent_color ) {
 
-		echo '.woocommerce-info:before, .woocommerce-info a {';
+		echo '.woocommerce-info a {';
 		echo sprintf( 'color: %s;', esc_attr( $page_accent_color ) );
+		echo '}';
+		echo '.woocommerce-info:before {';
+		echo sprintf( 'color: %s !important;', esc_attr( $page_accent_color ) );
 		echo '}';
 
 		echo '.woocommerce-info a:hover {';
@@ -64,7 +70,7 @@ function potter_do_woocommerce_customizer_css() {
 		echo '}';
 
 		echo '.woocommerce-info {';
-		echo sprintf( 'border-top-color: %s;', esc_attr( $page_accent_color ) );
+		echo sprintf( 'border-top-color: %s !important;', esc_attr( $page_accent_color ) );
 		echo '}';
 
 	}
@@ -72,7 +78,7 @@ function potter_do_woocommerce_customizer_css() {
 	if ( $woocommerce_message_notice_color ) {
 
 		echo '.woocommerce-message:before, .woocommerce-message a {';
-		echo sprintf( 'color: %s;', esc_attr( $woocommerce_message_notice_color ) );
+		echo sprintf( 'color: %s !important;', esc_attr( $woocommerce_message_notice_color ) );
 		echo '}';
 
 		echo '.woocommerce-message a:hover {';
@@ -294,7 +300,7 @@ function potter_do_woocommerce_customizer_css() {
 		if ( 'center' === $woocommerce_loop_content_alignment ) {
 
 			echo '.woocommerce .products .star-rating {';
-			echo 'margin: 0 auto 10px auto;';
+			echo 'margin: 0 auto 10px auto !important;';
 			echo '}';
 
 		}
@@ -640,9 +646,11 @@ function potter_do_woocommerce_customizer_css() {
 		echo '}';
 
 		echo '.woocommerce div.product .woocommerce-tabs ul.tabs li {';
-		echo 'border: none;';
-		echo 'border-top: 5px solid transparent;';
-		echo 'background: none;';
+		echo 'border-bottom: none !important;';
+		echo 'border-left: none !important;';
+		echo 'border-right: none !important;';
+		echo 'border-top: 5px solid transparent !important;';
+		echo 'background: none !important;';
 		echo 'margin: 0 40px 0 0;';
 		echo '}';
 
@@ -661,21 +669,22 @@ function potter_do_woocommerce_customizer_css() {
 
 		echo '.woocommerce div.product .woocommerce-tabs ul.tabs li.active {';
 		echo 'background: none;';
+		echo 'border-left: none !important;';
 
 		if ( $woocommerce_single_tabs_font_color_active ) {
-			echo sprintf( 'border-top: 5px solid %s;', esc_attr( $woocommerce_single_tabs_font_color_active ) );
+			echo sprintf( 'border-top: 5px solid %s !important;', esc_attr( $woocommerce_single_tabs_font_color_active ) );
 		} elseif ( $page_accent_color ) {
-			echo sprintf( 'border-top: 5px solid %s;', esc_attr( $page_accent_color ) );
+			echo sprintf( 'border-top: 5px solid %s !important;', esc_attr( $page_accent_color ) );
 		} else {
-			echo 'border-top: 5px solid #0056FF;';
+			echo 'border-top: 5px solid #0056FF !important;';
 		}
 
 		echo '}';
 
 		echo '.woocommerce div.product .woocommerce-tabs .panel {';
-		echo 'padding: 0;';
-		echo 'border: none;';
-		echo 'margin-top: 30px;';
+		echo 'padding: 0 !important;';
+		echo 'border: none !important;';
+		echo 'margin-top: 30px !important;';
 		echo '}';
 
 	}
@@ -736,7 +745,7 @@ function potter_do_woocommerce_customizer_css() {
 		echo '@media screen and (max-width: ' . esc_attr( $breakpoint_medium ) . ') {';
 
 		echo '.woocommerce-checkout .col2-set, #order_review_heading, .woocommerce-checkout-review-order {';
-		echo 'width: 100%;';
+		echo 'width: 100% !important;';
 		echo 'float: none;';
 		echo '}';
 

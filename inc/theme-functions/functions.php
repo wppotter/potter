@@ -533,7 +533,7 @@ function potter_archive_header()
 
 function potter_blog_page_title()
 {
-    $blog_page_custom_title = get_theme_mod('blog_page_custom_title', __( 'Just another WordPress blog', 'potter' ));
+    $blog_page_custom_title = get_theme_mod('blog_page_custom_title');
     if (is_home() && $blog_page_custom_title) {
         echo '<div class="default-title-bar-archive">';
         echo '<h1 class="page-title">';

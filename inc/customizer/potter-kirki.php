@@ -88,7 +88,7 @@ Kirki::add_config('potter', array(
 // General.
 Kirki::add_panel('layout_panel', array(
     'priority' => 2,
-    'title'    => __('General', 'potter'),
+    'title'    => __('Global', 'potter'),
 ));
 
 // Blog.
@@ -1189,7 +1189,6 @@ foreach ($archives as $archive) {
       'type'     => 'text',
       'settings' => 'blog_page_custom_title',
       'section'  => 'potter_' . $archive . '_options',
-      'default'  => __('Just another WordPress blog', 'potter'),
       'priority' => 0,
   ));
 
@@ -1784,7 +1783,6 @@ Kirki::add_field('potter', array(
     'description' => __('Default: 1200px', 'potter'),
     'priority'    => 1,
     'default'			=> '1200px',
-    'transport'       => 'postMessage',
 ));
 
 // Boxed.
@@ -2252,6 +2250,21 @@ Kirki::add_field('potter', array(
     'priority'        => 1,
 ));
 
+Kirki::add_field('potter', array(
+    'type'        => 'dimensions',
+    'settings'    => 'theme_button_padding',
+    'label'       => esc_html__('Button Padding', 'potter'),
+    'description' => esc_html__('Set Padding for buttons.', 'potter'),
+  'priority'  => 1,
+    'section'     => 'potter_button_options',
+    'default'     => array(
+        'padding-top'    => '10px',
+        'padding-bottom' => '10px',
+        'padding-left'   => '30px',
+        'padding-right'  => '30px',
+    ),
+
+));
 
 // Background color.
 Kirki::add_field('potter', array(

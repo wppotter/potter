@@ -516,9 +516,10 @@ $button_primary_text_color       = get_theme_mod('button_primary_text_color');
 $button_primary_bg_color_alt     = get_theme_mod('button_primary_bg_color_alt');
 $button_primary_text_color_alt   = get_theme_mod('button_primary_text_color_alt');
 $buttom_font_family_value = get_theme_mod('button_font_family');
+$theme_button_padding            = get_theme_mod('theme_button_padding', 'padding-top');
 
 if ($button_border_width) {
-    echo '.potter-button, input[type="submit"], .button {';
+    echo '.potter-button, input[type="submit"], .button, button{';
 
     echo sprintf('border-width: %s;', esc_attr($button_border_width) . 'px');
     echo 'border-style: solid;';
@@ -530,7 +531,7 @@ if ($button_border_width) {
     echo '}';
 
     if ($button_border_color_alt) {
-        echo '.potter-button:hover, input[type="submit"]:hover {';
+        echo '.potter-button:hover, input[type="submit"]:hover, button:hover, .button:hover{';
         echo sprintf('border-color: %s;', esc_attr($button_border_color_alt) . ' !important');
         echo '}';
     }
@@ -547,7 +548,7 @@ if ($button_border_width) {
         echo '}';
     }
 }
-echo '.potter-button, input[type="submit"], .button {';
+echo '.potter-button, input[type="submit"], .button, button {';
 if ($button_bg_color || $button_text_color || $button_border_radius) {
     if ($button_border_radius) {
         echo sprintf('border-radius: %s;', esc_attr($button_border_radius) . 'px');
@@ -622,6 +623,20 @@ if ($button_primary_bg_color_alt || $button_primary_bg_color_alt) {
 
     echo '}';
 }
+echo '.potter-button-primary, .potter-button, input[type="submit"], .button, button {';
+if ($theme_button_padding['padding-top']) {
+    echo sprintf('padding-top: %s;', esc_attr($theme_button_padding['padding-top']));
+}
+if ($theme_button_padding['padding-bottom']) {
+    echo sprintf('padding-bottom: %s;', esc_attr($theme_button_padding['padding-bottom']));
+}
+if ($theme_button_padding['padding-left']) {
+    echo sprintf('padding-left: %s;', esc_attr($theme_button_padding['padding-left']));
+}
+if ($theme_button_padding['padding-right']) {
+    echo sprintf('padding-right: %s;', esc_attr($theme_button_padding['padding-right']));
+}
+echo '}';
 
 // Sidebar.
 $sidebar_bg_color                      = get_theme_mod('sidebar_bg_color');
