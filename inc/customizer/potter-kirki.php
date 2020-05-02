@@ -33,7 +33,7 @@ function potter_customizer_setup($wp_customize)
 {
 
     // Move sections.
-    $wp_customize->get_section('title_tagline')->panel    = 'header_panel';
+    $wp_customize->get_section('title_tagline')->panel    = 'layout_panel';
     $wp_customize->get_section('background_image')->panel = 'layout_panel';
 
     // Move controls.
@@ -84,6 +84,7 @@ Kirki::add_config('potter', array(
 ));
 
 /* Panels */
+
 
 // General.
 Kirki::add_panel('layout_panel', array(
@@ -224,14 +225,6 @@ foreach ($singles as $single) {
 
 /* Sections – Header */
 
-// Navigation.
-Kirki::add_section('potter_menu_options', array(
-    'title'    => __('Navigation', 'potter'),
-    'panel'    => 'header_panel',
-    'priority' => 200,
-));
-
-
 // Sub menu.
 Kirki::add_section('potter_sub_menu_options', array(
     'title'    => __('Sub Menu', 'potter'),
@@ -250,7 +243,7 @@ Kirki::add_section('potter_mobile_menu_options', array(
 Kirki::add_section('potter_pre_header_options', array(
     'title'    => __('Top Header', 'potter'),
     'panel'    => 'header_panel',
-    'priority' => 800,
+    'priority' => 400,
 ));
 // Transparent Header.
 Kirki::add_section('potter_transparent_header_options', array(
@@ -269,6 +262,29 @@ Kirki::add_section('potter_offcanvas_menu_options', array(
     'panel'    => 'header_panel',
     'priority' => 902,
 
+));
+Kirki::add_panel('potter_navbar_options', array(
+    'title'    => __('Navigation Bar', 'potter'),
+    'panel'    => 'header_panel',
+    'priority' => 800,
+));
+
+// Navigation.
+Kirki::add_section('potter_menu_options', array(
+    'title'    => __('Navigation Layout', 'potter'),
+    'panel'    => 'potter_navbar_options',
+    'priority' => 1,
+));
+
+Kirki::add_section('potter_menu_button_options', array(
+    'title'    => __('Navbar HTML Button', 'potter'),
+    'panel'    => 'potter_navbar_options',
+    'priority' => 2,
+));
+Kirki::add_section('potter_menu_iconlink_options', array(
+    'title'    => __('Navbar Icon Links', 'potter'),
+    'panel'    => 'potter_navbar_options',
+    'priority' => 3,
 ));
 
 //off canvas menu
@@ -1206,7 +1222,7 @@ foreach ($archives as $archive) {
         'label'       => __('Custom Content Width', 'potter'),
         'settings'    => $archive . '_custom_width',
         'section'     => 'potter_' . $archive . '_options',
-        'description' => __('Default: 1200px', 'potter'),
+        'description' => __('Value can be "px", "em" or with "%"', 'potter'),
         'priority'    => 0,
         'default'			=> '1200px',
 
@@ -1553,7 +1569,7 @@ foreach ($singles as $single) {
         'label'       => __('Custom Content Width', 'potter'),
         'settings'    => $single . '_custom_width',
         'section'     => 'potter_' . $single . '_options',
-        'description' => __('Default: 1200px', 'potter'),
+        'description' => __('Value can be "px", "em" or with "%"', 'potter'),
         'priority'    => 0,
         'default'			=> '1200px',
     ));
@@ -1780,7 +1796,7 @@ Kirki::add_field('potter', array(
     'label'       => __('Default Container Width', 'potter'),
     'settings'    => 'page_max_width',
     'section'     => 'potter_page_options',
-    'description' => __('Default: 1200px', 'potter'),
+    'description' => __('Value can be "px", "em" or with "%"', 'potter'),
     'priority'    => 1,
     'default'			=> '1200px',
 ));
@@ -2251,19 +2267,30 @@ Kirki::add_field('potter', array(
 ));
 
 Kirki::add_field('potter', array(
-    'type'        => 'dimensions',
-    'settings'    => 'theme_button_padding',
-    'label'       => esc_html__('Button Padding', 'potter'),
-    'description' => esc_html__('Set Padding for buttons.', 'potter'),
-  'priority'  => 1,
+    'type'        => 'input_slider',
+    'settings'    => 'theme_button_padding_top_bottom',
+    'label'       => esc_html__('Padding for top and bottom', 'potter'),
+    'priority'  => 1,
     'section'     => 'potter_button_options',
-    'default'     => array(
-        'padding-top'    => '10px',
-        'padding-bottom' => '10px',
-        'padding-left'   => '30px',
-        'padding-right'  => '30px',
+    'default'     => '10',
+    'choices'   => array(
+        'min'  => '5',
+        'max'  => '100',
+        'step' => '1',
     ),
-
+));
+Kirki::add_field('potter', array(
+    'type'        => 'input_slider',
+    'settings'    => 'theme_button_padding_left_right',
+    'label'       => esc_html__('Padding for left and right', 'potter'),
+    'priority'  => 1,
+    'section'     => 'potter_button_options',
+    'default'     => '10',
+    'choices'   => array(
+        'min'  => '5',
+        'max'  => '100',
+        'step' => '1',
+    ),
 ));
 
 // Background color.
@@ -3261,7 +3288,7 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'            => 'dimension',
     'label'           => __('Pre Header Width', 'potter'),
-    'description'     => __('Default: 1200px', 'potter'),
+    'description'     => __('Value can be "px", "em" or with "%"', 'potter'),
     'settings'        => 'pre_header_width',
     'section'         => 'potter_pre_header_options',
     'priority'        => 3,
@@ -3838,8 +3865,9 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'        => 'dimension',
     'label'       => __('Navigation Width', 'potter'),
-    'description' => __('Default: 1200px', 'potter'),
+    'description' => __('Value can be "px", "em" or with "%"', 'potter'),
     'settings'    => 'menu_width',
+    'default'     => '1200px',
     'section'     => 'potter_menu_options',
     'transport' => 'postMessage',
     'priority'    => 1,
@@ -3863,14 +3891,14 @@ Kirki::add_field('potter', array(
     'type'     => 'toggle',
     'settings' => 'menu_html_button',
     'label'    => __('HTML Button', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'priority' => 3,
 ));
 Kirki::add_field('potter', array(
     'type'     => 'textarea',
     'settings' => 'menu_html_button_content',
     'label'    => __('Content', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'default'  => '<a href="#">Contact Us</a>',
     'priority' => 4,
     'active_callback' => array(
@@ -3882,14 +3910,12 @@ Kirki::add_field('potter', array(
     ),
 ));
 
-
-
 // Background color.
 Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'nav_button_bg_color',
     'label'    => __('Background Color', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'default'  => '#0056FF',
     'priority' => 4,
     'choices'  => array(
@@ -3910,7 +3936,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'nav_button_bg_hover_color',
     'label'    => __('Background Hover Color', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'default'  => '#6592E9',
     'priority' => 4,
     'choices'  => array(
@@ -3930,7 +3956,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'nav_button_font_color',
     'label'    => __('Font Color', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'default'  => '#fff',
     'priority' => 4,
     'choices'  => array(
@@ -3950,7 +3976,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'nav_button_font_color_alt',
     'label'    => __('Hover', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'default'  => '#fff',
     'priority' => 4,
     'choices'  => array(
@@ -3970,7 +3996,7 @@ Kirki::add_field('potter', array(
     'type'     => 'slider',
     'label'    => __('Border Width', 'potter'),
     'settings' => 'nav_button_border_width',
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'priority' => 4,
     'default'  => '0',
     'choices'  => array(
@@ -3992,7 +4018,7 @@ Kirki::add_field('potter', array(
     'type'     => 'slider',
     'label'    => __('Border Radius', 'potter'),
     'settings' => 'nav_button_border_radius',
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'priority' => 4,
     'default'  => '0',
     'choices'  => array(
@@ -4015,7 +4041,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'nav_button_border_color',
     'label'    => __('Button Border Color', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'priority' => 4,
     'choices'  => array(
         'alpha' => true,
@@ -4033,7 +4059,7 @@ Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'nav_button_border_color_alt',
     'label'    => __('Button Border Hover Color', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_button_options',
     'default'  => '#6592E9',
     'priority' => 4,
     'choices'  => array(
@@ -4049,10 +4075,53 @@ Kirki::add_field('potter', array(
 ));
 
 Kirki::add_field('potter', array(
+    'type'     => 'input_slider',
+    'label'    => __('Button Height', 'potter'),
+    'settings' => 'nav_button_height',
+    'section'  => 'potter_menu_button_options',
+    'priority' => 10,
+    'default'  => '10',
+    'choices'  => array(
+        'min'  => '5',
+        'max'  => '100',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_html_button',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'     => 'input_slider',
+    'label'    => __('Button Width', 'potter'),
+    'settings' => 'nav_button_width',
+    'section'  => 'potter_menu_button_options',
+    'priority' => 11,
+    'default'  => '10',
+    'choices'  => array(
+        'min'  => '5',
+        'max'  => '100',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_html_button',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+
+// icon link
+
+Kirki::add_field('potter', array(
     'type'     => 'toggle',
     'settings' => 'menu_icon_link',
     'label'    => __('Icon Link', 'potter'),
-    'section'  => 'potter_menu_options',
+    'section'  => 'potter_menu_iconlink_options',
     'priority' => 4,
 ));
 
@@ -4060,7 +4129,7 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
   'type'        => 'repeater',
     'label'       => esc_html__('Menu Icon', 'potter'),
-    'section'     => 'potter_menu_options',
+    'section'     => 'potter_menu_iconlink_options',
     'priority'    => 4,
     'row_label' => [
         'type'  => 'text',
@@ -4106,6 +4175,27 @@ Kirki::add_field('potter', array(
   ),
 ));
 
+Kirki::add_field('potter', array(
+    'type'     => 'input_slider',
+    'label'    => __('Icon Size', 'potter'),
+    'settings' => 'menu_icon_size',
+    'section'  => 'potter_menu_iconlink_options',
+    'priority' => 4,
+    'default'  => '16',
+    'choices'  => array(
+        'min'  => '5',
+        'max'  => '100',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_icon_link',
+            'operator' => '!=',
+            'value'    => '',
+        ),
+    ),
+));
+
 // Separator.
 Kirki::add_field('potter', array(
     'type'     => 'custom',
@@ -4118,7 +4208,7 @@ Kirki::add_field('potter', array(
 // Height.
 Kirki::add_field('potter', array(
     'type'     => 'input_slider',
-    'label'    => __('Menu Height', 'potter'),
+    'label'    => __('Navbar Height', 'potter'),
     'settings' => 'menu_height',
     'section'  => 'potter_menu_options',
     'priority' => 4,
@@ -4141,6 +4231,32 @@ Kirki::add_field('potter', array(
     'choices'         => array(
         'min'  => '5',
         'max'  => '40',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-off-canvas',
+        ),
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-full-screen',
+        ),
+    ),
+));
+// Padding.
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'label'           => __('Menu Item Top and Bottom Padding', 'potter'),
+    'settings'        => 'menu_top_bottom_padding',
+    'section'         => 'potter_menu_options',
+    'priority'        => 5,
+    'default'         => '10',
+    'choices'         => array(
+        'min'  => '5',
+        'max'  => '100',
         'step' => '1',
     ),
     'active_callback' => array(
@@ -4219,6 +4335,215 @@ Kirki::add_field('potter', array(
     'default'  => '<hr style="border-top: 1px solid #ccc; border-bottom: 1px solid #f8f8f8">',
     'priority' => 10,
 ));
+
+
+Kirki::add_field('potter', array(
+    'type'     => 'radio-image',
+    'settings' => 'menu_item_hover_style',
+    'label'    => __('Menu iteam hover style', 'potter'),
+    'section'  => 'potter_menu_options',
+    'default'  => 'none',
+    'priority' => 11,
+    'multiple' => 1,
+    'choices'  => array(
+        'none'   => POTTER_THEME_URI . '/inc/customizer/img/header-hover-none.png',
+        'underline'  => POTTER_THEME_URI . '/inc/customizer/img/header-hover-underline.png',
+        'overline'  => POTTER_THEME_URI . '/inc/customizer/img/header-hover-aboveline.png',
+        'outliner'  => POTTER_THEME_URI . '/inc/customizer/img/header-hover-outline.png',
+        'background'  => POTTER_THEME_URI . '/inc/customizer/img/header-hover-bg.png',
+    ),
+));
+
+
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'label'           => __('Menu item underline', 'potter'),
+    'settings'        => 'menu_under_line_size',
+    'section'         => 'potter_menu_options',
+    'priority'        => 11,
+    'default'         => '1',
+    'choices'         => array(
+        'min'  => '1',
+        'max'  => '10',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'underline',
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'menu_under_line_color',
+    'label'    => __('Underline color', 'potter'),
+    'section'  => 'potter_menu_options',
+    'priority' => 11,
+    'default'         => '#666',
+    'choices'  => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'underline',
+        ),
+    ),
+));
+
+//overline
+
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'label'           => __('Menu item overline', 'potter'),
+    'settings'        => 'menu_over_line_size',
+    'section'         => 'potter_menu_options',
+    'priority'        => 11,
+    'default'         => '1',
+    'choices'         => array(
+        'min'  => '1',
+        'max'  => '10',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'overline',
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'menu_over_line_color',
+    'label'    => __('Overline color', 'potter'),
+    'section'  => 'potter_menu_options',
+    'priority' => 11,
+    'default'         => '#666',
+    'choices'  => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'overline',
+        ),
+    ),
+));
+
+
+//outerline
+
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'label'           => __('Menu item outerline', 'potter'),
+    'settings'        => 'menu_outer_line_size',
+    'section'         => 'potter_menu_options',
+    'priority'        => 11,
+    'default'         => '1',
+    'choices'         => array(
+        'min'  => '1',
+        'max'  => '10',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'outliner',
+        ),
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'label'           => __('Menu item outerline curner radius', 'potter'),
+    'settings'        => 'menu_outer_line_corner',
+    'section'         => 'potter_menu_options',
+    'priority'        => 11,
+    'default'         => '0',
+    'choices'         => array(
+        'min'  => '0',
+        'max'  => '100',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'outliner',
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'menu_outer_line_color',
+    'label'    => __('Outer color', 'potter'),
+    'section'  => 'potter_menu_options',
+    'priority' => 11,
+    'default'         => '#666',
+    'choices'  => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'outliner',
+        ),
+    ),
+));
+
+
+//background
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'label'           => __('Menu item background curner radius', 'potter'),
+    'settings'        => 'menu_background_corner',
+    'section'         => 'potter_menu_options',
+    'priority'        => 11,
+    'default'         => '0',
+    'choices'         => array(
+        'min'  => '0',
+        'max'  => '100',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'background',
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'menu_item_background_color',
+    'label'    => __('Background Color', 'potter'),
+    'section'  => 'potter_menu_options',
+    'priority' => 11,
+    'default'         => '#666',
+    'choices'  => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_item_hover_style',
+            'operator' => '==',
+            'value'    => 'background',
+        ),
+    ),
+));
+
+
+
 
 // Sticky Navbar.
 Kirki::add_field('potter', array(
@@ -4344,8 +4669,8 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'            => 'dimension',
     'settings'        => 'sticky_nav_width',
-    'label'           => __('Menu Bar Width', 'potter'),
-    'description'           => __('Default 1200px', 'potter'),
+    'label'           => __('Navbar Width', 'potter'),
+    'description'           => __('Value can be "px", "em" or with "%"', 'potter'),
     'section'         => 'potter_sticky_header_options',
     'priority'        => 26,
     'default'         => '1200px',
@@ -4640,6 +4965,47 @@ Kirki::add_field('potter', array(
         ),
     ),
 ));
+// Border.
+
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'settings'        => 'trans_navbar_bottom_border',
+    'label'           => __('Navbar Bottom Border', 'potter'),
+    'section'         => 'potter_transparent_header_options',
+    'priority'        => 15,
+    'default'         => '0',
+    'choices'         => array(
+        'min'  => '0',
+        'max'  => '10',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'transparent_header',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'            => 'color',
+    'settings'        => 'transparent_header_bottom_border_color',
+    'label'           => __('Bottom Border Color', 'potter'),
+    'section'         => 'potter_transparent_header_options',
+    'default'         => '#cccccc',
+    'priority'        => 15,
+    'choices'         => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'transparent_header',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+
 // Separator.
 
 Kirki::add_field('potter', array(
@@ -5337,7 +5703,7 @@ Kirki::add_field('potter', array(
     'type'            => 'dimension',
     'settings'        => 'top_footer_width',
     'label'           => __('Footer Width', 'potter'),
-    'description'     => __('Default: 1200px', 'potter'),
+    'description'     => __('Value can be "px", "em" or with "%"', 'potter'),
     'section'         => 'potter_footer_widgets',
     'default'         => '1200px',
     'transport'       => 'postMessage',
@@ -5816,7 +6182,7 @@ Kirki::add_field('potter', array(
     'type'            => 'dimension',
     'settings'        => 'footer_width',
     'label'           => __('Footer Width', 'potter'),
-    'description'     => __('Default: 1200px', 'potter'),
+    'description'     => __('Value can be "px", "em" or with "%"', 'potter'),
     'section'         => 'potter_bottom_footer',
     'default'         => '1200px',
     'transport'       => 'postMessage',

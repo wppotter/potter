@@ -140,7 +140,7 @@ function potter_theme_activation_notice(){
 		</svg>
 		<div class="notification-content-potter" style="display: inline-block; padding-bottom: 10px;">
 					<h2>Potter Kit - Pre Designed Pagebuilder Templates</h2>
-		      <p>Did you know Potter comes with dozens of ready-to-use <a href="https://demos.wppotter.com/" traget="_blank">starter templates?</a></p>
+		      <p>Did you know Potter comes with dozens of ready-to-use <a href="https://wppotter.com/potter-kit" traget="_blank">starter templates?</a></p>
 					<a class="button button-primary" href="themes.php?page=demo-importer&browse=all"> Browse Now </a>
 		  </div>
 		</div>
@@ -157,7 +157,7 @@ function potter_theme_activation_notice(){
 </svg>
 <div class="notification-content-potter" style="display: inline-block; padding-bottom: 10px;">
 			<h2>Thank you for installing Potter!</h2>
-      <p>Did you know Potter comes with dozens of ready-to-use <a href="https://demos.wppotter.com/" traget="_blank">starter templates?</a> Go to theme page and install the Potter Kit plugin to get started.</p>
+      <p>Did you know Potter comes with dozens of ready-to-use <a href="https://wppotter.com/potter-kit" traget="_blank">starter templates?</a> Go to theme page and install the Potter Kit plugin to get started.</p>
 			<a class="button button-primary" href="themes.php?page=potter"> Get Started </a>
   </div>
 </div>

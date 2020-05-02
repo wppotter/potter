@@ -113,7 +113,7 @@ class Potter_Plugin_Install_Helper
                     network_admin_url('plugins.php')
                 );
 
-                $button .= '<a  data-redirect="' . esc_url($redirect) . '" data-slug="' . esc_attr($slug) . '" class="deactivate-now button" href="' . esc_url($nonce) . '" data-name="' . esc_attr($slug) . '" aria-label="Deactivate ' . esc_attr($slug) . '">' . esc_html__('Deactivate', 'potter') . '</a>';
+                $button .= '<a  data-redirect="' . esc_url($redirect) . '" data-slug="' . esc_attr($slug) . '" class="deactivate-now button" href="' . esc_url($nonce) . '" data-name="' . esc_attr($slug) . '" aria-label="Deactivate ' . esc_attr($slug) . '">' . esc_html__('Deactivate', 'potter') . '</a> <a style="margin: 10px 20px; vertical-align: middle; display: inline-block;" href="' . esc_url( admin_url('themes.php?page=demo-importer')) . '">' . esc_html__('Browse Starter Sites', 'potter') . '</a>' ;
                 break;
 
             case 'enable_cpt':

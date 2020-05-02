@@ -121,9 +121,10 @@ input[type=dimention] {
 	border: 1px solid #ccc;
 	padding: 8px;
 	font-size: 14px;
+	font-weight: 300;
 	text-transform: uppercase;
-	background: #000;
-	color: #fff;
+	background: #fff;
+	color: #333;
 	letter-spacing: 2px;
 	margin: auto -15px auto -15px;
 }

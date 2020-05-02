@@ -519,11 +519,6 @@ function potter_woo_menu_item_class_current( $css_classes ) {
 }
 add_filter( 'potter_woo_menu_item_classes', 'potter_woo_menu_item_class_current' );
 
-
-
-
-
-
 /**
  * Construct cart menu item.
  *
@@ -533,7 +528,7 @@ function potter_woo_menu_item() {
 
 	// Vars.
 	$icon        = get_theme_mod( 'woocommerce_menu_item_icon', 'cart' );
-	$css_classes = apply_filters( 'potter_woo_menu_item_classes', 'menu-item potter-woo-menu-item' );
+	$css_classes = apply_filters( 'potter_woo_menu_item_classes', 'potter-woo-menu-item' );
 	$title       = apply_filters( 'potter_woo_menu_item_title', __( 'Shopping Cart', 'potter' ) );
 	$cart_count  = WC()->cart->get_cart_contents_count();
 	$cart_url    = wc_get_cart_url();

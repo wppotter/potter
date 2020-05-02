@@ -133,6 +133,13 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
+= 1.1.5 - May 2 2020 =
+* Fixed Issue related to WooCommerce Layout
+* Navigation Menu Hover option added
+* More Power to header options
+* Admin Page changed
+* Screenshot changed
+
 = 1.1.4 - April 27 2020 =
 * Sfticky nav issue Fixed
 * Admin page changed

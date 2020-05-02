@@ -5,7 +5,7 @@ Author: 		   wppotter
 Author URI:
 Description: 	Potter is a super fast,  gutenberg ready fully customizable & beautiful theme suitable for blog, personal portfolio, business website and WooCommerce storefront. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Potter comes with Schema.org code integrated and is Native AMP ready so search engines will love your site. It offers special features and templates so it works perfectly with all page builders like Elementor, Beaver Builder, Visual Composer, SiteOrigin, Divi, etc. Some of the other features: # WooCommerce Ready # Responsive # RTL & Translation Ready # Regularly updated. Looking for a perfect base theme? Look no further. Potter is fast, fully customizable and WooCommerce & Easy Digital Downloads ready theme that you can use for building any kind of website!
 Tags: Blog,   E-Commerce,  Entertainment, Microformats, one-column, two-columns, left-sidebar, right-sidebar, custom-colors, custom-menu, featured-images, full-width-template, custom-logo, custom-background, threaded-comments, translation-ready, rtl-language-support, theme-options, block-styles, wide-blocks
-Version: 		1.1.4
+Version: 		1.1.5
 License:		GNU General Public License v3 or later
 License URI:	https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -368,15 +368,7 @@ template {
   color: #fff
 }
 
-.potter-menu-item-button a:hover {
-  background: #6592e9;
-  color: #fff
-}
 
-.potter-menu-item-button a {
-  background: #0056ff;
-  color: #fff
-}
 
 .potter-button-primary:hover {
   background: #6592e9;
@@ -1063,7 +1055,7 @@ table thead th, .potter-table thead th {
   margin-bottom: 10px
 }
 
-#main-navbar, .potter-logo  {
+.potter-logo  {
   transition: all 100ms;
 }
 img.alignright, figure.alignright, div.alignright {
@@ -1317,7 +1309,15 @@ body:focus {
 }
 .split-left-menu #navigation-left {
   float: left;
+  height: 100%;
+  position: absolute;
+  top:0px;
+  left: 0px;
 }
+.logo-container-split {
+  width: 30%;
+}
+
 .split-left-menu #navigation-right {
   float: right;
 }
@@ -1508,17 +1508,57 @@ body:focus {
   display: block !important;
   opacity: 1 !important
 }
-
+.main-nav-left-menu {
+  position: relative;
+}
 .potter-menu-right .potter-menu a, .potter-menu-left .potter-menu a, .potter-menu-stacked .potter-menu a, .potter-menu-stacked-advanced .potter-menu a, .potter-menu-centered .potter-menu a, #potter-pre-header .potter-menu a, .potter-page-footer .potter-menu a {
   padding: 10px 10px
 }
 
-.potter-menu-right .potter-menu>.menu-item, .potter-menu-left .potter-menu>.menu-item, .potter-menu-stacked .potter-menu>.menu-item, .potter-menu-stacked-advanced .potter-menu>.menu-item, .potter-menu-centered .potter-menu>.menu-item, #potter-pre-header .potter-menu>.menu-item, .potter-page-footer .potter-menu>.menu-item {
-  float: left
+.potter-menu-right .potter-menu>.menu-item, .potter-menu-left .potter-menu>.menu-item, .potter-menu-stacked .potter-menu>.menu-item, .potter-menu-stacked-advanced .potter-menu>.menu-item, .potter-menu-centered .potter-menu>.menu-item, #potter-pre-header .potter-menu>.menu-item, .potter-page-footer .potter-menu>.menu-item, .potter-menu-item-button, .potter-menu-item-icon, .potter-woo-menu-item {
+  display: inline-block;
+  vertical-align: middle;
+}
+.potter-menu-item-icon {
+  margin-left: 10px;
+}
+.potter-menu-item-icon a {
+  transition: 0.5s;
+}
+.potter-menu-item-icon a:hover {
+  opacity: 0.6;
+}
+.potter-menu .potter-menu-item-button a:hover {
+  background: #6592e9;
+  color: #fff
 }
 
+.potter-menu .potter-menu-item-button a {
+  background: #0056ff;
+  color: #fff;
+  padding: 10px 20px;
+}
+.logo-container-center-nav {
+  position: relative;
+}
+.logo-container-center-nav .potter-logo {
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  width: 100%;
+  padding: 0px 20px;
+}
+.potter-menu-stacked nav {
+  padding: 0px 20px;
+}
 .potter-menu-stacked .potter-logo {
-  padding-bottom: 15px
+  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.potter-menu-stacked {
+  padding: 0px;
 }
 
 .potter-menu-right .potter-menu, .potter-menu-right #navigation {
@@ -1882,7 +1922,7 @@ body:focus {
 
 .potter-navigation {
   border-bottom: 1px solid #ccc;
-  transition: .5s;
+
 }
 
 .potter-page {
@@ -2421,7 +2461,7 @@ body.potter-full-width .potter-page-content {
 }
 
 .logo-container-center-nav {
-  padding: 0px 20px;
+  padding: 0px 0px;
   text-align: center;
 }
 .potter-menu-centered .potter-grid {
@@ -2539,9 +2579,12 @@ body.woocommerce {
   position: absolute;
   left: 40px;
   top: 40px;
-  cursor: pointer
+  cursor: pointer;
+  padding: 0px;
 }
-
+.potter-menu-offcanvasnav {
+  padding: 0px;
+}
 .canvas-close-nav:before {
   content: "\f106" !important
 }
@@ -2578,7 +2621,8 @@ body.woocommerce {
 }
 
 .potter-menu-off-canvas .potter-menu li a {
-  display: inline-block
+  display: block;
+  padding: 5px 0px;
 }
 
 .potter-menu-off-canvas .potter-menu li ul li a {

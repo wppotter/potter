@@ -184,7 +184,7 @@ function potter_html_button_item( $is_navigation = true, $is_mobile = false ) {
 
 
 	// We have a slightly different markup for the search menu item if it's being displayed outside the main menu.
-	$button_item = '<li class="menu-item potter-menu-item-button">';
+	$button_item = '<li class="potter-menu-item-button">';
 	$button_item .=  wp_kses_post( $menu_html_button_content );
 	$button_item .= '</li>';
 
@@ -243,7 +243,7 @@ function potter_nav_icon_link( $is_navigation = true, $is_mobile = false ) {
 $settings = get_theme_mod( 'potter_icon_nav_bar', $defaults );
 $icon_item = '';
 	foreach( $settings as $setting ) :
-		$icon_item .= '<li class="menu-item potter-menu-item-icon"><a href="' . esc_url($setting['link_url']) . '" target="_blank">';
+		$icon_item .= '<li class="potter-menu-item-icon"><a href="' . esc_url($setting['link_url']) . '" target="_blank">';
 		$icon_item .= '<span class="' . esc_attr($setting['link_text']) . '" style="color: '. esc_attr($setting['link_color']) .'">';
 		$icon_item .= '</span></a></li>';
 	endforeach;

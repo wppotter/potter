@@ -120,6 +120,9 @@ function potter_do_woocommerce_customizer_css() {
 			echo '.potter-menu .potter-woo-menu-item .potter-woo-menu-item-count {';
 			echo sprintf( 'background: %s;', esc_attr( $woocommerce_menu_item_desktop_color ) );
 			echo '}';
+			echo '.potter-woo-menu-item a:hover {';
+			echo sprintf( 'color: %s;', esc_attr( $woocommerce_menu_item_desktop_color ) );
+			echo '}';
 
 
 
@@ -129,7 +132,9 @@ function potter_do_woocommerce_customizer_css() {
 			echo sprintf( 'background: %s;', esc_attr( $menu_font_color ) );
 			echo '}';
 
-
+			echo '.potter-woo-menu-item a:hover {';
+			echo sprintf( 'color: %s;', esc_attr( $woocommerce_menu_item_desktop_color ) );
+			echo '}';
 
 		} elseif ( $page_accent_color ) {
 
@@ -137,6 +142,9 @@ function potter_do_woocommerce_customizer_css() {
 			echo sprintf( 'background: %s;', esc_attr( $page_accent_color ) );
 			echo '}';
 
+			echo '.potter-woo-menu-item a:hover {';
+			echo sprintf( 'color: %s;', esc_attr( $woocommerce_menu_item_desktop_color ) );
+			echo '}';
 
 
 		}

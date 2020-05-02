@@ -286,8 +286,9 @@ Kirki::add_field( 'potter', array(
 	'label'       => __( 'Custom Content Width', 'potter' ),
 	'settings'    => 'woocommerce_loop_custom_width',
 	'section'     => 'woocommerce_product_catalog',
-	'description' => __( 'Default: 1200px', 'potter' ),
+	'description' => __( 'Value can be "px", "em" or with "%"', 'potter' ),
 	'priority'    => 10,
+	'default'			=> '1200px',
 	'transport'   => 'postMessage',
 ) );
 
@@ -832,8 +833,9 @@ Kirki::add_field( 'potter', array(
 	'label'       => __( 'Custom Content Width', 'potter' ),
 	'settings'    => 'woocommerce_single_custom_width',
 	'section'     => 'potter_woocommerce_product_options',
-	'description' => __( 'Default: 1200px', 'potter' ),
+	'description' => __( 'Value can be "px", "em" or with "%"', 'potter' ),
 	'priority'    => $product_priority++,
+	'default'			=> '1200px',
 	'transport'   => 'postMessage',
 ) );
 

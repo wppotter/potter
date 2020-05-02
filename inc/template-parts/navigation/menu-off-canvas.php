@@ -9,7 +9,7 @@
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 ?>
 
-<div class="potter-container potter-container-center potter-visible-large potter-nav-wrapper potter-menu-right">
+<div class="potter-container potter-container-center potter-visible-large potter-nav-wrapper potter-menu-right potter-menu-offcanvasnav">
 
 	<div class="potter-grid potter-grid-collapse">
 
