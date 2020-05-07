@@ -20,12 +20,13 @@ get_header();
 		<?php do_action( 'potter_inner_content_open' ); ?>
 
 		<main id="main" class="potter-main<?php echo esc_attr(potter_singular_class()); ?>">
-
 			<?php do_action( 'potter_main_content_open' ); ?>
 			<?php do_action( 'potter_main_title_before' ); ?>
 			<?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 			<div class="entry-content" itemprop="text">
+				<?php	potter_page_feature_image(); ?>
+
 				<?php	potter_title(); ?>
 				<?php do_action( 'potter_entry_content_open' ); ?>
 

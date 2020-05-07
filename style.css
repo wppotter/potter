@@ -2669,3 +2669,9 @@ body.woocommerce {
   padding: 10px;
   line-height: 1 !important
 }
+.potter-page-image-wrapper {
+  padding-bottom: 30px;
+}
+.potter-page-image-wrapper img {
+  width: 100%;
+}
