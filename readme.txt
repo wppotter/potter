@@ -133,6 +133,10 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
+= 1.1.6 - May 8 2020 =
+* Fixed Issue related off Canvas menu
+
+
 = 1.1.5 - May 2 2020 =
 * Fixed Issue related to WooCommerce Layout
 * Navigation Menu Hover option added

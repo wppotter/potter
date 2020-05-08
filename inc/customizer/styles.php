@@ -1550,7 +1550,7 @@ $off_canvas_close_button_color                   = get_theme_mod('off_canvas_clo
 $off_canvas_menu_separator_color                   = get_theme_mod('off_canvas_menu_separator_color');
 $off_canvas_menu_item_spacing                   = get_theme_mod('off_canvas_menu_item_spacing');
 $off_canvas_menu_font_size                   = get_theme_mod('off_canvas_menu_font_size');
-$off_canvas_padding                   = get_theme_mod('off_canvas_padding', 'padding-top');
+$off_canvas_padding                   = get_theme_mod('off_canvas_padding');
 $off_canvas_overlay_color                  = get_theme_mod('off_canvas_overlay_color');
 
 $burger_menu_color                   = get_theme_mod('burger_menu_color');
@@ -1564,6 +1564,7 @@ $burger_menu_padding                  = get_theme_mod('burger_menu_padding');
 
 
 if ('menu-off-canvas' === $menu_position) {
+  
     echo '.potter-menu-overlay {';
     if ($off_canvas_overlay_color) {
         echo sprintf('background: %s;', esc_attr($off_canvas_overlay_color));

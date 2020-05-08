@@ -368,11 +368,20 @@ Kirki::add_field('potter', array(
   'priority'  => 2,
     'section'     => 'potter_offcanvas_menu_options',
     'default'     => array(
-        'padding-top'    => '60px',
+        'padding-top'    => '80px',
         'padding-bottom' => '40px',
         'padding-left'   => '40px',
         'padding-right'  => '40px',
     ),
+
+    'choices'     => array(
+		'labels' => array(
+			'padding-top'  => esc_html__( 'Padding Top', 'potter' ),
+			'padding-bottom'  => esc_html__( 'Padding Bottom', 'potter' ),
+			'padding-left' => esc_html__( 'Padding Left', 'potter' ),
+			'padding-right' => esc_html__( 'Padding Right', 'potter' ),
+		),
+	),
 
 ));
 

@@ -31,6 +31,7 @@ get_header();
 				<?php if( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 				<div class="entry-content" itemprop="text">
+					<?php	potter_page_feature_image(); ?>
 					<?php	potter_title(); ?>
 					<?php do_action( 'potter_entry_content_open' ); ?>
 
