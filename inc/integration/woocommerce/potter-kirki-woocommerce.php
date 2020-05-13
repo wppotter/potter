@@ -178,6 +178,21 @@ Kirki::add_field( 'potter', array(
 	),
 ) );
 
+// Mobile container width.
+Kirki::add_field('potter', array(
+    'type'        => 'slider',
+    'settings'    => 'cart_icon_size',
+    'label'       => __('Cart Icon Size', 'potter'),
+    'section'     => 'potter_woocommerce_menu_item_options',
+    'priority'    => 11,
+    'default'     => '16',
+    'choices'     => array(
+        'min'  => '10',
+        'max'  => '80',
+        'step' => '1',
+    ),
+));
+
 // Menu item color.
 Kirki::add_field( 'potter', array(
 	'type'            => 'color',

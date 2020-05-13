@@ -109,7 +109,7 @@ function potter_search_menu_item( $is_navigation = true, $is_mobile = false ) {
 	$search_form = apply_filters( 'potter_search_menu_item_form', $search_form );
 
 	// We have a slightly different markup for the search menu item if it's being displayed outside the main menu.
-	$search_item  = $is_navigation ? '<li class="menu-item potter-menu-item-search" aria-haspopup="true" aria-expanded="false"><a href="javascript:void(0)" role="button">' : '<button class="' . $class . ' potter-menu-item-search" aria-haspopup="true" aria-expanded="false">';
+	$search_item  = $is_navigation ? '<li class="potter-menu-item-search" aria-haspopup="true" aria-expanded="false"><a href="javascript:void(0)" role="button">' : '<button class="' . $class . ' potter-menu-item-search" aria-haspopup="true" aria-expanded="false">';
 	$search_item .= '<span class="screen-reader-text">' . __( 'Search Toggle', 'potter' ) . '</span>';
 	$search_item .= '<div class="potter-menu-search">';
 	$search_item .= $search_form;

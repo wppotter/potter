@@ -1310,9 +1310,9 @@ body:focus {
 .split-left-menu #navigation-left {
   float: left;
   height: 100%;
-  position: absolute;
   top:0px;
   left: 0px;
+  position: absolute;
 }
 .logo-container-split {
   width: 30%;
@@ -1320,7 +1320,9 @@ body:focus {
 
 .split-left-menu #navigation-right {
   float: right;
+
 }
+
 
 .split-menu .main-nav-left-menu ul.potter-sub-menu {
   display: block;
@@ -1337,7 +1339,9 @@ body:focus {
 }
 
 .potter-menu-item-search {
-  position: relative
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .potter-menu-item-search.active i {
@@ -1518,6 +1522,9 @@ body:focus {
 .potter-menu-right .potter-menu>.menu-item, .potter-menu-left .potter-menu>.menu-item, .potter-menu-stacked .potter-menu>.menu-item, .potter-menu-stacked-advanced .potter-menu>.menu-item, .potter-menu-centered .potter-menu>.menu-item, #potter-pre-header .potter-menu>.menu-item, .potter-page-footer .potter-menu>.menu-item, .potter-menu-item-button, .potter-menu-item-icon, .potter-woo-menu-item {
   display: inline-block;
   vertical-align: middle;
+}
+.potter-woo-menu-item a, .potter-menu-item-search a {
+  padding: 5px 10px !important;
 }
 .potter-menu-item-icon {
   margin-left: 10px;
@@ -1780,11 +1787,10 @@ body:focus {
 
 .transparent-header .potter-pre-header {
   background: transparent;
-  border-bottom: 0
 }
 
 .transparent-header #potter-pre-header {
-  border-bottom: 0
+  border-bottom: 0;
 }
 
 

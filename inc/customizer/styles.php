@@ -767,8 +767,26 @@ $page_title_bar_top_padding	= get_theme_mod('page_title_bar_top_padding');
 $page_title_bar_bottom_padding	= get_theme_mod('page_title_bar_bottom_padding');
 $page_title_font_size	= get_theme_mod('page_title_font_size');
 $transparent_header = get_theme_mod('transparent_header');
+$trans_nav_icon_link_color = get_theme_mod('trans_nav_icon_link_color');
+$trans_nav_icon_link_color_hover = get_theme_mod('trans_nav_icon_link_color_hover');
 
 $dtheader_single_post								= get_theme_mod('dtheader_single_post');
+
+if ($transparent_header) {
+  if ($trans_nav_icon_link_color) {
+    echo '.potter-menu-item-icon a span {';
+    echo sprintf('color: %s !important;', esc_attr($trans_nav_icon_link_color));
+    echo '}';
+  }
+  if ($trans_nav_icon_link_color_hover) {
+    echo '.potter-menu-item-icon a:hover span {';
+    echo sprintf('color: %s !important;', esc_attr($trans_nav_icon_link_color_hover));
+    echo '}';
+  }
+}
+
+
+
 
 if ('left' !== $breadcrumbs_alignment) {
     echo '.title-bar-after-header {';
@@ -1564,7 +1582,7 @@ $burger_menu_padding                  = get_theme_mod('burger_menu_padding');
 
 
 if ('menu-off-canvas' === $menu_position) {
-  
+
     echo '.potter-menu-overlay {';
     if ($off_canvas_overlay_color) {
         echo sprintf('background: %s;', esc_attr($off_canvas_overlay_color));
@@ -1873,6 +1891,19 @@ $nav_bar_box_shadow_none        = get_theme_mod('nav_bar_box_shadow_none');
 $sticky_nav_height        = get_theme_mod('sticky_nav_height');
 $sticky_nav_width        = get_theme_mod('sticky_nav_width');
 
+$sticky_nav_icon_link_color        = get_theme_mod('sticky_nav_icon_link_color');
+$sticky_nav_icon_link_color_hover        = get_theme_mod('sticky_nav_icon_link_color_hover');
+
+$nav_button_sticky_bg_color            = get_theme_mod('nav_button_sticky_bg_color');
+$nav_button_sticky_bg_hover_color = get_theme_mod('nav_button_sticky_bg_hover_color');
+$nav_button_sticky_font_color  = get_theme_mod('nav_button_sticky_font_color');
+$nav_button_sticky_font_color_alt  = get_theme_mod('nav_button_sticky_font_color_alt');
+$nav_button_sticky_border_width             = get_theme_mod('nav_button_sticky_border_width');
+$nav_button_sticky_border_radius = get_theme_mod('nav_button_sticky_border_radius');
+$nav_button_sticky_border_color             = get_theme_mod('nav_button_sticky_border_color');
+$nav_button_sticky_border_color_alt = get_theme_mod('nav_button_sticky_border_color_alt');
+
+
 if ($menu_sticky_logo) {
     echo '.hide-on-sticky {';
     echo sprintf('display: none !important;');
@@ -1881,14 +1912,14 @@ if ($menu_sticky_logo) {
 echo '@media (min-width: 1025px) {';
   if ($transparent_header) {
       if ($transparent_header_color) {
-          echo '.transparent-header .potter-menu > .menu-item > a, .transparent-header .potter-inner-pre-header a {';
-          echo sprintf('color: %s;', esc_attr($transparent_header_color));
+          echo '.transparent-header .potter-menu > .menu-item > a, .transparent-header .potter-inner-pre-header a, .transparent-header .potter-woo-menu-item a i, .transparent-header .potter-menu-item-search a i {';
+          echo sprintf('color: %s !important;', esc_attr($transparent_header_color));
           echo '}';
       }
 
       if ($transparent_header_hover_color) {
-          echo '.transparent-header .potter-menu > .menu-item > a:hover, .transparent-header .potter-inner-pre-header a:hover {';
-          echo sprintf('color: %s;', esc_attr($transparent_header_hover_color));
+          echo '.transparent-header .potter-menu > .menu-item > a:hover, .transparent-header .potter-inner-pre-header a:hover, .potter-woo-menu-item a:hover i, .potter-menu-item-search a:hover i {';
+          echo sprintf('color: %s !important;', esc_attr($transparent_header_hover_color));
           echo '}';
       }
       if ($transparent_header_active_color) {
@@ -1931,15 +1962,59 @@ echo '@media (min-width: 1025px) {';
             echo sprintf('max-width: %s;', esc_attr($sticky_nav_width));
         }
         echo '}';
+
+        if ($sticky_nav_icon_link_color) {
+          echo '.stickynav .potter-menu-item-icon a span {';
+          echo sprintf('color: %s !important;', esc_attr($sticky_nav_icon_link_color));
+          echo '}';
+        }
+        if ($sticky_nav_icon_link_color_hover) {
+          echo '.stickynav .potter-menu-item-icon a:hover span {';
+          echo sprintf('color: %s !important;', esc_attr($sticky_nav_icon_link_color_hover));
+          echo '}';
+        }
+
+        echo '.stickynav .potter-menu-item-button a {';
+        if ($nav_button_sticky_bg_color) {
+            echo sprintf('background: %s;', esc_attr($nav_button_sticky_bg_color));
+        }
+        if ($nav_button_sticky_font_color) {
+            echo sprintf('color: %s;', esc_attr($nav_button_sticky_font_color) . ' !important');
+        }
+        if ($nav_button_sticky_border_width) {
+            echo sprintf('border-width: %s;', esc_attr($nav_button_sticky_border_width) . 'px');
+            echo sprintf('border-style: solid;');
+        }
+        if ($nav_button_sticky_border_color) {
+            echo sprintf('border-color: %s;', esc_attr($nav_button_sticky_border_color));
+        }
+
+        if ($nav_button_sticky_border_radius) {
+            echo sprintf('border-radius: %spx !important;', esc_attr($nav_button_sticky_border_radius));
+        }
+        echo '}';
+        echo '.stickynav .potter-menu-item-button a:hover {';
+        if ($nav_button_sticky_bg_hover_color) {
+            echo sprintf('background: %s;', esc_attr($nav_button_sticky_bg_hover_color));
+        }
+        if ($nav_button_sticky_font_color_alt) {
+            echo sprintf('color: %s;', esc_attr($nav_button_sticky_font_color_alt) . ' !important');
+        }
+        if ($nav_button_sticky_border_color_alt) {
+            echo sprintf('border-color: %s;', esc_attr($nav_button_sticky_border_color_alt));
+        }
+        echo '}';
+
+
     }
     if ($sticky_menu_font_color) {
-        echo '.potter-navigation.stickynav .potter-menu > .menu-item > a {';
-        echo sprintf('color: %s;', esc_attr($sticky_menu_font_color));
+        echo '.potter-navigation.stickynav .potter-menu > .menu-item > a, .stickynav .potter-woo-menu-item a i, .stickynav .potter-menu-item-search a i {';
+        echo sprintf('color: %s !important;', esc_attr($sticky_menu_font_color));
         echo '}';
     }
         if ($sticky_menu_font_color_alt) {
-            echo '.potter-navigation.stickynav .potter-menu > .menu-item > a:hover {';
-            echo sprintf('color: %s;', esc_attr($sticky_menu_font_color_alt));
+            echo '.potter-navigation.stickynav .potter-menu > .menu-item > a:hover, .stickynav .potter-woo-menu-item a:hover i, .stickynav .potter-menu-item-search a:hover i{';
+            echo sprintf('color: %s !important;', esc_attr($sticky_menu_font_color_alt));
             echo '}';
         }
     echo '}';
@@ -1983,10 +2058,6 @@ if ($menu_top_bottom_padding) {
     echo sprintf('padding-bottom: %s;', esc_attr($menu_top_bottom_padding) . 'px');
     echo '}';
 }
-
-
-
-
     echo '.potter-navigation {';
         if ($nav_bar_border_top) {
             if ($nav_bar_border_top_width) {
@@ -2016,13 +2087,13 @@ if ($menu_top_bottom_padding) {
 
 
 if ($menu_font_color) {
-    echo '.potter-menu a, .potter-mobile-menu a, .potter-close {';
+    echo '.potter-menu > .menu-item > a, .potter-woo-menu-item a i, .potter-menu-item-search a i {';
     echo sprintf('color: %s;', esc_attr($menu_font_color));
     echo '}';
 }
 
 if ($menu_font_color_alt) {
-    echo '.potter-menu a:hover, .potter-mobile-menu a:hover {';
+    echo '.potter-menu > .menu-item > a:hover, .potter-woo-menu-item a:hover i, .potter-menu-item-search a:hover i {';
     echo sprintf('color: %s;', esc_attr($menu_font_color_alt));
     echo '}';
 
@@ -2180,7 +2251,14 @@ if ('background' === $menu_item_hover_style) {
     echo sprintf('opacity: 1;');
     echo '}';
 }
+// search icon
+$search_icon_size         = get_theme_mod('search_icon_size');
 
+if ($search_icon_size ) {
+    echo '.potter-menu-item-search i {';
+    echo sprintf('font-size: %spx;', esc_attr($search_icon_size ));
+    echo '}';
+}
 
 // Sub menu.
 $sub_menu_bg_color         = get_theme_mod('sub_menu_bg_color');
@@ -2490,7 +2568,7 @@ if ('none' !== $pre_header_layout && ($pre_header_bg_color || $pre_header_font_c
     echo '.potter-pre-header {';
 
     if ($pre_header_bg_color) {
-        echo sprintf('background-color: %s;', esc_attr($pre_header_bg_color));
+        echo sprintf('background-color: %s !important;', esc_attr($pre_header_bg_color));
     }
 
     if ($pre_header_font_color) {
@@ -2511,10 +2589,10 @@ echo '.potter-pre-header {';
     }
     if ($top_header_border_bottom) {
         if ($pre_header_border_bottom_width) {
-            echo sprintf('border-bottom: %s;', esc_attr($pre_header_border_bottom_width) . 'px' . ' solid ');
+            echo sprintf('border-bottom: %s !important;', esc_attr($pre_header_border_bottom_width) . 'px' . ' solid ');
         }
         if ($pre_header_bottom_border_color) {
-            echo sprintf('border-bottom-color: %s;', esc_attr($pre_header_bottom_border_color));
+            echo sprintf('border-bottom-color: %s !important;', esc_attr($pre_header_bottom_border_color));
         }
     }
 echo '}';
