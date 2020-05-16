@@ -1564,8 +1564,16 @@ $vertical_nav_width        = get_theme_mod('vertical_nav_width');
 $vertical_nav_top_padding        = get_theme_mod('vertical_nav_top_padding');
 $vertical_nav_left_right_padding        = get_theme_mod('vertical_nav_left_right_padding');
 $vertical_nav_position        = get_theme_mod('vertical_nav_position', 'left');
+$vertical_nav_content_alignment        = get_theme_mod('vertical_nav_content_alignment', 'left');
 if ('menu-vertical' === $menu_position) {
   echo '@media (min-width: 1025px) {';
+
+    if ('left' !== $vertical_nav_content_alignment) {
+        echo '.menu-vertical-container .potter-logo, .menu-vertical-container .potter-menu>.menu-item>a, .menu-vertical-container .potter-menu .menu-item ul li a, .potter-woo-menu-item, .menu-vertical-container .potter-menu {';
+        echo sprintf('text-align: %s;', esc_attr($vertical_nav_content_alignment));
+        echo '}';
+    }
+
     if ($menu_top_bottom_padding) {
         echo '.menu-vertical .menu-item > a {';
         echo sprintf('padding-top: %s;', esc_attr($menu_top_bottom_padding) . 'px !important');
@@ -1638,10 +1646,19 @@ $burger_menu_border_radius                  = get_theme_mod('burger_menu_border_
 $burger_menu_size                  = get_theme_mod('burger_menu_size');
 $burger_menu_padding                  = get_theme_mod('burger_menu_padding');
 $menu_icon_size                 = get_theme_mod('menu_icon_size');
+$canvas_content_alignment                = get_theme_mod('canvas_content_alignment');
 
 
 
 if ('menu-off-canvas' === $menu_position) {
+
+      if ('left' !== $canvas_content_alignment) {
+          echo '.potter-menu-off-canvas .potter-menu>.menu-item>a, .potter-offcanvas-cta, .off-canvas-social-link {';
+          echo sprintf('text-align: %s;', esc_attr($canvas_content_alignment));
+          echo '}';
+      }
+
+
 
     if ($menu_icon_size) {
       echo '.off-canvas-social-link a span {';

@@ -414,6 +414,11 @@
 			$('.title-bar-before-content').css('text-align', newval );
 		} );
 	} );
+	wp.customize( 'canvas_content_alignment', function( value ) {
+		value.bind( function( newval ) {
+			$('.potter-menu-off-canvas .potter-menu>.menu-item>a, .potter-offcanvas-cta, .off-canvas-social-link').css('text-align', newval );
+		} );
+	} );
 
 	// Font color.
 	wp.customize( 'breadcrumbs_font_color', function( value ) {

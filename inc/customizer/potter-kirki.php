@@ -321,6 +321,23 @@ Kirki::add_field('potter', array(
 
 ));
 
+// Alignment.
+Kirki::add_field('potter', array(
+    'type'     => 'radio-image',
+    'settings' => 'canvas_content_alignment',
+    'label'    => __('Canvas Content Alignment', 'potter'),
+    'section'  => 'potter_offcanvas_menu_options',
+    'default'  => 'left',
+    'transport' => 'postMessage',
+    'priority' => 1,
+    'multiple' => 1,
+    'choices'  => array(
+        'left'   => POTTER_THEME_URI . '/inc/customizer/img/align-left.png',
+        'center' => POTTER_THEME_URI . '/inc/customizer/img/align-center.png',
+        'right'  => POTTER_THEME_URI . '/inc/customizer/img/align-right.png',
+    ),
+));
+
 
 
 Kirki::add_field('potter', array(
@@ -3874,7 +3891,7 @@ Kirki::add_field('potter', array(
     ),
 ));
 
-// Alignment.
+// Position.
 Kirki::add_field('potter', array(
     'type'     => 'radio-image',
     'settings' => 'vertical_nav_position',
@@ -3884,7 +3901,30 @@ Kirki::add_field('potter', array(
     'priority' => 1,
     'multiple' => 1,
     'choices'  => array(
+        'left'   => POTTER_THEME_URI . '/inc/customizer/img/left-sidebar.png',
+        'right'  => POTTER_THEME_URI . '/inc/customizer/img/right-sidebar.png',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+));
+
+// Alignmeny.
+Kirki::add_field('potter', array(
+    'type'     => 'radio-image',
+    'settings' => 'vertical_nav_content_alignment',
+    'label'    => __('Content Alignment', 'potter'),
+    'section'  => 'potter_menu_options',
+    'default'  => 'left',
+    'priority' => 1,
+    'multiple' => 1,
+    'choices'  => array(
         'left'   => POTTER_THEME_URI . '/inc/customizer/img/align-left.png',
+        'center'  => POTTER_THEME_URI . '/inc/customizer/img/align-center.png',
         'right'  => POTTER_THEME_URI . '/inc/customizer/img/align-right.png',
     ),
     'active_callback' => array(
@@ -4112,7 +4152,7 @@ Kirki::add_field('potter', array(
     'settings' => 'nav_button_bg_hover_color',
     'label'    => __('Background Hover Color', 'potter'),
     'section'  => 'potter_menu_button_options',
-    'default'  => '#6592E9',
+    'default'  => '#0C95DA',
     'priority' => 4,
     'choices'  => array(
         'alpha' => true,

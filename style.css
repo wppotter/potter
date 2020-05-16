@@ -1235,7 +1235,6 @@ body:focus {
 }
 .off-canvas-social-link {
   padding: 20px 0px 0px 0px;
-  text-align: center;
 }
 
 .off-canvas-social-link a {
@@ -1253,7 +1252,6 @@ body:focus {
 .potter-offcanvas-cta {
   padding: 20px 0px 0px 0px;
   width: 100%;
-  text-align: center;
 }
 .potter-offcanvas-cta.potter-menu-item-button a:hover {
   background: #0C95DA;
@@ -1264,7 +1262,7 @@ body:focus {
   background: #007CBA;
   color: #fff;
   padding: 10px 20px;
-  display: block;
+  display: inline-block;
 }
 
 .potter-menu-centered #navigation, .potter-menu-centered #navigation-left {
@@ -2778,9 +2776,7 @@ body.woocommerce {
     padding-left: 250px;
   }
 
-  .menu-vertical-container .potter-logo {
-    text-align: center;
-  }
+
 
   .menu-vertical-container .potter-logo-container {
     width: 100%;
@@ -2866,9 +2862,11 @@ body.woocommerce {
 
   .menu-vertical-container .potter-menu-item-button a {
     text-align: center;
+    display: inline-block;
   }
 
   .menu-vertical-container .potter-woo-menu-item {
     margin-top: 30px !important;
+    width: 100%;
   }
 }

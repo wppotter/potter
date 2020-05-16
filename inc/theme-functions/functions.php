@@ -57,8 +57,8 @@ function potter_transparent_header_class()
             // transparabt header disable in 404 page.
             elseif ($dtheader_search_404 && is_404()) {
                 echo 'no-transparent';
-            } elseif ( 'menu-vertical' === get_theme_mod( 'menu_position' ) ) {
-           	 echo 'no-transparent';
+            } elseif ('menu-vertical' === get_theme_mod('menu_position')) {
+                echo 'no-transparent';
             }
             // transparabt header disable in woo page.
             elseif (class_exists('woocommerce')) {
@@ -222,22 +222,21 @@ function potter_title()
 
 function potter_page_feature_image()
 {
-  // Stop if there's no thumbnail.
-  if ( ! has_post_thumbnail() ) {
-  	return;
-  }
+    // Stop if there's no thumbnail.
+    if (! has_post_thumbnail()) {
+        return;
+    }
 
-  $options = get_post_meta( get_the_ID(), 'potter_options', true );
+    $options = get_post_meta(get_the_ID(), 'potter_options', true);
 
-  $remove_featured = $options ? in_array( 'remove-featured', $options ) : false;
+    $remove_featured = $options ? in_array('remove-featured', $options) : false;
 
-  // Stop here if featured image has been disabled.
-  if ( $remove_featured ) {
-  	return;
-  }
-  ?>
+    // Stop here if featured image has been disabled.
+    if ($remove_featured) {
+        return;
+    } ?>
   <div class="potter-page-image-wrapper">
-  	<?php the_post_thumbnail( apply_filters( 'potter_single_post_thumbnail_size', 'large' ), array( 'class' => 'potter-post-image', 'itemprop' => 'image' ) ); ?>
+  	<?php the_post_thumbnail(apply_filters('potter_single_post_thumbnail_size', 'large'), array( 'class' => 'potter-post-image', 'itemprop' => 'image' )); ?>
   </div>
 
   <?php
@@ -917,6 +916,7 @@ function potter_is_off_canvas_menu()
 function potter_navigation_offcanvas_nav()
 {
     $menu_search_icon = get_theme_mod('menu_search_icon');
+    $menu_icon_link = get_theme_mod('menu_icon_link');
     $menu_position = get_theme_mod('menu_position');
     if ('menu-off-canvas' === $menu_position) {
         ?>
@@ -938,11 +938,18 @@ function potter_navigation_offcanvas_nav()
           <?php  potter_search_off_canvas(); ?>
           </div>
           <?php
-          }
-        ?>
-      <div class="off-canvas-social-link">
-      <?php potter_icon_off_canvas(); ?>
-      </div>
+          } ?>
+
+      <?php
+        if ($menu_icon_link) { ?>
+          <div class="off-canvas-social-link">
+            <?php
+              potter_icon_off_canvas();
+          ?>
+          </div>
+          <?php
+      } ?>
+
     </div>
     <?php
     }
