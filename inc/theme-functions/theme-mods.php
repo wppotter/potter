@@ -168,6 +168,24 @@ function potter_search_menu_icon_mobile() {
 add_action( 'potter_before_mobile_toggle', 'potter_search_menu_icon_mobile', 20 );
 
 
+/**
+ * Add search menu item to mobile menu.
+ */
+function potter_search_off_canvas() {
+
+	// Stop here if search menu item is turned off.
+	if ( ! get_theme_mod( 'menu_search_icon' ) ) {
+		return;
+	}
+
+	$menu_item = get_search_form( $echo = false );
+
+	echo $menu_item;
+
+}
+
+
+
 
 
 /**
@@ -216,6 +234,21 @@ function potter_nav_html_button( $items, $args ) {
 
 }
 add_filter( 'wp_nav_menu_items', 'potter_nav_html_button', 20, 2 );
+
+
+//off canvas cta
+
+function potter_html_button_offcanvas() {
+	$menu_html_button = get_theme_mod( 'menu_html_button');
+	$menu_html_button_content = get_theme_mod( 'menu_html_button_content', __('<a href="#">Contact Us</a>', 'potter'  ));
+	$menu_cta_content = wp_kses_post( $menu_html_button_content );
+	if ($menu_html_button) {
+		echo '<div class="potter-offcanvas-cta potter-menu-item-button">';
+		echo $menu_cta_content;
+		echo '</div>';
+	}
+
+}
 
 
 /**

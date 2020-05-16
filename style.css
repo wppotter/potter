@@ -11,10 +11,7 @@ License URI:	https://www.gnu.org/licenses/gpl-3.0.html
 
 Text Domain:	potter
 */
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
-
-
 body {
   font-family: Helvetica, Arial, sans-serif;
   color: #333;
@@ -24,6 +21,7 @@ body {
   margin: 0;
   background: #eee;
 }
+
 html {
   -webkit-text-size-adjust: 100%;
 }
@@ -157,7 +155,6 @@ textarea {
   resize: vertical
 }
 
-
 main {
   display: block;
   padding: 0 !important
@@ -273,7 +270,6 @@ textarea {
   outline-offset: -2px
 }
 
-
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none
 }
@@ -345,12 +341,13 @@ template {
   -webkit-appearance: none;
   text-align: center;
   padding: 14px 16px;
-  background: #e7e7ec;
+  background: #007CBA;
+  border-radius: 1px;
   outline: 0;
   border: 0;
   display: inline-block;
   cursor: pointer;
-  color: #6d7680;
+  color: #fff;
   -moz-transition: all .2s;
   -o-transition: all .2s;
   -webkit-transition: all .2s;
@@ -359,16 +356,14 @@ template {
 }
 
 .potter-button:hover, input[type="submit"]:hover {
-  background: #dedee5;
-  color: #6d7680
+  background: #036393;
+  color: #fff
 }
 
 .potter-button-primary {
   background: #0056ff;
   color: #fff
 }
-
-
 
 .potter-button-primary:hover {
   background: #6592e9;
@@ -1055,9 +1050,10 @@ table thead th, .potter-table thead th {
   margin-bottom: 10px
 }
 
-.potter-logo  {
+.potter-logo {
   transition: all 100ms;
 }
+
 img.alignright, figure.alignright, div.alignright {
   float: right;
   margin: 0 0 20px 20px
@@ -1223,19 +1219,58 @@ body:focus {
     padding-top: 100px
   }
 }
+
 #navigation-left, #navigation {
   display: flex;
   height: 100%;
 }
+
 .potter-menu-container {
   position: relative;
 }
-.potter-menu-off-canvas #navigation{
+
+.potter-menu-off-canvas #navigation {
+  display: block;
+  height: auto !important;
+}
+.off-canvas-social-link {
+  padding: 20px 0px 0px 0px;
+  text-align: center;
+}
+
+.off-canvas-social-link a {
+  padding: 5px;
+  display: inline-block;
+  margin: 5px;
+}
+.off-canvas-social-link a:hover {
+  opacity: .5;
+}
+
+.off-canvas-search {
+  padding: 20px 0px 0px 0px;
+}
+.potter-offcanvas-cta {
+  padding: 20px 0px 0px 0px;
+  width: 100%;
+  text-align: center;
+}
+.potter-offcanvas-cta.potter-menu-item-button a:hover {
+  background: #0C95DA;
+  color: #fff
+}
+
+.potter-offcanvas-cta.potter-menu-item-button a {
+  background: #007CBA;
+  color: #fff;
+  padding: 10px 20px;
   display: block;
 }
+
 .potter-menu-centered #navigation, .potter-menu-centered #navigation-left {
   position: relative;
 }
+
 .potter-navigation {
   width: 100%;
   position: relative;
@@ -1290,44 +1325,49 @@ body:focus {
 .potter-logo-container {
   line-height: 1.5
 }
+
 .potter-split-menu {
   display: table;
   width: 100%;
 }
+
 .logo-container-split {
   padding-left: 0px;
   display: table-cell;
   padding-right: 30px;
   vertical-align: middle;
 }
-.logo-container-split a{
+
+.logo-container-split a {
   display: block;
 }
+
 .split-left-menu {
   display: table-cell;
   vertical-align: middle;
 }
+
 .split-left-menu #navigation-left {
   float: left;
   height: 100%;
-  top:0px;
+  top: 0px;
   left: 0px;
   position: absolute;
 }
+
 .logo-container-split {
   width: 30%;
 }
 
 .split-left-menu #navigation-right {
   float: right;
-
 }
-
 
 .split-menu .main-nav-left-menu ul.potter-sub-menu {
   display: block;
   margin: auto 0px;
 }
+
 .potter-logo a {
   font-weight: 700;
   font-size: 22px
@@ -1379,7 +1419,7 @@ body:focus {
 }
 
 .potter-menu>.current-menu-item>a {
-  color: #6592e9
+  color: #007CBA;
 }
 
 .stickynav .site-sticky-logo {
@@ -1512,9 +1552,11 @@ body:focus {
   display: block !important;
   opacity: 1 !important
 }
+
 .main-nav-left-menu {
   position: relative;
 }
+
 .potter-menu-right .potter-menu a, .potter-menu-left .potter-menu a, .potter-menu-stacked .potter-menu a, .potter-menu-stacked-advanced .potter-menu a, .potter-menu-centered .potter-menu a, #potter-pre-header .potter-menu a, .potter-page-footer .potter-menu a {
   padding: 10px 10px
 }
@@ -1523,31 +1565,38 @@ body:focus {
   display: inline-block;
   vertical-align: middle;
 }
+
 .potter-woo-menu-item a, .potter-menu-item-search a {
   padding: 5px 10px !important;
 }
+
 .potter-menu-item-icon {
   margin-left: 10px;
 }
+
 .potter-menu-item-icon a {
   transition: 0.5s;
 }
+
 .potter-menu-item-icon a:hover {
   opacity: 0.6;
 }
+
 .potter-menu .potter-menu-item-button a:hover {
-  background: #6592e9;
+  background: #0C95DA;
   color: #fff
 }
 
 .potter-menu .potter-menu-item-button a {
-  background: #0056ff;
+  background: #007CBA;
   color: #fff;
   padding: 10px 20px;
 }
+
 .logo-container-center-nav {
   position: relative;
 }
+
 .logo-container-center-nav .potter-logo {
   top: 50%;
   transform: translateY(-50%);
@@ -1555,15 +1604,18 @@ body:focus {
   width: 100%;
   padding: 0px 20px;
 }
+
 .potter-menu-stacked nav {
   padding: 0px 20px;
 }
+
 .potter-menu-stacked .potter-logo {
   padding-bottom: 15px;
   padding-top: 15px;
   padding-left: 20px;
   padding-right: 20px;
 }
+
 .potter-menu-stacked {
   padding: 0px;
 }
@@ -1600,9 +1652,11 @@ body:focus {
   justify-content: center;
   margin: auto;
 }
+
 .potter-menu-centered .main-nav-left-menu nav {
   float: right;
 }
+
 .potter-menu-centered .main-nav-right-menu nav {
   float: left;
 }
@@ -1652,6 +1706,14 @@ body:focus {
 .potter-mobile-nav-wrapper {
   padding-top: 20px;
   padding-bottom: 20px
+}
+.off-canvas-nav-containe-right {
+  text-align: right;
+}
+.off-canvas-nav-containe-right nav, .off-canvas-nav-containe-right .potter-menu-toggle-container {
+  display: inline-block !important;
+  float: none !important;
+  vertical-align: middle;
 }
 
 .potter-mobile-menu-hamburger .potter-mobile-nav-wrapper, .potter-mobile-menu-off-canvas .potter-mobile-nav-wrapper {
@@ -1731,6 +1793,7 @@ body:focus {
   left: 0px;
   width: 100%;
 }
+
 #content {
   transition: 3s;
   animation: smoothScroll 1s backwards;
@@ -1793,8 +1856,6 @@ body:focus {
   border-bottom: 0;
 }
 
-
-
 .default-shop-title-bar {
   position: relative;
   background: #ececec
@@ -1809,10 +1870,10 @@ body:focus {
   position: relative;
   margin-bottom: 30px;
 }
+
 .default-title-bar-archive .page-title {
   margin-bottom: 0px;
 }
-
 
 .title-bar {
   padding-top: 40px;
@@ -1820,9 +1881,11 @@ body:focus {
   z-index: 2;
   position: relative
 }
+
 .title-bar-before-content {
   padding: 10px 0
 }
+
 .title-bar h1 {
   margin: 0;
   padding: 0
@@ -1831,9 +1894,11 @@ body:focus {
 .title-bar-content-blog {
   padding: 20px 0
 }
+
 .title-bar-after-header .potter-breadcrumbs {
   margin-bottom: 0px;
 }
+
 .icon-links a {
   display: inline-block;
   margin: 0 8px
@@ -1842,7 +1907,6 @@ body:focus {
 .icon-links a:hover {
   opacity: .6
 }
-
 
 .potter-page-footer .potter-inner-footer-content .potter-menu {
   display: -webkit-box;
@@ -1928,7 +1992,6 @@ body:focus {
 
 .potter-navigation {
   border-bottom: 1px solid #ccc;
-
 }
 
 .potter-page {
@@ -1940,6 +2003,7 @@ body:focus {
 #content .potter-container>.potter-grid-medium, #content .potter-container>.potter-grid-large, #content .potter-container>.potter-grid-xlarge {
   margin-left: 0
 }
+
 #content .potter-container>.potter-grid-divider:not(:empty) {
   margin-left: 0;
   margin-right: 0;
@@ -2108,9 +2172,11 @@ body:focus {
 .potter-single-content .potter-post-style-boxed.stretched .article-header>.potter-post-image-wrapper:first-child {
   margin-top: -20px
 }
+
 .edd-download .potter-post-image-wrapper img {
   width: 100%;
 }
+
 .commentlist ul {
   margin: 0;
   padding: 0
@@ -2357,7 +2423,7 @@ body:focus {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  z-index: 222;
+  z-index: 999;
   background: rgba(62, 67, 73, 0.5);
   bottom: 20px;
   right: 20px;
@@ -2441,6 +2507,7 @@ body.potter-full-width .potter-page-content {
   padding: 0 !important;
   background: 0
 }
+
 .potter-full-width #container {
   background: #fff;
 }
@@ -2462,6 +2529,7 @@ body.potter-full-width .potter-page-content {
   padding-left: 0;
   padding-right: 25px
 }
+
 .potter-grid-collapse .potter-sidebar-wrapper {
   padding-right: 0px
 }
@@ -2470,12 +2538,15 @@ body.potter-full-width .potter-page-content {
   padding: 0px 0px;
   text-align: center;
 }
+
 .potter-menu-centered .potter-grid {
   margin-left: 0px;
 }
+
 .main-nav-left-menu, .main-nav-right-menu {
   padding: 0px;
 }
+
 @media(max-width:786px) {
   .footer-widget-container>* {
     width: 50%;
@@ -2507,6 +2578,7 @@ body.potter-full-width .potter-page-content {
   .potter-page-content, .potter-archive-content .potter-post, .potter-article-wrapper {
     padding: 20px !important;
   }
+
   .potter-archive-content .potter-post {
     padding: 20px
   }
@@ -2539,21 +2611,25 @@ body.woocommerce {
   color: #fff;
   font-weight: 700
 }
+
 .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover {
   background-color: #6592e9;
   color: #fff
 }
+
 .woocommerce a.button:hover, .woocommerce button.button:hover {
   background-color: #6592e9;
   text-decoration: none;
   background-image: none
 }
+
 .woocommerce-checkout:after {
   display: block;
   content: "";
   width: 100%;
   clear: both;
 }
+
 @media(max-width:1024px) {
   .potter-menu-overlay {
     display: none !important
@@ -2610,7 +2686,6 @@ body.woocommerce {
   opacity: 1;
   display: block;
   z-index: 9999;
-
 }
 
 .potter-menu-off-canvas .potter-menu li {
@@ -2638,8 +2713,6 @@ body.woocommerce {
   padding-right: 0
 }
 
-
-
 .potter-menu-off-canvas .potter-menu li button {
   display: inline-block;
   float: right
@@ -2666,16 +2739,136 @@ body.woocommerce {
 .potter-menu-off-canvas .potter-menu li ul li .potter-submenu-toggle {
   display: none
 }
+
 .potter-navigation.stickynav .potter-nav-wrapper {
   transition: .5s;
 }
+
 #potter-menu-toggle {
   padding: 10px;
   line-height: 1 !important
 }
+
 .potter-page-image-wrapper {
   padding-bottom: 30px;
 }
+
 .potter-page-image-wrapper img {
   width: 100%;
+}
+.stickynav .potter-nav-wrapper {
+  border-bottom: 0px !important;
+}
+/* vertical menu */
+@media (min-width: 1025px) {
+  .menu-vertical .potter-navigation {
+    position: fixed !important;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    border: 0px;
+    width: 250px;
+    border-right: 1px solid #ccc;
+    padding: 60px 30px 30px 30px;
+    overflow: auto;
+    transform: none !important;
+  }
+
+  body.vertical-menuposition {
+    padding-left: 250px;
+  }
+
+  .menu-vertical-container .potter-logo {
+    text-align: center;
+  }
+
+  .menu-vertical-container .potter-logo-container {
+    width: 100%;
+    display: block;
+  }
+
+  .menu-vertical-container .potter-menu {
+    padding: 30px 0px;
+  }
+
+  .menu-vertical-container .potter-menu-container {
+    width: 100%;
+    display: block;
+  }
+
+  .menu-vertical-container .potter-menu>.menu-item>a {
+    padding: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .menu-vertical-container .potter-menu>li.menu-item, .menu-vertical-container .potter-menu>li.potter-menu-item-button {
+    width: 100%;
+    display: block;
+  }
+
+  .menu-vertical-container .potter-menu-item-search a i {
+    display: none !important;
+  }
+
+  .menu-vertical-container .potter-menu-item-search .potter-menu-search {
+    position: relative;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    opacity: 1 !important;
+    margin: 20px 0px !important;
+  }
+
+  .menu-vertical-container .potter-menu-item-search a {
+    padding: 0px !important;
+  }
+
+  .menu-vertical-container .potter-menu-item-icon {
+    margin: 20px 10px;
+  }
+
+  .menu-vertical-container .potter-menu .sub-menu a {
+    padding: 5px 20px;
+    display: block;
+  }
+
+  .menu-vertical-container .potter-menu-item-search {
+    display: block !important;
+  }
+
+  .menu-vertical-container .current-menu-parent>ul {
+    display: block !important;
+  }
+
+  .menu-vertical-container .potter-menu>li {
+    padding: 3px 0px;
+  }
+
+  .menu-vertical-container .potter-menu>li .sub-menu {
+    width: 100% !important;
+    position: relative;
+    background: none !important;
+    border-top: none !important;
+    box-shadow: none;
+  }
+
+  .menu-vertical-container #navigation {
+    display: block;
+  }
+
+  .menu-vertical-container .potter-sub-menu>.menu-item-has-children>a:after {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .menu-vertical-container .potter-menu-item-button a {
+    text-align: center;
+  }
+
+  .menu-vertical-container .potter-woo-menu-item {
+    margin-top: 30px !important;
+  }
 }

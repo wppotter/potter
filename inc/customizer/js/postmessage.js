@@ -195,7 +195,7 @@
 	// Background color.
 	wp.customize( 'pre_header_bg_color', function( value ) {
 		value.bind( function( newval ) {
-			$('.potter-pre-header').css('background-color', newval );
+			$('.potter-pre-header').css('background-color', newval + ' !important');
 		} );
 	} );
 

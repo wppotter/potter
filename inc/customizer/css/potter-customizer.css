@@ -148,3 +148,8 @@ input[type=dimention] {
 	border: 1px solid transparent;
 	border-radius: 2px;
 }
+
+.repeater-row {
+	border-radius: 3px;
+	overflow: hidden;
+}

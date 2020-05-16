@@ -315,8 +315,8 @@ Kirki::add_field('potter', array(
     'default'  => 'left',
     'priority' => 0,
     'choices'  => array(
-        'left'   => POTTER_THEME_URI . '/inc/customizer/img/flyout-left.png',
-        'right' => POTTER_THEME_URI . '/inc/customizer/img/flyout-right.png',
+        'left'   => POTTER_THEME_URI . '/inc/customizer/img/left-sidebar.png',
+        'right' => POTTER_THEME_URI . '/inc/customizer/img/right-sidebar.png',
     ),
 
 ));
@@ -2286,7 +2286,7 @@ Kirki::add_field('potter', array(
     'label'       => esc_html__('Padding for top and bottom', 'potter'),
     'priority'  => 1,
     'section'     => 'potter_button_options',
-    'default'     => '10',
+    'default'     => '14',
     'choices'   => array(
         'min'  => '5',
         'max'  => '100',
@@ -2299,7 +2299,7 @@ Kirki::add_field('potter', array(
     'label'       => esc_html__('Padding for left and right', 'potter'),
     'priority'  => 1,
     'section'     => 'potter_button_options',
-    'default'     => '10',
+    'default'     => '16',
     'choices'   => array(
         'min'  => '5',
         'max'  => '100',
@@ -3351,9 +3351,7 @@ Kirki::add_field('potter', array(
     'settings'        => 'pre_header_bg_color',
     'label'           => __('Background Color', 'potter'),
     'section'         => 'potter_pre_header_options',
-    'default'         => '#ffffff',
     'priority'        => 4,
-    'transport'       => 'postMessage',
     'active_callback' => array(
         array(
             'setting'  => 'pre_header_layout',
@@ -3372,7 +3370,6 @@ Kirki::add_field('potter', array(
     'settings'        => 'pre_header_font_color',
     'label'           => __('Font Color', 'potter'),
     'section'         => 'potter_pre_header_options',
-    'default'         => '#6d7680',
     'priority'        => 4,
     'transport'       => 'postMessage',
     'active_callback' => array(
@@ -3858,13 +3855,131 @@ Kirki::add_field('potter', array(
         'menu-split'  => POTTER_THEME_URI . '/inc/customizer/img/nav-split.png',
         'menu-stacked'  => POTTER_THEME_URI . '/inc/customizer/img/nav-stacked.png',
         'menu-off-canvas'  => POTTER_THEME_URI . '/inc/customizer/img/nav-off-canvas.png',
+        'menu-vertical'  => POTTER_THEME_URI . '/inc/customizer/img/nav-vertical.png',
     ),
 ));
+
+Kirki::add_field('potter', array(
+    'type'     => 'custom',
+    'settings' => 'separator-1023675656',
+    'section'  => 'potter_menu_options',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Setting For Vertical Nav', 'potter') .  '</h3>',
+    'priority' => 1,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+));
+
+// Alignment.
+Kirki::add_field('potter', array(
+    'type'     => 'radio-image',
+    'settings' => 'vertical_nav_position',
+    'label'    => __('Vertical Nav Position', 'potter'),
+    'section'  => 'potter_menu_options',
+    'default'  => 'left',
+    'priority' => 1,
+    'multiple' => 1,
+    'choices'  => array(
+        'left'   => POTTER_THEME_URI . '/inc/customizer/img/align-left.png',
+        'right'  => POTTER_THEME_URI . '/inc/customizer/img/align-right.png',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+));
+
+// Mobile container width.
+Kirki::add_field('potter', array(
+    'type'        => 'input_slider',
+    'settings'    => 'vertical_nav_width',
+    'label'       => __('Vertical Nav Width', 'potter'),
+    'section'     => 'potter_menu_options',
+    'priority'    => 1,
+    'default'     => '250',
+    'choices'     => array(
+        'min'  => '10',
+        'max'  => '800',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+));
+
+//container width.
+Kirki::add_field('potter', array(
+    'type'        => 'input_slider',
+    'settings'    => 'vertical_nav_top_padding',
+    'label'       => __('Vertical Nav Top Padding', 'potter'),
+    'section'     => 'potter_menu_options',
+    'priority'    => 1,
+    'default'     => '60',
+    'choices'     => array(
+        'min'  => '10',
+        'max'  => '800',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+));
+
+
+
+// Top padding .
+Kirki::add_field('potter', array(
+    'type'        => 'input_slider',
+    'settings'    => 'vertical_nav_left_right_padding',
+    'label'       => __('Vertical Nav Left Right Padding', 'potter'),
+    'section'     => 'potter_menu_options',
+    'priority'    => 1,
+    'default'     => '30',
+    'choices'     => array(
+        'min'  => '10',
+        'max'  => '100',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+));
+
+
+Kirki::add_field('potter', array(
+    'type'     => 'custom',
+    'settings' => 'separator-10236756566',
+    'section'  => 'potter_menu_options',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Nav Layout Options', 'potter') .  '</h3>',
+    'priority' => 1,
+
+));
+
+
 Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-445498923',
     'section'  => 'potter_menu_options',
-    'default'  => __('<p style="Background: #FFD186; padding: 10px;">Please setup the menu at <strong>Customizer-> Header -> Off Canvas Menu.</strong></p>', 'potter'),
+    'default'  => __('<p style="Background: #FFD186; padding: 10px;">Please Customize the Off Canvas at <strong>Customizer-> Header -> Off Canvas Menu.</strong></p>', 'potter'),
     'priority' => 1,
     'active_callback' => array(
         array(
@@ -3874,16 +3989,25 @@ Kirki::add_field('potter', array(
         ),
     ),
 ));
+
+
 // Width.
 Kirki::add_field('potter', array(
     'type'        => 'dimension',
     'label'       => __('Navigation Width', 'potter'),
-    'description' => __('Value can be "px", "em" or with "%"', 'potter'),
+    'description' => __('Value can be "px", "em" or with "%" (only for horizontal Nav)', 'potter'),
     'settings'    => 'menu_width',
     'default'     => '1200px',
     'section'     => 'potter_menu_options',
     'transport' => 'postMessage',
     'priority'    => 1,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-vertical',
+        ),
+    ),
 ));
 
 // Search icon.
@@ -3906,6 +4030,26 @@ Kirki::add_field('potter', array(
     'choices'     => array(
         'min'  => '10',
         'max'  => '80',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_search_icon',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'        => 'slider',
+    'settings'    => 'search_box_border_radius',
+    'label'       => __('Search Box Border Radius', 'potter'),
+    'section'     => 'potter_menu_search_icon_options',
+    'priority'    => 3,
+    'default'     => '0',
+    'choices'     => array(
+        'min'  => '0',
+        'max'  => '100',
         'step' => '1',
     ),
     'active_callback' => array(
@@ -3947,7 +4091,7 @@ Kirki::add_field('potter', array(
     'settings' => 'nav_button_bg_color',
     'label'    => __('Background Color', 'potter'),
     'section'  => 'potter_menu_button_options',
-    'default'  => '#0056FF',
+    'default'  => '#007CBA',
     'priority' => 4,
     'choices'  => array(
         'alpha' => true,
@@ -4392,6 +4536,14 @@ Kirki::add_field('potter', array(
         'max'  => '80',
         'step' => '1',
     ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+
 ));
 
 // Padding.
@@ -4411,15 +4563,11 @@ Kirki::add_field('potter', array(
         array(
             'setting'  => 'menu_position',
             'operator' => '!=',
-            'value'    => 'menu-off-canvas',
-        ),
-        array(
-            'setting'  => 'menu_position',
-            'operator' => '!=',
-            'value'    => 'menu-full-screen',
+            'value'    => 'menu-vertical',
         ),
     ),
 ));
+
 // Padding.
 Kirki::add_field('potter', array(
     'type'            => 'slider',
@@ -4432,18 +4580,6 @@ Kirki::add_field('potter', array(
         'min'  => '5',
         'max'  => '100',
         'step' => '1',
-    ),
-    'active_callback' => array(
-        array(
-            'setting'  => 'menu_position',
-            'operator' => '!=',
-            'value'    => 'menu-off-canvas',
-        ),
-        array(
-            'setting'  => 'menu_position',
-            'operator' => '!=',
-            'value'    => 'menu-full-screen',
-        ),
     ),
 ));
 
@@ -4879,6 +5015,13 @@ Kirki::add_field('potter', array(
     'section'  => 'potter_menu_options',
     'default'  => '<hr style="border-top: 1px solid #ccc; border-bottom: 1px solid #f8f8f8">',
     'priority' => 16,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-vertical',
+        ),
+    ),
 ));
 
 
@@ -4890,6 +5033,14 @@ Kirki::add_field('potter', array(
     'label'    => __('Border Top', 'potter'),
     'section'  => 'potter_menu_options',
     'priority' => 19,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-vertical',
+        ),
+    ),
+
 ));
 
 // Height.
@@ -4948,6 +5099,13 @@ Kirki::add_field('potter', array(
         'max'  => '25',
         'step' => '1',
     ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-vertical',
+        ),
+    ),
 ));
 
 // border color.
@@ -4968,6 +5126,13 @@ Kirki::add_field('potter', array(
     'choices'         => array(
         'alpha' => true,
     ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-vertical',
+        ),
+    ),
 ));
 
 
@@ -4977,6 +5142,13 @@ Kirki::add_field('potter', array(
     'label'    => __('Box Shadow', 'potter'),
     'section'  => 'potter_menu_options',
     'priority' => 24,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '!=',
+            'value'    => 'menu-vertical',
+        ),
+    ),
 ));
 
 

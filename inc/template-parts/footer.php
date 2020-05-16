@@ -333,7 +333,7 @@ function potter_footer_three_column_middle()
 function potter_footer_widget_column_layout()
 {
     $active_footer_widget = get_theme_mod('active_footer_widget');
-    $top_footer_widget_layout = get_theme_mod('top_footer_widget_layout', 'three-column');
+    $top_footer_widget_layout = get_theme_mod('top_footer_widget_layout', 'four-column');
     if ($active_footer_widget) {
         echo '<div class="footer-widget-area"><div class="potter-inner-footer potter-container potter-container-center">
   	  <div class="potter-grid footer-widget-container">';
@@ -351,7 +351,7 @@ function potter_footer_widget_column_layout()
             potter_footer_three_column_left();
         } elseif ('three-column-middle'  === $top_footer_widget_layout) {
             potter_footer_three_column_middle();
-        }
+        } 
         echo '</div></div></div>';
     }
 }

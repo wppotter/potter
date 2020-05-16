@@ -114,15 +114,25 @@ jQuery(document).ready(function() {
   var a = jQuery("#main-navbar");
   if (a.length) var b = a.offset().top;
   var c = function() {
-    jQuery(window).scrollTop() > b ? (jQuery("#main-navbar").addClass("stickynav"), jQuery(".site-logo").addClass("hide-on-sticky")) : (jQuery("#main-navbar").removeClass("stickynav"), jQuery(".site-logo").removeClass("hide-on-sticky"))
+    jQuery(window).scrollTop() > b ? (jQuery(".regular-header-style #main-navbar").addClass("stickynav"),
+    jQuery(".site-logo").addClass("hide-on-sticky")) : (jQuery(".regular-header-style #main-navbar").removeClass("stickynav"),
+    jQuery(".site-logo").removeClass("hide-on-sticky")
+  )
   };
   c();
   jQuery(window).scroll(function() {
-    c()
-  });
-  a = jQuery("#main-navbar").height();
-  jQuery("#header").css("min-height", a + "px")
+    c();
+    a = jQuery("#header").height();
+    jQuery("#header").css("min-height", a + "px")
+  })
 });
+
+jQuery(document).ready(function() {
+    a = jQuery("#menu-left .menu-item").height();
+    jQuery(".potter-split-menu").css("min-height", a + "px");
+
+});
+
 jQuery("#potter-menu-toggle").click(function() {
   jQuery(".potter-menu-off-canvas").toggleClass("canvas-visible");
   jQuery(this).toggleClass("canvas-close-nav");

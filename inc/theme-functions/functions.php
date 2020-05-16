@@ -57,6 +57,8 @@ function potter_transparent_header_class()
             // transparabt header disable in 404 page.
             elseif ($dtheader_search_404 && is_404()) {
                 echo 'no-transparent';
+            } elseif ( 'menu-vertical' === get_theme_mod( 'menu_position' ) ) {
+           	 echo 'no-transparent';
             }
             // transparabt header disable in woo page.
             elseif (class_exists('woocommerce')) {
@@ -522,6 +524,27 @@ function potter_icon_fotter_bottom_coltwo()
     echo '</span></a>';
     endforeach;
 }
+
+// Offcanvas icon-link
+
+function potter_icon_off_canvas()
+{
+    $defaults = [
+[
+  'link_text' => esc_html__('pottericon-twitter', 'potter'),
+  'link_url'  => esc_url('#'),
+  'link_color' => '#333333',
+],
+];
+    // Theme_mod settings to check.
+    $settings = get_theme_mod('potter_icon_nav_bar', $defaults);
+    foreach ($settings as $setting) :
+    echo '<a href="' . esc_url($setting['link_url']) . '" target="_blank">';
+    echo '<span class="' . $setting['link_text'] . '" style="color: '. $setting['link_color'] .'">';
+    echo '</span></a>';
+    endforeach;
+}
+
 /**
  * Archive header.
  */
@@ -893,6 +916,7 @@ function potter_is_off_canvas_menu()
 
 function potter_navigation_offcanvas_nav()
 {
+    $menu_search_icon = get_theme_mod('menu_search_icon');
     $menu_position = get_theme_mod('menu_position');
     if ('menu-off-canvas' === $menu_position) {
         ?>
@@ -905,8 +929,20 @@ function potter_navigation_offcanvas_nav()
         <?php do_action('potter_main_menu'); ?>
         <?php do_action('potter_main_menu_close'); ?>
       </nav>
-      <?php do_action('potter_after_main_menu'); ?>
 
+      <?php do_action('potter_after_main_menu'); ?>
+      <?php potter_html_button_offcanvas(); ?>
+      <?php
+        if ($menu_search_icon) { ?>
+          <div class="off-canvas-search">
+          <?php  potter_search_off_canvas(); ?>
+          </div>
+          <?php
+          }
+        ?>
+      <div class="off-canvas-social-link">
+      <?php potter_icon_off_canvas(); ?>
+      </div>
     </div>
     <?php
     }

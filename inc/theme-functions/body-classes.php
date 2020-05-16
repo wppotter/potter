@@ -43,6 +43,13 @@ function potter_body_classes( $classes ) {
 	if ( 'list' === get_theme_mod( 'woocommerce_loop_layout' ) ) {
 		$classes[] = 'potter-woo-list-view';
 	}
+ // vertical menu
+
+ if ( 'menu-vertical' === get_theme_mod( 'menu_position' ) ) {
+	 $classes[] = 'vertical-menuposition';
+ } else {
+ 		$classes[] = 'regular-header-style';
+ }
 
 	return $classes;
 
