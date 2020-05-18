@@ -153,3 +153,13 @@ input[type=dimention] {
 	border-radius: 3px;
 	overflow: hidden;
 }
+#customize-control-footer_column_one_layout span.customize-control-title, #customize-control-footer_column_two_layout span.customize-control-title {
+	padding: 8px;
+	font-size: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+	background: #0085ba;
+	color: #fff;
+	letter-spacing: 2px;
+	margin: auto -15px 20px -15px;
+}

@@ -21,6 +21,9 @@ $theme_author = apply_filters(
 $footer_layout            = get_theme_mod('footer_layout', 'two');
 $layout                   = 'one' === $footer_layout ? ' potter-footer-one-column' : ' potter-footer-two-columns';
 $inner_layout             = 'one' === $footer_layout ? 'potter-inner-footer-content' : 'potter-inner-footer-left';
+
+$footer_layout_two_row = get_theme_mod ('footer_layout_two_row', 'two-column');
+$row_layout_footer = 'two-row' === $footer_layout_two_row? 'potter-footer-center-aligned': ' potter-footer-two-rows';
 $footer_column_one        = get_theme_mod('footer_column_one', '&copy; [year] - [blogname] | All rights reserved');
 $footer_column_two        = get_theme_mod('footer_column_two', 'Powered by [theme_author]');
 $search_for               = array( '[year]', '[blogname]', '[theme_author]' );
@@ -29,9 +32,7 @@ $footer_column_one        = str_replace($search_for, $replace_with, $footer_colu
 $footer_column_two        = str_replace($search_for, $replace_with, $footer_column_two);
 $footer_column_one_layout = get_theme_mod('footer_column_one_layout', 'text');
 $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
-
 ?>
-
 <footer id="footer" class="potter-page-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
 
 <?php do_action('potter_footer_open'); ?>
@@ -39,7 +40,7 @@ $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
 <?php if ('none' !== get_theme_mod('footer_layout')) { ?>
   <div class="bottom-footer">
 	<div class="potter-inner-footer potter-container potter-container-center<?php echo esc_attr($layout); ?>">
-		<div class="<?php echo esc_attr($inner_layout); ?>">
+		<div class="<?php echo esc_attr($inner_layout); ?> <?php echo esc_attr($row_layout_footer); ?>">
 			<?php
             if ('text' === $footer_column_one_layout) {
                 echo do_shortcode(apply_filters('footer-column-left', $footer_column_one));
@@ -61,8 +62,7 @@ $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
 
 		<?php if ('two' === $footer_layout) { ?>
 
-		<div class="potter-inner-footer-right">
-
+		<div class="potter-inner-footer-right <?php echo esc_attr($row_layout_footer); ?>">
 			<?php
 
             if ('text' === $footer_column_two_layout) {
@@ -82,7 +82,6 @@ $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
             }
 
             ?>
-
 		</div>
 
 		<?php } ?>
@@ -351,7 +350,7 @@ function potter_footer_widget_column_layout()
             potter_footer_three_column_left();
         } elseif ('three-column-middle'  === $top_footer_widget_layout) {
             potter_footer_three_column_middle();
-        } 
+        }
         echo '</div></div></div>';
     }
 }

@@ -391,9 +391,10 @@ textarea, select, input[type="text"], input[type="password"], input[type="email"
   width: 100%;
   background: #fff;
   border: 1px solid #dedee5;
-  padding: 13px 15px;
+  padding: 10px 15px;
   outline: 0;
-  line-height: 1
+  line-height: 1;
+  border-radius: 2px;
 }
 
 form :-ms-input-placeholder {
@@ -1924,7 +1925,14 @@ body:focus {
 .potter-page-footer .potter-inner-footer-left .potter-menu {
   float: left
 }
-
+.potter-footer-center-aligned {
+  width: 100% !important;
+  text-align: center !important;
+  display: block !important;
+}
+.potter-footer-center-aligned .potter-menu {
+  float: none !important;
+}
 .post-links {
   margin: 40px 0
 }

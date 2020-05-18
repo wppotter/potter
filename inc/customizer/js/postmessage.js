@@ -19,6 +19,12 @@
 		} );
 	} );
 
+	wp.customize( 'footer_row_gap', function( value ) {
+		value.bind( function( newval ) {
+			$('.potter-inner-footer-left.potter-footer-center-aligned').css('padding-bottom', newval + 'px' );
+		} );
+	} );
+
 	// Boxed background color.
 	wp.customize( 'page_boxed_background', function( value ) {
 		value.bind( function( newval ) {

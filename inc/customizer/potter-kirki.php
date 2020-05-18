@@ -6524,6 +6524,54 @@ Kirki::add_field('potter', array(
     ),
 ));
 
+Kirki::add_field('potter', array(
+    'type'     => 'radio-image',
+    'settings' => 'footer_layout_two_row',
+    'label'    => __('Footer lay out layout', 'potter'),
+    'section'  => 'potter_bottom_footer',
+    'default'  => 'two-column',
+    'priority' => 16,
+    'choices'  => array(
+      'two-column'  => POTTER_THEME_URI . '/inc/customizer/img/footer-two-column-style.png',
+      'two-row'  => POTTER_THEME_URI . '/inc/customizer/img/footer-two-row.png',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'footer_layout',
+            'operator' => '==',
+            'value'    => 'two',
+        ),
+    ),
+));
+
+// Width.
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'label'           => __('Row Gap', 'potter'),
+    'settings'        => 'footer_row_gap',
+    'section'         => 'potter_bottom_footer',
+    'priority'        => 16,
+    'transport'       => 'postMessage',
+    'default'			=> 20,
+    'choices'         => array(
+        'min'  => '5',
+        'max'  => '100',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+      array(
+          'setting'  => 'footer_layout',
+          'operator' => '!=',
+          'value'    => 'none',
+      ),
+        array(
+            'setting'  => 'footer_layout_two_row',
+            'operator' => '==',
+            'value'    => 'two-row',
+        ),
+    ),
+));
+
 // Column one layout.
 Kirki::add_field('potter', array(
     'type'            => 'radio',
