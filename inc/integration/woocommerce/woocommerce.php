@@ -51,7 +51,7 @@ function potter_woo_scripts() {
 	wp_enqueue_style( 'potter-woocommerce-smallscreen', get_template_directory_uri() . '/css/min/woocommerce-smallscreen-min.css', '', POTTER_VERSION );
 
 }
-add_action( 'wp_enqueue_scripts', 'potter_woo_scripts', 10 );
+add_action( 'wp_enqueue_scripts', 'potter_woo_scripts', 3 );
 
 // WooCommerce customizer settings.
 require_once POTTER_THEME_DIR . '/inc/integration/woocommerce/potter-kirki-woocommerce.php';

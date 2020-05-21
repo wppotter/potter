@@ -48,7 +48,7 @@ $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
                 wp_nav_menu(array(
                     'theme_location' => 'footer_menu',
                     'container'      => false,
-                    'menu_class'     => 'potter-menu',
+                    'menu_class'     => 'potter-footer-menu',
                     'depth'          => '1',
                     'fallback_cb'    => 'potter_menu_fallback',
                 ));
@@ -71,7 +71,7 @@ $footer_column_two_layout = get_theme_mod('footer_column_two_layout', 'text');
                 wp_nav_menu(array(
                     'theme_location' => 'footer_menu_right',
                     'container'      => false,
-                    'menu_class'     => 'potter-menu',
+                    'menu_class'     => 'potter-footer-menu',
                     'depth'          => '1',
                     'fallback_cb'    => 'potter_menu_fallback',
                 ));

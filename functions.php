@@ -169,7 +169,9 @@ function potter_scripts()
     }
 
     // Main stylesheet.
-    wp_enqueue_style('potter-style', get_template_directory_uri() . '/style.css', '', POTTER_VERSION);
+    wp_enqueue_style('potter-style-main', get_template_directory_uri() . '/style.css', '', POTTER_VERSION);
+    // Main stylesheet min.
+    wp_enqueue_style('potter-style', get_template_directory_uri() . '/style-min.css', '', POTTER_VERSION);
 
     // Responsive styles.
     wp_enqueue_style('potter-responsive', get_template_directory_uri() . '/css/min/responsive-min.css', '', POTTER_VERSION);
@@ -206,3 +208,6 @@ function potter_is_blog()
 {
     return (is_archive() || is_author() || is_category() || is_tag()) && 'post' == get_post_type();
 }
+
+
+//minification

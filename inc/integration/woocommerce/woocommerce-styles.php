@@ -395,7 +395,7 @@ function potter_do_woocommerce_customizer_css() {
 	if ( 'square' === $woocommerce_loop_sale_layout ) {
 
 		echo '.woocommerce span.onsale {';
-		echo 'border-radius: 0;';
+		echo 'border-radius: 0 !important;';
 		echo '}';
 
 	}
@@ -433,11 +433,11 @@ function potter_do_woocommerce_customizer_css() {
 		}
 
 		if ( $woocommerce_loop_sale_font_color ) {
-			echo sprintf( 'color: %s;', esc_attr( $woocommerce_loop_sale_font_color ) );
+			echo sprintf( 'color: %s !important;', esc_attr( $woocommerce_loop_sale_font_color ) );
 		}
 
 		if ( $woocommerce_loop_sale_background_color ) {
-			echo sprintf( 'background-color: %s;', esc_attr( $woocommerce_loop_sale_background_color ) );
+			echo sprintf( 'background-color: %s !important;', esc_attr( $woocommerce_loop_sale_background_color ) );
 		}
 
 		echo '}';

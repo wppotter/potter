@@ -1604,13 +1604,17 @@ if ('menu-vertical' === $menu_position) {
         if ('left' === $vertical_nav_position) {
           if ($vertical_nav_width) {
           echo sprintf('padding-left: %s;', esc_attr($vertical_nav_width) . 'px !important');
+          } else {
+            echo sprintf('padding-left: 250px !important;');
           }
         }
 
-        if ('right' === $vertical_nav_position) {
+        elseif ('right' === $vertical_nav_position) {
           if ($vertical_nav_width) {
           echo sprintf('padding-right: %s;', esc_attr($vertical_nav_width) . 'px !important');
-          }
+        } else {
+          echo sprintf('padding-right: 250px !important;');
+        }
           echo sprintf('padding-left: 0px !important;');
         }
         echo '}';

@@ -111,7 +111,7 @@ function potter_create_customizer_css_file() {
 	}
 
 }
-add_action( 'wp_loaded', 'potter_create_customizer_css_file' );
+add_action( 'wp_loaded', 'potter_create_customizer_css_file', 20 );
 
 /**
  * Enqueue customizer CSS.
