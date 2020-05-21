@@ -553,11 +553,11 @@ function potter_do_woocommerce_customizer_css() {
 		echo '@media (min-width: ' . esc_attr( $breakpoint_medium_int + 1 ) . 'px) {';
 
 		echo '.woocommerce div.product div.images, .woocommerce #content div.product div.images, .woocommerce-page div.product div.images, .woocommerce-page #content div.product div.images {';
-		echo sprintf( 'width: %s;', esc_attr( $woocommerce_single_image_width ) - 2 . '%' );
+		echo sprintf( 'width: %s !important;', esc_attr( $woocommerce_single_image_width ) - 2 . '%' );
 		echo '}';
 
 		echo '.woocommerce div.product div.summary, .woocommerce #content div.product div.summary, .woocommerce-page div.product div.summary, .woocommerce-page #content div.product div.summary {';
-		echo sprintf( 'width: %s;', 98 - esc_attr( $woocommerce_single_image_width ) . '%' );
+		echo sprintf( 'width: %s !important;', 98 - esc_attr( $woocommerce_single_image_width ) . '%' );
 		echo '}';
 
 		echo '}';

@@ -2655,6 +2655,28 @@ Kirki::add_field('potter', array(
 ));
 
 Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'settings'        => 'page_font_letter_spacing',
+    'label'           => __('Letter Spacing', 'potter'),
+    'section'         => 'typo_panel',
+    'priority'        => 1,
+    'default'         => '1',
+    'choices'         => array(
+        'min'  => '1',
+        'max'  => '20',
+        'step' => '.1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'page_font_toggle',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+
+
+Kirki::add_field('potter', array(
     'type'     => 'custom',
     'settings' => 'separator-102345',
     'section'  => 'typo_panel',
@@ -4674,6 +4696,19 @@ Kirki::add_field('potter', array(
     'choices'   => array(
         'min'  => '0',
         'max'  => '100',
+        'step' => '1',
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'            => 'input_slider',
+    'settings'        => 'menu_font_letter_spacing',
+    'label'           => __('Letter Spacing', 'potter'),
+    'section'         => 'potter_menu_options',
+    'priority'        => 9,
+    'default'         => '1',
+    'choices'         => array(
+        'min'  => '1',
+        'max'  => '20',
         'step' => '1',
     ),
 ));

@@ -24,7 +24,7 @@ defined('ABSPATH') || die("Can't access directly");
 	<a class="screen-reader-text skip-link" href="#content" title="<?php echo esc_attr__('Skip to content', 'potter'); ?>"><?php esc_attr_e('Skip to content', 'potter'); ?></a>
 	<?php do_action('wp_body_open'); ?>
 		<?php do_action('potter_body_open'); ?>
-			<div id="container" class="hfeed potter-page <?php potter_transparent_header_class(); ?>">
+			<div id="container" class="hfeed potter-page">
 				<?php do_action('potter_before_header'); ?>
 					<?php do_action('potter_header'); ?>
 						<?php do_action('potter_after_header'); ?>

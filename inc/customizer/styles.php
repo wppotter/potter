@@ -19,6 +19,7 @@ $page_font_toggle       = get_theme_mod('page_font_toggle');
 $page_font_family_value = get_theme_mod('page_font_family');
 $page_font_color        = get_theme_mod('page_font_color');
 $page_font_line_height        = get_theme_mod('page_font_line_height');
+$page_font_letter_spacing        = get_theme_mod('page_font_letter_spacing');
 
 $heading_font_color        = get_theme_mod('heading_font_color');
 $heading_font_accent_color        = get_theme_mod('heading_font_accent_hover_color');
@@ -27,6 +28,11 @@ $heading_font_accent_hover_color        = get_theme_mod('heading_font_accent_col
 if ($page_font_line_height) {
     echo 'body, optgroup, textarea, h1, h2, h3, h4, h5, h6, ul li, ol {';
     echo sprintf('line-height: %s;', esc_attr($page_font_line_height));
+    echo '}';
+}
+if ($page_font_letter_spacing) {
+    echo '.entry-content *, .article-content * {';
+    echo sprintf('letter-spacing: %spx;', esc_attr($page_font_letter_spacing));
     echo '}';
 }
 
@@ -1651,14 +1657,12 @@ $canvas_content_alignment                = get_theme_mod('canvas_content_alignme
 
 
 if ('menu-off-canvas' === $menu_position) {
-
+    echo '@media (min-width: 1025px){';
       if ('left' !== $canvas_content_alignment) {
           echo '.potter-menu-off-canvas .potter-menu>.menu-item>a, .potter-offcanvas-cta, .off-canvas-social-link {';
           echo sprintf('text-align: %s;', esc_attr($canvas_content_alignment));
           echo '}';
       }
-
-
 
     if ($menu_icon_size) {
       echo '.off-canvas-social-link a span {';
@@ -1672,19 +1676,19 @@ if ('menu-off-canvas' === $menu_position) {
     }
     echo '}';
     if ($off_canvas_menu_font_size) {
-        echo '.potter-menu-off-canvas ul.potter-menu a {';
+        echo '.potter-menu-off-canvas ul.potter-menu a, .transparent-header .potter-menu-off-canvas ul.potter-menu a {';
 
         echo sprintf('font-size: %s;', esc_attr($off_canvas_menu_font_size) . 'px');
         echo '}';
     }
     if ($off_canvas_menu_hover_color) {
-        echo '.potter-menu-off-canvas ul li a:hover {';
+        echo '.potter-menu-off-canvas ul li a:hover, .transparent-header .potter-menu-off-canvas ul li a:hover {';
 
         echo sprintf('color: %s;', esc_attr($off_canvas_menu_hover_color));
         echo '}';
     }
     if ($off_canvas_menu_active_color) {
-        echo '.potter-menu-off-canvas ul li.current-menu-item a {';
+        echo '.potter-menu-off-canvas ul li.current-menu-item a, .transparent-header .potter-menu-off-canvas ul li.current-menu-item a {';
 
         echo sprintf('color: %s;', esc_attr($off_canvas_menu_active_color) . ' !important');
         echo '}';
@@ -1703,8 +1707,8 @@ if ('menu-off-canvas' === $menu_position) {
     echo '}';
 
     if ($off_canvas_menu_color) {
-        echo '.potter-menu-off-canvas .potter-menu li a {';
-        echo sprintf('color: %s;', esc_attr($off_canvas_menu_color));
+        echo '.potter-menu-off-canvas .potter-menu li a, .transparent-header .potter-menu-off-canvas .potter-menu li a {';
+        echo sprintf('color: %s !important;', esc_attr($off_canvas_menu_color));
         echo '}';
     }
 
@@ -1778,6 +1782,7 @@ if ('menu-off-canvas' === $menu_position) {
         echo sprintf('background: %s;', esc_attr($burger_menu_background_hover_color));
     }
     echo '}';
+    echo '}';
 }
 
 
@@ -1845,7 +1850,7 @@ if ($menu_html_button) {
 
     echo '}';
 
-    echo '.transparent-header .potter-menu-item-button a {';
+    echo '.transparent-header .potter-menu .potter-menu-item-button a {';
     if ($nav_button_trans_bg_color) {
         echo sprintf('background: %s;', esc_attr($nav_button_trans_bg_color));
     }
@@ -1864,7 +1869,7 @@ if ($menu_html_button) {
         echo sprintf('border-radius: %s;', esc_attr($nav_button_trans_border_radius) . 'px');
     }
     echo '}';
-    echo '.transparent-header .potter-menu-item-button a:hover {';
+    echo '.transparent-header .potter-menu .potter-menu-item-button a:hover {';
     if ($nav_button_trans_bg_hover_color) {
         echo sprintf('background: %s;', esc_attr($nav_button_trans_bg_hover_color));
     }
@@ -2058,7 +2063,7 @@ echo '@media (min-width: 1025px) {';
           echo '}';
         }
 
-        echo '.stickynav .potter-menu-item-button a {';
+        echo '.stickynav .potter-menu .potter-menu-item-button a {';
         if ($nav_button_sticky_bg_color) {
             echo sprintf('background: %s;', esc_attr($nav_button_sticky_bg_color));
         }
@@ -2077,7 +2082,7 @@ echo '@media (min-width: 1025px) {';
             echo sprintf('border-radius: %spx !important;', esc_attr($nav_button_sticky_border_radius));
         }
         echo '}';
-        echo '.stickynav .potter-menu-item-button a:hover {';
+        echo '.stickynav .potter-menu .potter-menu-item-button a:hover {';
         if ($nav_button_sticky_bg_hover_color) {
             echo sprintf('background: %s;', esc_attr($nav_button_sticky_bg_hover_color));
         }
@@ -2182,7 +2187,7 @@ if ($menu_font_color_alt) {
     echo '}';
 
     echo '.potter-menu > .current-menu-item > a, .potter-mobile-menu > .current-menu-item > a {';
-    echo sprintf('color: %s;', esc_attr($menu_font_color_alt) . '!important');
+    echo sprintf('color: %s;', esc_attr($menu_font_color_alt) . ' !important');
     echo '}';
 }
 
@@ -2606,9 +2611,15 @@ if ($mobile_menu_font_size) {
 }
 
 $menu_font_size           = get_theme_mod('menu_font_size');
+$menu_font_letter_spacing           = get_theme_mod('menu_font_letter_spacing');
 if ($menu_font_size) {
     echo '.potter-menu > .menu-item > a {';
     echo sprintf('font-size: %s;', esc_attr($menu_font_size));
+    echo '}';
+}
+if ($menu_font_letter_spacing) {
+    echo '.potter-menu > .menu-item > a {';
+    echo sprintf('letter-spacing: %spx;', esc_attr($menu_font_letter_spacing));
     echo '}';
 }
 //menu icons
@@ -2818,14 +2829,14 @@ if ('none' !== $footer_layout && ($footer_bg_color || $footer_font_color)) {
 }
 
 if ('none' !== $footer_layout && $footer_accent_color) {
-    echo '.potter-page-footer a {';
+    echo '.potter-page-footer a, .potter-page-footer .potter-menu > .menu-item > a {';
     echo sprintf('color: %s;', esc_attr($footer_accent_color));
     echo '}';
 }
 
 if ('none' !== $footer_layout && $footer_accent_color_alt) {
-    echo '.potter-page-footer a:hover {';
-    echo sprintf('color: %s;', esc_attr($footer_accent_color_alt));
+    echo '.potter-page-footer a:hover, .potter-page-footer .potter-menu > .menu-item > a:hover, .potter-page-footer .potter-menu > .current-menu-item > a {';
+    echo sprintf('color: %s !important;', esc_attr($footer_accent_color_alt));
     echo '}';
 }
 
