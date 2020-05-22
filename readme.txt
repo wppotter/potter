@@ -9,6 +9,7 @@ Tags: Blog, Custom Colors, Custom Logo, Custom Menu, E-Commerce, Editor Style, E
 Requires at least: 5.2
 Tested up to: 5.4
 Requires PHP: 5.4
+Stable tag: 2.0.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 -------------------------------------------------------
@@ -132,6 +133,14 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 2.0 - May 22 2020 Big Release =
+* Fixed Several issues
+* Change in customizer interface and UX
+* More controll in header Options
+* More controll in Footer options
+* More controll in Offcanvas Menu
+* Fixed Several issue related to Transparent Header
+* Fixed Issue related to Sticky Header
 
 = 1.1.6 - May 8 2020 =
 * Fixed Issue related off Canvas menu

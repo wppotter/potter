@@ -208,6 +208,3 @@ function potter_is_blog()
 {
     return (is_archive() || is_author() || is_category() || is_tag()) && 'post' == get_post_type();
 }
-
-
-//minification
