@@ -2068,9 +2068,12 @@ body:focus {
 .potter-post-image-wrapper {
   margin-bottom: 20px
 }
+.potter-post-image-wrapper img {
+  width: 100%;
+}
 
 .potter-post-image-link {
-  display: inline-block
+  display: block;
 }
 
 .article-meta {

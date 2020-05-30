@@ -84,6 +84,7 @@ get_header();
 						<?php do_action('potter_article_close'); ?>
 					</div>
 					<?php do_action('potter_article_after'); ?>
+
 					<?php if ('hide' !== get_theme_mod('single_post_nav')) { ?>
 					<?php do_action('potter_before_post_links'); ?>
 

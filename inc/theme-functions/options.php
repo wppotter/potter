@@ -124,12 +124,17 @@ function potter_options_metabox_callback( $post ) {
 		<input id="remove-title" type="checkbox" name="potter_options[]" value="remove-title" <?php checked( $remove_title, 'remove-title' ); ?> />
 		<label for="remove-title"><?php _e( 'Page Title', 'potter' ); ?></label>
 	</div>
-
+	<?php
+	$breadcrumbs_toggle = get_theme_mod ('breadcrumbs_toggle');
+	if ($breadcrumbs_toggle) {
+	?>
 	<div>
 		<input id="remove-breadcrumb" type="checkbox" name="potter_options[]" value="remove-breadcrumb" <?php checked( $remove_breadcrumb, 'remove-breadcrumb' ); ?> />
 		<label for="remove-breadcrumb"><?php _e( 'Breadcrumb', 'potter' ); ?></label>
 	</div>
-
+	<?php
+	}
+	?>
 	<div>
 		<input id="remove-featured" type="checkbox" name="potter_options[]" value="remove-featured" <?php checked( $remove_featured, 'remove-featured' ); ?> />
 		<label for="remove-featured"><?php _e( 'Featured Image', 'potter' ); ?></label>
@@ -144,17 +149,17 @@ function potter_options_metabox_callback( $post ) {
 		<input id="remove-footer" type="checkbox" name="potter_options[]" value="remove-footer" <?php checked( $remove_footer, 'remove-footer' ); ?> />
 		<label for="remove-footer"><?php _e( 'Footer', 'potter' ); ?></label>
 	</div>
-
-	<h4><?php _e( 'Transparent Header Option', 'potter' ); ?></h4>
-	<p><?php _e( 'This only applicable when transparent header is active (Customizer -> Header -> Transparent Header)', 'potter' ); ?></p>
-
+	<?php
+	$transparent_header = get_theme_mod ('transparent_header');
+	if ($transparent_header) {
+	?>
 	<div>
 		<input id="remove-transparent-header" type="checkbox" name="potter_options[]" value="remove-transparent-header" <?php checked( $remove_transparent_header, 'remove-transparent-header' ); ?> />
-		<label for="remove-transparent-header"><?php _e( 'Remove Transparent Header', 'potter' ); ?></label>
+		<label for="remove-transparent-header"><?php _e( 'Transparent Header', 'potter' ); ?></label>
 	</div>
 
-<?php
-
+	<?php
+	}
 }
 
 /**
