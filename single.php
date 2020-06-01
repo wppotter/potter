@@ -4,18 +4,14 @@
  *
  * @package Potter
  */
-
 defined('ABSPATH') || die("Can't access directly");
-
 $grid_gap				= get_theme_mod('sidebar_gap', 'medium');
 $template_parts_header	= get_theme_mod('single_sortable_header', array( 'title', 'meta', 'featured' ));
 $template_parts_footer	= get_theme_mod('single_sortable_footer', array( 'categories' ));
 $post_style             = get_theme_mod('single_post_style', 'plain');
 $post_style            .= get_theme_mod('single_boxed_image_stretched', false) ? ' stretched' : '';
 $post_classes           = array( 'potter-post-style-' . $post_style );
-
 get_header();
-
 ?>
 <div id="content">
 

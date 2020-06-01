@@ -457,7 +457,8 @@ p.demo_store a, .woocommerce-store-notice a {
 }
 
 .woocommerce ul.products li.product .potter-woo-loop-thumbnail-wrapper {
-  position: relative
+  position: relative;
+  border: 1px solid #ececec;
 }
 
 .woocommerce ul.products li.product .potter-woo-loop-out-of-stock {
@@ -489,7 +490,7 @@ p.demo_store a, .woocommerce-store-notice a {
 .woocommerce ul.products li.product a img {
   width: 100%;
   display: block;
-  margin: 0 0 20px 0
+  margin: 0 0 0px 0
 }
 
 .woocommerce ul.products li.product strong {

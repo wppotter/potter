@@ -4026,6 +4026,163 @@ Kirki::add_field('potter', array(
     ),
 ));
 
+Kirki::add_field('potter', array(
+    'type'     => 'custom',
+    'settings' => 'separator-1023675656234',
+    'section'  => 'potter_menu_options',
+    'default'  => '<h3 class="setting-header">' . esc_html__('LOGO Bar Setting', 'potter') .  '</h3>',
+    'priority' => 1,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'        => 'input_slider',
+    'settings'    => 'logo_bar_top_bottom_padding',
+    'label'       => __('Logo Bar Top Bottom Padding', 'potter'),
+    'section'     => 'potter_menu_options',
+    'priority'    => 1,
+    'default'     => '15',
+    'choices'     => array(
+        'min'  => '5',
+        'max'  => '800',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+    ),
+));
+
+// Background color.
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'logo_bar_bg_color',
+    'label'    => __('Background Color', 'potter'),
+    'section'  => 'potter_menu_options',
+    'priority' => 1,
+    'choices'  => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+        array(
+            'setting'  => 'logo_bar_bg_image',
+            'operator' => '==',
+            'value'    => false,
+        ),
+    ),
+));
+
+
+Kirki::add_field('potter', array(
+    'type'            => 'image',
+    'settings'        => 'logo_bar_bg_image',
+    'label'           => __('Logo Bar Mackground Image', 'potter'),
+    'section'         => 'potter_menu_options',
+    'priority'        => 1,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'select',
+    'settings' => 'logo_bar_bg_image_repeat',
+    'label'    => __('Background repeat', 'potter'),
+    'section'  => 'potter_menu_options',
+    'default'  => 'repeat',
+    'priority' => 1,
+    'choices'  => array(
+        'repeat'   => esc_html__('Background Repeat', 'potter'),
+        'no-repeat'  => esc_html__('Background No-Repeat', 'potter'),
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+        array(
+            'setting'  => 'logo_bar_bg_image',
+            'operator' => '!=',
+            'value'    => false,
+        ),
+    ),
+));
+Kirki::add_field('potter', array(
+    'type'     => 'select',
+    'settings' => 'logo_bar_bg_image_size',
+    'label'    => __('Background Size', 'potter'),
+    'section'  => 'potter_menu_options',
+    'default'  => 'auto',
+    'priority' => 1,
+    'choices'  => array(
+        'cover'   => esc_html__('Background Cover', 'potter'),
+        'auto'  => esc_html__('Background Auto Size', 'potter'),
+        '100%'  => esc_html__('Background Size 100%', 'potter'),
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+        array(
+            'setting'  => 'logo_bar_bg_image',
+            'operator' => '!=',
+            'value'    => false,
+        ),
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'select',
+    'settings' => 'logo_bar_bg_image_position',
+    'label'    => __('Background Size', 'potter'),
+    'section'  => 'potter_menu_options',
+    'default'  => 'center center',
+    'priority' => 1,
+    'choices'  => array(
+        'center center'   => esc_html__('Center, Center', 'potter'),
+        'left center'  => esc_html__('Left, Center', 'potter'),
+        'right center'  => esc_html__('Right, Center', 'potter'),
+        'top left'  => esc_html__('Top, Left', 'potter'),
+        'bottom left'  => esc_html__('Bottom, Left', 'potter'),
+        'top right'  => esc_html__('Top, Right', 'potter'),
+        'bottom right'  => esc_html__('Bottom, Right', 'potter'),
+        'top center'  => esc_html__('Top, Center', 'potter'),
+        'bottom center'  => esc_html__('Bottom, Center', 'potter'),
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+        array(
+            'setting'  => 'logo_bar_bg_image',
+            'operator' => '!=',
+            'value'    => false,
+        ),
+    ),
+));
 
 Kirki::add_field('potter', array(
     'type'     => 'custom',
@@ -4869,7 +5026,7 @@ Kirki::add_field('potter', array(
 Kirki::add_field('potter', array(
     'type'     => 'color',
     'settings' => 'menu_outer_line_color',
-    'label'    => __('Outer color', 'potter'),
+    'label'    => __('Outline color', 'potter'),
     'section'  => 'potter_menu_options',
     'priority' => 11,
     'default'         => '#666',

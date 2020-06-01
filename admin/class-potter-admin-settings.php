@@ -239,8 +239,8 @@ if (! class_exists('Potter_Admin_Settings')) {
               esc_html_e('Install Potter Kit for Gutenberg & Elementor to get ready-to-use website templates that can be imported with one click.', 'potter'); ?>
               <?php echo Potter_Plugin_Install_Helper::instance()->get_button_html('potter-kit'); //phpcs:ignore?>
 								<?php
-		            $potter_facebook_group_link      = 'https://wordpress.org/plugins/potter-kit';
-		            $potter_facebook_group_link_text = __('Learn More &raquo;', 'potter');
+                    $potter_facebook_group_link      = 'https://wordpress.org/plugins/potter-kit';
+            $potter_facebook_group_link_text = __('Learn More &raquo;', 'potter');
 
             printf(
                 '%1$s',
@@ -265,24 +265,19 @@ if (! class_exists('Potter_Admin_Settings')) {
 				<h2 class="handle">
 					<span>
 
-<svg width="20px" viewBox="0 0 152 205" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Group-131">
-            <g id="Group-128-Copy">
-                <path d="M75.9762877,152 L75.9762877,198.033977 C75.9762877,198.033977 76.7724975,202.27377 69.137403,205 L41.3473893,205 C41.3473893,205 6.83841374,204.090823 4.09001565,184.708267 C4.09001565,184.708267 -0.185925584,154.120546 50.2033387,152 L75.9762877,152 Z" id="Fill-4" fill="#0F89FF"></path>
-                <path d="M0,157 L0,34.6545192 C0,34.6545192 2.73160017,0.300685764 49.7777792,0 L89.5390398,0 C89.5390398,0 143.566626,3.013324 151.761427,61.4737495 C151.761427,61.4737495 159.349856,126.262802 88.9320175,136.810083 L44.9216011,136.810083 C44.9216011,136.810083 13.6586521,137.412747 0,157" id="Fill-1" fill="#07123B"></path>
+        <svg width="30px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: inline-block; vertical-align: middle; margin-right: 10px; border-radius: 4px;">
+            <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <path d="M0,0 L86,0 L86,86 L0,86 L0,0 Z M54.8461538,50.1641791 L54.8461538,36.7910448 L56.8455798,36.7910448 C60.0109133,36.7910448 62.5769231,34.225035 62.5769231,31.0597015 C62.5769231,27.894368 60.0109133,25.3283582 56.8455798,25.3283582 L27,25.3283582 L27,11 L57.4179104,11 C68.2327999,11 77,19.7672001 77,30.5820896 C77,35.4497103 75.2239703,39.902517 72.284574,43.3278469 C75.2208963,46.6869501 77,51.0834703 77,55.8955224 C77,66.446634 68.446634,75 57.8955224,75 L27,75 L27,61.6268657 L56.8455798,61.6268657 C60.0109133,61.6268657 62.5769231,59.0608559 62.5769231,55.8955224 C62.5769231,52.7301889 60.0109133,50.1641791 56.8455798,50.1641791 L54.8461538,50.1641791 Z M52,50.1641791 L27,50.1641791 L27,43.4776119 L27,36.7910448 L52,36.7910448 L52,50.1641791 Z M9,11 L24,11 L24,75 L9,75 L9,11 Z" id="Combined-Shape" fill="#E0105F"></path>
             </g>
-        </g>
-    </g>
-</svg>
-            <?php esc_html_e('Potter Kit', 'potter'); ?></span>
+        </svg>
+            <?php esc_html_e('Elementor Blocks', 'potter'); ?></span>
 				</h2>
 				<div class="inside">
 					<p>
-						<?php esc_html_e('Potter Kit comes with pre designed websites to import and use, also it has feature called Elemntor Blocks which helps to create Elementor templates and plublish them in no editable areas of website with option to choose from global to specific page or post.', 'potter'); ?>
+						<?php esc_html_e('Elementor Blocks is a block building fetaure of Potter Kit. Using this feature you can create Block template with Elementor and publish them in non editable areas like above header and many more places. To use this feature you need to install and active Elementor plugin.', 'potter'); ?>
 					</p>
 					<?php
-                    $potterkit_link           = 'https://pottertheme.com/support/';
+                    $potterkit_link           = 'https://wppotter.com/potter-kit';
             $potterkit_link_text = __('Know More &raquo;', 'potter');
 
             printf(
@@ -474,7 +469,7 @@ if (! class_exists('Potter_Admin_Settings')) {
                                     esc_html($info['title'])
                                 );
                             }
-                      } ?>
+                        } ?>
 					</ul>
 				</div>
 				<?php

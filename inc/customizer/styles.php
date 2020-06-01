@@ -1994,6 +1994,47 @@ $nav_button_sticky_border_width             = get_theme_mod('nav_button_sticky_b
 $nav_button_sticky_border_radius = get_theme_mod('nav_button_sticky_border_radius');
 $nav_button_sticky_border_color             = get_theme_mod('nav_button_sticky_border_color');
 $nav_button_sticky_border_color_alt = get_theme_mod('nav_button_sticky_border_color_alt');
+$logo_bar_top_bottom_padding              = get_theme_mod('logo_bar_top_bottom_padding');
+$logo_bar_bg_color              = get_theme_mod('logo_bar_bg_color');
+$logo_bar_bg_image              = get_theme_mod('logo_bar_bg_image');
+$logo_bar_bg_image_size              = get_theme_mod('logo_bar_bg_image_size');
+$logo_bar_bg_image_position              = get_theme_mod('logo_bar_bg_image_position');
+$logo_bar_bg_image_repeat              = get_theme_mod('logo_bar_bg_image_repeat');
+
+if ('menu-stacked' === $menu_position) {
+  if ($logo_bar_top_bottom_padding) {
+    echo '.potter-menu-stacked .potter-logo {';
+    echo sprintf('padding-top: %spx;', esc_attr($logo_bar_top_bottom_padding));
+    echo sprintf('padding-bottom: %spx;', esc_attr($logo_bar_top_bottom_padding));
+    echo '}';
+  }
+  if ($logo_bar_bg_image) {
+    echo '.potter-menu-stacked .potter-logo {';
+    echo sprintf('background-image: url(%s);', esc_attr($logo_bar_bg_image));
+      if ($logo_bar_bg_image_size) {
+      echo sprintf('background-size: %s;', esc_attr($logo_bar_bg_image_size));
+    } else {
+      echo sprintf('background-size: auto;');
+    }
+    if ($logo_bar_bg_image_position) {
+    echo sprintf('background-position: %s;', esc_attr($logo_bar_bg_image_position));
+  } else {
+    echo sprintf('background-position: center center;');
+  }
+        if ($logo_bar_bg_image_repeat) {
+          echo sprintf('background-repeat: %s;', esc_attr($logo_bar_bg_image_repeat));
+        } else {
+          echo sprintf('background-repeat: repeat;');
+        }
+    echo '}';
+  } else {
+    if ($logo_bar_bg_color) {
+      echo '.potter-menu-stacked .potter-logo {';
+      echo sprintf('background-color: %s;', esc_attr($logo_bar_bg_color));
+      echo '}';
+    }
+  }
+}
 
 
 if ($menu_sticky_logo) {
@@ -2485,6 +2526,8 @@ $mobile_menu_bg_color                = get_theme_mod('mobile_menu_bg_color');
 $mobile_menu_bg_color_alt            = get_theme_mod('mobile_menu_bg_color_alt');
 $mobile_menu_submenu_arrow_color     = get_theme_mod('mobile_menu_submenu_arrow_color');
 $mobile_menu_font_size               = get_theme_mod('mobile_menu_font_size');
+
+
 
 if ($mobile_menu_height) {
     echo '.potter-mobile-nav-wrapper {';
