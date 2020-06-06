@@ -131,6 +131,12 @@ Does this theme support any plugins?
 
 == Donation ==
 Donation Link: https://pottertheme.com/
+== Changelog ==
+= 2.0.1 - June 06 2020 =
+* Fixed Several issues
+* Change in customizer interface and UX
+* Vertical Navbar option modified
+* More Control in Blog Layout
 
 == Changelog ==
 = 2.0 - May 22 2020 Big Release =

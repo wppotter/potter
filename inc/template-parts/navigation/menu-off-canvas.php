@@ -26,6 +26,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 							'container'      => false,
 							'menu_class'     => 'potter-menu',
 							'depth'          => 3,
+							'fallback_cb'    => 'potter_main_menu_fallback',
 					));
 				?>
 			</nav>

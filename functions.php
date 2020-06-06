@@ -56,8 +56,10 @@ function potter_theme_setup()
 
     /* image size */
     add_image_size('post-thumbnail', 800, 240);
-    add_image_size('potter-homepage-thumb', 220, 180);
-    add_image_size('potter-fullpage-thumb', 1000, 800);
+    add_image_size('potter-homepage-thumb', 220, 180, true);
+    add_image_size('potter-fullpage-thumb', 1000, 800, true);
+    add_image_size('potter-postpage-thumb', 1000, 600, true);
+    add_image_size('potter-archive-list-thumb', 800, 800, true);
 
     // Title tag.
     add_theme_support('title-tag');

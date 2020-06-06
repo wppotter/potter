@@ -264,12 +264,14 @@ if (! class_exists('Potter_Admin_Settings')) {
 			<div class="postbox potter-support-section">
 				<h2 class="handle">
 					<span>
-
-        <svg width="30px" viewBox="0 0 86 86" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: inline-block; vertical-align: middle; margin-right: 10px; border-radius: 4px;">
-            <g id="logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                <path d="M0,0 L86,0 L86,86 L0,86 L0,0 Z M54.8461538,50.1641791 L54.8461538,36.7910448 L56.8455798,36.7910448 C60.0109133,36.7910448 62.5769231,34.225035 62.5769231,31.0597015 C62.5769231,27.894368 60.0109133,25.3283582 56.8455798,25.3283582 L27,25.3283582 L27,11 L57.4179104,11 C68.2327999,11 77,19.7672001 77,30.5820896 C77,35.4497103 75.2239703,39.902517 72.284574,43.3278469 C75.2208963,46.6869501 77,51.0834703 77,55.8955224 C77,66.446634 68.446634,75 57.8955224,75 L27,75 L27,61.6268657 L56.8455798,61.6268657 C60.0109133,61.6268657 62.5769231,59.0608559 62.5769231,55.8955224 C62.5769231,52.7301889 60.0109133,50.1641791 56.8455798,50.1641791 L54.8461538,50.1641791 Z M52,50.1641791 L27,50.1641791 L27,43.4776119 L27,36.7910448 L52,36.7910448 L52,50.1641791 Z M9,11 L24,11 L24,75 L9,75 L9,11 Z" id="Combined-Shape" fill="#E0105F"></path>
-            </g>
-        </svg>
+        <svg width="20px" viewBox="0 0 126 123" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: inline-block; vertical-align: middle; margin-right: 10px;">
+      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+          <g id="Group-4" transform="translate(-10.000000, -5.000000)" fill="#E01072">
+              <path d="M45.7510204,0.809316237 L47.5119511,0.895754094 C54.9756921,1.26212272 60.9386735,7.24078947 61.2854337,14.7054671 L66.0933247,118.20454 C66.4413137,125.695669 60.6506546,132.050529 53.1595258,132.398518 C52.7278083,132.418573 52.2953796,132.418005 51.8637163,132.396816 L50.1027856,132.310378 C42.6390446,131.94401 36.6760632,125.965343 36.329303,118.500665 L31.521412,15.0015926 C31.173423,7.5104637 36.9640821,1.15560312 44.4552109,0.807614195 C44.8869284,0.787559422 45.3193571,0.788127416 45.7510204,0.809316237 Z" id="Rectangle" transform="translate(48.807368, 66.603066) rotate(30.000000) translate(-48.807368, -66.603066) "></path>
+              <path d="M93.7510204,0.809316237 L95.5119511,0.895754094 C102.975692,1.26212272 108.938674,7.24078947 109.285434,14.7054671 L114.093325,118.20454 C114.441314,125.695669 108.650655,132.050529 101.159526,132.398518 C100.727808,132.418573 100.29538,132.418005 99.8637163,132.396816 L98.1027856,132.310378 C90.6390446,131.94401 84.6760632,125.965343 84.329303,118.500665 L79.521412,15.0015926 C79.173423,7.5104637 84.9640821,1.15560312 92.4552109,0.807614195 C92.8869284,0.787559422 93.3193571,0.788127416 93.7510204,0.809316237 Z" id="Rectangle-Copy" transform="translate(96.807368, 66.603066) rotate(30.000000) translate(-96.807368, -66.603066) "></path>
+          </g>
+      </g>
+  </svg>
             <?php esc_html_e('Elementor Blocks', 'potter'); ?></span>
 				</h2>
 				<div class="inside">
@@ -303,7 +305,7 @@ if (! class_exists('Potter_Admin_Settings')) {
 
 			<div class="postbox potter-support-section">
 				<h2 class="handle">
-					<span><?php esc_html_e('Support', 'potter'); ?></span>
+					<span class="dashicons dashicons-format-chat"></span> <span><?php esc_html_e('Support', 'potter'); ?></span>
 				</h2>
 				<div class="inside">
 					<p>
@@ -389,7 +391,7 @@ if (! class_exists('Potter_Admin_Settings')) {
                 )
             ); ?>
 			<div class="postbox potter-quick-setting-section">
-				<h2 class="handle"><span><?php esc_html_e('Resources:', 'potter'); ?></span></h2>
+				<h2 class="handle"><span class="dashicons dashicons-format-aside"></span> <span><?php esc_html_e('Resources:', 'potter'); ?></span></h2>
 				<div class="potter-quick-setting-section-inner">
 					<?php
                     if (! empty($quick_settings)) :
@@ -407,7 +409,7 @@ if (! class_exists('Potter_Admin_Settings')) {
 			</div>
 
 			<div class="postbox">
-				<h2 class="handle"><?php esc_html_e('Slack Community', 'potter'); ?></h2>
+				<h2 class="handle"><span class="dashicons dashicons-format-chat"></span> <?php esc_html_e('Slack Community', 'potter'); ?></h2>
 				<div class="potter-documentation-section">
 					<div class="resposive-documentation">
 						<p>

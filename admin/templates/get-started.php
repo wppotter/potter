@@ -25,7 +25,7 @@ if (! defined('ABSPATH')) {
 				<?php do_action('potter_welcome_page_right_sidebar_content'); ?>
 
 				<div class="postbox">
-					<h2 class="handle"><?php esc_html_e('Feedback', 'potter'); ?></h2>
+					<h2 class="handle"><span class="dashicons dashicons-testimonial"></span> <?php esc_html_e('Feedback', 'potter'); ?></h2>
 					<div class="potter-review-section">
 						<div class="potter-review">
 							<p>

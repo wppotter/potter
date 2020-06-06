@@ -2278,6 +2278,51 @@ Kirki::add_field('potter', array(
     ),
 ));
 
+Kirki::add_field('potter', array(
+    'type'      => 'color',
+    'settings'  => 'sidebar_font_color',
+    'label'     => __('Font Color', 'potter'),
+    'section'   => 'potter_sidebar_options',
+    'priority'  => 6,
+    'choices'   => array(
+        'alpha' => true,
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'      => 'color',
+    'settings'  => 'sidebar_font_color',
+    'label'     => __('Font Color', 'potter'),
+    'section'   => 'potter_sidebar_options',
+    'priority'  => 7,
+    'choices'   => array(
+        'alpha' => true,
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'      => 'color',
+    'settings'  => 'sidebar_accent_color',
+    'label'     => __('Accent Color', 'potter'),
+    'section'   => 'potter_sidebar_options',
+    'priority'  => 8,
+    'choices'   => array(
+        'alpha' => true,
+    ),
+));
+
+Kirki::add_field('potter', array(
+    'type'      => 'color',
+    'settings'  => 'sidebar_accent_hover_color',
+    'label'     => __('Accent Hover Color', 'potter'),
+    'section'   => 'potter_sidebar_options',
+    'priority'  => 8,
+    'choices'   => array(
+        'alpha' => true,
+    ),
+));
+
+
 
 
 /* Fields – Buttons */
@@ -2599,7 +2644,7 @@ Kirki::add_field('potter', array(
     'settings' => 'page_font_color',
     'label'    => __('Color', 'potter'),
     'section'  => 'color_panel',
-    'default'  => '#666',
+    'default'  => '#333',
     'priority' => 2,
     'choices'  => array(
         'alpha' => true,
@@ -2660,7 +2705,7 @@ Kirki::add_field('potter', array(
     'label'           => __('Letter Spacing', 'potter'),
     'section'         => 'typo_panel',
     'priority'        => 1,
-    'default'         => '1',
+    'default'         => '0',
     'choices'         => array(
         'min'  => '1',
         'max'  => '20',
@@ -3559,12 +3604,13 @@ Kirki::add_field('potter', array(
     ),
 ));
 
+// Separator.
 Kirki::add_field('potter', array(
-    'type'     => 'toggle',
-    'settings' => 'top_header_border_bottom',
-    'label'    => __('Border Bottom', 'potter'),
+    'type'     => 'custom',
+    'settings' => 'separator-264356125645',
     'section'  => 'potter_pre_header_options',
-    'priority' => 10,
+    'default'  => '<hr style="border-top: 1px solid #ccc; border-bottom: 1px solid #f8f8f8">',
+    'priority' => 11,
     'active_callback' => array(
         array(
             'setting'  => 'pre_header_layout',
@@ -3573,15 +3619,14 @@ Kirki::add_field('potter', array(
         ),
     ),
 ));
-
 // Height.
 Kirki::add_field('potter', array(
     'type'            => 'slider',
     'settings'        => 'pre_header_border_bottom_width',
-    'label'           => __('Border Width', 'potter'),
+    'label'           => __('Bottom Border Width', 'potter'),
     'section'         => 'potter_pre_header_options',
     'priority'        => 11,
-    'default'         => '1',
+    'default'         => '0',
     'choices'         => array(
         'min'  => '0',
         'max'  => '25',
@@ -3589,9 +3634,9 @@ Kirki::add_field('potter', array(
     ),
     'active_callback' => array(
         array(
-            'setting'  => 'top_header_border_bottom',
+            'setting'  => 'pre_header_layout',
             'operator' => '!=',
-            'value'    => '',
+            'value'    => 'none',
         ),
     ),
 ));
@@ -3605,9 +3650,9 @@ Kirki::add_field('potter', array(
     'priority'        => 12,
     'active_callback' => array(
         array(
-            'setting'  => 'top_header_border_bottom',
-            'operator' => '==',
-            'value'    => true,
+            'setting'  => 'pre_header_layout',
+            'operator' => '!=',
+            'value'    => 'none',
         ),
     ),
     'choices'         => array(
@@ -3965,7 +4010,7 @@ Kirki::add_field('potter', array(
     'label'       => __('Vertical Nav Width', 'potter'),
     'section'     => 'potter_menu_options',
     'priority'    => 1,
-    'default'     => '250',
+    'default'     => '250px',
     'choices'     => array(
         'min'  => '10',
         'max'  => '800',
@@ -3987,9 +4032,9 @@ Kirki::add_field('potter', array(
     'label'       => __('Vertical Nav Top Padding', 'potter'),
     'section'     => 'potter_menu_options',
     'priority'    => 1,
-    'default'     => '60',
+    'default'     => '60px',
     'choices'     => array(
-        'min'  => '10',
+        'min'  => '0',
         'max'  => '800',
         'step' => '1',
     ),
@@ -4011,9 +4056,9 @@ Kirki::add_field('potter', array(
     'label'       => __('Vertical Nav Left Right Padding', 'potter'),
     'section'     => 'potter_menu_options',
     'priority'    => 1,
-    'default'     => '30',
+    'default'     => '30px',
     'choices'     => array(
-        'min'  => '10',
+        'min'  => '0',
         'max'  => '100',
         'step' => '1',
     ),
@@ -4061,6 +4106,27 @@ Kirki::add_field('potter', array(
         ),
     ),
 ));
+Kirki::add_field('potter', array(
+    'type'        => 'input_slider',
+    'settings'    => 'logo_bar_top_bottom_padding_sticky',
+    'label'       => __('Logo Bar Top Bottom Padding', 'potter'),
+    'section'     => 'potter_sticky_header_options',
+    'priority'    => 26,
+    'default'     => '15',
+    'choices'     => array(
+        'min'  => '5',
+        'max'  => '800',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+    ),
+));
+
 
 // Background color.
 Kirki::add_field('potter', array(
@@ -4077,11 +4143,6 @@ Kirki::add_field('potter', array(
             'setting'  => 'menu_position',
             'operator' => '==',
             'value'    => 'menu-stacked',
-        ),
-        array(
-            'setting'  => 'logo_bar_bg_image',
-            'operator' => '==',
-            'value'    => false,
         ),
     ),
 ));
@@ -4169,6 +4230,30 @@ Kirki::add_field('potter', array(
         'bottom right'  => esc_html__('Bottom, Right', 'potter'),
         'top center'  => esc_html__('Top, Center', 'potter'),
         'bottom center'  => esc_html__('Bottom, Center', 'potter'),
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-stacked',
+        ),
+        array(
+            'setting'  => 'logo_bar_bg_image',
+            'operator' => '!=',
+            'value'    => false,
+        ),
+    ),
+));
+
+// Background color.
+Kirki::add_field('potter', array(
+    'type'     => 'color',
+    'settings' => 'logo_bar_overlay_color',
+    'label'    => __('Overlay Color', 'potter'),
+    'section'  => 'potter_menu_options',
+    'priority' => 1,
+    'choices'  => array(
+        'alpha' => true,
     ),
     'active_callback' => array(
         array(
@@ -5187,12 +5272,12 @@ Kirki::add_field('potter', array(
 
 // Height.
 Kirki::add_field('potter', array(
-    'type'            => 'slider',
+    'type'            => 'input_slider',
     'settings'        => 'sticky_nav_height',
     'label'           => __('Menu Bar Height', 'potter'),
     'section'         => 'potter_sticky_header_options',
     'priority'        => 25,
-    'default'         => '20',
+    'default'         => '15px',
     'choices'         => array(
         'min'  => '0',
         'max'  => '100',
@@ -5282,8 +5367,7 @@ Kirki::add_field('potter', array(
     'label'           => __('Border Width', 'potter'),
     'section'         => 'potter_menu_options',
     'priority'        => 20,
-    'default'         => '5',
-    'transport'       => 'postMessage',
+    'default'         => '0',
     'choices'         => array(
         'min'  => '0',
         'max'  => '25',
@@ -5457,8 +5541,40 @@ Kirki::add_field('potter', array(
     ),
 ));
 
-
+Kirki::add_field('potter', array(
+    'type'     => 'custom',
+    'settings' => 'separator-10236756566234',
+    'section'  => 'potter_transparent_header_options',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Transparent Header Layout', 'potter') .  '</h3>',
+    'priority' => 11,
+    'active_callback' => array(
+        array(
+            'setting'  => 'transparent_header',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
 // Font  color.
+Kirki::add_field('potter', array(
+    'type'            => 'color',
+    'settings'        => 'transparent_header_bg_color',
+    'label'           => __('Background Color', 'potter'),
+    'section'         => 'potter_transparent_header_options',
+    'priority'        => 13,
+    'choices'         => array(
+        'alpha' => true,
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'transparent_header',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+
+
 Kirki::add_field('potter', array(
     'type'            => 'color',
     'settings'        => 'transparent_header_color',

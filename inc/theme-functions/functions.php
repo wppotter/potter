@@ -236,7 +236,7 @@ function potter_page_feature_image()
         return;
     } ?>
   <div class="potter-page-image-wrapper">
-  	<?php the_post_thumbnail(apply_filters('potter_single_post_thumbnail_size', 'large'), array( 'class' => 'potter-post-image', 'itemprop' => 'image' )); ?>
+  	<?php the_post_thumbnail(apply_filters('potter_single_post_thumbnail_size', 'potter-postpage-thumb'), array( 'class' => 'potter-post-image', 'itemprop' => 'image' )); ?>
   </div>
 
   <?php
