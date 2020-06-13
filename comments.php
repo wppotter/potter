@@ -40,7 +40,7 @@ if ( post_password_required() )	return;
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
 		<nav class="potter-comment-nav potter-clearfix" aria-label="<?php esc_attr_e( 'Comments Navigation', 'potter' ); ?>">
-			<span class="screen-reader-text"><?php esc_attr_e( 'Comments Navigation', 'potter' ) ?></span>
+			<span class="screen-reader-text"><?php esc_html_e( 'Comments Navigation', 'potter' ) ?></span>
 			<div class="previous"><?php previous_comments_link( __( '&larr; Older Comments', 'potter' ) ); ?></div>
 			<div class="next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'potter' ) ); ?></div>
 		</nav>
@@ -49,7 +49,7 @@ if ( post_password_required() )	return;
 	</section>
 
 	<?php if ( ! comments_open() ) : ?>
-	<p class="no-comments"><?php esc_attr_e( 'Comments are closed.' , 'potter' ); ?></p>
+	<p class="no-comments"><?php esc_html_e( 'Comments are closed.' , 'potter' ); ?></p>
 	<?php endif; ?>
 
 	<?php do_action( 'potter_after_comments' ); ?>

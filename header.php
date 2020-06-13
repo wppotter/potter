@@ -21,7 +21,7 @@ defined('ABSPATH') || die("Can't access directly");
 </head>
 
 <body <?php body_class(); ?> <?php potter_body_schema_markup(); ?>>
-	<a class="screen-reader-text skip-link" href="#content" title="<?php echo esc_attr__('Skip to content', 'potter'); ?>"><?php esc_attr_e('Skip to content', 'potter'); ?></a>
+	<a class="screen-reader-text skip-link" href="#content" title="<?php echo esc_attr__('Skip to content', 'potter'); ?>"><?php esc_html_e('Skip to content', 'potter'); ?></a>
 	<?php do_action('wp_body_open'); ?>
 		<?php do_action('potter_body_open'); ?>
 		<?php do_action('potter_before_header'); ?>
