@@ -1,6 +1,9 @@
 -------------------------------------------------------
 Change Logs
 -------------------------------------------------------
+= 2.0.2 - June 13 2020 =
+* Fixed Several issues
+
 = 2.0.1 - June 06 2020 =
 * Fixed Several issues
 * Change in customizer interface and UX

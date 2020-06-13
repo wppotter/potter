@@ -70,8 +70,19 @@ a.potterra-starter-sites-detail-link {
 .general .potter-container {
 	max-width: 1130px;
 }
+.potter-quick-setting-section {
+	background: #0073aa;
+}
 .potter-quick-setting-section span.dashicons {
 	margin: 1px 3px 0 10px;
+	color: #fff;
+}
+.potter-quick-setting-section h2 {
+	background: #0073aa !important;
+	color: #fff !important;
+}
+.potter-quick-setting-section li a {
+	color: #fff !important;
 }
 .potter-container div.notice,
 .potter-container div.updated,
@@ -80,6 +91,7 @@ a.potterra-starter-sites-detail-link {
 }
 .potter-container #poststuff h2 {
 	padding: 12px 20px;
+
 }
 .potter-container img.potter-starter-sites-img {
 	width: 100%;
@@ -136,7 +148,7 @@ a.potterra-starter-sites-detail-link {
 	margin: 0;
 }
 .potter-quick-setting-section li {
-	border-bottom: 1px solid #eee;
+	border-bottom: 1px solid #028EC5;
 	margin-bottom: 0;
 }
 .potter-quick-setting-section li {

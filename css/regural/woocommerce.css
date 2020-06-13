@@ -28,7 +28,7 @@ p.demo_store, .woocommerce-store-notice {
   padding: 10px 0;
   font-size: 14px;
   text-align: center;
-  background-color: #0056ff;
+  background-color: #007cba;
   color: #fff;
   z-index: 99998;
   display: none
@@ -578,7 +578,7 @@ p.demo_store a, .woocommerce-store-notice a {
 
 
 .woocommerce a.button.alt.disabled, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled]:hover {
-  background-color: #0056ff;
+  background-color: #007cba;
   color: #fff
 }
 
@@ -1250,7 +1250,7 @@ p.demo_store a, .woocommerce-store-notice a {
   z-index: 2;
   width: 16px;
   height: 16px;
-  background-color: #0056ff;
+  background-color: #007cba;
   border-radius: 15px;
   cursor: ew-resize;
   outline: 0;
@@ -1264,7 +1264,7 @@ p.demo_store a, .woocommerce-store-notice a {
   display: block;
   border: 0;
   border-radius: 15px;
-  background-color: #0056ff
+  background-color: #007cba
 }
 
 .woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
@@ -1315,7 +1315,7 @@ p.demo_store a, .woocommerce-store-notice a {
   margin: 0 0 40px;
   position: relative;
   background-color: #f5f5f7;
-  border-top: 3px solid #0056ff;
+  border-top: 3px solid #007cba;
   *zoom: 1
 }
 
@@ -1360,11 +1360,11 @@ p.demo_store a, .woocommerce-store-notice a {
 }
 
 .woocommerce-info {
-  border-top-color: #0056ff
+  border-top-color: #007cba
 }
 
 .woocommerce-info::before {
-  color: #0056ff
+  color: #007cba
 }
 
 .woocommerce-error {

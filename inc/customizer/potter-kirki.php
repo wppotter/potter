@@ -4947,9 +4947,9 @@ Kirki::add_field('potter', array(
     'label'           => __('Letter Spacing', 'potter'),
     'section'         => 'potter_menu_options',
     'priority'        => 9,
-    'default'         => '1',
+    'default'         => '0',
     'choices'         => array(
-        'min'  => '1',
+        'min'  => '0',
         'max'  => '20',
         'step' => '1',
     ),

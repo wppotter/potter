@@ -348,7 +348,7 @@ template {
 }
 
 .potter-button-primary {
-  background: #0056ff;
+  background: #007cba;
   color: #fff
 }
 
@@ -2325,7 +2325,7 @@ body:focus {
 }
 
 .bypostauthor {
-  border-color: #0056ff
+  border-color: #007cba
 }
 
 .potter-comment-nav {
@@ -2530,8 +2530,8 @@ div.wpcf7-spam-blocked, div.wpcf7-validation-errors {
 }
 
 div.wpcf7-mail-sent-ok {
-  border-color: #0056ff;
-  color: #0056ff
+  border-color: #007cba;
+  color: #007cba
 }
 
 .edd-meta .categories, .edd-meta .tags {
@@ -2656,7 +2656,7 @@ body.woocommerce {
   transition: all .2s;
   position: relative;
   padding: 14px 16px;
-  background: #0056ff;
+  background: #007cba;
   outline: 0;
   cursor: pointer;
   border: 0;

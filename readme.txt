@@ -131,7 +131,12 @@ Does this theme support any plugins?
 
 == Donation ==
 Donation Link: https://pottertheme.com/
+
 == Changelog ==
+= 2.0.2 - June 13 2020 =
+* Fixed Several issues
+
+
 = 2.0.1 - June 06 2020 =
 * Fixed Several issues
 * Change in customizer interface and UX

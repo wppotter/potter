@@ -631,11 +631,11 @@ table#edd_purchase_receipt_products .edd_bundled_product_name {
 }
 
 .edd_download_purchase_form .edd_single_mode input[type=radio]:checked+.edd_price_option_name:after {
-  background: #0056ff
+  background: #007cba
 }
 
 .edd_download_purchase_form .edd_single_mode input[type=radio]:checked+.edd_price_option_name:before {
-  border-color: #0056ff
+  border-color: #007cba
 }
 
 .edd_download_purchase_form .edd_single_mode label:hover .edd_price_option_name:after {
@@ -693,7 +693,7 @@ table#edd_purchase_receipt_products .edd_bundled_product_name {
 
 .edd-submit.button.blue {
   color: #fff;
-  background: #0056ff
+  background: #007cba
 }
 
 .edd-submit.button.blue:hover {
@@ -919,9 +919,9 @@ edd-hide-on-empty.cart-not.empty {
 }
 
 .edd-alert-info {
-  color: #0056ff;
+  color: #007cba;
   background-color: rgba(59, 169, 210, 0.15);
-  border-color: #0056ff
+  border-color: #007cba
 }
 
 .edd-alert-warn {

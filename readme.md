@@ -86,6 +86,8 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 2.0.2 - June 13 2020 =
+* Fixed Several issues
 
 = 2.0 - May 22 2020 Big Release =
 * Fixed Several issues
