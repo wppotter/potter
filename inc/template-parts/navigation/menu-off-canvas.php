@@ -24,7 +24,7 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 					wp_nav_menu(array(
 							'theme_location' => 'main_menu',
 							'container'      => false,
-							'menu_class'     => 'potter-menu',
+							'menu_class'     => 'potter-menu potter-sub-menu' . potter_sub_menu_alignment() . potter_sub_menu_animation() . potter_menu_hover_effect(),
 							'depth'          => 3,
 							'fallback_cb'    => 'potter_main_menu_fallback',
 					));

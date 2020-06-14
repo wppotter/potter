@@ -1707,9 +1707,9 @@ if ('menu-off-canvas' === $menu_position) {
         echo '}';
     }
     if ($off_canvas_menu_hover_color) {
-        echo '.potter-menu-off-canvas ul li a:hover, .transparent-header .potter-menu-off-canvas ul li a:hover {';
+        echo '.potter-menu-off-canvas .potter-menu li a:hover, .transparent-header .potter-menu-off-canvas .potter-menu li a:hover {';
 
-        echo sprintf('color: %s;', esc_attr($off_canvas_menu_hover_color));
+        echo sprintf('color: %s !important;', esc_attr($off_canvas_menu_hover_color));
         echo '}';
     }
     if ($off_canvas_menu_active_color) {

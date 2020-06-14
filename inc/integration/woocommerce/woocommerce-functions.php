@@ -8,6 +8,7 @@
 
 defined( 'ABSPATH' ) || die( "Can't access directly" );
 
+
 /**
  * Enqueue scripts & styles.
  */
@@ -19,6 +20,11 @@ function potter_woo_fragment_refresh() {
 	// Single add to cart ajax.
 	if ( is_product() && 'yes' === get_option( 'woocommerce_enable_ajax_add_to_cart' ) && get_theme_mod( 'woocommerce_single_add_to_cart_ajax' ) ) {
 		wp_enqueue_script( 'potter-woocommerce-single-add-to-cart-ajax', get_template_directory_uri() . '/assets/woocommerce/js/woocommerce-single-add-to-cart-ajax.js', array( 'jquery' ), '', true );
+	}
+
+	$woocommerce_loop_image_flip = get_theme_mod ('woocommerce_loop_image_flip');
+	if ($woocommerce_loop_image_flip) {
+		require_once POTTER_THEME_DIR . '/inc/integration/woocommerce/woocommerce-product-image-flipper.php';
 	}
 
 }
@@ -524,6 +530,8 @@ add_filter( 'potter_woo_menu_item_classes', 'potter_woo_menu_item_class_current'
  *
  * @return string The cart menu item.
  */
+
+
 function potter_woo_menu_item() {
 
 	// Vars.
@@ -552,11 +560,14 @@ function potter_woo_menu_item() {
 
 	$menu_item .= '</a>';
 	$menu_item .= apply_filters( 'potter_woo_menu_item_dropdown', '' );
-	$menu_item .= '</li>';
 
+	$menu_item .= '</li>';
 	return $menu_item;
 
 }
+
+
+
 
 /**
  * Add cart menu item to main navigation.
@@ -624,7 +635,7 @@ add_action( 'potter_before_mobile_toggle', 'potter_woo_menu_icon_mobile' );
 function potter_woo_menu_icon_offcanvas() {
 
 	// Stop right here if menu item is hidden.
-	if ( 'hide' === get_theme_mod( 'woocommerce_menu_item_mobile' ) ) {
+	if ( 'hide' === get_theme_mod( 'woocommerce_menu_item_desktop' ) ) {
 		return;
 	}
 

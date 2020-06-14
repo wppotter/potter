@@ -356,6 +356,15 @@ Kirki::add_field( 'potter', array(
 	'priority' => 10,
 ) );
 
+Kirki::add_field( 'potter', array(
+	'type'     => 'toggle',
+	'settings' => 'woocommerce_loop_image_flip',
+	'label'    => __( 'Product Image Flip', 'potter' ),
+	'section'  => 'woocommerce_product_catalog',
+	'default'  => 1,
+	'priority' => 10,
+) );
+
 // Separator.
 Kirki::add_field( 'potter', array(
 	'type'     => 'custom',
@@ -486,22 +495,24 @@ Kirki::add_field( 'potter', array(
 	'priority' => 20,
 ) );
 
+
+
+
+
 // Layout.
-Kirki::add_field(
-	'potter',
-	array(
-		'type'     => 'select',
-		'settings' => 'woocommerce_loop_layout',
-		'label'    => __( 'Layout', 'potter' ),
-		'section'  => 'woocommerce_product_catalog',
-		'default'  => 'default',
-		'priority' => 20,
-		'choices'  => array(
-			'default' => __( 'Default', 'potter' ),
-			'list'    => __( 'List', 'potter' ),
-		),
-	)
-);
+Kirki::add_field( 'potter', array(
+	'type'     => 'radio-image',
+	'settings' => 'woocommerce_loop_layout',
+	'label'    => __( 'Layout', 'potter' ),
+	'section'  => 'woocommerce_product_catalog',
+	'default'  => 'default',
+	'priority' => 20,
+	'choices'  => array(
+		'default'   => POTTER_THEME_URI . '/inc/customizer/img/woo-grid.png',
+		'list' => POTTER_THEME_URI . '/inc/customizer/img/woo-list.png',
+	),
+) );
+
 
 // Alignment.
 Kirki::add_field( 'potter', array(
