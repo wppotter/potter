@@ -536,6 +536,7 @@ if ($button_border_width) {
     echo sprintf('border-width: %s;', esc_attr($button_border_width) . 'px');
     echo 'border-style: solid;';
 
+
     if ($button_border_color) {
         echo sprintf('border-color: %s;', esc_attr($button_border_color));
     }
@@ -595,7 +596,7 @@ if (! empty($buttom_font_family_value['text-transform'])) {
 echo '}';
 
 if ($button_bg_color_alt || $button_text_color_alt) {
-    echo '.potter-button:hover, input[type="submit"]:hover {';
+    echo '.potter-button:hover, input[type="submit"]:hover, .button:hover {';
 
     if ($button_bg_color_alt) {
         echo sprintf('background: %s;', esc_attr($button_bg_color_alt) . ' !important');

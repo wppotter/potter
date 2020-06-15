@@ -26,5 +26,6 @@ defined('ABSPATH') || die("Can't access directly");
 		<?php do_action('potter_body_open'); ?>
 		<?php do_action('potter_before_header'); ?>
 			<div id="container" class="hfeed potter-page">
+				<?php do_action('potter_before_header_open'); ?>
 					<?php do_action('potter_header'); ?>
 						<?php do_action('potter_after_header'); ?>

@@ -293,6 +293,33 @@ Kirki::add_field( 'potter', array(
 	),
 ) );
 
+// Separator.
+Kirki::add_field( 'potter', array(
+	'type'     => 'custom',
+	'settings' => 'separator-366524566',
+	'section'  => 'potter_woocommerce_menu_item_options',
+	'default'  => '<hr style="border-top: 1px solid #ccc; border-bottom: 1px solid #f8f8f8">',
+	'priority' => 17,
+) );
+
+// Menu item count.
+Kirki::add_field( 'potter', array(
+	'type'     => 'radio',
+	'settings' => 'woocommerce_menu_item_link',
+	'label'    => __( 'Cart Menu Link', 'potter' ),
+	'section'  => 'potter_woocommerce_menu_item_options',
+	'default'  => 'cartpage',
+	'priority' => 17,
+	'multiple' => 1,
+	'choices'  => array(
+		'cartpage' => __( 'Cart Page', 'potter' ),
+		'offcanvas' => __( 'Off-Canvas Minicart', 'potter' ),
+	),
+) );
+
+
+
+
 /* Fields – Shop & Archive Pages (Loop) */
 
 // Custom width.
