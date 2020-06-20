@@ -2369,6 +2369,20 @@ Kirki::add_field('potter', array(
     ),
 ));
 
+Kirki::add_field('potter', array(
+    'type'            => 'slider',
+    'settings'        => 'theme_button_font_size',
+    'label'           => __('Font size', 'potter'),
+    'section'         => 'potter_button_options',
+    'priority'        => 1,
+    'default'         => '16',
+    'choices'         => array(
+        'min'  => '1',
+        'max'  => '40',
+        'step' => '1',
+    ),
+));
+
 // Background color.
 Kirki::add_field('potter', array(
     'type'     => 'color',

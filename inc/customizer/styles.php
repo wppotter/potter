@@ -20,7 +20,6 @@ $page_font_family_value = get_theme_mod('page_font_family');
 $page_font_color        = get_theme_mod('page_font_color');
 $page_font_line_height        = get_theme_mod('page_font_line_height');
 $page_font_letter_spacing        = get_theme_mod('page_font_letter_spacing');
-
 $heading_font_color        = get_theme_mod('heading_font_color');
 $heading_font_accent_color        = get_theme_mod('heading_font_accent_hover_color');
 $heading_font_accent_hover_color        = get_theme_mod('heading_font_accent_color');
@@ -529,6 +528,7 @@ $button_primary_text_color_alt   = get_theme_mod('button_primary_text_color_alt'
 $buttom_font_family_value = get_theme_mod('button_font_family');
 $theme_button_padding_top_bottom            = get_theme_mod('theme_button_padding_top_bottom');
 $theme_button_padding_left_right            = get_theme_mod('theme_button_padding_left_right');
+$theme_button_font_size            = get_theme_mod('theme_button_font_size');
 
 if ($button_border_width) {
     echo '.potter-button, input[type="submit"], .button{';
@@ -562,7 +562,7 @@ if ($button_border_width) {
     }
 }
 echo '.potter-button, input[type="submit"], .button {';
-if ($button_bg_color || $button_text_color || $button_border_radius) {
+if ($button_bg_color || $button_text_color || $button_border_radius || $theme_button_font_size  ) {
     if ($button_border_radius) {
         echo sprintf('border-radius: %s;', esc_attr($button_border_radius) . 'px');
     }
@@ -573,6 +573,10 @@ if ($button_bg_color || $button_text_color || $button_border_radius) {
 
     if ($button_text_color) {
         echo sprintf('color: %s;', esc_attr($button_text_color));
+    }
+
+    if ($theme_button_font_size) {
+        echo sprintf('font-size: %spx;', esc_attr($theme_button_font_size));
     }
 }
 if (! empty($buttom_font_family_value['font-family'])) {
@@ -606,10 +610,11 @@ if ($button_bg_color_alt || $button_text_color_alt) {
         echo sprintf('color: %s;', esc_attr($button_text_color_alt) . ' !important');
     }
 
+
     echo '}';
 }
 
-if ($button_primary_bg_color || $button_primary_text_color) {
+if ($button_primary_bg_color || $button_primary_text_color || $theme_button_font_size) {
     echo '.potter-button-primary {';
 
     if ($button_primary_bg_color) {
@@ -618,6 +623,10 @@ if ($button_primary_bg_color || $button_primary_text_color) {
 
     if ($button_primary_text_color) {
         echo sprintf('color: %s;', esc_attr($button_primary_text_color));
+    }
+
+    if ($theme_button_font_size) {
+        echo sprintf('font-size: %spx;', esc_attr($theme_button_font_size));
     }
 
     echo '}';

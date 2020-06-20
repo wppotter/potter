@@ -15,20 +15,21 @@ defined('ABSPATH') || die("Can't access directly");
 function potter_woo_fragment_refresh()
 {
 
-    // Fragments refresh fix.
     wp_enqueue_script('potter-woocommerce-fragment-refresh', get_template_directory_uri() . '/assets/woocommerce/js/woocommerce-fragment-refresh.js', array( 'jquery' ), '', true);
 
     // Single add to cart ajax.
     if (is_product() && 'yes' === get_option('woocommerce_enable_ajax_add_to_cart') && get_theme_mod('woocommerce_single_add_to_cart_ajax')) {
         wp_enqueue_script('potter-woocommerce-single-add-to-cart-ajax', get_template_directory_uri() . '/assets/woocommerce/js/woocommerce-single-add-to-cart-ajax.js', array( 'jquery' ), '', true);
     }
-
     $woocommerce_loop_image_flip = get_theme_mod('woocommerce_loop_image_flip');
     if ($woocommerce_loop_image_flip) {
         require_once POTTER_THEME_DIR . '/inc/integration/woocommerce/woocommerce-product-image-flipper.php';
     }
+
 }
 add_action('wp_enqueue_scripts', 'potter_woo_fragment_refresh');
+
+
 
 /**
  * Deregister defaults.
@@ -512,7 +513,6 @@ function potter_woo_menu_item()
     $menu_item  = '<li class="' . esc_attr($css_classes) . '">';
 
     if ('offcanvas' === get_theme_mod('woocommerce_menu_item_link')) {
-
         $menu_item .= '<a id="offminicartbtn" title="' . esc_attr($title) . '">';
     } else {
         $menu_item .= '<a href="' . esc_url($cart_url) . '" title="' . esc_attr($title) . '">';
@@ -667,7 +667,12 @@ function potter_offcabvas_minicart() {
 		echo '</div>';
 
 }
-add_filter('potter_before_header_open', 'potter_offcabvas_minicart');
+
+  if ('offcanvas' === get_theme_mod('woocommerce_menu_item_link')) {
+  add_filter('potter_before_header_open', 'potter_offcabvas_minicart');
+  }
+
+
 /**
  * Add to cart ajax on product pages.
  */

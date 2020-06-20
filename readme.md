@@ -86,6 +86,10 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 2.0.5 - June 20 2020 =
+* Fixed Several issues related to WooCommerce
+
+
 = 2.0.3 - June 16 2020 =
 * Fixed Several issues
 * Fixed issue related to Off Canvas Menu
