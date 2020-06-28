@@ -1,17 +1,13 @@
 @font-face {
   font-family: 'pottericon';
-  src:  url('fonts/pottericon.eot?th30vd');
-  src:  url('fonts/pottericon.eot?th30vd#iefix') format('embedded-opentype'),
-    url('fonts/pottericon.ttf?th30vd') format('truetype'),
-    url('fonts/pottericon.woff?th30vd') format('woff'),
-    url('fonts/pottericon.svg?th30vd#pottericon') format('svg');
+  src: url('fonts/pottericon.eot?th30vd');
+  src: url('fonts/pottericon.eot?th30vd#iefix') format('embedded-opentype'), url('fonts/pottericon.ttf?th30vd') format('truetype'), url('fonts/pottericon.woff?th30vd') format('woff'), url('fonts/pottericon.svg?th30vd#pottericon') format('svg');
   font-weight: normal;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 
 [class^="pottericon-"], [class*=" pottericon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'pottericon' !important;
   speak: none;
   font-style: normal;
@@ -19,1488 +15,1976 @@
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
-  /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale
 }
 
 .pottericon-home:before {
-  content: "\e900";
+  content: "\e900"
 }
+
 .pottericon-home2:before {
-  content: "\e901";
+  content: "\e901"
 }
+
 .pottericon-home3:before {
-  content: "\e902";
+  content: "\e902"
 }
+
 .pottericon-office:before {
-  content: "\e903";
+  content: "\e903"
 }
+
 .pottericon-newspaper:before {
-  content: "\e904";
+  content: "\e904"
 }
+
 .pottericon-pencil:before {
-  content: "\e905";
+  content: "\e905"
 }
+
 .pottericon-pencil2:before {
-  content: "\e906";
+  content: "\e906"
 }
+
 .pottericon-quill:before {
-  content: "\e907";
+  content: "\e907"
 }
+
 .pottericon-pen:before {
-  content: "\e908";
+  content: "\e908"
 }
+
 .pottericon-blog:before {
-  content: "\e909";
+  content: "\e909"
 }
+
 .pottericon-eyedropper:before {
-  content: "\e90a";
+  content: "\e90a"
 }
+
 .pottericon-droplet:before {
-  content: "\e90b";
+  content: "\e90b"
 }
+
 .pottericon-paint-format:before {
-  content: "\e90c";
+  content: "\e90c"
 }
+
 .pottericon-image:before {
-  content: "\e90d";
+  content: "\e90d"
 }
+
 .pottericon-images:before {
-  content: "\e90e";
+  content: "\e90e"
 }
+
 .pottericon-camera:before {
-  content: "\e90f";
+  content: "\e90f"
 }
+
 .pottericon-headphones:before {
-  content: "\e910";
+  content: "\e910"
 }
+
 .pottericon-music:before {
-  content: "\e911";
+  content: "\e911"
 }
+
 .pottericon-play:before {
-  content: "\e912";
+  content: "\e912"
 }
+
 .pottericon-film:before {
-  content: "\e913";
+  content: "\e913"
 }
+
 .pottericon-video-camera:before {
-  content: "\e914";
+  content: "\e914"
 }
+
 .pottericon-dice:before {
-  content: "\e915";
+  content: "\e915"
 }
+
 .pottericon-pacman:before {
-  content: "\e916";
+  content: "\e916"
 }
+
 .pottericon-spades:before {
-  content: "\e917";
+  content: "\e917"
 }
+
 .pottericon-clubs:before {
-  content: "\e918";
+  content: "\e918"
 }
+
 .pottericon-diamonds:before {
-  content: "\e919";
+  content: "\e919"
 }
+
 .pottericon-bullhorn:before {
-  content: "\e91a";
+  content: "\e91a"
 }
+
 .pottericon-connection:before {
-  content: "\e91b";
+  content: "\e91b"
 }
+
 .pottericon-podcast:before {
-  content: "\e91c";
+  content: "\e91c"
 }
+
 .pottericon-feed:before {
-  content: "\e91d";
+  content: "\e91d"
 }
+
 .pottericon-mic:before {
-  content: "\e91e";
+  content: "\e91e"
 }
+
 .pottericon-book:before {
-  content: "\e91f";
+  content: "\e91f"
 }
+
 .pottericon-books:before {
-  content: "\e920";
+  content: "\e920"
 }
+
 .pottericon-library:before {
-  content: "\e921";
+  content: "\e921"
 }
+
 .pottericon-file-text:before {
-  content: "\e922";
+  content: "\e922"
 }
+
 .pottericon-profile:before {
-  content: "\e923";
+  content: "\e923"
 }
+
 .pottericon-file-empty:before {
-  content: "\e924";
+  content: "\e924"
 }
+
 .pottericon-files-empty:before {
-  content: "\e925";
+  content: "\e925"
 }
+
 .pottericon-file-text2:before {
-  content: "\e926";
+  content: "\e926"
 }
+
 .pottericon-file-picture:before {
-  content: "\e927";
+  content: "\e927"
 }
+
 .pottericon-file-music:before {
-  content: "\e928";
+  content: "\e928"
 }
+
 .pottericon-file-play:before {
-  content: "\e929";
+  content: "\e929"
 }
+
 .pottericon-file-video:before {
-  content: "\e92a";
+  content: "\e92a"
 }
+
 .pottericon-file-zip:before {
-  content: "\e92b";
+  content: "\e92b"
 }
+
 .pottericon-copy:before {
-  content: "\e92c";
+  content: "\e92c"
 }
+
 .pottericon-paste:before {
-  content: "\e92d";
+  content: "\e92d"
 }
+
 .pottericon-stack:before {
-  content: "\e92e";
+  content: "\e92e"
 }
+
 .pottericon-folder:before {
-  content: "\e92f";
+  content: "\e92f"
 }
+
 .pottericon-folder-open:before {
-  content: "\e930";
+  content: "\e930"
 }
+
 .pottericon-folder-plus:before {
-  content: "\e931";
+  content: "\e931"
 }
+
 .pottericon-folder-minus:before {
-  content: "\e932";
+  content: "\e932"
 }
+
 .pottericon-folder-download:before {
-  content: "\e933";
+  content: "\e933"
 }
+
 .pottericon-folder-upload:before {
-  content: "\e934";
+  content: "\e934"
 }
+
 .pottericon-price-tag:before {
-  content: "\e935";
+  content: "\e935"
 }
+
 .pottericon-price-tags:before {
-  content: "\e936";
+  content: "\e936"
 }
+
 .pottericon-barcode:before {
-  content: "\e937";
+  content: "\e937"
 }
+
 .pottericon-qrcode:before {
-  content: "\e938";
+  content: "\e938"
 }
+
 .pottericon-ticket:before {
-  content: "\e939";
+  content: "\e939"
 }
+
 .pottericon-cart:before {
-  content: "\e93a";
+  content: "\e93a"
 }
+
 .pottericon-coin-dollar:before {
-  content: "\e93b";
+  content: "\e93b"
 }
+
 .pottericon-coin-euro:before {
-  content: "\e93c";
+  content: "\e93c"
 }
+
 .pottericon-coin-pound:before {
-  content: "\e93d";
+  content: "\e93d"
 }
+
 .pottericon-coin-yen:before {
-  content: "\e93e";
+  content: "\e93e"
 }
+
 .pottericon-credit-card:before {
-  content: "\e93f";
+  content: "\e93f"
 }
+
 .pottericon-calculator:before {
-  content: "\e940";
+  content: "\e940"
 }
+
 .pottericon-lifebuoy:before {
-  content: "\e941";
+  content: "\e941"
 }
+
 .pottericon-phone:before {
-  content: "\e942";
+  content: "\e942"
 }
+
 .pottericon-phone-hang-up:before {
-  content: "\e943";
+  content: "\e943"
 }
+
 .pottericon-address-book:before {
-  content: "\e944";
+  content: "\e944"
 }
+
 .pottericon-envelop:before {
-  content: "\e945";
+  content: "\e945"
 }
+
 .pottericon-pushpin:before {
-  content: "\e946";
+  content: "\e946"
 }
+
 .pottericon-location:before {
-  content: "\e947";
+  content: "\e947"
 }
+
 .pottericon-location2:before {
-  content: "\e948";
+  content: "\e948"
 }
+
 .pottericon-compass:before {
-  content: "\e949";
+  content: "\e949"
 }
+
 .pottericon-compass2:before {
-  content: "\e94a";
+  content: "\e94a"
 }
+
 .pottericon-map:before {
-  content: "\e94b";
+  content: "\e94b"
 }
+
 .pottericon-map2:before {
-  content: "\e94c";
+  content: "\e94c"
 }
+
 .pottericon-history:before {
-  content: "\e94d";
+  content: "\e94d"
 }
+
 .pottericon-clock:before {
-  content: "\e94e";
+  content: "\e94e"
 }
+
 .pottericon-clock2:before {
-  content: "\e94f";
+  content: "\e94f"
 }
+
 .pottericon-alarm:before {
-  content: "\e950";
+  content: "\e950"
 }
+
 .pottericon-bell:before {
-  content: "\e951";
+  content: "\e951"
 }
+
 .pottericon-stopwatch:before {
-  content: "\e952";
+  content: "\e952"
 }
+
 .pottericon-calendar:before {
-  content: "\e953";
+  content: "\e953"
 }
+
 .pottericon-printer:before {
-  content: "\e954";
+  content: "\e954"
 }
+
 .pottericon-keyboard:before {
-  content: "\e955";
+  content: "\e955"
 }
+
 .pottericon-display:before {
-  content: "\e956";
+  content: "\e956"
 }
+
 .pottericon-laptop:before {
-  content: "\e957";
+  content: "\e957"
 }
+
 .pottericon-mobile:before {
-  content: "\e958";
+  content: "\e958"
 }
+
 .pottericon-mobile2:before {
-  content: "\e959";
+  content: "\e959"
 }
+
 .pottericon-tablet:before {
-  content: "\e95a";
+  content: "\e95a"
 }
+
 .pottericon-tv:before {
-  content: "\e95b";
+  content: "\e95b"
 }
+
 .pottericon-drawer:before {
-  content: "\e95c";
+  content: "\e95c"
 }
+
 .pottericon-drawer2:before {
-  content: "\e95d";
+  content: "\e95d"
 }
+
 .pottericon-box-add:before {
-  content: "\e95e";
+  content: "\e95e"
 }
+
 .pottericon-box-remove:before {
-  content: "\e95f";
+  content: "\e95f"
 }
+
 .pottericon-download:before {
-  content: "\e960";
+  content: "\e960"
 }
+
 .pottericon-upload:before {
-  content: "\e961";
+  content: "\e961"
 }
+
 .pottericon-floppy-disk:before {
-  content: "\e962";
+  content: "\e962"
 }
+
 .pottericon-drive:before {
-  content: "\e963";
+  content: "\e963"
 }
+
 .pottericon-database:before {
-  content: "\e964";
+  content: "\e964"
 }
+
 .pottericon-undo:before {
-  content: "\e965";
+  content: "\e965"
 }
+
 .pottericon-redo:before {
-  content: "\e966";
+  content: "\e966"
 }
+
 .pottericon-undo2:before {
-  content: "\e967";
+  content: "\e967"
 }
+
 .pottericon-redo2:before {
-  content: "\e968";
+  content: "\e968"
 }
+
 .pottericon-forward:before {
-  content: "\e969";
+  content: "\e969"
 }
+
 .pottericon-reply:before {
-  content: "\e96a";
+  content: "\e96a"
 }
+
 .pottericon-bubble:before {
-  content: "\e96b";
+  content: "\e96b"
 }
+
 .pottericon-bubbles:before {
-  content: "\e96c";
+  content: "\e96c"
 }
+
 .pottericon-bubbles2:before {
-  content: "\e96d";
+  content: "\e96d"
 }
+
 .pottericon-bubble2:before {
-  content: "\e96e";
+  content: "\e96e"
 }
+
 .pottericon-bubbles3:before {
-  content: "\e96f";
+  content: "\e96f"
 }
+
 .pottericon-bubbles4:before {
-  content: "\e970";
+  content: "\e970"
 }
+
 .pottericon-user:before {
-  content: "\e971";
+  content: "\e971"
 }
+
 .pottericon-users:before {
-  content: "\e972";
+  content: "\e972"
 }
+
 .pottericon-user-plus:before {
-  content: "\e973";
+  content: "\e973"
 }
+
 .pottericon-user-minus:before {
-  content: "\e974";
+  content: "\e974"
 }
+
 .pottericon-user-check:before {
-  content: "\e975";
+  content: "\e975"
 }
+
 .pottericon-user-tie:before {
-  content: "\e976";
+  content: "\e976"
 }
+
 .pottericon-quotes-left:before {
-  content: "\e977";
+  content: "\e977"
 }
+
 .pottericon-quotes-right:before {
-  content: "\e978";
+  content: "\e978"
 }
+
 .pottericon-hour-glass:before {
-  content: "\e979";
+  content: "\e979"
 }
+
 .pottericon-spinner:before {
-  content: "\e97a";
+  content: "\e97a"
 }
+
 .pottericon-spinner2:before {
-  content: "\e97b";
+  content: "\e97b"
 }
+
 .pottericon-spinner3:before {
-  content: "\e97c";
+  content: "\e97c"
 }
+
 .pottericon-spinner4:before {
-  content: "\e97d";
+  content: "\e97d"
 }
+
 .pottericon-spinner5:before {
-  content: "\e97e";
+  content: "\e97e"
 }
+
 .pottericon-spinner6:before {
-  content: "\e97f";
+  content: "\e97f"
 }
+
 .pottericon-spinner7:before {
-  content: "\e980";
+  content: "\e980"
 }
+
 .pottericon-spinner8:before {
-  content: "\e981";
+  content: "\e981"
 }
+
 .pottericon-spinner9:before {
-  content: "\e982";
+  content: "\e982"
 }
+
 .pottericon-spinner10:before {
-  content: "\e983";
+  content: "\e983"
 }
+
 .pottericon-spinner11:before {
-  content: "\e984";
+  content: "\e984"
 }
+
 .pottericon-binoculars:before {
-  content: "\e985";
+  content: "\e985"
 }
+
 .pottericon-search:before {
-  content: "\e986";
+  content: "\e986"
 }
+
 .pottericon-zoom-in:before {
-  content: "\e987";
+  content: "\e987"
 }
+
 .pottericon-zoom-out:before {
-  content: "\e988";
+  content: "\e988"
 }
+
 .pottericon-enlarge:before {
-  content: "\e989";
+  content: "\e989"
 }
+
 .pottericon-shrink:before {
-  content: "\e98a";
+  content: "\e98a"
 }
+
 .pottericon-enlarge2:before {
-  content: "\e98b";
+  content: "\e98b"
 }
+
 .pottericon-shrink2:before {
-  content: "\e98c";
+  content: "\e98c"
 }
+
 .pottericon-key:before {
-  content: "\e98d";
+  content: "\e98d"
 }
+
 .pottericon-key2:before {
-  content: "\e98e";
+  content: "\e98e"
 }
+
 .pottericon-lock:before {
-  content: "\e98f";
+  content: "\e98f"
 }
+
 .pottericon-unlocked:before {
-  content: "\e990";
+  content: "\e990"
 }
+
 .pottericon-wrench:before {
-  content: "\e991";
+  content: "\e991"
 }
+
 .pottericon-equalizer:before {
-  content: "\e992";
+  content: "\e992"
 }
+
 .pottericon-equalizer2:before {
-  content: "\e993";
+  content: "\e993"
 }
+
 .pottericon-cog:before {
-  content: "\e994";
+  content: "\e994"
 }
+
 .pottericon-cogs:before {
-  content: "\e995";
+  content: "\e995"
 }
+
 .pottericon-hammer:before {
-  content: "\e996";
+  content: "\e996"
 }
+
 .pottericon-magic-wand:before {
-  content: "\e997";
+  content: "\e997"
 }
+
 .pottericon-aid-kit:before {
-  content: "\e998";
+  content: "\e998"
 }
+
 .pottericon-bug:before {
-  content: "\e999";
+  content: "\e999"
 }
+
 .pottericon-pie-chart:before {
-  content: "\e99a";
+  content: "\e99a"
 }
+
 .pottericon-stats-dots:before {
-  content: "\e99b";
+  content: "\e99b"
 }
+
 .pottericon-stats-bars:before {
-  content: "\e99c";
+  content: "\e99c"
 }
+
 .pottericon-stats-bars2:before {
-  content: "\e99d";
+  content: "\e99d"
 }
+
 .pottericon-trophy:before {
-  content: "\e99e";
+  content: "\e99e"
 }
+
 .pottericon-gift:before {
-  content: "\e99f";
+  content: "\e99f"
 }
+
 .pottericon-glass:before {
-  content: "\e9a0";
+  content: "\e9a0"
 }
+
 .pottericon-glass2:before {
-  content: "\e9a1";
+  content: "\e9a1"
 }
+
 .pottericon-mug:before {
-  content: "\e9a2";
+  content: "\e9a2"
 }
+
 .pottericon-spoon-knife:before {
-  content: "\e9a3";
+  content: "\e9a3"
 }
+
 .pottericon-leaf:before {
-  content: "\e9a4";
+  content: "\e9a4"
 }
+
 .pottericon-rocket:before {
-  content: "\e9a5";
+  content: "\e9a5"
 }
+
 .pottericon-meter:before {
-  content: "\e9a6";
+  content: "\e9a6"
 }
+
 .pottericon-meter2:before {
-  content: "\e9a7";
+  content: "\e9a7"
 }
+
 .pottericon-hammer2:before {
-  content: "\e9a8";
+  content: "\e9a8"
 }
+
 .pottericon-fire:before {
-  content: "\e9a9";
+  content: "\e9a9"
 }
+
 .pottericon-lab:before {
-  content: "\e9aa";
+  content: "\e9aa"
 }
+
 .pottericon-magnet:before {
-  content: "\e9ab";
+  content: "\e9ab"
 }
+
 .pottericon-bin:before {
-  content: "\e9ac";
+  content: "\e9ac"
 }
+
 .pottericon-bin2:before {
-  content: "\e9ad";
+  content: "\e9ad"
 }
+
 .pottericon-briefcase:before {
-  content: "\e9ae";
+  content: "\e9ae"
 }
+
 .pottericon-airplane:before {
-  content: "\e9af";
+  content: "\e9af"
 }
+
 .pottericon-truck:before {
-  content: "\e9b0";
+  content: "\e9b0"
 }
+
 .pottericon-road:before {
-  content: "\e9b1";
+  content: "\e9b1"
 }
+
 .pottericon-accessibility:before {
-  content: "\e9b2";
+  content: "\e9b2"
 }
+
 .pottericon-target:before {
-  content: "\e9b3";
+  content: "\e9b3"
 }
+
 .pottericon-shield:before {
-  content: "\e9b4";
+  content: "\e9b4"
 }
+
 .pottericon-power:before {
-  content: "\e9b5";
+  content: "\e9b5"
 }
+
 .pottericon-switch:before {
-  content: "\e9b6";
+  content: "\e9b6"
 }
+
 .pottericon-power-cord:before {
-  content: "\e9b7";
+  content: "\e9b7"
 }
+
 .pottericon-clipboard:before {
-  content: "\e9b8";
+  content: "\e9b8"
 }
+
 .pottericon-list-numbered:before {
-  content: "\e9b9";
+  content: "\e9b9"
 }
+
 .pottericon-list:before {
-  content: "\e9ba";
+  content: "\e9ba"
 }
+
 .pottericon-list2:before {
-  content: "\e9bb";
+  content: "\e9bb"
 }
+
 .pottericon-tree:before {
-  content: "\e9bc";
+  content: "\e9bc"
 }
+
 .pottericon-menu:before {
-  content: "\e9bd";
+  content: "\e9bd"
 }
+
 .pottericon-menu2:before {
-  content: "\e9be";
+  content: "\e9be"
 }
+
 .pottericon-menu3:before {
-  content: "\e9bf";
+  content: "\e9bf"
 }
+
 .pottericon-menu4:before {
-  content: "\e9c0";
+  content: "\e9c0"
 }
+
 .pottericon-cloud:before {
-  content: "\e9c1";
+  content: "\e9c1"
 }
+
 .pottericon-cloud-download:before {
-  content: "\e9c2";
+  content: "\e9c2"
 }
+
 .pottericon-cloud-upload:before {
-  content: "\e9c3";
+  content: "\e9c3"
 }
+
 .pottericon-cloud-check:before {
-  content: "\e9c4";
+  content: "\e9c4"
 }
+
 .pottericon-download2:before {
-  content: "\e9c5";
+  content: "\e9c5"
 }
+
 .pottericon-upload2:before {
-  content: "\e9c6";
+  content: "\e9c6"
 }
+
 .pottericon-download3:before {
-  content: "\e9c7";
+  content: "\e9c7"
 }
+
 .pottericon-upload3:before {
-  content: "\e9c8";
+  content: "\e9c8"
 }
+
 .pottericon-sphere:before {
-  content: "\e9c9";
+  content: "\e9c9"
 }
+
 .pottericon-earth:before {
-  content: "\e9ca";
+  content: "\e9ca"
 }
+
 .pottericon-link:before {
-  content: "\e9cb";
+  content: "\e9cb"
 }
+
 .pottericon-flag:before {
-  content: "\e9cc";
+  content: "\e9cc"
 }
+
 .pottericon-attachment:before {
-  content: "\e9cd";
+  content: "\e9cd"
 }
+
 .pottericon-eye:before {
-  content: "\e9ce";
+  content: "\e9ce"
 }
+
 .pottericon-eye-plus:before {
-  content: "\e9cf";
+  content: "\e9cf"
 }
+
 .pottericon-eye-minus:before {
-  content: "\e9d0";
+  content: "\e9d0"
 }
+
 .pottericon-eye-blocked:before {
-  content: "\e9d1";
+  content: "\e9d1"
 }
+
 .pottericon-bookmark:before {
-  content: "\e9d2";
+  content: "\e9d2"
 }
+
 .pottericon-bookmarks:before {
-  content: "\e9d3";
+  content: "\e9d3"
 }
+
 .pottericon-sun:before {
-  content: "\e9d4";
+  content: "\e9d4"
 }
+
 .pottericon-contrast:before {
-  content: "\e9d5";
+  content: "\e9d5"
 }
+
 .pottericon-brightness-contrast:before {
-  content: "\e9d6";
+  content: "\e9d6"
 }
+
 .pottericon-star-empty:before {
-  content: "\e9d7";
+  content: "\e9d7"
 }
+
 .pottericon-star-half:before {
-  content: "\e9d8";
+  content: "\e9d8"
 }
+
 .pottericon-star-full:before {
-  content: "\e9d9";
+  content: "\e9d9"
 }
+
 .pottericon-heart:before {
-  content: "\e9da";
+  content: "\e9da"
 }
+
 .pottericon-heart-broken:before {
-  content: "\e9db";
+  content: "\e9db"
 }
+
 .pottericon-man:before {
-  content: "\e9dc";
+  content: "\e9dc"
 }
+
 .pottericon-woman:before {
-  content: "\e9dd";
+  content: "\e9dd"
 }
+
 .pottericon-man-woman:before {
-  content: "\e9de";
+  content: "\e9de"
 }
+
 .pottericon-happy:before {
-  content: "\e9df";
+  content: "\e9df"
 }
+
 .pottericon-happy2:before {
-  content: "\e9e0";
+  content: "\e9e0"
 }
+
 .pottericon-smile:before {
-  content: "\e9e1";
+  content: "\e9e1"
 }
+
 .pottericon-smile2:before {
-  content: "\e9e2";
+  content: "\e9e2"
 }
+
 .pottericon-tongue:before {
-  content: "\e9e3";
+  content: "\e9e3"
 }
+
 .pottericon-tongue2:before {
-  content: "\e9e4";
+  content: "\e9e4"
 }
+
 .pottericon-sad:before {
-  content: "\e9e5";
+  content: "\e9e5"
 }
+
 .pottericon-sad2:before {
-  content: "\e9e6";
+  content: "\e9e6"
 }
+
 .pottericon-wink:before {
-  content: "\e9e7";
+  content: "\e9e7"
 }
+
 .pottericon-wink2:before {
-  content: "\e9e8";
+  content: "\e9e8"
 }
+
 .pottericon-grin:before {
-  content: "\e9e9";
+  content: "\e9e9"
 }
+
 .pottericon-grin2:before {
-  content: "\e9ea";
+  content: "\e9ea"
 }
+
 .pottericon-cool:before {
-  content: "\e9eb";
+  content: "\e9eb"
 }
+
 .pottericon-cool2:before {
-  content: "\e9ec";
+  content: "\e9ec"
 }
+
 .pottericon-angry:before {
-  content: "\e9ed";
+  content: "\e9ed"
 }
+
 .pottericon-angry2:before {
-  content: "\e9ee";
+  content: "\e9ee"
 }
+
 .pottericon-evil:before {
-  content: "\e9ef";
+  content: "\e9ef"
 }
+
 .pottericon-evil2:before {
-  content: "\e9f0";
+  content: "\e9f0"
 }
+
 .pottericon-shocked:before {
-  content: "\e9f1";
+  content: "\e9f1"
 }
+
 .pottericon-shocked2:before {
-  content: "\e9f2";
+  content: "\e9f2"
 }
+
 .pottericon-baffled:before {
-  content: "\e9f3";
+  content: "\e9f3"
 }
+
 .pottericon-baffled2:before {
-  content: "\e9f4";
+  content: "\e9f4"
 }
+
 .pottericon-confused:before {
-  content: "\e9f5";
+  content: "\e9f5"
 }
+
 .pottericon-confused2:before {
-  content: "\e9f6";
+  content: "\e9f6"
 }
+
 .pottericon-neutral:before {
-  content: "\e9f7";
+  content: "\e9f7"
 }
+
 .pottericon-neutral2:before {
-  content: "\e9f8";
+  content: "\e9f8"
 }
+
 .pottericon-hipster:before {
-  content: "\e9f9";
+  content: "\e9f9"
 }
+
 .pottericon-hipster2:before {
-  content: "\e9fa";
+  content: "\e9fa"
 }
+
 .pottericon-wondering:before {
-  content: "\e9fb";
+  content: "\e9fb"
 }
+
 .pottericon-wondering2:before {
-  content: "\e9fc";
+  content: "\e9fc"
 }
+
 .pottericon-sleepy:before {
-  content: "\e9fd";
+  content: "\e9fd"
 }
+
 .pottericon-sleepy2:before {
-  content: "\e9fe";
+  content: "\e9fe"
 }
+
 .pottericon-frustrated:before {
-  content: "\e9ff";
+  content: "\e9ff"
 }
+
 .pottericon-frustrated2:before {
-  content: "\ea00";
+  content: "\ea00"
 }
+
 .pottericon-crying:before {
-  content: "\ea01";
+  content: "\ea01"
 }
+
 .pottericon-crying2:before {
-  content: "\ea02";
+  content: "\ea02"
 }
+
 .pottericon-point-up:before {
-  content: "\ea03";
+  content: "\ea03"
 }
+
 .pottericon-point-right:before {
-  content: "\ea04";
+  content: "\ea04"
 }
+
 .pottericon-point-down:before {
-  content: "\ea05";
+  content: "\ea05"
 }
+
 .pottericon-point-left:before {
-  content: "\ea06";
+  content: "\ea06"
 }
+
 .pottericon-warning:before {
-  content: "\ea07";
+  content: "\ea07"
 }
+
 .pottericon-notification:before {
-  content: "\ea08";
+  content: "\ea08"
 }
+
 .pottericon-question:before {
-  content: "\ea09";
+  content: "\ea09"
 }
+
 .pottericon-plus:before {
-  content: "\ea0a";
+  content: "\ea0a"
 }
+
 .pottericon-minus:before {
-  content: "\ea0b";
+  content: "\ea0b"
 }
+
 .pottericon-info:before {
-  content: "\ea0c";
+  content: "\ea0c"
 }
+
 .pottericon-cancel-circle:before {
-  content: "\ea0d";
+  content: "\ea0d"
 }
+
 .pottericon-blocked:before {
-  content: "\ea0e";
+  content: "\ea0e"
 }
+
 .pottericon-cross:before {
-  content: "\ea0f";
+  content: "\ea0f"
 }
+
 .pottericon-checkmark:before {
-  content: "\ea10";
+  content: "\ea10"
 }
+
 .pottericon-checkmark2:before {
-  content: "\ea11";
+  content: "\ea11"
 }
+
 .pottericon-spell-check:before {
-  content: "\ea12";
+  content: "\ea12"
 }
+
 .pottericon-enter:before {
-  content: "\ea13";
+  content: "\ea13"
 }
+
 .pottericon-exit:before {
-  content: "\ea14";
+  content: "\ea14"
 }
+
 .pottericon-play2:before {
-  content: "\ea15";
+  content: "\ea15"
 }
+
 .pottericon-pause:before {
-  content: "\ea16";
+  content: "\ea16"
 }
+
 .pottericon-stop:before {
-  content: "\ea17";
+  content: "\ea17"
 }
+
 .pottericon-previous:before {
-  content: "\ea18";
+  content: "\ea18"
 }
+
 .pottericon-next:before {
-  content: "\ea19";
+  content: "\ea19"
 }
+
 .pottericon-backward:before {
-  content: "\ea1a";
+  content: "\ea1a"
 }
+
 .pottericon-forward2:before {
-  content: "\ea1b";
+  content: "\ea1b"
 }
+
 .pottericon-play3:before {
-  content: "\ea1c";
+  content: "\ea1c"
 }
+
 .pottericon-pause2:before {
-  content: "\ea1d";
+  content: "\ea1d"
 }
+
 .pottericon-stop2:before {
-  content: "\ea1e";
+  content: "\ea1e"
 }
+
 .pottericon-backward2:before {
-  content: "\ea1f";
+  content: "\ea1f"
 }
+
 .pottericon-forward3:before {
-  content: "\ea20";
+  content: "\ea20"
 }
+
 .pottericon-first:before {
-  content: "\ea21";
+  content: "\ea21"
 }
+
 .pottericon-last:before {
-  content: "\ea22";
+  content: "\ea22"
 }
+
 .pottericon-previous2:before {
-  content: "\ea23";
+  content: "\ea23"
 }
+
 .pottericon-next2:before {
-  content: "\ea24";
+  content: "\ea24"
 }
+
 .pottericon-eject:before {
-  content: "\ea25";
+  content: "\ea25"
 }
+
 .pottericon-volume-high:before {
-  content: "\ea26";
+  content: "\ea26"
 }
+
 .pottericon-volume-medium:before {
-  content: "\ea27";
+  content: "\ea27"
 }
+
 .pottericon-volume-low:before {
-  content: "\ea28";
+  content: "\ea28"
 }
+
 .pottericon-volume-mute:before {
-  content: "\ea29";
+  content: "\ea29"
 }
+
 .pottericon-volume-mute2:before {
-  content: "\ea2a";
+  content: "\ea2a"
 }
+
 .pottericon-volume-increase:before {
-  content: "\ea2b";
+  content: "\ea2b"
 }
+
 .pottericon-volume-decrease:before {
-  content: "\ea2c";
+  content: "\ea2c"
 }
+
 .pottericon-loop:before {
-  content: "\ea2d";
+  content: "\ea2d"
 }
+
 .pottericon-loop2:before {
-  content: "\ea2e";
+  content: "\ea2e"
 }
+
 .pottericon-infinite:before {
-  content: "\ea2f";
+  content: "\ea2f"
 }
+
 .pottericon-shuffle:before {
-  content: "\ea30";
+  content: "\ea30"
 }
+
 .pottericon-arrow-up-left:before {
-  content: "\ea31";
+  content: "\ea31"
 }
+
 .pottericon-arrow-up:before {
-  content: "\ea32";
+  content: "\ea32"
 }
+
 .pottericon-arrow-up-right:before {
-  content: "\ea33";
+  content: "\ea33"
 }
+
 .pottericon-arrow-right:before {
-  content: "\ea34";
+  content: "\ea34"
 }
+
 .pottericon-arrow-down-right:before {
-  content: "\ea35";
+  content: "\ea35"
 }
+
 .pottericon-arrow-down:before {
-  content: "\ea36";
+  content: "\ea36"
 }
+
 .pottericon-arrow-down-left:before {
-  content: "\ea37";
+  content: "\ea37"
 }
+
 .pottericon-arrow-left:before {
-  content: "\ea38";
+  content: "\ea38"
 }
+
 .pottericon-arrow-up-left2:before {
-  content: "\ea39";
+  content: "\ea39"
 }
+
 .pottericon-arrow-up2:before {
-  content: "\ea3a";
+  content: "\ea3a"
 }
+
 .pottericon-arrow-up-right2:before {
-  content: "\ea3b";
+  content: "\ea3b"
 }
+
 .pottericon-arrow-right2:before {
-  content: "\ea3c";
+  content: "\ea3c"
 }
+
 .pottericon-arrow-down-right2:before {
-  content: "\ea3d";
+  content: "\ea3d"
 }
+
 .pottericon-arrow-down2:before {
-  content: "\ea3e";
+  content: "\ea3e"
 }
+
 .pottericon-arrow-down-left2:before {
-  content: "\ea3f";
+  content: "\ea3f"
 }
+
 .pottericon-arrow-left2:before {
-  content: "\ea40";
+  content: "\ea40"
 }
+
 .pottericon-circle-up:before {
-  content: "\ea41";
+  content: "\ea41"
 }
+
 .pottericon-circle-right:before {
-  content: "\ea42";
+  content: "\ea42"
 }
+
 .pottericon-circle-down:before {
-  content: "\ea43";
+  content: "\ea43"
 }
+
 .pottericon-circle-left:before {
-  content: "\ea44";
+  content: "\ea44"
 }
+
 .pottericon-tab:before {
-  content: "\ea45";
+  content: "\ea45"
 }
+
 .pottericon-move-up:before {
-  content: "\ea46";
+  content: "\ea46"
 }
+
 .pottericon-move-down:before {
-  content: "\ea47";
+  content: "\ea47"
 }
+
 .pottericon-sort-alpha-asc:before {
-  content: "\ea48";
+  content: "\ea48"
 }
+
 .pottericon-sort-alpha-desc:before {
-  content: "\ea49";
+  content: "\ea49"
 }
+
 .pottericon-sort-numeric-asc:before {
-  content: "\ea4a";
+  content: "\ea4a"
 }
+
 .pottericon-sort-numberic-desc:before {
-  content: "\ea4b";
+  content: "\ea4b"
 }
+
 .pottericon-sort-amount-asc:before {
-  content: "\ea4c";
+  content: "\ea4c"
 }
+
 .pottericon-sort-amount-desc:before {
-  content: "\ea4d";
+  content: "\ea4d"
 }
+
 .pottericon-command:before {
-  content: "\ea4e";
+  content: "\ea4e"
 }
+
 .pottericon-shift:before {
-  content: "\ea4f";
+  content: "\ea4f"
 }
+
 .pottericon-ctrl:before {
-  content: "\ea50";
+  content: "\ea50"
 }
+
 .pottericon-opt:before {
-  content: "\ea51";
+  content: "\ea51"
 }
+
 .pottericon-checkbox-checked:before {
-  content: "\ea52";
+  content: "\ea52"
 }
+
 .pottericon-checkbox-unchecked:before {
-  content: "\ea53";
+  content: "\ea53"
 }
+
 .pottericon-radio-checked:before {
-  content: "\ea54";
+  content: "\ea54"
 }
+
 .pottericon-radio-checked2:before {
-  content: "\ea55";
+  content: "\ea55"
 }
+
 .pottericon-radio-unchecked:before {
-  content: "\ea56";
+  content: "\ea56"
 }
+
 .pottericon-crop:before {
-  content: "\ea57";
+  content: "\ea57"
 }
+
 .pottericon-make-group:before {
-  content: "\ea58";
+  content: "\ea58"
 }
+
 .pottericon-ungroup:before {
-  content: "\ea59";
+  content: "\ea59"
 }
+
 .pottericon-scissors:before {
-  content: "\ea5a";
+  content: "\ea5a"
 }
+
 .pottericon-filter:before {
-  content: "\ea5b";
+  content: "\ea5b"
 }
+
 .pottericon-font:before {
-  content: "\ea5c";
+  content: "\ea5c"
 }
+
 .pottericon-ligature:before {
-  content: "\ea5d";
+  content: "\ea5d"
 }
+
 .pottericon-ligature2:before {
-  content: "\ea5e";
+  content: "\ea5e"
 }
+
 .pottericon-text-height:before {
-  content: "\ea5f";
+  content: "\ea5f"
 }
+
 .pottericon-text-width:before {
-  content: "\ea60";
+  content: "\ea60"
 }
+
 .pottericon-font-size:before {
-  content: "\ea61";
+  content: "\ea61"
 }
+
 .pottericon-bold:before {
-  content: "\ea62";
+  content: "\ea62"
 }
+
 .pottericon-underline:before {
-  content: "\ea63";
+  content: "\ea63"
 }
+
 .pottericon-italic:before {
-  content: "\ea64";
+  content: "\ea64"
 }
+
 .pottericon-strikethrough:before {
-  content: "\ea65";
+  content: "\ea65"
 }
+
 .pottericon-omega:before {
-  content: "\ea66";
+  content: "\ea66"
 }
+
 .pottericon-sigma:before {
-  content: "\ea67";
+  content: "\ea67"
 }
+
 .pottericon-page-break:before {
-  content: "\ea68";
+  content: "\ea68"
 }
+
 .pottericon-superscript:before {
-  content: "\ea69";
+  content: "\ea69"
 }
+
 .pottericon-subscript:before {
-  content: "\ea6a";
+  content: "\ea6a"
 }
+
 .pottericon-superscript2:before {
-  content: "\ea6b";
+  content: "\ea6b"
 }
+
 .pottericon-subscript2:before {
-  content: "\ea6c";
+  content: "\ea6c"
 }
+
 .pottericon-text-color:before {
-  content: "\ea6d";
+  content: "\ea6d"
 }
+
 .pottericon-pagebreak:before {
-  content: "\ea6e";
+  content: "\ea6e"
 }
+
 .pottericon-clear-formatting:before {
-  content: "\ea6f";
+  content: "\ea6f"
 }
+
 .pottericon-table:before {
-  content: "\ea70";
+  content: "\ea70"
 }
+
 .pottericon-table2:before {
-  content: "\ea71";
+  content: "\ea71"
 }
+
 .pottericon-insert-template:before {
-  content: "\ea72";
+  content: "\ea72"
 }
+
 .pottericon-pilcrow:before {
-  content: "\ea73";
+  content: "\ea73"
 }
+
 .pottericon-ltr:before {
-  content: "\ea74";
+  content: "\ea74"
 }
+
 .pottericon-rtl:before {
-  content: "\ea75";
+  content: "\ea75"
 }
+
 .pottericon-section:before {
-  content: "\ea76";
+  content: "\ea76"
 }
+
 .pottericon-paragraph-left:before {
-  content: "\ea77";
+  content: "\ea77"
 }
+
 .pottericon-paragraph-center:before {
-  content: "\ea78";
+  content: "\ea78"
 }
+
 .pottericon-paragraph-right:before {
-  content: "\ea79";
+  content: "\ea79"
 }
+
 .pottericon-paragraph-justify:before {
-  content: "\ea7a";
+  content: "\ea7a"
 }
+
 .pottericon-indent-increase:before {
-  content: "\ea7b";
+  content: "\ea7b"
 }
+
 .pottericon-indent-decrease:before {
-  content: "\ea7c";
+  content: "\ea7c"
 }
+
 .pottericon-share:before {
-  content: "\ea7d";
+  content: "\ea7d"
 }
+
 .pottericon-new-tab:before {
-  content: "\ea7e";
+  content: "\ea7e"
 }
+
 .pottericon-embed:before {
-  content: "\ea7f";
+  content: "\ea7f"
 }
+
 .pottericon-embed2:before {
-  content: "\ea80";
+  content: "\ea80"
 }
+
 .pottericon-terminal:before {
-  content: "\ea81";
+  content: "\ea81"
 }
+
 .pottericon-share2:before {
-  content: "\ea82";
+  content: "\ea82"
 }
+
 .pottericon-mail:before {
-  content: "\ea83";
+  content: "\ea83"
 }
+
 .pottericon-mail2:before {
-  content: "\ea84";
+  content: "\ea84"
 }
+
 .pottericon-mail3:before {
-  content: "\ea85";
+  content: "\ea85"
 }
+
 .pottericon-mail4:before {
-  content: "\ea86";
+  content: "\ea86"
 }
+
 .pottericon-amazon:before {
-  content: "\ea87";
+  content: "\ea87"
 }
+
 .pottericon-google:before {
-  content: "\ea88";
+  content: "\ea88"
 }
+
 .pottericon-google2:before {
-  content: "\ea89";
+  content: "\ea89"
 }
+
 .pottericon-google3:before {
-  content: "\ea8a";
+  content: "\ea8a"
 }
+
 .pottericon-google-plus:before {
-  content: "\ea8b";
+  content: "\ea8b"
 }
+
 .pottericon-google-plus2:before {
-  content: "\ea8c";
+  content: "\ea8c"
 }
+
 .pottericon-google-plus3:before {
-  content: "\ea8d";
+  content: "\ea8d"
 }
+
 .pottericon-hangouts:before {
-  content: "\ea8e";
+  content: "\ea8e"
 }
+
 .pottericon-google-drive:before {
-  content: "\ea8f";
+  content: "\ea8f"
 }
+
 .pottericon-facebook:before {
-  content: "\ea90";
+  content: "\ea90"
 }
+
 .pottericon-facebook2:before {
-  content: "\ea91";
+  content: "\ea91"
 }
+
 .pottericon-instagram:before {
-  content: "\ea92";
+  content: "\ea92"
 }
+
 .pottericon-whatsapp:before {
-  content: "\ea93";
+  content: "\ea93"
 }
+
 .pottericon-spotify:before {
-  content: "\ea94";
+  content: "\ea94"
 }
+
 .pottericon-telegram:before {
-  content: "\ea95";
+  content: "\ea95"
 }
+
 .pottericon-twitter:before {
-  content: "\ea96";
+  content: "\ea96"
 }
+
 .pottericon-vine:before {
-  content: "\ea97";
+  content: "\ea97"
 }
+
 .pottericon-vk:before {
-  content: "\ea98";
+  content: "\ea98"
 }
+
 .pottericon-renren:before {
-  content: "\ea99";
+  content: "\ea99"
 }
+
 .pottericon-sina-weibo:before {
-  content: "\ea9a";
+  content: "\ea9a"
 }
+
 .pottericon-rss:before {
-  content: "\ea9b";
+  content: "\ea9b"
 }
+
 .pottericon-rss2:before {
-  content: "\ea9c";
+  content: "\ea9c"
 }
+
 .pottericon-youtube:before {
-  content: "\ea9d";
+  content: "\ea9d"
 }
+
 .pottericon-youtube2:before {
-  content: "\ea9e";
+  content: "\ea9e"
 }
+
 .pottericon-twitch:before {
-  content: "\ea9f";
+  content: "\ea9f"
 }
+
 .pottericon-vimeo:before {
-  content: "\eaa0";
+  content: "\eaa0"
 }
+
 .pottericon-vimeo2:before {
-  content: "\eaa1";
+  content: "\eaa1"
 }
+
 .pottericon-lanyrd:before {
-  content: "\eaa2";
+  content: "\eaa2"
 }
+
 .pottericon-flickr:before {
-  content: "\eaa3";
+  content: "\eaa3"
 }
+
 .pottericon-flickr2:before {
-  content: "\eaa4";
+  content: "\eaa4"
 }
+
 .pottericon-flickr3:before {
-  content: "\eaa5";
+  content: "\eaa5"
 }
+
 .pottericon-flickr4:before {
-  content: "\eaa6";
+  content: "\eaa6"
 }
+
 .pottericon-dribbble:before {
-  content: "\eaa7";
+  content: "\eaa7"
 }
+
 .pottericon-behance:before {
-  content: "\eaa8";
+  content: "\eaa8"
 }
+
 .pottericon-behance2:before {
-  content: "\eaa9";
+  content: "\eaa9"
 }
+
 .pottericon-deviantart:before {
-  content: "\eaaa";
+  content: "\eaaa"
 }
+
 .pottericon-500px:before {
-  content: "\eaab";
+  content: "\eaab"
 }
+
 .pottericon-steam:before {
-  content: "\eaac";
+  content: "\eaac"
 }
+
 .pottericon-steam2:before {
-  content: "\eaad";
+  content: "\eaad"
 }
+
 .pottericon-dropbox:before {
-  content: "\eaae";
+  content: "\eaae"
 }
+
 .pottericon-onedrive:before {
-  content: "\eaaf";
+  content: "\eaaf"
 }
+
 .pottericon-github:before {
-  content: "\eab0";
+  content: "\eab0"
 }
+
 .pottericon-npm:before {
-  content: "\eab1";
+  content: "\eab1"
 }
+
 .pottericon-basecamp:before {
-  content: "\eab2";
+  content: "\eab2"
 }
+
 .pottericon-trello:before {
-  content: "\eab3";
+  content: "\eab3"
 }
+
 .pottericon-wordpress:before {
-  content: "\eab4";
+  content: "\eab4"
 }
+
 .pottericon-joomla:before {
-  content: "\eab5";
+  content: "\eab5"
 }
+
 .pottericon-ello:before {
-  content: "\eab6";
+  content: "\eab6"
 }
+
 .pottericon-blogger:before {
-  content: "\eab7";
+  content: "\eab7"
 }
+
 .pottericon-blogger2:before {
-  content: "\eab8";
+  content: "\eab8"
 }
+
 .pottericon-tumblr:before {
-  content: "\eab9";
+  content: "\eab9"
 }
+
 .pottericon-tumblr2:before {
-  content: "\eaba";
+  content: "\eaba"
 }
+
 .pottericon-yahoo:before {
-  content: "\eabb";
+  content: "\eabb"
 }
+
 .pottericon-yahoo2:before {
-  content: "\eabc";
+  content: "\eabc"
 }
+
 .pottericon-tux:before {
-  content: "\eabd";
+  content: "\eabd"
 }
+
 .pottericon-appleinc:before {
-  content: "\eabe";
+  content: "\eabe"
 }
+
 .pottericon-finder:before {
-  content: "\eabf";
+  content: "\eabf"
 }
+
 .pottericon-android:before {
-  content: "\eac0";
+  content: "\eac0"
 }
+
 .pottericon-windows:before {
-  content: "\eac1";
+  content: "\eac1"
 }
+
 .pottericon-windows8:before {
-  content: "\eac2";
+  content: "\eac2"
 }
+
 .pottericon-soundcloud:before {
-  content: "\eac3";
+  content: "\eac3"
 }
+
 .pottericon-soundcloud2:before {
-  content: "\eac4";
+  content: "\eac4"
 }
+
 .pottericon-skype:before {
-  content: "\eac5";
+  content: "\eac5"
 }
+
 .pottericon-reddit:before {
-  content: "\eac6";
+  content: "\eac6"
 }
+
 .pottericon-hackernews:before {
-  content: "\eac7";
+  content: "\eac7"
 }
+
 .pottericon-wikipedia:before {
-  content: "\eac8";
+  content: "\eac8"
 }
+
 .pottericon-linkedin:before {
-  content: "\eac9";
+  content: "\eac9"
 }
+
 .pottericon-linkedin2:before {
-  content: "\eaca";
+  content: "\eaca"
 }
+
 .pottericon-lastfm:before {
-  content: "\eacb";
+  content: "\eacb"
 }
+
 .pottericon-lastfm2:before {
-  content: "\eacc";
+  content: "\eacc"
 }
+
 .pottericon-delicious:before {
-  content: "\eacd";
+  content: "\eacd"
 }
+
 .pottericon-stumbleupon:before {
-  content: "\eace";
+  content: "\eace"
 }
+
 .pottericon-stumbleupon2:before {
-  content: "\eacf";
+  content: "\eacf"
 }
+
 .pottericon-stackoverflow:before {
-  content: "\ead0";
+  content: "\ead0"
 }
+
 .pottericon-pinterest:before {
-  content: "\ead1";
+  content: "\ead1"
 }
+
 .pottericon-pinterest2:before {
-  content: "\ead2";
+  content: "\ead2"
 }
+
 .pottericon-xing:before {
-  content: "\ead3";
+  content: "\ead3"
 }
+
 .pottericon-xing2:before {
-  content: "\ead4";
+  content: "\ead4"
 }
+
 .pottericon-flattr:before {
-  content: "\ead5";
+  content: "\ead5"
 }
+
 .pottericon-foursquare:before {
-  content: "\ead6";
+  content: "\ead6"
 }
+
 .pottericon-yelp:before {
-  content: "\ead7";
+  content: "\ead7"
 }
+
 .pottericon-paypal:before {
-  content: "\ead8";
+  content: "\ead8"
 }
+
 .pottericon-chrome:before {
-  content: "\ead9";
+  content: "\ead9"
 }
+
 .pottericon-firefox:before {
-  content: "\eada";
+  content: "\eada"
 }
+
 .pottericon-IE:before {
-  content: "\eadb";
+  content: "\eadb"
 }
+
 .pottericon-edge:before {
-  content: "\eadc";
+  content: "\eadc"
 }
+
 .pottericon-safari:before {
-  content: "\eadd";
+  content: "\eadd"
 }
+
 .pottericon-opera:before {
-  content: "\eade";
+  content: "\eade"
 }
+
 .pottericon-file-pdf:before {
-  content: "\eadf";
+  content: "\eadf"
 }
+
 .pottericon-file-openoffice:before {
-  content: "\eae0";
+  content: "\eae0"
 }
+
 .pottericon-file-word:before {
-  content: "\eae1";
+  content: "\eae1"
 }
+
 .pottericon-file-excel:before {
-  content: "\eae2";
+  content: "\eae2"
 }
+
 .pottericon-libreoffice:before {
-  content: "\eae3";
+  content: "\eae3"
 }
+
 .pottericon-html-five:before {
-  content: "\eae4";
+  content: "\eae4"
 }
+
 .pottericon-html-five2:before {
-  content: "\eae5";
+  content: "\eae5"
 }
+
 .pottericon-css3:before {
-  content: "\eae6";
+  content: "\eae6"
 }
+
 .pottericon-git:before {
-  content: "\eae7";
+  content: "\eae7"
 }
+
 .pottericon-codepen:before {
-  content: "\eae8";
+  content: "\eae8"
 }
+
 .pottericon-svg:before {
-  content: "\eae9";
+  content: "\eae9"
 }
 
 @font-face {
   font-family: 'potter';
   src: url("fonts/potter.woff2") format("woff2"), url("fonts/potter.woff") format("woff"), url("fonts/potter.ttf") format("truetype"), url("fonts/potter.eot");
   font-weight: normal;
-  font-style: normal
+  font-style: normal;
+  font-display: swap;
 }
 
 .potterf {

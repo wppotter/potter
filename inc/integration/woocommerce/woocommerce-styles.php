@@ -12,10 +12,9 @@ defined( 'ABSPATH' ) || die( "Can't access directly" );
 
 function potter_do_woocommerce_customizer_css() {
 
-	$breakpoint_mobile_int = function_exists( 'potter_breakpoint_mobile' ) ? potter_breakpoint_mobile() : 480;
-	$breakpoint_medium_int = function_exists( 'potter_breakpoint_medium' ) ? potter_breakpoint_medium() : 768;
-	$breakpoint_mobile     = $breakpoint_mobile_int . 'px';
-	$breakpoint_medium     = $breakpoint_medium_int . 'px';
+	$breakpoint_mobile = get_theme_mod('responsive_breakpoint_mobile', '480');
+	$breakpoint_medium = get_theme_mod('responsive_breakpoint_tablet', '768');
+	$breakpoint_desktop = get_theme_mod('responsive_breakpoint_desktop', '1024');
 
 	// Notices.
 	$page_accent_color                = get_theme_mod( 'page_accent_color' );
@@ -316,7 +315,7 @@ function potter_do_woocommerce_customizer_css() {
 
 	if ( 'list' === $woocommerce_loop_layout ) {
 
-		echo '@media (min-width: ' . esc_attr( $breakpoint_mobile_int + 1 ) . 'px) {';
+		echo '@media (min-width: ' . esc_attr( $breakpoint_mobile + 1 ) . 'px) {';
 
 		echo '.potter-woo-list-view .potter-woo-loop-thumbnail-wrapper {';
 		echo 'float: left;';
@@ -350,7 +349,7 @@ function potter_do_woocommerce_customizer_css() {
 
 	if ( $woocommerce_loop_image_width && '50' !== $woocommerce_loop_image_width ) {
 
-		echo '@media (min-width: ' . esc_attr( $breakpoint_mobile_int + 1 ) . 'px) {';
+		echo '@media (min-width: ' . esc_attr( $breakpoint_mobile + 1 ) . 'px) {';
 
 		echo '.potter-woo-list-view .potter-woo-loop-thumbnail-wrapper {';
 		echo sprintf( 'width: %s;', esc_attr( $woocommerce_loop_image_width ) - 2 . '%' );
@@ -550,7 +549,7 @@ function potter_do_woocommerce_customizer_css() {
 
 	if ( $woocommerce_single_image_width && '50' !== $woocommerce_single_image_width ) {
 
-		echo '@media (min-width: ' . esc_attr( $breakpoint_medium_int + 1 ) . 'px) {';
+		echo '@media (min-width: ' . esc_attr( $breakpoint_medium + 1 ) . 'px) {';
 
 		echo '.woocommerce div.product div.images, .woocommerce #content div.product div.images, .woocommerce-page div.product div.images, .woocommerce-page #content div.product div.images {';
 		echo sprintf( 'width: %s !important;', esc_attr( $woocommerce_single_image_width ) - 2 . '%' );
@@ -740,7 +739,7 @@ function potter_do_woocommerce_customizer_css() {
 		echo 'width: 100%;';
 		echo '}';
 
-		echo '@media screen and (max-width: ' . esc_attr( $breakpoint_medium ) . ') {';
+		echo '@media screen and (max-width: ' . esc_attr( $breakpoint_medium ) . 'px) {';
 
 		echo '.woocommerce-checkout .col2-set, #order_review_heading, .woocommerce-checkout-review-order {';
 		echo 'width: 100% !important;';

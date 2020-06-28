@@ -37,7 +37,7 @@ function potter_customizer_setup($wp_customize)
     $wp_customize->get_section('background_image')->panel = 'layout_panel';
 
     // Move controls.
-    $wp_customize->get_control('background_color')->section = 'background_image';
+  //  $wp_customize->get_control('background_color')->section = 'background_image';
 
     // Change section titles.
     $wp_customize->get_section('title_tagline')->title    = __('Logo And General Settings', 'potter');
@@ -74,6 +74,20 @@ function potter_customizer_setup($wp_customize)
     ));
 }
 add_action('customize_register', 'potter_customizer_setup', 20);
+
+
+Kirki::add_field('potter', array(
+    'type'            => 'color',
+    'settings'        => 'background_color',
+    'label'           => __('Background Color', 'potter'),
+    'section'         => 'background_image',
+    'default'         => '#eee;',
+    'priority'        => 1,
+    'choices'         => array(
+        'alpha' => true,
+    ),
+
+));
 
 // Kirki configuration.
 Kirki::add_config('potter', array(
@@ -135,6 +149,12 @@ Kirki::add_panel('potter_footer_options', array(
 /* Sections – General */
 
 // Site layout.
+Kirki::add_section('potter_responsive_breakpoint', array(
+    'title'    => __('Responsive Break Point', 'potter'),
+    'panel'    => 'layout_panel',
+    'priority' => 1,
+));
+
 Kirki::add_section('potter_page_options', array(
     'title'    => __('Layout', 'potter'),
     'panel'    => 'layout_panel',
@@ -291,6 +311,41 @@ Kirki::add_section('potter_menu_search_icon_options', array(
     'panel'    => 'potter_navbar_options',
     'priority' => 4,
 ));
+
+//responsive options
+
+Kirki::add_field('potter', array(
+    'type'        => 'dimension',
+    'settings'    => 'responsive_breakpoint_desktop',
+    'label'       => esc_html__('Responsive Break Point desktop', 'potter'),
+    'description' => esc_html__('Set width for desktop.', 'potter'),
+  'priority'  => 1,
+    'section'     => 'potter_responsive_breakpoint',
+    'default'     => '1024',
+));
+
+Kirki::add_field('potter', array(
+    'type'        => 'dimension',
+    'settings'    => 'responsive_breakpoint_tablet',
+    'label'       => esc_html__('Responsive Break Point Tablet', 'potter'),
+    'description' => esc_html__('Setwidth for Tablet.', 'potter'),
+  'priority'  => 2,
+    'section'     => 'potter_responsive_breakpoint',
+    'default'     => '768',
+));
+
+Kirki::add_field('potter', array(
+    'type'        => 'dimension',
+    'settings'    => 'responsive_breakpoint_mobile',
+    'label'       => esc_html__('Responsive Break Point Mobile', 'potter'),
+    'description' => esc_html__('Set width for Mobile.', 'potter'),
+  'priority'  => 3,
+    'section'     => 'potter_responsive_breakpoint',
+    'default'     => '480',
+));
+
+
+
 
 //off canvas menu
 Kirki::add_field('potter', array(

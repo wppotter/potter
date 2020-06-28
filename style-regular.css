@@ -2672,7 +2672,7 @@ body.woocommerce {
   border: 0;
   display: inline-block;
   color: #fff;
-  font-weight: 700
+  font-weight: 500;
 }
 
 .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover {

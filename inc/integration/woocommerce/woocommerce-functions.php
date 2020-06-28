@@ -641,19 +641,110 @@ function potter_woo_fragments($fragments)
 }
 add_filter('woocommerce_add_to_cart_fragments', 'potter_woo_fragments');
 
+/* cart dropdown Cart
+
 
 /**
-* minicart drop down
-* @return string The dropdown shorytcode
+ * Add WooCommerce menu item dropdown.
+ *
+ * @return string The menu item dropdown.
+ */
+function potter_woo_do_menu_item_dropdown() {
+
+	$label           = apply_filters( 'potter_woo_menu_item_label', __( 'Cart', 'potter' ) );
+	$cart_items      = WC()->cart->get_cart();
+	$cart_url        = wc_get_cart_url();
+	$checkout_url    = wc_get_checkout_url();
+	$cart_button     = get_theme_mod( 'woocommerce_menu_item_dropdown_cart_button' );
+	$checkout_button = get_the_title( 'woocommerce_menu_item_dropdown_checkout_button' );
+
+	// Construct.
+	$menu_item = '';
+
+//	if ( $cart_items && 'hide' !== get_theme_mod( 'woocommerce_menu_item_dropdown' ) ) {
+
+		$menu_item .= '<ul class="potter-woo-sub-menu sub-menu">';
+		$menu_item .= '<li>';
+		$menu_item .= '<div class="potter-woo-sub-menu-table-wrap">';
+		$menu_item .= '<table class="potter-table">';
+		$menu_item .= '<thead>';
+		$menu_item .= '<tr>';
+		$menu_item .= '<th>' . __( 'Product/s', 'potter' ) . '</th>';
+		$menu_item .= '<th>' . __( 'Quantity', 'potter' ) . '</th>';
+		$menu_item .= '</tr>';
+		$menu_item .= '</thead>';
+
+		$menu_item .= '<tbody>';
+
+		foreach ( $cart_items as $cart_item => $values ) {
+
+			$product   = wc_get_product( $values['data']->get_id() );
+			$item_name = $product->get_name();
+			$quantity  = $values['quantity'];
+			$image     = $product->get_image();
+			$link      = $product->get_permalink();
+			// $price		= $product->get_price();
+
+			$menu_item .= '<tr>';
+			$menu_item .= '<td>';
+			$menu_item .= '<div class="potter-woo-sub-menu-product-wrap">';
+			if ( $image ) {
+				$menu_item .= '<a class="potter-woo-sub-menu-image-wrap" href="' . esc_url( $link ) . '">';
+				$menu_item .= $image;
+				$menu_item .= '</a>';
+			}
+			$menu_item .= '<a class="potter-woo-sub-menu-title-wrap" href="' . esc_url( $link ) . '">';
+			$menu_item .= $item_name;
+			$menu_item .= '</a>';
+			$menu_item .= '</div>';
+			$menu_item .= '</td>';
+			$menu_item .= '<td>';
+			$menu_item .= $quantity;
+			$menu_item .= '</td>';
+			$menu_item .= '</tr>';
+
+		}
+
+		$menu_item .= '</tbody>';
+		$menu_item .= '</table>';
+		$menu_item .= '</div>';
+
+		$menu_item .= '<div class="potter-woo-sub-menu-summary-wrap">';
+		$menu_item .= '<div>' . __( 'Subtotal', 'potter' ) . '</div>';
+		$menu_item .= '<div>' . WC()->cart->get_cart_subtotal() . '</div>';
+		$menu_item .= '</div>';
+
+
+	$menu_item .= '<div class="potter-woo-sub-menu-button-wrap">';
+  $menu_item .= '<a href="' . esc_url( $cart_url ) . '" class="potter-button">' . esc_html( $label ) . '</a>';
+  $menu_item .= '<a href="' . esc_url( $checkout_url ) . '" class="potter-button potter-button-primary">' . __( 'Checkout', 'potter' ) . '</a>';
+  $menu_item .= '</div>';
+    /*
+
+		if ( 'hide' !== $cart_button || 'hide' !== $checkout_button ) {
+
+			$menu_item .= '<div class="potter-woo-sub-menu-button-wrap">';
+			if ( 'hide' !== $cart_button ) $menu_item .= '<a href="' . esc_url( $cart_url ) . '" class="potter-button">' . esc_html( $label ) . '</a>';
+			if ( 'hide' !== $checkout_button ) $menu_item .= '<a href="' . esc_url( $checkout_url ) . '" class="potter-button potter-button-primary">' . __( 'Checkout', 'potter' ) . '</a>';
+			$menu_item .= '</div>';
+
+		}
 */
-/*
-function custom_mini_cart() {
-    echo '<ul class="dropdown-menu dropdown-menu-mini-cart">';
-  echo '<li> <div class="widget_shopping_cart_content">';
-       woocommerce_mini_cart();
-  echo '</div></li></ul>';
+		$menu_item .= '</li>';
+		$menu_item .= '</ul>';
+
+//	}
+
+	return $menu_item;
+echo "string";
 }
-add_action( 'potter_woo_menu_item_dropdown', 'custom_mini_cart' );
+add_filter( 'potter_woo_menu_item_dropdown', 'potter_woo_do_menu_item_dropdown' );
+
+
+
+/**
+* minicart off canvas
+* @return string The offcanvas cart
 */
 function potter_offcabvas_minicart() {
 	//construct-minicart

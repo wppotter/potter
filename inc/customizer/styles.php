@@ -11,6 +11,18 @@
 defined('ABSPATH') || die("Can't access directly");
 
 do_action('potter_before_customizer_css');
+/* background */
+$background_color = get_theme_mod('background_color');
+if ($background_color) {
+    echo 'body {';
+    echo sprintf('background-color: %s;', esc_attr($background_color));
+    echo '}';
+} else {
+  echo 'body {';
+  echo sprintf('background-color: #eee;');
+  echo '}';
+}
+
 
 /* Typography */
 
@@ -721,16 +733,15 @@ if (! is_bool($sidebar_widget_padding_top_desktop) || ! is_bool($sidebar_widget_
 
     echo '}';
 }
-$breakpoint_mobile_int  = function_exists('potter_breakpoint_mobile') ? potter_breakpoint_mobile() : 480;
-$breakpoint_medium_int  = function_exists('potter_breakpoint_medium') ? potter_breakpoint_medium() : 768;
-$breakpoint_desktop_int = function_exists('potter_breakpoint_desktop') ? potter_breakpoint_desktop() : 1024;
-$breakpoint_mobile      = $breakpoint_mobile_int . 'px';
-$breakpoint_medium      = $breakpoint_medium_int . 'px';
-$breakpoint_desktop     = $breakpoint_desktop_int . 'px';
 
+//responsive break points
+
+$breakpoint_mobile = get_theme_mod('responsive_breakpoint_mobile', '480');
+$breakpoint_medium = get_theme_mod('responsive_breakpoint_tablet', '768');
+$breakpoint_desktop = get_theme_mod('responsive_breakpoint_desktop', '1024');
 
 if (! is_bool($sidebar_widget_padding_top_tablet) || ! is_bool($sidebar_widget_padding_right_tablet) || ! is_bool($sidebar_widget_padding_bottom_tablet) || ! is_bool($sidebar_widget_padding_left_tablet)) {
-    echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . ') {';
+    echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . 'px) {';
 
     echo '.potter-sidebar .widget, .elementor-widget-sidebar .widget {';
 
@@ -756,7 +767,7 @@ if (! is_bool($sidebar_widget_padding_top_tablet) || ! is_bool($sidebar_widget_p
 }
 
 if (! is_bool($sidebar_widget_padding_top_mobile) || ! is_bool($sidebar_widget_padding_right_mobile) || ! is_bool($sidebar_widget_padding_bottom_mobile) || ! is_bool($sidebar_widget_padding_left_mobile)) {
-    echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . ') {';
+    echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . 'px) {';
 
     echo '.potter-sidebar .widget, .elementor-widget-sidebar .widget {';
 
@@ -782,7 +793,7 @@ if (! is_bool($sidebar_widget_padding_top_mobile) || ! is_bool($sidebar_widget_p
 }
 
 if ($sidebar_width) {
-    echo '@media (min-width: ' . esc_attr($breakpoint_medium_int + 1) . 'px) {';
+    echo '@media (min-width: ' . esc_attr($breakpoint_medium + 1) . 'px) {';
 
     echo 'body:not(.potter-no-sidebar) .potter-sidebar-wrapper.potter-medium-1-3 {';
     echo sprintf('width: %s;', esc_attr($sidebar_width) . '%');
@@ -1102,7 +1113,7 @@ foreach ($archives as $archive) {
         }
 
         if ($boxed_padding_top_tablet || $boxed_padding_right_tablet || $boxed_padding_bottom_tablet || $boxed_padding_left_tablet) {
-            echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . ') {';
+            echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . 'px) {';
 
             echo '.potter-' . $archive . '-content .potter-post-style-boxed {';
 
@@ -1151,7 +1162,7 @@ foreach ($archives as $archive) {
         }
 
         if ($boxed_padding_top_mobile || $boxed_padding_right_mobile || $boxed_padding_bottom_mobile || $boxed_padding_left_mobile) {
-            echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . ') {';
+            echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . 'px) {';
 
             echo '.potter-' . $archive . '-content .potter-post-style-boxed {';
 
@@ -1206,7 +1217,7 @@ foreach ($archives as $archive) {
         $image_alignment = get_theme_mod($archive . '_post_image_alignment', 'left');
 
         if ($image_width && '40' !== $image_width) {
-            echo '@media (min-width: ' . esc_attr($breakpoint_desktop_int + 1) . 'px) {';
+            echo '@media (min-width: ' . esc_attr($breakpoint_desktop + 1) . 'px) {';
 
             echo '.potter-' . $archive . '-content .potter-blog-layout-beside .potter-large-2-5 {';
             echo sprintf('width: %s;', esc_attr($image_width) . '%');
@@ -1349,7 +1360,7 @@ foreach ($singles as $single) {
         }
 
         if ($boxed_padding_top_tablet || $boxed_padding_right_tablet || $boxed_padding_bottom_tablet || $boxed_padding_left_tablet) {
-            echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . ') {';
+            echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . 'px) {';
 
             echo '.potter-' . $single . '-content .potter-post-style-boxed .potter-article-wrapper, .potter-' . $single . '-content .potter-post-style-boxed #respond, .potter-' . $single . '-content .potter-post-style-boxed .commentlist {';
 
@@ -1398,7 +1409,7 @@ foreach ($singles as $single) {
         }
 
         if ($boxed_padding_top_mobile || $boxed_padding_right_mobile || $boxed_padding_bottom_mobile || $boxed_padding_left_mobile) {
-            echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . ') {';
+            echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . 'px) {';
 
             echo '.potter-' . $single . '-content .potter-post-style-boxed .potter-article-wrapper, .potter-' . $single . '-content .potter-post-style-boxed #respond, .potter-' . $single . '-content .potter-post-style-boxed .commentlist {';
 
@@ -1534,7 +1545,7 @@ if (! $custom_logo) {
     }
 
     if ($menu_logo_font_size_tablet) {
-        echo '@media screen and (max-width: ' . esc_attr($breakpoint_medium) . ') {';
+        echo '@media screen and (max-width: ' . esc_attr($breakpoint_medium) . 'px) {';
         echo '.potter-logo a, .potter-mobile-logo a {';
         echo sprintf('font-size: %s;', esc_attr($menu_logo_font_size_tablet));
         echo '}';
@@ -1542,7 +1553,7 @@ if (! $custom_logo) {
     }
 
     if ($menu_logo_font_size_mobile) {
-        echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . ') {';
+        echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . 'px) {';
         echo '.potter-logo a, .potter-mobile-logo a {';
         echo sprintf('font-size: %s;', esc_attr($menu_logo_font_size_mobile));
         echo '}';
@@ -1579,7 +1590,7 @@ if ($custom_logo) {
     if ($menu_logo_size_tablet) {
         $suffix = is_numeric($menu_logo_size_tablet) ? 'px' : '';
 
-        echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . ') {';
+        echo '@media screen and (max-width: ' . esc_attr($breakpoint_desktop) . 'px) {';
         echo '.potter-mobile-logo img {';
         echo sprintf('width: %s;', esc_attr($menu_logo_size_tablet) . $suffix);
         echo '}';
@@ -1588,7 +1599,7 @@ if ($custom_logo) {
 
     if ($menu_logo_size_mobile) {
         $suffix = is_numeric($menu_logo_size_mobile) ? 'px' : '';
-        echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . ') {';
+        echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . 'px) {';
         echo '.potter-mobile-logo img {';
         echo sprintf('width: %s;', esc_attr($menu_logo_size_mobile) . $suffix);
         echo '}';
@@ -1966,7 +1977,7 @@ if (! $custom_logo && $menu_logo_description) {
     }
 
     if ($menu_logo_description_font_size_tablet) {
-        echo '@media screen and (max-width: ' . esc_attr($breakpoint_medium) . ') {';
+        echo '@media screen and (max-width: ' . esc_attr($breakpoint_medium) . 'px) {';
         echo '.potter-tagline {';
         echo sprintf('font-size: %s;', esc_attr($menu_logo_description_font_size_tablet));
         echo '}';
@@ -1974,7 +1985,7 @@ if (! $custom_logo && $menu_logo_description) {
     }
 
     if ($menu_logo_description_font_size_mobile) {
-        echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . ') {';
+        echo '@media screen and (max-width: ' . esc_attr($breakpoint_mobile) . 'px) {';
         echo '.potter-tagline {';
         echo sprintf('font-size: %s;', esc_attr($menu_logo_description_font_size_mobile));
         echo '}';

@@ -644,6 +644,8 @@ function potter_archive_title($title)
 }
 add_filter('get_the_archive_title', 'potter_archive_title', 10);
 
+/*
+
 if (! function_exists('potter_has_responsive_breakpoints')) {
 
     /**
@@ -652,7 +654,7 @@ if (! function_exists('potter_has_responsive_breakpoints')) {
      * Simple check if responsive breakpoints are set.
      *
      * @return boolean.
-     */
+
     function potter_has_responsive_breakpoints()
     {
         $potter_settings = get_option('potter_settings');
@@ -665,7 +667,7 @@ if (! function_exists('potter_has_responsive_breakpoints')) {
         }
     }
 }
-
+*/
 /**
  * Render right sidebar.
  */
