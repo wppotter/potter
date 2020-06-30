@@ -1458,6 +1458,31 @@ foreach ($singles as $single) {
 }
 
 /* Header */
+if ('menu-centered'===get_theme_mod('menu_position')) {
+  $closednav = get_theme_mod('center_nav_layout', 'close');
+  if ('streached' === $closednav) {
+    echo '.potter-menu-centered .main-nav-left-menu nav {';
+    echo sprintf('float: left !important;');
+    echo '}';
+    echo '.potter-menu-centered .main-nav-right-menu nav {';
+    echo sprintf('float: right !important;');
+    echo '}';
+  } else {
+    echo '.potter-menu-centered .main-nav-left-menu nav {';
+    echo sprintf('float: right !important;');
+    echo '}';
+    echo '.potter-menu-centered .main-nav-right-menu nav {';
+    echo sprintf('float: left !important;');
+    echo '}';
+  }
+}
+$remove_left_right_padding_nav = get_theme_mod('remove_left_right_padding');
+if ($remove_left_right_padding_nav) {
+  echo '.potter-navigation .potter-visible-large {';
+  echo sprintf('padding-left: 0px !important;');
+  echo sprintf('padding-right: 0px !important;');
+  echo '}';
+}
 
 // Logo container.
 $menu_logo_container_width        = get_theme_mod('menu_logo_container_width');

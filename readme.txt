@@ -124,15 +124,6 @@ Icons: Font Awesome
 			 Licence OFL: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
 			 Licence MIT: http://opensource.org/licenses/mit-license.html
 
-			 Image Resource links: https://stocksnap.io/photo/beautiful-bright-6E5ZAMCKC4
-			https://stocksnap.io/photo/stylish-boy-03P9JTLVF7
-			https://stocksnap.io/photo/people-girl-AQ62CU8K64
-			https://stocksnap.io/photo/game-controller-D9ET42KESB
-			https://stocksnap.io/photo/game-controller-D9ET42KESB
-			https://stocksnap.io/photo/fashion-clothing-XSM5N2TADD
-			Licensed under the CCO license.
-			 License link : https://burst.shopify.com/licenses/creative-commons
-
 == Frequently Asked Questions ==
 
 Does this theme support any plugins?
@@ -142,6 +133,14 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 2.0.6 - June 30 2020 =
+---- Another Big Release -----
+* Cart Dropdown Added
+* Option to choose between cart Dropdown, Off-canvas Minicart and Checkoutpage
+* More controll over header style.
+* Fixed Several issues related to WooCommerce
+
+
 = 2.0.5 - June 20 2020 =
 * Fixed Several issues related to WooCommerce
 

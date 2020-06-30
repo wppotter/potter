@@ -661,9 +661,8 @@ function potter_woo_do_menu_item_dropdown() {
 	// Construct.
 	$menu_item = '';
 
-//	if ( $cart_items && 'hide' !== get_theme_mod( 'woocommerce_menu_item_dropdown' ) ) {
-
-		$menu_item .= '<ul class="potter-woo-sub-menu sub-menu">';
+  if ( $cart_items && 'dropdowncart' === get_theme_mod( 'woocommerce_menu_item_link' ) ) {
+		$menu_item .= '<ul class="potter-woo-sub-menu">';
 		$menu_item .= '<li>';
 		$menu_item .= '<div class="potter-woo-sub-menu-table-wrap">';
 		$menu_item .= '<table class="potter-table">';
@@ -717,26 +716,14 @@ function potter_woo_do_menu_item_dropdown() {
 
 	$menu_item .= '<div class="potter-woo-sub-menu-button-wrap">';
   $menu_item .= '<a href="' . esc_url( $cart_url ) . '" class="potter-button">' . esc_html( $label ) . '</a>';
-  $menu_item .= '<a href="' . esc_url( $checkout_url ) . '" class="potter-button potter-button-primary">' . __( 'Checkout', 'potter' ) . '</a>';
+  $menu_item .= '<a href="' . esc_url( $checkout_url ) . '" class="potter-button-primary">' . __( 'Checkout', 'potter' ) . '</a>';
   $menu_item .= '</div>';
-    /*
-
-		if ( 'hide' !== $cart_button || 'hide' !== $checkout_button ) {
-
-			$menu_item .= '<div class="potter-woo-sub-menu-button-wrap">';
-			if ( 'hide' !== $cart_button ) $menu_item .= '<a href="' . esc_url( $cart_url ) . '" class="potter-button">' . esc_html( $label ) . '</a>';
-			if ( 'hide' !== $checkout_button ) $menu_item .= '<a href="' . esc_url( $checkout_url ) . '" class="potter-button potter-button-primary">' . __( 'Checkout', 'potter' ) . '</a>';
-			$menu_item .= '</div>';
-
-		}
-*/
 		$menu_item .= '</li>';
 		$menu_item .= '</ul>';
 
-//	}
+}
 
 	return $menu_item;
-echo "string";
 }
 add_filter( 'potter_woo_menu_item_dropdown', 'potter_woo_do_menu_item_dropdown' );
 

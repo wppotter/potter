@@ -162,21 +162,22 @@ Kirki::add_field( 'potter', array(
 	),
 ) );
 
-// Menu item.
-Kirki::add_field( 'potter', array(
-	'type'        => 'radio',
-	'settings'    => 'woocommerce_menu_item_icon',
-	'label'       => __( 'Cart Icon Style', 'potter' ),
-	'section'     => 'potter_woocommerce_menu_item_options',
-	'default'     => 'cart',
-	'priority'    => 11,
-	'multiple'    => 1,
-	'choices'     => array(
-		'cart' => __( 'Cart', 'potter' ),
-		'basket' => __( 'Basket', 'potter' ),
-		'bag' => __( 'Bag', 'potter' ),
-	),
-) );
+// Menu item icon.
+Kirki::add_field('potter', array(
+    'type'     => 'radio-image',
+    'settings' => 'woocommerce_menu_item_icon',
+    'label'    => __('Cart Icon Style', 'potter'),
+    'section'  => 'potter_woocommerce_menu_item_options',
+    'default'  => 'cart',
+    'priority' => 11,
+    'multiple' => 1,
+    'choices'  => array(
+        'cart'   => POTTER_THEME_URI . '/inc/customizer/img/cart.png',
+        'basket'  => POTTER_THEME_URI . '/inc/customizer/img/basket.png',
+				'bag'  => POTTER_THEME_URI . '/inc/customizer/img/bag.png',
+    ),
+));
+
 
 // Mobile container width.
 Kirki::add_field('potter', array(
@@ -314,6 +315,7 @@ Kirki::add_field( 'potter', array(
 	'choices'  => array(
 		'cartpage' => __( 'Cart Page', 'potter' ),
 		'offcanvas' => __( 'Off-Canvas Minicart', 'potter' ),
+		'dropdowncart' => __( 'Cart Dropdown', 'potter' ),
 	),
 ) );
 

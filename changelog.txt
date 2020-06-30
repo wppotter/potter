@@ -1,6 +1,13 @@
 -------------------------------------------------------
 Change Logs
 -------------------------------------------------------
+= 2.0.6 - June 30 2020 =
+---- Another Big Release -----
+* Cart Dropdown Added
+* Option to choose between cart Dropdown, Off-canvas Minicart and Checkoutpage
+* More controll over header style.
+* Fixed Several issues related to WooCommerce
+
 = 2.0.5 - June 20 2020 =
 * Fixed Several issues related to WooCommerce
 

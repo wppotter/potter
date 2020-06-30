@@ -4014,6 +4014,47 @@ Kirki::add_field('potter', array(
 
 Kirki::add_field('potter', array(
     'type'     => 'custom',
+    'settings' => 'separator-102367565667',
+    'section'  => 'potter_menu_options',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Setting For Center Nav', 'potter') .  '</h3>',
+    'priority' => 1,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-centered',
+        ),
+    ),
+));
+
+// Position.
+Kirki::add_field('potter', array(
+    'type'     => 'radio-image',
+    'settings' => 'center_nav_layout',
+    'label'    => __('Menubar Layout', 'potter'),
+    'section'  => 'potter_menu_options',
+    'default'  => 'close',
+    'priority' => 1,
+    'multiple' => 1,
+    'choices'  => array(
+        'close'   => POTTER_THEME_URI . '/inc/customizer/img/logo-center-menu-closed.png',
+        'streached'  => POTTER_THEME_URI . '/inc/customizer/img/logo-center-menu-sctreched.png',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_position',
+            'operator' => '==',
+            'value'    => 'menu-centered',
+        ),
+    ),
+));
+
+
+
+
+
+Kirki::add_field('potter', array(
+    'type'     => 'custom',
     'settings' => 'separator-1023675656',
     'section'  => 'potter_menu_options',
     'default'  => '<h3 class="setting-header">' . esc_html__('Setting For Vertical Nav', 'potter') .  '</h3>',
@@ -4381,6 +4422,14 @@ Kirki::add_field('potter', array(
             'value'    => 'menu-vertical',
         ),
     ),
+));
+
+Kirki::add_field('potter', array(
+    'type'     => 'checkbox',
+    'settings' => 'remove_left_right_padding',
+    'label'    => __('Remove Menubar Left Right padding', 'potter'),
+    'section'  => 'potter_menu_options',
+    'priority' => 1,
 ));
 
 // Search icon.
