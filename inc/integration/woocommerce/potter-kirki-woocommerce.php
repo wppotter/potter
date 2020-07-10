@@ -194,6 +194,116 @@ Kirki::add_field('potter', array(
     ),
 ));
 
+// Menu icon color.
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_item_icon_color',
+	'label'           => __( 'Icon Color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 12,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_desktop',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+		array(
+			'setting'  => 'woocommerce_menu_item_count',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+	),
+) );
+
+// Menu icon color.
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_item_icon_sticky_color',
+	'label'           => __( 'Icon Color for sticky menu', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 12,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+				'setting'  => 'sticky_navbar',
+				'operator' => '!=',
+				'value'    => '',
+		),
+		array(
+			'setting'  => 'woocommerce_menu_item_desktop',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+		array(
+			'setting'  => 'woocommerce_menu_item_count',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+	),
+) );
+
+// Menu icon color.
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_item_icon_transparent_color',
+	'label'           => __( 'Icon Color for transparent menu', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 12,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+				'setting'  => 'transparent_header',
+				'operator' => '!=',
+				'value'    => '',
+		),
+		array(
+			'setting'  => 'woocommerce_menu_item_desktop',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+		array(
+			'setting'  => 'woocommerce_menu_item_count',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+	),
+) );
+
+// Menu item color.
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_item_desktop_color',
+	'label'           => __( 'Cart Item Color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 12,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_desktop',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+		array(
+			'setting'  => 'woocommerce_menu_item_count',
+			'operator' => '!=',
+			'value'    => 'hide',
+		),
+	),
+) );
+
 // Menu item color.
 Kirki::add_field( 'potter', array(
 	'type'            => 'color',

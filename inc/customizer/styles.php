@@ -495,8 +495,11 @@ if ($page_accent_color) {
     echo sprintf('color: %s;', esc_attr($page_accent_color));
     echo '}';
 
-    echo '.potter-sub-menu>.menu-item-has-children>.sub-menu {';
+    echo '.potter-sub-menu>.menu-item-has-children>.sub-menu, .potter-woo-menu-item .potter-woo-sub-menu, .potter-menu-item-search .potter-menu-search.drop-down-search {';
     echo sprintf('border-top: %s;', '2px solid ' . esc_attr($page_accent_color));
+    echo '}';
+    echo '.potter-woo-menu-item .potter-woo-sub-menu:after, .potter-menu-item-search .potter-menu-search.drop-down-search:after {';
+    echo sprintf('border-bottom-color: %s;', esc_attr($page_accent_color));
     echo '}';
 
     echo '.bypostauthor {';
@@ -543,7 +546,7 @@ $theme_button_padding_left_right            = get_theme_mod('theme_button_paddin
 $theme_button_font_size            = get_theme_mod('theme_button_font_size');
 
 if ($button_border_width) {
-    echo '.potter-button, input[type="submit"], .button{';
+    echo '.potter-button, input[type="submit"], .button, .potter-woo-sub-menu-button-wrap a.potter-button-primary {';
 
     echo sprintf('border-width: %s;', esc_attr($button_border_width) . 'px');
     echo 'border-style: solid;';
@@ -562,21 +565,21 @@ if ($button_border_width) {
     }
 
     if ($button_primary_border_color) {
-        echo '.potter-button-primary {';
+        echo '.potter-button-primary, .potter-woo-sub-menu-button-wrap a.potter-button-primary {';
         echo sprintf('border-color: %s;', esc_attr($button_primary_border_color));
         echo '}';
     }
 
     if ($button_primary_border_color_alt) {
-        echo '.potter-button-primary:hover {';
+        echo '.potter-button-primary:hover, .potter-woo-sub-menu-button-wrap a.potter-button-primary:hover {';
         echo sprintf('border-color: %s;', esc_attr($button_primary_border_color_alt) . ' !important');
         echo '}';
     }
 }
-echo '.potter-button, input[type="submit"], .button {';
+echo '.potter-button, input[type="submit"], .button, .potter-woo-menu-item ul .potter-woo-sub-menu-button-wrap a.potter-button, .potter-woo-sub-menu-button-wrap a.potter-button-primary, .offminicart .wc-forward {';
 if ($button_bg_color || $button_text_color || $button_border_radius || $theme_button_font_size  ) {
     if ($button_border_radius) {
-        echo sprintf('border-radius: %s;', esc_attr($button_border_radius) . 'px');
+        echo sprintf('border-radius: %s !important;', esc_attr($button_border_radius) . 'px');
     }
 
     if ($button_bg_color) {
@@ -627,7 +630,7 @@ if ($button_bg_color_alt || $button_text_color_alt) {
 }
 
 if ($button_primary_bg_color || $button_primary_text_color || $theme_button_font_size) {
-    echo '.potter-button-primary {';
+    echo '.potter-button-primary, .potter-woo-sub-menu-button-wrap a.potter-button-primary {';
 
     if ($button_primary_bg_color) {
         echo sprintf('background: %s;', esc_attr($button_primary_bg_color));
@@ -666,6 +669,7 @@ if ($theme_button_padding_left_right) {
     echo sprintf('padding-left: %spx !important;', esc_attr($theme_button_padding_left_right));
     echo sprintf('padding-right: %spx !important;', esc_attr($theme_button_padding_left_right));
 }
+  echo sprintf('line-height: 1;');
 echo '}';
 
 // Sidebar.
@@ -2137,13 +2141,13 @@ echo '@media (min-width: 1025px) {';
         echo '}';
     }
       if ($transparent_header_color) {
-          echo '.transparent-header .potter-menu > .menu-item > a, .transparent-header .potter-inner-pre-header a, .transparent-header .potter-woo-menu-item a i, .transparent-header .potter-menu-item-search a i {';
+          echo '.transparent-header .potter-menu > .menu-item > a, .transparent-header .potter-inner-pre-header a, .transparent-header .potter-woo-menu-item a, .transparent-header .potter-menu-item-search a {';
           echo sprintf('color: %s !important;', esc_attr($transparent_header_color));
           echo '}';
       }
 
       if ($transparent_header_hover_color) {
-          echo '.transparent-header .potter-menu > .menu-item > a:hover, .transparent-header .potter-inner-pre-header a:hover, .potter-woo-menu-item a:hover i, .potter-menu-item-search a:hover i {';
+          echo '.transparent-header .potter-menu > .menu-item > a:hover, .transparent-header .potter-inner-pre-header a:hover, .potter-woo-menu-item a:hover, .potter-menu-item-search a:hover {';
           echo sprintf('color: %s !important;', esc_attr($transparent_header_hover_color));
           echo '}';
       }
@@ -2256,12 +2260,12 @@ echo '@media (min-width: 1025px) {';
     }
 
     if ($sticky_menu_font_color) {
-        echo '.potter-navigation.stickynav .potter-menu > .menu-item > a, .stickynav .potter-woo-menu-item a i, .stickynav .potter-menu-item-search a i {';
+        echo '.potter-navigation.stickynav .potter-menu > .menu-item > a, .stickynav .potter-woo-menu-item a, .stickynav .potter-menu-item-search a {';
         echo sprintf('color: %s !important;', esc_attr($sticky_menu_font_color));
         echo '}';
     }
         if ($sticky_menu_font_color_alt) {
-            echo '.potter-navigation.stickynav .potter-menu > .menu-item > a:hover, .stickynav .potter-woo-menu-item a:hover i, .stickynav .potter-menu-item-search a:hover i{';
+            echo '.potter-navigation.stickynav .potter-menu > .menu-item > a:hover, .stickynav .potter-woo-menu-item a:hover, .stickynav .potter-menu-item-search a:hover{';
             echo sprintf('color: %s !important;', esc_attr($sticky_menu_font_color_alt));
             echo '}';
         }
@@ -2340,13 +2344,13 @@ if ($menu_top_bottom_padding) {
 
 
 if ($menu_font_color) {
-    echo '.potter-menu > .menu-item > a, .potter-woo-menu-item a i, .potter-menu-item-search a i {';
+    echo '.potter-menu > .menu-item > a, .potter-woo-menu-item a, .potter-menu-item-search a {';
     echo sprintf('color: %s;', esc_attr($menu_font_color));
     echo '}';
 }
 
 if ($menu_font_color_alt) {
-    echo '.potter-menu > .menu-item > a:hover, .potter-woo-menu-item a:hover i, .potter-menu-item-search a:hover i {';
+    echo '.potter-menu > .menu-item > a:hover, .potter-woo-menu-item a:hover, .potter-menu-item-search a:hover {';
     echo sprintf('color: %s;', esc_attr($menu_font_color_alt));
     echo '}';
 
@@ -2507,13 +2511,30 @@ if ('background' === $menu_item_hover_style) {
 // search icon
 $search_box_border_radius         = get_theme_mod('search_box_border_radius');
 $search_icon_size         = get_theme_mod('search_icon_size');
+$search_menu_item_icon_color        = get_theme_mod('search_menu_item_icon_color');
+$search_menu_item_icon_sticky_color        = get_theme_mod('search_menu_item_icon_sticky_color');
+$search_menu_item_icon_transparent_color        = get_theme_mod('search_menu_item_icon_transparent_color');
 
+echo '.potter-menu-item-search a i {';
 if ($search_icon_size ) {
-    echo '.potter-menu-item-search i {';
     echo sprintf('font-size: %spx;', esc_attr($search_icon_size ));
-    echo '}';
+}
+if ($search_menu_item_icon_color) {
+    echo sprintf('color: %s;', esc_attr($search_menu_item_icon_color  ));
+}
+echo '}';
+if ($search_menu_item_icon_sticky_color) {
+  echo '.stickynav .potter-menu-item-search a i {';
+  echo sprintf('color: %s !important;', esc_attr($search_menu_item_icon_sticky_color));
+  echo '}';
+}
+if ($search_menu_item_icon_transparent_color) {
+  echo '.transparent-header .potter-menu-item-search a i {';
+  echo sprintf('color: %s;', esc_attr($search_menu_item_icon_transparent_color));
+  echo '}';
 }
 
+//search box setting
 if ($search_box_border_radius ) {
     echo '.potter-menu-item-search .potter-menu-search input[type=search], input[type="search"] {';
     echo sprintf('border-radius: %spx;', esc_attr($search_box_border_radius ));

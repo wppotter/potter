@@ -97,7 +97,7 @@ add_action( 'wp', 'potter_remove_404_search_form' );
 function potter_search_menu_item( $is_navigation = true, $is_mobile = false ) {
 
 	$class = $is_mobile ? 'potter-mobile-nav-item' : 'potter-nav-item';
-
+	$search_box_style	= get_theme_mod ('search_box_style', 'inline');
 	// If we have a shop, let's call the product search form
 	if ( class_exists( 'WooCommerce' ) && get_theme_mod( 'woocommerce_search_menu_item' ) ) {
 		$search_form = get_product_search_form( $echo = false );
@@ -111,7 +111,14 @@ function potter_search_menu_item( $is_navigation = true, $is_mobile = false ) {
 	// We have a slightly different markup for the search menu item if it's being displayed outside the main menu.
 	$search_item  = $is_navigation ? '<li class="potter-menu-item-search" aria-haspopup="true" aria-expanded="false"><a href="javascript:void(0)" role="button">' : '<button class="' . $class . ' potter-menu-item-search" aria-haspopup="true" aria-expanded="false">';
 	$search_item .= '<span class="screen-reader-text">' . __( 'Search Toggle', 'potter' ) . '</span>';
-	$search_item .= '<div class="potter-menu-search">';
+	if ('dropdown'===$search_box_style) {
+		$search_item .= '<div class="potter-menu-search drop-down-search">';
+	} elseif ('fullscreen'===$search_box_style) {
+		$search_item .= '<div class="potter-menu-search full-screen-search">';
+		$search_item .= '<button class="potter-close"><span class="potterf potterf-times" aria-hidden="true"></span></button>';
+	} else {
+		$search_item .= '<div class="potter-menu-search">';
+	}
 	$search_item .= $search_form;
 	$search_item .= '</div>';
 	$search_item .= '<i class="potterf potterf-search" aria-hidden="true"></i>';

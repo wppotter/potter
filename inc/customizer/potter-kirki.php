@@ -4462,6 +4462,100 @@ Kirki::add_field('potter', array(
         ),
     ),
 ));
+
+Kirki::add_field('potter', array(
+    'type'     => 'radio',
+    'settings' => 'search_box_style',
+    'label'    => __('Search Box Style', 'potter'),
+    'section'  => 'potter_menu_search_icon_options',
+    'default'  => 'inline',
+    'priority' => 2,
+    'choices'  => array(
+        'inline'   => esc_html__('Inline', 'potter'),
+        'dropdown'  => esc_html__('Dropdown', 'potter'),
+        'fullscreen'  => esc_html__('Fullscreen', 'potter'),
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_search_icon',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
+
+
+// Menu icon color.
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_menu_item_icon_color',
+	'label'           => __( 'Icon Color', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 2,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+	),
+) );
+
+// Menu icon color.
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_menu_item_icon_sticky_color',
+	'label'           => __( 'Icon Color for sticky menu', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 2,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+				'setting'  => 'sticky_navbar',
+				'operator' => '!=',
+				'value'    => '',
+		),
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+	),
+) );
+
+// Menu icon color.
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_menu_item_icon_transparent_color',
+	'label'           => __( 'Icon Color for transparent menu', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 2,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+				'setting'  => 'transparent_header',
+				'operator' => '!=',
+				'value'    => '',
+		),
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+	),
+) );
+
+
 Kirki::add_field('potter', array(
     'type'        => 'slider',
     'settings'    => 'search_box_border_radius',
