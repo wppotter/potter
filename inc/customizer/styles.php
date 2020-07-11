@@ -1787,16 +1787,28 @@ if ('menu-off-canvas' === $menu_position) {
         echo '}';
     }
 
-    if ('right' !== $off_canvas_menu_position) {
+    if ('left' === $off_canvas_menu_position) {
         echo '.potter-menu-off-canvas .potter-close {';
         echo sprintf('right: %s;', esc_attr('40px !important'));
         echo sprintf('left: %s;', esc_attr('auto !important'));
         echo '}';
         echo '.potter-menu-off-canvas.canvas-visible {';
-        echo sprintf(esc_attr($off_canvas_menu_position) . ': %s;', esc_attr('0px !important'));
+        echo sprintf('left: 0px !important;');
         echo '}';
         echo '.potter-menu-off-canvas {';
-        echo sprintf(esc_attr($off_canvas_menu_position) . ': %s;', esc_attr('-100%'));
+        echo 'left: -100% !important;';
+        echo '}';
+    } elseif ('right' === $off_canvas_menu_position) {
+        echo '.potter-menu-off-canvas.canvas-visible {';
+        echo sprintf('right: 0px !important;');
+        echo '}';
+        echo '.potter-menu-off-canvas {';
+        echo sprintf('right: -100% !important;');
+        echo '}';
+    } elseif ('fullscreen' === $off_canvas_menu_position) {
+      echo '.potter-menu-off-canvas.fullscreen-container {';
+        echo 'transform: translateX(50%);';
+        echo 'right: 50% !important;';
         echo '}';
     }
 
@@ -2509,12 +2521,21 @@ if ('background' === $menu_item_hover_style) {
     echo '}';
 }
 // search icon
+$menu_search_icon = get_theme_mod('menu_search_icon');
 $search_box_border_radius         = get_theme_mod('search_box_border_radius');
 $search_icon_size         = get_theme_mod('search_icon_size');
 $search_menu_item_icon_color        = get_theme_mod('search_menu_item_icon_color');
 $search_menu_item_icon_sticky_color        = get_theme_mod('search_menu_item_icon_sticky_color');
 $search_menu_item_icon_transparent_color        = get_theme_mod('search_menu_item_icon_transparent_color');
+$search_input_background_color        = get_theme_mod('search_input_background_color');
+$search_input_text_color    = get_theme_mod('search_input_text_color');
+$search_input_text_border_color    = get_theme_mod('search_input_text_border_color');
+$search_box_container_background_color    = get_theme_mod('search_box_container_background_color');
+$search_box_overlay_background_color    = get_theme_mod('search_box_overlay_background_color');
+$search_box_style = get_theme_mod('search_box_style', 'inline');
+$search_box_overlay_close_btn_color = get_theme_mod('search_box_overlay_close_btn_color');
 
+if ($menu_search_icon) {
 echo '.potter-menu-item-search a i {';
 if ($search_icon_size ) {
     echo sprintf('font-size: %spx;', esc_attr($search_icon_size ));
@@ -2535,10 +2556,46 @@ if ($search_menu_item_icon_transparent_color) {
 }
 
 //search box setting
+
+
 if ($search_box_border_radius ) {
     echo '.potter-menu-item-search .potter-menu-search input[type=search], input[type="search"] {';
     echo sprintf('border-radius: %spx;', esc_attr($search_box_border_radius ));
     echo '}';
+}
+echo '.potter-menu-search input[type=search] {';
+if ($search_input_background_color ) {
+    echo sprintf('background: %s;', esc_attr($search_input_background_color));
+}
+if ($search_input_text_color ) {
+    echo sprintf('color: %s;', esc_attr($search_input_text_color));
+}
+if ($search_input_text_border_color) {
+    echo sprintf('border-color: %s !important;', esc_attr($search_input_text_border_color));
+}
+echo '}';
+  if ('dropdown'===$search_box_style){
+    if ($search_box_container_background_color ) {
+    echo '.potter-menu-search.drop-down-search {';
+      echo sprintf('background: %s !important;', esc_attr($search_box_container_background_color));
+    echo '}';
+  }
+  }
+
+  if ('fullscreen'===$search_box_style){
+    if ($search_box_overlay_background_color ) {
+    echo '.potter-menu-search.full-screen-search {';
+      echo sprintf('background: %s !important;', esc_attr($search_box_overlay_background_color));
+    echo '}';
+  }
+
+  if ($search_box_overlay_close_btn_color ) {
+  echo '.potter-menu-search.full-screen-search .potter-close span {';
+    echo sprintf('color: %s !important;', esc_attr($search_box_overlay_close_btn_color));
+  echo '}';
+}
+  }
+
 }
 
 // Sub menu.

@@ -133,6 +133,14 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 2.0.7 - July 11 2020 =
+---- Another Big Release -----
+* Cart Dropdown style option
+* Cart off-canvas style option
+* Search option changes
+* Burger Menu option Added
+* Full Screen men u option of Burger Menu
+
 = 2.0.6 - June 30 2020 =
 ---- Another Big Release -----
 * Cart Dropdown Added

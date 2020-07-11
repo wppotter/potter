@@ -117,7 +117,7 @@ function potter_search_menu_item( $is_navigation = true, $is_mobile = false ) {
 		$search_item .= '<div class="potter-menu-search full-screen-search">';
 		$search_item .= '<button class="potter-close"><span class="potterf potterf-times" aria-hidden="true"></span></button>';
 	} else {
-		$search_item .= '<div class="potter-menu-search">';
+		$search_item .= '<div class="potter-menu-search inline-search">';
 	}
 	$search_item .= $search_form;
 	$search_item .= '</div>';

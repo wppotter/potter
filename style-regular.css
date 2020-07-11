@@ -352,7 +352,7 @@ template {
 .potter-button-primary {
   background: #666;
   color: #fff;
-  text-align: center;
+  text-align: center
 }
 
 .potter-button-primary:hover {
@@ -1395,7 +1395,7 @@ body:focus {
 }
 
 .potter-menu-item-search.active i {
-  opacity: 0
+  opacity: 1;
 }
 
 .potter-menu-item-search .potter-menu-search {
@@ -1408,6 +1408,68 @@ body:focus {
   opacity: 0;
   width: 0;
   max-width: 350px
+}
+
+.potter-menu-item-search .potter-menu-search.drop-down-search {
+  position: absolute;
+  z-index: 3;
+  top: 100%;
+  right: 0;
+  display: none;
+  margin-top: 0px;
+  opacity: 0;
+  width: 300px !important;
+  padding: 10px;
+  border-top: 2px solid #000;
+  background: #fff;
+  box-shadow: 0px 0px 5px #999;
+}
+
+.potter-menu-item-search .potter-menu-search.drop-down-search:after {
+	bottom: 100%;
+	right: 6px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(0, 0, 0, 0);
+	border-bottom-color: #000000;
+	border-width: 10px;
+	margin-left: -10px;
+}
+
+.potter-menu-item-search .potter-menu-search.full-screen-search {
+  position: fixed;
+  z-index: 3;
+  top: 0px;
+  left: 0;
+  bottom: 0px;
+  right: 0px !important;
+  height: 100vh;
+  display: none;
+  margin-top: 0px;
+  opacity: 0;
+  width: 100% !important;
+  padding: 10px;
+  background: #fff;
+  max-width: 100% !important;
+}
+
+.potter-menu-item-search .potter-menu-search.full-screen-search #searchform {
+  position: absolute;
+  max-width: 600px;
+  width: 90%;
+  top: 50%;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.potter-menu-item-search .potter-menu-search.full-screen-search .potter-close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
 }
 
 .potter-menu-item-search .potter-menu-search input[type=search] {
@@ -1595,7 +1657,7 @@ body:focus {
   position: relative
 }
 
-.potter-woo-menu-item > a, .potter-menu-item-search > a {
+.potter-woo-menu-item>a, .potter-menu-item-search>a {
   padding: 5px 10px !important
 }
 
@@ -2716,7 +2778,7 @@ body.woocommerce {
   top: 0;
   right: -100%;
   transition: .2s;
-  box-shadow: -10px 0 15px -9px rgba(0, 0, 0, 0.3)
+  box-shadow: 0px 0 5px 5px rgba(0, 0, 0, 0.3)
 }
 
 .potter-menu-off-canvas.canvas-visible {
@@ -2724,8 +2786,28 @@ body.woocommerce {
   z-index: 99999
 }
 
+.potter-menu-off-canvas.fullscreen-container {
+  height: auto;
+  width: 50% !important;
+  max-width: 600px;
+  top: 50%;
+  transform: translate(50%, -50%) !important;
+  box-shadow: none;
+}
+.potter-menu-off-canvas.fullscreen-container .potter-close {
+  right: 40px !important;
+  left: auto !important;
+}
+.potter-menu-off-canvas.fullscreen-container * {
+  opacity: 0;
+  transition: .5s;
+}
+.potter-menu-off-canvas.fullscreen-container.canvas-visible * {
+  opacity: 1;
+}
+
 .potter-close {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .potter-menu-off-canvas .potter-close {
@@ -2841,10 +2923,17 @@ body.woocommerce {
     border: 0;
     width: 250px;
     padding: 60px 30px 30px 30px;
-    overflow: auto;
     transform: none !important
   }
-
+  .menu-vertical .potter-menu-item-search .potter-menu-search.drop-down-search {
+    left: 0px !important;
+  }
+.menu-vertical .potter-menu-item-search .potter-menu-search.drop-down-search:after {
+  left: 12px !important;
+}
+.menu-vertical .potter-menu-item-search .potter-menu-search.inline-search {
+  left: 0px !important;
+}
   body.vertical-menuposition {
     padding-left: 250px
   }
@@ -2874,23 +2963,7 @@ body.woocommerce {
     display: block
   }
 
-  .menu-vertical-container .potter-menu-item-search a i {
-    display: none !important
-  }
 
-  .menu-vertical-container .potter-menu-item-search .potter-menu-search {
-    position: relative;
-    display: block !important;
-    width: auto !important;
-    height: auto !important;
-    opacity: 1 !important;
-    margin: 20px 0 !important;
-    max-width: 100% !important
-  }
-
-  .menu-vertical-container .potter-menu-item-search a {
-    padding: 0 !important
-  }
 
   .menu-vertical-container .potter-menu-item-icon {
     margin: 20px 10px
@@ -2902,7 +2975,7 @@ body.woocommerce {
   }
 
   .menu-vertical-container .potter-menu-item-search .potter-menu-search input[type=search] {
-    border: 0
+    border: 1px solid #ececec;
   }
 
   .menu-vertical-container .potter-menu-item-search {

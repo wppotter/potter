@@ -920,10 +920,19 @@ function potter_navigation_offcanvas_nav()
     $menu_search_icon = get_theme_mod('menu_search_icon');
     $menu_icon_link = get_theme_mod('menu_icon_link');
     $menu_position = get_theme_mod('menu_position');
+    $off_canvas_menu_position = get_theme_mod('off_canvas_menu_position', 'left');
     if ('menu-off-canvas' === $menu_position) {
+      if ('fullscreen' === $off_canvas_menu_position) {
         ?>
-    <div class="potter-menu-overlay"></div>
-    <div class="potter-menu-off-canvas potter-menu-off-canvas-right potter-visible-large">
+    <div class="potter-menu-overlay fullscreen-off"></div>
+    <div class="potter-menu-off-canvas fullscreen-container">
+    <?php } else {
+      ?>
+      <div class="potter-menu-overlay"></div>
+      <div class="potter-menu-off-canvas potter-menu-off-canvas-right potter-visible-large">
+      <?php
+    }
+    ?>
       <button class="potter-close"><i class="potterf potterf-times" aria-hidden="true"></i></button>
       <?php do_action('potter_before_main_menu'); ?>
       <nav id="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement" aria-labelledby="potter-menu-toggle">

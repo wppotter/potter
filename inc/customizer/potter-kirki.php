@@ -278,7 +278,7 @@ Kirki::add_section('potter_sticky_header_options', array(
     'priority' => 901,
 ));
 Kirki::add_section('potter_offcanvas_menu_options', array(
-    'title'    => __('Off Canvas Menu', 'potter'),
+    'title'    => __('Burger Menu', 'potter'),
     'panel'    => 'header_panel',
     'priority' => 902,
 
@@ -372,6 +372,7 @@ Kirki::add_field('potter', array(
     'choices'  => array(
         'left'   => POTTER_THEME_URI . '/inc/customizer/img/left-sidebar.png',
         'right' => POTTER_THEME_URI . '/inc/customizer/img/right-sidebar.png',
+        'fullscreen' => POTTER_THEME_URI . '/inc/customizer/img/full-screen-menu.png',
     ),
 
 ));
@@ -4432,7 +4433,7 @@ Kirki::add_field('potter', array(
     'priority' => 1,
 ));
 
-// Search icon.
+// Search icon navigation.
 Kirki::add_field('potter', array(
     'type'     => 'toggle',
     'settings' => 'menu_search_icon',
@@ -4555,11 +4556,25 @@ Kirki::add_field( 'potter', array(
 	),
 ) );
 
+Kirki::add_field('potter', array(
+    'type'     => 'custom',
+    'settings' => 'separator-10236756566dsd',
+    'section'  => 'potter_menu_search_icon_options',
+    'default'  => '<h3 class="setting-header">' . esc_html__('Search Box setting', 'potter') .  '</h3>',
+    'priority' => 2,
+    'active_callback' => array(
+        array(
+            'setting'  => 'menu_search_icon',
+            'operator' => '==',
+            'value'    => true,
+        ),
+    ),
+));
 
 Kirki::add_field('potter', array(
     'type'        => 'slider',
     'settings'    => 'search_box_border_radius',
-    'label'       => __('Search Box Border Radius', 'potter'),
+    'label'       => __('Search Input Box Border Radius', 'potter'),
     'section'     => 'potter_menu_search_icon_options',
     'priority'    => 3,
     'default'     => '0',
@@ -4578,6 +4593,137 @@ Kirki::add_field('potter', array(
 ));
 
 
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_input_background_color',
+	'label'           => __( 'Input Background Color', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 4,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_input_text_color',
+	'label'           => __( 'Input Text Color', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 5,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_input_text_border_color',
+	'label'           => __( 'Input Border Color', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 6,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_box_container_background_color',
+	'label'           => __( 'Search Box container Background color', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 7,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+    array(
+        'setting'  => 'search_box_style',
+        'operator' => '==',
+        'value'    => 'dropdown',
+    ),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_box_overlay_background_color',
+	'label'           => __( 'Search Box overlay Background color', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 8,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+    array(
+        'setting'  => 'search_box_style',
+        'operator' => '==',
+        'value'    => 'fullscreen',
+    ),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'search_box_overlay_close_btn_color',
+	'label'           => __( 'Search Box close button color', 'potter' ),
+	'section'         => 'potter_menu_search_icon_options',
+	'default'         => '',
+	'priority'        => 9,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+    array(
+        'setting'  => 'menu_search_icon',
+        'operator' => '==',
+        'value'    => true,
+    ),
+    array(
+        'setting'  => 'search_box_style',
+        'operator' => '==',
+        'value'    => 'fullscreen',
+    ),
+	),
+) );
+
+
+//menu button setting
 Kirki::add_field('potter', array(
     'type'     => 'toggle',
     'settings' => 'menu_html_button',

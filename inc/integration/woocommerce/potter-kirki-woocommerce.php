@@ -429,7 +429,177 @@ Kirki::add_field( 'potter', array(
 	),
 ) );
 
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_dropdowncart_bgcolor',
+	'label'           => __( 'Dropdown Background', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 18,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'dropdowncart',
+		),
+	),
+) );
 
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_dropdowncart_fontcolor',
+	'label'           => __( 'Font color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'dropdowncart',
+		),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_dropdowncart_acentcolor',
+	'label'           => __( 'Acent Color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'dropdowncart',
+		),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_menu_dropdowncart_hovercolor',
+	'label'           => __( 'Hover Color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'dropdowncart',
+		),
+	),
+) );
+//offcanvas settings
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_offcanvas_bgcolor',
+	'label'           => __( 'Off-canvas Background', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'offcanvas',
+		),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_offcanvas_fontcolor',
+	'label'           => __( 'Font color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'offcanvas',
+		),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_offcanvas_acentcolor',
+	'label'           => __( 'Acent Color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'offcanvas',
+		),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_offcanvas_hovercolor',
+	'label'           => __( 'Hover Color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'offcanvas',
+		),
+	),
+) );
+
+Kirki::add_field( 'potter', array(
+	'type'            => 'color',
+	'settings'        => 'woocommerce_offcanvas_closecolor',
+	'label'           => __( 'Close Button Color', 'potter' ),
+	'section'         => 'potter_woocommerce_menu_item_options',
+	'default'         => '',
+	'priority'        => 19,
+	'choices'         => array(
+		'alpha' => true,
+	),
+	'active_callback' => array(
+		array(
+			'setting'  => 'woocommerce_menu_item_link',
+			'operator' => '==',
+			'value'    => 'offcanvas',
+		),
+	),
+) );
 
 
 /* Fields – Shop & Archive Pages (Loop) */
