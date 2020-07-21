@@ -1809,6 +1809,7 @@ if ('menu-off-canvas' === $menu_position) {
       echo '.potter-menu-off-canvas.fullscreen-container {';
         echo 'transform: translateX(50%);';
         echo 'right: 50% !important;';
+        echo 'display: none;';
         echo '}';
     }
 

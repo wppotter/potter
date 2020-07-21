@@ -133,6 +133,13 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 2.0.8 - July 19 2020 =
+---- Issue fixes -----
+* Cart Icon Issue fixed
+* Full screen menu option issue fixed.
+
+
+
 = 2.0.7 - July 11 2020 =
 ---- Another Big Release -----
 * Cart Dropdown style option
