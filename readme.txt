@@ -133,6 +133,12 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+
+= 2.0.8 - August 12 2020 =
+---- Issue fixes -----
+* Compatibility for new Block Editor
+* Fixed issue with customizer for new release.
+
 = 2.0.8 - July 19 2020 =
 ---- Issue fixes -----
 * Cart Icon Issue fixed
