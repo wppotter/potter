@@ -134,7 +134,7 @@ Donation Link: https://pottertheme.com/
 
 == Changelog ==
 
-= 2.0.8 - August 12 2020 =
+= 2.0.9 - August 12 2020 =
 ---- Issue fixes -----
 * Compatibility for new Block Editor
 * Fixed issue with customizer for new release.
