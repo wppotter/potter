@@ -1395,7 +1395,7 @@ body:focus {
 }
 
 .potter-menu-item-search.active i {
-  opacity: 1;
+  opacity: 1
 }
 
 .potter-menu-item-search .potter-menu-search {
@@ -1416,45 +1416,45 @@ body:focus {
   top: 100%;
   right: 0;
   display: none;
-  margin-top: 0px;
+  margin-top: 0;
   opacity: 0;
   width: 300px !important;
   padding: 10px;
   border-top: 2px solid #000;
   background: #fff;
-  box-shadow: 0px 0px 5px #999;
+  box-shadow: 0 0 5px #999
 }
 
 .potter-menu-item-search .potter-menu-search.drop-down-search:after {
-	bottom: 100%;
-	right: 6px;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(0, 0, 0, 0);
-	border-bottom-color: #000000;
-	border-width: 10px;
-	margin-left: -10px;
+  bottom: 100%;
+  right: 6px;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(0, 0, 0, 0);
+  border-bottom-color: #000;
+  border-width: 10px;
+  margin-left: -10px
 }
 
 .potter-menu-item-search .potter-menu-search.full-screen-search {
   position: fixed;
   z-index: 3;
-  top: 0px;
+  top: 0;
   left: 0;
-  bottom: 0px;
-  right: 0px !important;
+  bottom: 0;
+  right: 0 !important;
   height: 100vh;
   display: none;
-  margin-top: 0px;
+  margin-top: 0;
   opacity: 0;
   width: 100% !important;
   padding: 10px;
   background: #fff;
-  max-width: 100% !important;
+  max-width: 100% !important
 }
 
 .potter-menu-item-search .potter-menu-search.full-screen-search #searchform {
@@ -1463,13 +1463,13 @@ body:focus {
   width: 90%;
   top: 50%;
   transform: translateX(-50%);
-  left: 50%;
+  left: 50%
 }
 
 .potter-menu-item-search .potter-menu-search.full-screen-search .potter-close {
   position: absolute;
   top: 50px;
-  right: 50px;
+  right: 50px
 }
 
 .potter-menu-item-search .potter-menu-search input[type=search] {
@@ -2251,13 +2251,13 @@ body:focus {
 .potter-single-content .potter-post-style-plain #comments-title {
   margin-top: 40px;
   padding-top: 40px;
-  border-top: 10px solid #f5f5f7
+
 }
 
 .potter-single-content .potter-post-style-plain #reply-title {
   padding-top: 40px;
   margin-top: 40px;
-  border-top: 10px solid #f5f5f7;
+
   display: block
 }
 
@@ -2320,9 +2320,9 @@ body:focus {
 
 .comment {
   position: relative;
-  padding: 25px;
+  padding: 40px;
   margin-bottom: 20px;
-  background: #f5f5f7
+  background: #fff
 }
 
 .comment .comment-edit-link {
@@ -2778,7 +2778,7 @@ body.woocommerce {
   top: 0;
   right: -100%;
   transition: .2s;
-  box-shadow: 0px 0 5px 5px rgba(0, 0, 0, 0.3)
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.3)
 }
 
 .potter-menu-off-canvas.canvas-visible {
@@ -2792,22 +2792,29 @@ body.woocommerce {
   max-width: 600px;
   top: 50%;
   transform: translate(50%, -50%) !important;
-  box-shadow: none;
+  box-shadow: none
 }
+
 .potter-menu-off-canvas.fullscreen-container .potter-close {
   right: 40px !important;
-  left: auto !important;
+  left: auto !important
 }
+
 .potter-menu-off-canvas.fullscreen-container * {
   opacity: 0;
-  transition: .5s;
+  transition: .5s
 }
+
 .potter-menu-off-canvas.fullscreen-container.canvas-visible * {
-  opacity: 1;
+  opacity: 1
+}
+
+.potter-menu-off-canvas.fullscreen-container.canvas-visible {
+  display: block !important
 }
 
 .potter-close {
-  cursor: pointer;
+  cursor: pointer
 }
 
 .potter-menu-off-canvas .potter-close {
@@ -2925,15 +2932,19 @@ body.woocommerce {
     padding: 60px 30px 30px 30px;
     transform: none !important
   }
+
   .menu-vertical .potter-menu-item-search .potter-menu-search.drop-down-search {
-    left: 0px !important;
+    left: 0 !important
   }
-.menu-vertical .potter-menu-item-search .potter-menu-search.drop-down-search:after {
-  left: 12px !important;
-}
-.menu-vertical .potter-menu-item-search .potter-menu-search.inline-search {
-  left: 0px !important;
-}
+
+  .menu-vertical .potter-menu-item-search .potter-menu-search.drop-down-search:after {
+    left: 12px !important
+  }
+
+  .menu-vertical .potter-menu-item-search .potter-menu-search.inline-search {
+    left: 0 !important
+  }
+
   body.vertical-menuposition {
     padding-left: 250px
   }
@@ -2963,8 +2974,6 @@ body.woocommerce {
     display: block
   }
 
-
-
   .menu-vertical-container .potter-menu-item-icon {
     margin: 20px 10px
   }
@@ -2975,7 +2984,7 @@ body.woocommerce {
   }
 
   .menu-vertical-container .potter-menu-item-search .potter-menu-search input[type=search] {
-    border: 1px solid #ececec;
+    border: 1px solid #ececec
   }
 
   .menu-vertical-container .potter-menu-item-search {

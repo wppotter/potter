@@ -1928,7 +1928,7 @@ Kirki::add_field('potter', array(
     'label'           => __('Padding', 'potter'),
     'section'         => 'potter_page_options',
     'priority'        => 4,
-    'default'         => 20,
+    'default'         => 40,
     'transport'       => 'postMessage',
     'choices'         => array(
         'min'  => '20',
@@ -2114,14 +2114,7 @@ Kirki::add_field('potter', array(
     ),
 ));
 
-// Separator.
-Kirki::add_field('potter', array(
-    'type'     => 'custom',
-    'settings' => 'separator-26125',
-    'section'  => 'potter_page_options',
-    'default'  => '<hr style="border-top: 1px solid #ccc; border-bottom: 1px solid #f8f8f8">',
-    'priority' => 12,
-));
+
 
 // Scrolltop.
 Kirki::add_field('potter', array(

@@ -317,6 +317,10 @@ if ($page_boxed) {
 }
 
 if ($page_boxed) {
+
+    echo '.comment {';
+    echo sprintf('background: none;');
+    echo '}';
     echo '.potter-archive-content .potter-post, .potter-article-wrapper {';
     echo sprintf('background: none;');
     echo '}';

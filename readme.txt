@@ -133,6 +133,15 @@ Does this theme support any plugins?
 Donation Link: https://pottertheme.com/
 
 == Changelog ==
+= 2.1.1 - September 15 2020 =
+---- Issue fixes -----
+* Comment CSS for boxed
+* Fixed issue with customizer for new release.
+
+= 2.1.0 - September 10 2020 =
+---- Issue fixes -----
+* Compatibility for new Block Editor
+* Fixed issue with customizer for new release.
 
 = 2.0.9 - August 12 2020 =
 ---- Issue fixes -----
