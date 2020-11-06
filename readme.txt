@@ -1,8 +1,8 @@
 -------------------------------------------------------
 Potter – The only theme you'll ever need
 -------------------------------------------------------
-Website: https://pottertheme.com/
-Documentation: https://pottertheme.com/docs-2/
+Website: https://wppotter.com/
+Documentation: https://wppotter.com/docs/
 Contributors: wppotter
 Email: support@pottertheme.com
 Tags: Blog, Custom Colors, Custom Logo, Custom Menu, E-Commerce, Editor Style, Entertainment, Featured Images, Full Width Template, Left Sidebar, Microformats, One Column, Post Formats, Right Sidebar, RTL Language Support, Theme Options, Threaded Comments, Translation Ready, Two Columns
@@ -30,7 +30,7 @@ Features:
 -------------------------------------------------------
 Child Theme:
 -------------------------------------------------------
-Download the Potter child theme here – https://pottertheme.com/
+Download the Potter child theme here – https://wppotter.com/
 
 -------------------------------------------------------
 License
@@ -130,9 +130,14 @@ Does this theme support any plugins?
 -> Contact Form 7, Elementor page builder, Page Builder by SiteOrigin, Beaver Builder and many more.
 
 == Donation ==
-Donation Link: https://pottertheme.com/
+Donation Link: https://wppotter.com/
 
 == Changelog ==
+= 2.1.2 - November 06 2020 =
+---- Issue fixes -----
+* Comment CSS for boxed
+* Fixed issue with customizer for new release.
+
 = 2.1.1 - September 15 2020 =
 ---- Issue fixes -----
 * Comment CSS for boxed

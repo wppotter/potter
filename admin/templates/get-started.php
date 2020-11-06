@@ -5,7 +5,7 @@
  * @package     Potter
  * @author      wppotter
  * @copyright   Copyright (c) 2020, Potter
- * @link        https://www.pottertheme.com
+ * @link        https://wppotter.com
  * @since       Potter 1.1.3
  */
 

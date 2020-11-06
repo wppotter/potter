@@ -2410,7 +2410,7 @@ Kirki::add_field('potter', array(
     'label'       => esc_html__('Padding for left and right', 'potter'),
     'priority'  => 1,
     'section'     => 'potter_button_options',
-    'default'     => '16',
+    'default'     => '25',
     'choices'   => array(
         'min'  => '5',
         'max'  => '100',
@@ -2553,7 +2553,7 @@ Kirki::add_field('potter', array(
     'label'     => __('Border Radius', 'potter'),
     'section'   => 'potter_button_options',
     'priority'  => 1,
-    'default'   => '0',
+    'default'   => '2',
     'choices'   => array(
         'min'  => '0',
         'max'  => '100',
@@ -3237,7 +3237,7 @@ Kirki::add_field('potter', array(
         'link_text' => [
             'type'        => 'text',
             'label'       => esc_html__('Icon Class', 'potter'),
-            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'description' => __('<a href="https://wppotter.com/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
             'default'     => '',
         ],
         'link_url'  => [
@@ -3342,7 +3342,7 @@ Kirki::add_field('potter', array(
         'link_text' => [
             'type'        => 'text',
             'label'       => esc_html__('Icon Class', 'potter'),
-            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'description' => __('<a href="https://wppotter.com/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
             'default'     => '',
         ],
         'link_url'  => [
@@ -4228,6 +4228,11 @@ Kirki::add_field('potter', array(
             'operator' => '==',
             'value'    => 'menu-stacked',
         ),
+        array(
+            'setting'  => 'sticky_navbar',
+            'operator' => '==',
+            'value'    => true,
+        ),
     ),
 ));
 
@@ -4977,7 +4982,7 @@ Kirki::add_field('potter', array(
         'link_text' => [
             'type'        => 'text',
             'label'       => esc_html__('Icon Class', 'potter'),
-            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'description' => __('<a href="https://wppotter.com/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
             'default'     => '',
         ],
         'link_url'  => [
@@ -5620,12 +5625,32 @@ Kirki::add_field('potter', array(
 ));
 
 
+Kirki::add_field('potter', array(
+    'type'            => 'input_slider',
+    'settings'        => 'sticky_nav_logo_width',
+    'label'           => __('Sticky Logo Width', 'potter'),
+    'section'         => 'potter_sticky_header_options',
+    'priority'        => 25,
+    'default'         => '150px',
+    'choices'         => array(
+        'min'  => '10',
+        'max'  => '500',
+        'step' => '1',
+    ),
+    'active_callback' => array(
+        array(
+            'setting'  => 'sticky_navbar',
+            'operator' => '!=',
+            'value'    => '',
+        ),
+    ),
+));
 
 // Height.
 Kirki::add_field('potter', array(
     'type'            => 'input_slider',
     'settings'        => 'sticky_nav_height',
-    'label'           => __('Menu Bar Height', 'potter'),
+    'label'           => __('Header Height', 'potter'),
     'section'         => 'potter_sticky_header_options',
     'priority'        => 25,
     'default'         => '15px',
@@ -7299,7 +7324,7 @@ Kirki::add_field('potter', array(
         'link_text' => [
             'type'        => 'text',
             'label'       => esc_html__('Icon Class', 'potter'),
-            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'description' => __('<a href="https://wppotter.com/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
             'default'     => '',
         ],
         'link_url'  => [
@@ -7434,7 +7459,7 @@ Kirki::add_field('potter', array(
         'link_text' => [
             'type'        => 'text',
             'label'       => esc_html__('Icon Class', 'potter'),
-            'description' => __('<a href="https://pottertheme.com/blog/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
+            'description' => __('<a href="https://wppotter.com/docs/page-posts-settings/custom-icons/" target="_blank">Icon Class Refernce</a>', 'potter'),
             'default'     => '',
         ],
         'link_url'  => [

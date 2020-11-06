@@ -1,6 +1,11 @@
 -------------------------------------------------------
 Change Logs
 -------------------------------------------------------
+= 2.1.2 - November 06 2020 =
+---- Issue fixes -----
+* Comment CSS for boxed
+* Fixed issue with customizer for new release.
+
 = 2.1.1 - September 15 2020 =
 ---- Issue fixes -----
 * Comment CSS for boxed
